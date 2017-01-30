@@ -10,7 +10,8 @@ I have a particularly strong interest in _WordPress_ development. A CMS designed
 I have a keen interest in recently-old consoles and handhelds. Many are often depreciated before they have been pushed to their maximum potential. The Sony wonders the PlayStation 2 and PlayStation Portable are currently my all time favourites, even trying to my hand at hardware modifications to bring my PSP back to life.
 
 # Projects
-## [Chromeboard](https://github.com/soup-bowl/chromeboard)
+
+## [Chromeboard](/chromeboard)
 A _super_ simple JavaScript extension built for Chrome, built out of the need for a simple way to cycle tabs for a Wallboard installation. [A simple bash script was created](https://gist.github.com/soup-bowl/6f75cd2f8c042344fedf02521bf113ac) for this purpose, but I decided a more interactive method was needed once in Kiosk mode.
 
 This project is available unlisted on the Chrome store, [click here to download](https://chrome.google.com/webstore/detail/chromeboard/fdnnlgfgjjjfafmdhkfndhnoboajdpom) and try it out. Please be aware while reviewing that the project is in _Alpha_ and is only available for initial testing.
