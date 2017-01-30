@@ -11,7 +11,7 @@ I have a keen interest in recently-old consoles and handhelds. Many are often de
 
 # Projects
 
-## [Chromeboard](https://soup-bowl.github.io/Chromeboard/)
+## [Chromeboard]
 A _super_ simple JavaScript extension built for Chrome, built out of the need for a simple way to cycle tabs for a Wallboard installation. [A simple bash script was created](https://gist.github.com/soup-bowl/6f75cd2f8c042344fedf02521bf113ac) for this purpose, but I decided a more interactive method was needed once in Kiosk mode.
 
 This project is available unlisted on the Chrome store, [click here to download](https://chrome.google.com/webstore/detail/chromeboard/fdnnlgfgjjjfafmdhkfndhnoboajdpom) and try it out. Please be aware while reviewing that the project is in _Alpha_ and is only available for initial testing.
@@ -25,3 +25,5 @@ A personal test of mine to see how far the WordPress system can be pushed. I hav
 ## [MySQL Backup Manager](https://github.com/soup-bowl/MySQL-Backup-Manager)
 A simple GUI tool for Windows that can schedule regular backups of a MySQL database.
 _(Company-related or contract applications are not stored on GitHub)_.
+
+[Chromeboard]:https://soup-bowl.github.io/Chromeboard/
