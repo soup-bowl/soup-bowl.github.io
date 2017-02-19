@@ -16,7 +16,7 @@ A _super_ simple JavaScript extension built for Chrome, built out of the need fo
 
 This project is available unlisted on the Chrome store, [click here to download](https://chrome.google.com/webstore/detail/chromeboard/fdnnlgfgjjjfafmdhkfndhnoboajdpom) and try it out. Please be aware while reviewing that the project is in _Alpha_ and is only available for initial testing.
 
-## [Nutab](https://github.com/soup-bowl/nutab)
+## [Nutab]
 My preferred setup for browsers has always been to have a row of bookmark bar icons, and thanks to the default way Chrome works I no longer needed it to be always visible, as it was on my new tab page. However, new tab modifiers that give you a more visually pleasing page never implement this, so I worked on building my own new tab replacer for Chrome.
 
 ## [Mailman](https://github.com/soup-bowl/mailman)
@@ -27,3 +27,4 @@ A simple GUI tool for Windows that can schedule regular backups of a MySQL datab
 _(Company-related or contract applications are not stored on GitHub)_.
 
 [Chromeboard]:https://soup-bowl.github.io/Chromeboard/
+[Nutab]:https://soup-bowl.github.io/nutab/
