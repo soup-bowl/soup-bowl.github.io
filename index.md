@@ -14,10 +14,12 @@ I have a keen interest in recently-old consoles and handhelds. Many are often de
 ## [Chromeboard]
 A _super_ simple JavaScript extension built for Chrome, built out of the need for a simple way to cycle tabs for a Wallboard installation. [A simple bash script was created](https://gist.github.com/soup-bowl/6f75cd2f8c042344fedf02521bf113ac) for this purpose, but I decided a more interactive method was needed once in Kiosk mode.
 
-This project is available unlisted on the Chrome store, [click here to download](https://chrome.google.com/webstore/detail/chromeboard/fdnnlgfgjjjfafmdhkfndhnoboajdpom) and try it out. Please be aware while reviewing that the project is in _Alpha_ and is only available for initial testing.
+[![Available on the Chrome Store][chromestore]][cs-chrbo]
 
 ## [Nutab]
 My preferred setup for browsers has always been to have a row of bookmark bar icons, and thanks to the default way Chrome works I no longer needed it to be always visible, as it was on my new tab page. However, new tab modifiers that give you a more visually pleasing page never implement this, so I worked on building my own new tab replacer for Chrome.
+
+[![Available on the Chrome Store][chromestore]][cs-nutab]
 
 ## [Mailman](https://github.com/soup-bowl/mailman)
 A personal test of mine to see how far the WordPress system can be pushed. I have been trying to integrate a simple IMAP mail client into the WordPress system using the wonderful [Herbert framework](https://github.com/getherbert/herbert). 
@@ -28,3 +30,6 @@ _(Company-related or contract applications are not stored on GitHub)_.
 
 [Chromeboard]:https://soup-bowl.github.io/Chromeboard/
 [Nutab]:https://soup-bowl.github.io/nutab/
+[chromestore]: https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png (Available on the Chrome Store)
+[cs-chrbo]: https://chrome.google.com/webstore/detail/chromeboard/fdnnlgfgjjjfafmdhkfndhnoboajdpom
+[cs-nutab]: https://chrome.google.com/webstore/detail/nutab-new-tab-replacer/gakefcipoclekkcillingdakceienkkm
