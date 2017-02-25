@@ -26,7 +26,10 @@ A personal test of mine to see how far the WordPress system can be pushed. I hav
 
 ## [MySQL Backup Manager](https://github.com/soup-bowl/MySQL-Backup-Manager)
 A simple GUI tool for Windows that can schedule regular backups of a MySQL database.
-_(Company-related or contract applications are not stored on GitHub)_.
+
+# Footnotes
+
+_Company related or contract applications are not stored on GitHub_.
 
 [Chromeboard]:https://soup-bowl.github.io/Chromeboard/
 [Nutab]:https://soup-bowl.github.io/nutab/
