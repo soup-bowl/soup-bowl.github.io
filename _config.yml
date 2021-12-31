@@ -6,18 +6,13 @@ description: >-
   Google search results) and in your feed.xml site description.
 baseurl: ""
 url: "https://www.soupbowl.io"
+twitter_username: TheAlmightyWord
+github_username:  soup-bowl
 
-#theme: minima
-remote_theme: jekyll/minima
-minima:
-  skin: dark
-  social_links:
-    twitter: TheAlmightyWord
-    github: soup-bowl
+theme: minima
 header_pages:
   index.md
   about-me.md
 
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
