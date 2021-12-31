@@ -1,0 +1,21 @@
+title: Soupbowl
+email: code@soupbowl.io
+description: >-
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+url: "https://www.soupbowl.io"
+
+theme: minima
+minima:
+  skin: dark
+  social_links:
+    twitter: TheAlmightyWord
+    github: soup-bowl
+header_pages:
+  index.md
+  about-me.md
+
+plugins:
+  - jekyll-feed
