@@ -4,7 +4,7 @@
 
 $base-font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" !default;
 $base-font-size:   18px !default;
-$base-font-weight: 200 !default;
+$base-font-weight: 100 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
@@ -70,6 +70,16 @@ $on-laptop:        800px !default;
   .page-link {
     color: $brand-color;
   }
+}
+
+.home {
+  text-align: center;
+}
+
+.home-banner {
+  background-size: cover;
+  background-position: 50%;
+  text-align: center;
 }
 
 .footer-col-1 {
