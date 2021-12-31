@@ -1,4 +1,5 @@
 title: Soupbowl
+subtitle: Ramblings of a DevOps Nerd
 email: code@soupbowl.io
 description: >-
   Write an awesome description for your new site here. You can edit this
@@ -11,8 +12,8 @@ github_username:  soup-bowl
 
 theme: minima
 header_pages:
-  index.md
-  about-me.md
+  - index.md
+  - about-me.md
 
 plugins:
   - jekyll-feed
