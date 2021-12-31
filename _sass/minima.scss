@@ -64,3 +64,20 @@ $on-laptop:        800px !default;
   margin-bottom: 0;
   color: $grey-color-dark;
 }
+
+.site-nav {
+  .page-link {
+    color: $brand-color;
+  }
+}
+
+.footer-col-1 {
+  width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+  width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+  width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+  width:         calc(50% - (#{$spacing-unit} / 2));
+  text-align: right;
+}
