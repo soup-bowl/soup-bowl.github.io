@@ -7,7 +7,8 @@ description: >-
 baseurl: ""
 url: "https://www.soupbowl.io"
 
-theme: minima
+#theme: minima
+remote_theme: jekyll/minima
 minima:
   skin: dark
   social_links:
@@ -19,3 +20,4 @@ header_pages:
 
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
