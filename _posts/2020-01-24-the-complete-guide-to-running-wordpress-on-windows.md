@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "The Complete Guide to Running WordPress on Windows/IIS"
+tags:   Development, Guides, Windows
 ---
 
 So you’ve discovered to your absolute horror that the WordPress site your company has inherited is running on Windows… on IIS?

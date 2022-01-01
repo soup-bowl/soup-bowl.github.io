@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Toshiba Satellite Pro L850, Hackintosh Revisited"
+tags: 	Hackintosh, Mac
 ---
 
 ![](/assets/img/IMG_20200424_111621-1200x900.jpg)

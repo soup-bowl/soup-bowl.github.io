@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Hackintoshing a Toshiba Satellite Pro L850-1UJ"
+tags:   Hackintosh, Mac
 ---
 
 **:warning: This project has been resumed. [Please see the latest version of this]({% post_url 2020-04-25-toshiba-satellite-pro-l850-hackintosh-revisited %}).**

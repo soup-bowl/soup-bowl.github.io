@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Linux it up like 2008 with Wubi, which still exists"
+tags:   Linux
 ---
 
 Wubi was **Marmite** back in the day. With Linux being pitched as an alternative to Windows, people weren’t particularly impressed with using Microsoft technology to boot up a virtual Linux installation. Alongside the genuine concern that a power outage would obliterate your Linux setup, Wubi faced a lot of criticism.

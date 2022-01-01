@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Smarting up my Car with a Raspberry Pi, Crankshaft & OpenAuto"
+tags:   Raspberry Pi
 ---
 
 I drive a 2014 Kia Rio. I have no legitimate complaints about it, as it works brilliantly as a daily driver. Sure, I would love an MX5 mk1 (Miata NA) but at my age (23) it serves a purpose of getting me around with no issue. However, it does come with a rather boring radio setup.

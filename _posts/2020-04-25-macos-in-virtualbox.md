@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "MacOS in Virtualbox. It just works."
+tags:   Guides, Mac
 ---
 
 **You can run MacOS in Virtualbox. Because? Because.**

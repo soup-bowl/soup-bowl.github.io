@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "I built: PlayStation 1, Pi Powered!"
+tags:   Gadgets, Gaming, Guides, Raspberry Pi
 ---
 
 **And this completes my PlayStation console collection… If we ignore the PS5.**
