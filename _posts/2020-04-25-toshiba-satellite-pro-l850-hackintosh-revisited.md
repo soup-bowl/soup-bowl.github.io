@@ -9,7 +9,7 @@ title:  "Toshiba Satellite Pro L850, Hackintosh Revisited"
 
 I eventually wiped macOS and re-installed Windows for a WordCamp coding session. The laptop proved to be quite a letdown, and now sits on a shelf collecting dust.
 
-So, let’s Hackintosh it – **[again](https://www.soupbowl.io/2018/08/hackintoshing-a-toshiba-satellite-pro-l850-1uj/)**!
+So, let’s Hackintosh it – **[again]({% post_url 2018-08-08-hackintoshing-a-toshiba-satellite-pro-l850-1uj %})**!
 
 ## :stop_sign: If You’re Attempting This…
 I hate it when some guides forget to do this, but if you want to try this yourself, you **absolutely must** have the following or you won’t be able to do it:
