@@ -10,7 +10,7 @@ I do have a problem with it however, and it isn’t something you can fault them
 They _do_ have a PHP 7 container available if you go down the CentOS route, but I personally encountered dependency issues running their version. However your milage may vary, so if you are a fan of CentOS, you don’t need to continue.
 
 ## Container Creation and Update
-Once you’ve logged in to Codeanywhere, it will ask you what container you want to setup (otherwise, File > New Connection > Container).  In this instance, we will select the Ubuntu 14.04 version of the PHP containers.
+Once you’ve logged in to Codeanywhere, it will ask you what container you want to setup (otherwise, File > New Connection > Container). In this instance, we will select the Ubuntu 14.04 version of the PHP containers.
 
 ![Screenshot of Codeanywhere container screen showing PHP options](/assets/img/20180415-Capture.png)
 

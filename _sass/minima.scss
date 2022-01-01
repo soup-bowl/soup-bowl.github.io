@@ -57,6 +57,14 @@ $on-laptop:        800px !default;
   }
 }
 
+strong {
+  font-weight: bold;
+}
+
+pre, code {
+  background-color: $grey-color-dark;
+}
+
 .site-subtitle {
   @include relative-font-size(1.625);
   font-weight: 300;
