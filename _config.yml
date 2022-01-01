@@ -10,7 +10,7 @@ baseurl: ""
 url: "https://www.soupbowl.io"
 footnote: Hello from London.
 
-exclude: ['README.md', 'LICENSE', 'Gemfile.lock', 'Gemfile']
+exclude: ['README.md', 'LICENSE', 'docker-compose.yml', 'Gemfile.lock', 'Gemfile']
 
 theme: minima
 header_pages:
