@@ -12,7 +12,7 @@ They _do_ have a PHP 7 container available if you go down the CentOS route, but 
 ## Container Creation and Update
 Once you’ve logged in to Codeanywhere, it will ask you what container you want to setup (otherwise, File > New Connection > Container).  In this instance, we will select the Ubuntu 14.04 version of the PHP containers.
 
-![Screenshot of Codeanywhere container screen showing PHP options](/assets/img/201804-Capture.png)
+![Screenshot of Codeanywhere container screen showing PHP options](/assets/img/20180415-Capture.png)
 
 Once finished, you’ll have your own personal VPS for your project(s). Before we do anything, we need to make sure your Ubuntu box is up-to-date. For this we need to run the commands that every Ubuntu sysadmin is familiar with:
 
