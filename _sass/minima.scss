@@ -61,7 +61,9 @@ strong {
   font-weight: bold;
 }
 
-pre, code {
+pre, code,
+.highlighter-rouge .highlight,
+.highlight .err {
   background-color: $grey-color-dark;
 }
 
