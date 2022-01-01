@@ -1,15 +1,12 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: page
 title: Behind the Bowl
 permalink: /me/
 ---
-## 👋 Hello! I’m Casey…
+## :wave: Hello! I’m Casey…
 …and I love technology. I have been working with various different technologies since I was young and so far the only answer tech hasn’t given me is how to stop!
 
-## 🧑‍💻 Speciality
+## :computer: Speciality
 ### Web Development
 My language of choice is **PHP** for the past **4 years**. I have learned the art through an apprenticeship with the *Building Research Establishment* since I was 19. The team was a mixed bag of different development styles, so I know how to code by the book, quickly in an emergency, how to test and debug other peoples’ work, and how to quickly grasp and maintain legacy code.
 
@@ -31,7 +28,7 @@ I love configuring servers. I have been assisting operations teams with configur
 
 My newest experiment is with **Docker**. After spending long hours staring at the documentation and not understanding the point it serves, after a eureka moment I now can’t stop using Docker! My primary passion is compiling development-related compose files and image setups, with the goal of forever killing the age-old ‘it works on my machine’ phenomena for good.
 
-## 🖥️ Other Technology
+## :desktop_computer: Other Technology
 I absolutely love hardware tinkering. My home desk is a vision of phone parts and random screws, and I love fixing up old phones to try old technology and alpha software on. A broken screen is a challenge, not a moment to dispair! I strongly support **Right to Repair**, and advocate for sustainable, self-fixable technology.
 
 In fact, **vintage technology** is my passion! I am an avid collector of the old technology, and always try to find modern-day uses for them without resorting to salvaging. **Retro consoles** are my specialty, in particular the **PlayStation 2**.
