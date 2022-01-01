@@ -10,6 +10,8 @@ baseurl: ""
 url: "https://www.soupbowl.io"
 footnote: Hello from London.
 
+exclude: ['README.md', 'LICENSE', 'Gemfile.lock', 'Gemfile']
+
 theme: minima
 header_pages:
   - index.md
