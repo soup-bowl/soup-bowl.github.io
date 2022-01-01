@@ -255,7 +255,7 @@ You should be greeted with a message saying the folder has been mounted. Great! 
 
 Now let’s check we have all the correct drives mounted. We should have a blank C drive where we will install Windows to, a G drive for our installation media, and a Z drive used by Dosbox. Run **mount** with no arguments to list all drives, and they should look like this:
 
-![](/assets/img/cardboardmac-image.png)
+![](/assets/img/cardboardmac-image-1.png)
 
 All good? Type **SETUP** and press enter. The install window will appear!
 
