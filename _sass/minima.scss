@@ -93,6 +93,24 @@ pre, code,
   margin-bottom: 15px;
 }
 
+.showy-banner {
+  font-size: 38px;
+  background-size: cover;
+  background-position: 50%;
+  margin-bottom: 15px;
+  padding-top: 120px;
+  background-color: #0f0000;
+}
+
+.showy-banner p {
+  padding-left: 10px;
+  background-color: rgba(0, 0, 0, 0.50);
+
+  a {
+    color: white;
+  }
+}
+
 .footer-col-1 {
   width: -webkit-calc(50% - (#{$spacing-unit} / 2));
   width:         calc(50% - (#{$spacing-unit} / 2));

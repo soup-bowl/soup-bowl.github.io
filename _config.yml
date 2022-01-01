@@ -14,7 +14,7 @@ exclude: ['README.md', 'LICENSE', 'docker-compose.yml', 'Gemfile.lock', 'Gemfile
 
 theme: minima
 header_pages:
-  - index.md
+  - projects/index.md
   - blog/index.html
 
 paginate: 5
