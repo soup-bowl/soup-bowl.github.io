@@ -4,22 +4,30 @@ title: WordPress Generator
 ---
 ![](/assets/img/wpgen-scrot.png)
 
-**Computer and network information, always visible.**
+**Quickly create WordPress setups for development and testing. [5 minute install be damned](https://wordpress.org/support/article/how-to-install-wordpress/), how’s 0?**
 
-After maxing out my computer on a full-screen application, I wondered if there was a way to get this information on an external device for monitoring. Unable to find a suitable solution, I made one. Using a Raspberry Pi, a screen, and some code.
+Sometimes you want to make a quick change to your WordPress site, but then the dread sets in… **WIll it break it?**
 
-Deskdash works in two parts, to get the visual application dashboard, and the hub of information.
+Rather than hoping for the best, how about quickly testing it elsewhere? And how about **collaborating** with others on it?
 
-## Dashboard
+Let me introduce to you, VVV– \*ahem\* **WordPress Generator**!
 
-The Dashboard is a **Node.js Electron** application, using Bootstrap for a standardised visual interface. The ‘carousel’ aspect is actually powered by a typical website carousel, adjusted to show the entire page. Using some JavaScript wizardry, the application will load in all the applicable pages with a nice, tidy JSON configuration file.
+## :question: What does it do?
 
-## Communicator
+Simple! WordPress Generator is a simple application installed like WordPress itself. However, the Generator will **create temporary sites** within itself, like a small factory.
 
-The counterpart informational API, this **Python HTTP** application provides a low-overhead JSON API that contains system information and – optionally – network scan data that the Dashboard can access. Exchange is done with the option of an agreed secret key, so “can I have the WiFI password?” doesn’t lead to an unintended yield of information.
+This is very similar in approach to what [Varying Vagrant Vagrants](https://varyingvagrantvagrants.org/) does. However, the Generator is not dependent on anything outside of a simple webhost. You can run it locally, or run it on a development server – choice is yours!
 
-[Dashboard](https://github.com/soup-bowl/deskdash)
+## :floppy_disk: Where can I get it?
 
-[Communicator](https://github.com/soup-bowl/deskdash-communicator)
+Head on over to the **BRE Digital GitHub** to grab the latest and greatest release. The instructions on the GitHub page will guide you on setting it up.
+
+It can also be run via :whale: **Docker**! Take a gander at the Dockerhub page to see how you could whack this mighty beast into your container network.
+
+Grab WordPress Generator from:
+
+[BRE Digital GitHub](https://github.com/bredigital/wordpress-generator)
+
+[Dockerhub](https://hub.docker.com/r/bredigital/wordpress-generator)
 
 :arrow_left: _Back to [projects](/projects)_.
