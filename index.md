@@ -7,4 +7,4 @@ layout: home
 	<img src="assets/img/icon.png">
 </div>
 
-Hello 👋 My name’s Casey, and I’m a programmer – [read about me here](/me).
+Hello :wave: My name’s Casey, and I’m a programmer – [read about me here](/me).
