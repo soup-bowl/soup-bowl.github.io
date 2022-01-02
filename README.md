@@ -21,7 +21,19 @@ server {
 	server_name beta.soupbowl.io;
 	root /www/beta.soupbowl.io;
 	index index.html;
+	error_page 404 /404.html;
+
+	location / {
+		try_files $uri $uri.html $uri/ $uri/index.html =404;
+	}
+
+	location = /404.html {
+		internal;
+	}
 }
 ```
+
+* First `server` block is to enforce HTTPS.
+* First `location` block is to catch URLs that do not end in '.html' and try them as if they did.
 
 [j]: https://jekyllrb.com/
