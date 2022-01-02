@@ -5,12 +5,15 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <p>
-          © {{ 'now' | date: "%Y" }}&nbsp;  
-          {%- if site.author -%}
-            {{ site.author | escape }}
-          {%- else -%}
-            {{ site.title | escape }}
-          {%- endif -%}
+          <strong>
+            © {{ 'now' | date: "%Y" }}&nbsp;  
+            {%- if site.author -%}
+              {{ site.author | escape }}
+            {%- else -%}
+              {{ site.title | escape }}
+            {%- endif -%}
+          </strong>
+          <a href="https://jekyllrb.com/">Proudly powered by Jekyll</a>
         </p>
       </div>
 

@@ -107,13 +107,20 @@ pre, code,
   background-color: rgba(0, 0, 0, 0.50);
 
   a {
-    color: white;
+    color: $text-color;
   }
 }
 
 .footer-col-1 {
   width: -webkit-calc(50% - (#{$spacing-unit} / 2));
   width:         calc(50% - (#{$spacing-unit} / 2));
+  strong {
+    color: $text-color;
+  }
+
+  a {
+    color: $grey-color;
+  }
 }
 
 .footer-col-2 {
