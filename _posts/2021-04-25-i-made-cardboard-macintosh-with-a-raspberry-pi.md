@@ -78,7 +78,7 @@ Depending on your platform, you might now see between 1-3 new mysterious storage
 
 Create a blank file **ssh** inside this directory. On Windows, you might need to temporarily turn off hide file extensions, create a new text file and remove the .txt extension. If it moans, your text editor’s save as dialog should be able to achieve it.
 
-Create another file in this directory called **wpa\_supplicant.conf**. Open this file in a code editor, and change the contents to this (replacing the <text> with your own information – [taken from here](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md)):
+Create another file in this directory called **wpa\_supplicant.conf**. Open this file in a code editor, and change the contents to this, replacing the <text> with your own information:
 
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
