@@ -128,3 +128,10 @@ pre, code,
   width:         calc(50% - (#{$spacing-unit} / 2));
   text-align: right;
 }
+
+@include media-query($on-laptop) {
+  .footer-col-1, .footer-col-2 {
+    width: 100%;
+    text-align: center;
+  }
+}
