@@ -101,14 +101,25 @@ pre, code,
   margin-bottom: 15px;
   padding-top: 120px;
   background-color: #0f0000;
+
+  p {
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.50);
+
+    a {
+      color: $text-color;
+    }
+  }
 }
 
-.showy-banner p {
-  padding-left: 10px;
-  background-color: rgba(0, 0, 0, 0.50);
+.post-featured {
+  background-size: cover;
+  background-position: 50%;
+  margin-bottom: 15px;
+  padding-top: 200px;
 
-  a {
-    color: $text-color;
+  h1 {
+    background-color: rgba(0, 0, 0, 0.50);
   }
 }
 
