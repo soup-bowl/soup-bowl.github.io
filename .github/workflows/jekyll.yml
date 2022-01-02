@@ -1,0 +1,29 @@
+name: Jekyll site CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    - name: SFTP Deploy w/ Password
+      uses: LubricantJam/SFTP-Deploy-Action@v2.1
+      with:
+        username: 'ghdeploy'
+        server: ${{ secrets.GHD_SERVER_IP }}
+        ssh_password: ${{ secrets.GHD_SERVER_PASS }}
+        local_path: './_site/*'
+        remote_path: '/deployments'
+        args: '-o ConnectTimeout=5'
