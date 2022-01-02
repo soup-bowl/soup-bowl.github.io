@@ -136,3 +136,12 @@ pre, code,
     text-align: center;
   }
 }
+
+.error {
+  text-align: center;
+
+  h1 {
+    font-size: ($base-font-size * 5);
+    font-family: monospace;
+  }
+}
