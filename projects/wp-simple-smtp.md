@@ -4,6 +4,8 @@ title: WordPress Simple SMTP
 ---
 ![](/assets/img/wpsmtp-scrot.png)
 
+![](/assets/img/wp-ssmtp-150x150.png)
+
 **Configure your emails within WordPress. No mess, no ads.**
 
 WordPress Simple SMTP gives you:

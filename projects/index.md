@@ -22,15 +22,15 @@ title: Projects
 
 ## Smaller Projects
 
-*   **[OpenSimulator Bridge](https://www.soupbowl.io/projects/wordpress-opensimulator-bridge/)**
-*   **[Kebabble](https://www.soupbowl.io/projects/kebabble/)** (discontinued)
-*   **[Nutab](https://www.soupbowl.io/projects/nutab/)**
-*   **[Discord Messenger](https://www.soupbowl.io/projects/wp-discord-messenger/)**
-*   [**Chromeboard**](https://www.soupbowl.io/projects/chromeboard/)
-*   [**Xperia Play Tools**](https://www.soupbowl.io/projects/xperia-play-tools/)
+*   **[OpenSimulator Bridge](/projects/wordpress-opensimulator-bridge)**
+*   **[Kebabble](/projects/kebabble/)** (discontinued)
+*   **[Nutab](/projects/nutab/)**
+*   **[Discord Messenger](/projects/wp-discord-messenger/)**
+*   [**Chromeboard**](/projects/chromeboard/)
+*   [**Xperia Play Tools**](/projects/xperia-play-tools/)
 *   **[Modern Modoki for Firefox](https://github.com/soup-bowl/Modoki-FirefoxCSS)**
 
-And a bunch of [experimental constructs](https://github.com/soup-bowl/labs).
+And a bunch of [experimental constructs](https://labs.soupbowl.io).
 
 ## And even more…
 
