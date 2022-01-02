@@ -22,5 +22,5 @@ jobs:
         server: ${{ secrets.GHD_SERVER_IP }}
         ssh_private_key: ${{ secrets.GHD_SERVER_PKEY }}
         local_path: './_site/*'
-        remote_path: '/deployments'
+        remote_path: '/deployments/beta.soupbowl.io'
         args: '-o ConnectTimeout=5'
