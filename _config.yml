@@ -3,9 +3,8 @@ subtitle: Ramblings of a DevOps Nerd
 author: soup-bowl
 email: code@soupbowl.io
 description: >-
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Personal blog for Casey - a back-end developer specialising in PHP, primarily for WordPress developments. 
+  Primarily a source of niche setup guides, cool Raspberry Pi builds, and general ranting.
 baseurl: ""
 url: "https://www.soupbowl.io"
 footnote: Hello from London.
