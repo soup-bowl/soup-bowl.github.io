@@ -46,12 +46,12 @@ Once the extension is installed, clicking on the icon takes you to the tab rotat
 For Windows, create a batch script (wallboard.bat) and store this command in it. Since Chrome is not stored in the global path, you will need to add either chrome to the user/system path variable, or store the full path of chrome.exe in the batch script like so:
 
     "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -kiosk --disable-session-crashed-bubble --disable-infobars
-    
+
 
 Alternatively, for a Linux machine, create a shell script to execute the following command (assumed Chromium, change if necessary).
 
     chromium-browser -kiosk --disable-session-crashed-bubble --disable-infobars
-    
+
 
 This will open Chrome/Chromium in kiosk mode, and hopefully open the rotation page once loaded. To escape, press ALT-F4.
 

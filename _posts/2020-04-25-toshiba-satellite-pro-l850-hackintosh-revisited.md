@@ -47,7 +47,7 @@ The L850 has a **Qualcomm Atheros AR9462**, which does not work in macOS. I happ
 Instead of relying on [TonyMac](http://www.tonymacx86.com) software, I’ve decided to attempt [Hackintosh Vanilla](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). To quote the website:
 
 > A vanilla setup implies that the OS itself remains relatively untouched – and that the bulk of the Hackintosh-related kexts, patches, etc are contained on the EFI partition. For all intents and purposes, a vanilla install’s main partition is _identical_ to that of an official Apple computer.
-> 
+>
 > [hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/)
 
 Other than the different approach, I had the following caveats:

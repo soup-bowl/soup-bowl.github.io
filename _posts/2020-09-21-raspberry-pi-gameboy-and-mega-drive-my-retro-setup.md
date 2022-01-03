@@ -60,13 +60,13 @@ I used **Recalbox** for a while since it was **much** easier to install, however
     *   Make a **wpa\_supplicant.conf** file for **WiFi** – [This guide explains how](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md) to configure this.
 *   Plug MicroSD into GPi and boot it up.
 *   Wait 2-3 minutes, then find the IP address of the Pi via your router’s web GUI.
-*   SSH in, and run  
+*   SSH in, and run
     `sudo ~/RetroPie-Setup/retropie_setup.sh`.
     *   I’d add this to your .bash\_aliases file, you’ll use this command **a lot**.
 *   [Run through the upgrade process](https://retropie.org.uk/docs/Updating-RetroPie/) to get the latest RetroPie.
-*   Install the **[GPi safe shutdown](https://github.com/RetroFlag/retroflag-picase)** drivers, by running:  
+*   Install the **[GPi safe shutdown](https://github.com/RetroFlag/retroflag-picase)** drivers, by running:
     `wget -O - "[https://raw.githubusercontent.com/RetroFlag/retroflag-picase/master/install_gpi.sh](https://raw.githubusercontent.com/RetroFlag/retroflag-picase/master/install_gpi.sh)" | sudo bash`
-*   Edit **/boot/cmdline.txt** to add the following to the end of the file (all on one line):  
+*   Edit **/boot/cmdline.txt** to add the following to the end of the file (all on one line):
     `snd_bcm2835.enable_hdmi=1 snd_bcm2835.enable_headphones=1 snd_bcm2835.enable_compat_alsa=1`
 *   Once complete, shutdown and eject the MicroSD.
 *   Install the **[screen patch](http://download.retroflag.com/)** you can find here.

@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+	{%- include head.html -%}
 
-  <body>
+	<body>
 
-    {%- include header.html -%}
+		{%- include header.html -%}
 
-    <div class="home-banner" style="background-image:url(assets/img/anton.jpg)">
-      <img src="assets/img/icon.png">
-    </div>
-    
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div class="home">
-          {{ content }}
-        
-          {%- if site.posts.size > 0 -%}
-            <h2 class="post-list-heading">Fresh from the Bowl</h2>
-            <ul class="post-list">
-              {%- for post in site.posts limit:5 -%}
-              <li>
-                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                <span class="post-meta">{{ post.date | date: date_format }}</span>
-                <h3>
-                  <a class="post-link" href="{{ post.url | relative_url }}">
-                    {{ post.title | escape }}
-                  </a>
-                </h3>
-                {%- if site.show_excerpts -%}
-                  {{ post.excerpt }}
-                {%- endif -%}
-              </li>
-              {%- endfor -%}
-            </ul>
-        
-            <p class="rss-subscribe"><a href="{{ "/blog" | relative_url }}">View the archive</a></p>
-          {%- endif -%}
-        
-        </div>
-      </div>
-    </main>
+		<div class="home-banner" style="background-image:url(assets/img/anton.jpg)">
+			<img src="assets/img/icon.png">
+		</div>
 
-    {%- include footer.html -%}
+		<main class="page-content" aria-label="Content">
+			<div class="wrapper">
+				<div class="home">
+					{{ content }}
 
-  </body>
+					{%- if site.posts.size > 0 -%}
+						<h2 class="post-list-heading">Fresh from the Bowl</h2>
+						<ul class="post-list">
+							{%- for post in site.posts limit:5 -%}
+							<li>
+								{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+								<span class="post-meta">{{ post.date | date: date_format }}</span>
+								<h3>
+									<a class="post-link" href="{{ post.url | relative_url }}">
+										{{ post.title | escape }}
+									</a>
+								</h3>
+								{%- if site.show_excerpts -%}
+									{{ post.excerpt }}
+								{%- endif -%}
+							</li>
+							{%- endfor -%}
+						</ul>
+
+						<p class="rss-subscribe"><a href="{{ "/blog" | relative_url }}">View the archive</a></p>
+					{%- endif -%}
+
+				</div>
+			</div>
+		</main>
+
+		{%- include footer.html -%}
+
+	</body>
 
 </html>

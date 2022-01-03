@@ -13,7 +13,7 @@ While I am a technical person, the Hackintosh community is scores ahead of what 
 
 I write this now on a Hackintosh **laptop**. This isn’t any old laptop however… This is a laptop that is not _technically_ supported. I googled for hours to see the achievements of other Satellite owners and found nothing. However, with trial and error (and years of configuring crap experience), I was graced with the Apple logo appearing on my non-Apple laptop.
 
-[Laptop Specification (PDF)  
+[Laptop Specification (PDF)
 ](https://www.soupbowl.io/wp-content/uploads/2018/08/Satellite-Pro-L850-1UJ.pdf)
 
 **Notice:** _Since 2019 I have removed Hackintosh from my laptop, this is primarily as I have received by MacBook White back and so now use the laptop for Linux distributions instead._
@@ -34,7 +34,7 @@ Take this with a pinch of salt, as Apple never intended for you to install this.
 
 ![](https://www.soupbowl.io/wp-content/uploads/2018/08/IMG_20180802_222431.jpg)
 
-### Does Work  
+### Does Work
 
 *   Main Display Graphics (Intel HD 4000) with Clover config.
 *   Keyboard (set to ISO, keys don’t match up 100%) and trackpad.
@@ -44,13 +44,13 @@ Take this with a pinch of salt, as Apple never intended for you to install this.
 *   CD/DVD drive.
 *   Webcam.
 
-### Doesn’t Work  
+### Doesn’t Work
 
 *   Laptop Detection, for power management (In Progress).
 *   Brightness Controls (In Progress).
 *   Standby (Kernel Panic).
 *   Brightness controls (Lucky for me, seemingly defaults to mid brightness).
-*   Sound (Untested, does seem to be fixable).  
+*   Sound (Untested, does seem to be fixable).
 
 For most of the non-working elements, any USB peripherals claiming to be Mac-compliant _should_ work in their place. Your experience may differ.
 
@@ -58,8 +58,8 @@ For most of the non-working elements, any USB peripherals claiming to be Mac-com
 *   Enabled UEFI, but disabled secure boot in BIOS.
 *   Download the macOS High Sierra installer from the App Store, on the existing Mac.
 *   Download and run [Unibeast](https://www.tonymacx86.com/resources/unibeast-8-3-2.383/) (set for UEFI).
-    *   Also copy [Multibeast](https://www.tonymacx86.com/resources/multibeast-high-sierra-10-3-0.388/) onto USB.
-    *   While EFI is apparently mounted, I copied over the neccessary kexts and [this configuration file](https://github.com/RehabMan/OS-X-Clover-Laptop-Config/blob/master/config_HD4000_1366x768.plist) into the CLOVER directory (don’t replace the existing config.plist).
+	*   Also copy [Multibeast](https://www.tonymacx86.com/resources/multibeast-high-sierra-10-3-0.388/) onto USB.
+	*   While EFI is apparently mounted, I copied over the neccessary kexts and [this configuration file](https://github.com/RehabMan/OS-X-Clover-Laptop-Config/blob/master/config_HD4000_1366x768.plist) into the CLOVER directory (don’t replace the existing config.plist).
 *   Make a cup of tea.
 *   Drink said tea.
 *   Plug USB Stick in Toshiba, repeatedly tap F12 on boot, and boot via USB.
@@ -68,13 +68,13 @@ For most of the non-working elements, any USB peripherals claiming to be Mac-com
 *   Wait (another tea moment) for macOS to start.
 *   Open Disk Utility (click View > Show All Devices at the top).
 *   Select TOSHIBA and click erase.
-    *   **I erased the entire hard drive**. If you wish to keep stuff or dual boot, please see a guide for dual booting as this will **erase everything**.
+	*   **I erased the entire hard drive**. If you wish to keep stuff or dual boot, please see a guide for dual booting as this will **erase everything**.
 *   I chose single HFS+ partition (I named it the classic Macintosh HD), with a GUID partition map.
 *   Once complete, run the installer.
 *   Once finished, boot via USB stick again.
 *   Same again with Clover, this time select ‘Boot from <partition name>’.
 *   Congratulations – You’re running macOS!
-    *   You will be reliant on the USB key to boot. Check out Remove USB Reliance to stop doing this.
+	*   You will be reliant on the USB key to boot. Check out Remove USB Reliance to stop doing this.
 *   (Optional) [Setup Windows dual boot](https://hackintosher.com/guides/hackintosh-dual-boot-windows-10-and-macos-high-sierra/).
 
 Many, many, many steps to go through, but so long as everything is done correctly, this should be a completely rewarding experience afterwards.
@@ -89,8 +89,8 @@ The following are the kexts I have successfully added and used with my installat
 *   [Lilu](https://github.com/acidanthera/Lilu/releases) – Dependency for most third-party driver kexts.
 *   [VoodooPS2Controller](https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/downloads/) – Enables keyboard and trackpad post-Clover.
 *   [ACPIBatteryManager](https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/) – macOS can see the battery now.
-*   [ATH9KInjector & fixup](https://github.com/black-dragon74/ATH9KFixup/releases) – Boot arguments not necessary.  
-    
+*   [ATH9KInjector & fixup](https://github.com/black-dragon74/ATH9KFixup/releases) – Boot arguments not necessary.
+
 
 Instead of installing them on the system, I opted (and is not recommended) to install them into Clover. Clover will inject these on boot, so you never need to install them in Mac and risk update breakage. The big downside however is that you risk breaking the boot process, which can make things tricky to resolve. My personal approach is to try riskier kexts on the USB Clover first, and if successful I then copy them to the HD Clover. You can also tell Clover to boot without these kexts, but this may leave FakeSMC behind and refuse to boot.
 

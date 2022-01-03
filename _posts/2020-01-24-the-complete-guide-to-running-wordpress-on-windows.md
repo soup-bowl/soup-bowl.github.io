@@ -107,10 +107,10 @@ For the technical information:
 
 *   **Microsoft WebMatrix** is installed.
 *   :exclamation: **PHP 7.1** is installed via **IIS Express**.
-    *   A newer version of PHP is recommended.
+		*   A newer version of PHP is recommended.
 *   A **global FastCGIModule** for PHP is created.
-    *   This means all sites on your IIS server can run PHP code via this module. Change priority listings if you wish to run different versions.
-    *   You can use the **PHP Manager** or manual process to over-ride this.
+		*   This means all sites on your IIS server can run PHP code via this module. Change priority listings if you wish to run different versions.
+		*   You can use the **PHP Manager** or manual process to over-ride this.
 *   **MySQL 5.1** is installed, if no external database was provided.
 
 #### PHP Manager IIS Plugin – Intermediate
@@ -149,14 +149,14 @@ Cool! IIS now knows that your PHP folder is a CGI process, it now knows how to h
 *   Open **Handler Mappings**.
 *   On the right-hand side, choose ‘**Add Module Mapping**‘.
 *   Add the following entry:
-    *   **\*.php** for **Request Path**.
-    *   **FastCgiModule** for **Module**.
-    *   Path to your PHP CGI for **Executable**.
-    *   Whatever you want for **Name**.
+		*   **\*.php** for **Request Path**.
+		*   **FastCgiModule** for **Module**.
+		*   Path to your PHP CGI for **Executable**.
+		*   Whatever you want for **Name**.
 *   Head back, and go into **Default document**.
 *   Add **index.php** to the list (your choice).
 *   Test in your browser if PHP loads up.
-    *   Try **index.php** file with `<?php phpinfo();`
+		*   Try **index.php** file with `<?php phpinfo();`
 
 If you do the above for the topmost entry (normally your machine name), it will **copy to all new containers**, so you don’t need to do this process for each site.
 
@@ -233,13 +233,13 @@ In my years of WordPress, this only recently popped up for me – people abusing
 
 Locate the `<system.webServer>` block, and add this (normally at the bottom):
 
-    <security>
-      <requestFiltering>
-        <denyUrlSequences>
-          <add sequence="xmlrpc.php" />
-        </denyUrlSequences>
-      </requestFiltering>
-    </security>
+		<security>
+			<requestFiltering>
+				<denyUrlSequences>
+					<add sequence="xmlrpc.php" />
+				</denyUrlSequences>
+			</requestFiltering>
+		</security>
 
 Any **contoso.com/xmlrpc.php** request will now serve a request denied error, instead of passing through to the interface. This stops WordPress processing said requests, therefore stop wasting processing power on these bogus requests.
 

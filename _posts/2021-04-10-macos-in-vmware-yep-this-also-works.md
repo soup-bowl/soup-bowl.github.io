@@ -45,7 +45,7 @@ Don’t stop there though, as it’s still _available_ – just hidden. Thanks t
 
 [Grab a copy of the unlocker.zip from the latest releases](https://github.com/paolo-projects/unlocker/releases/latest), and unzip it. Open a command prompt or console to the directory you extracted it to, and run:
 
-Windows: `win-install.cmd`  
+Windows: `win-install.cmd`
 Linux: `sudo lnx-install.sh` (you might need to `chmod +x` first).
 
 This script will change the VMware configuration to un-hide the missing macOS options, then download the system files for macOS guests. Once done, restart your VMware Player/Workstation and the options should now appear in the VM creation wizard.

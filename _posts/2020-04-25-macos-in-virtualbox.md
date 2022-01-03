@@ -22,7 +22,7 @@ You **need a donor Mac** to start this process. You will not need access to it p
 *   A Mac to create an ISO with.
 *   [MacOS Mojave installer](https://apps.apple.com/us/app/macos-mojave/id1398502828?mt=12) from the Mac App Store.
 *   [Virtualbox](https://www.virtualbox.org/wiki/Downloads) (Windows, Linux or MacOS).
-    *   [Virtualbox Extension Pack](https://www.virtualbox.org/wiki/Downloads#VirtualBox6.1.6OracleVMVirtualBoxExtensionPack) is **required**.
+	*   [Virtualbox Extension Pack](https://www.virtualbox.org/wiki/Downloads#VirtualBox6.1.6OracleVMVirtualBoxExtensionPack) is **required**.
 *   At least 4GB of RAM (8GB or more recommended).
 *   40GB of free disk space (more preferred).
 *   2 core CPU or more.
@@ -109,7 +109,7 @@ Before starting the VM, open the VM settings and make the following changes:
 *   System > Acceleration > uncheck **Enable Nested Paging**.
 *   Display > Screen > Video Memory is **128MB**.
 *   USB > **USB 3.0 Controller**.
-    *   If greyed/not there, you did not [install additions](#setup-vbox).
+	*   If greyed/not there, you did not [install additions](#setup-vbox).
 
 With all that done, we’re ready to start the VM!
 
@@ -170,7 +170,7 @@ This required **a lot of Googling**, and these are the people who saved me at th
 This is a difficult one, and will require investigation. I checked the logs as the error message said, and discovered:
 
 > HM: HMR3Init: Attempting fall back to NEM: AMD-V is not available
-> 
+>
 > If you’re on an Intel processor, it’ll likely say VT-x instead.
 
 Obviously, check if this is enabled. If you’re on a legacy BIOS computer, it’s a straightfoward scan for AMD-V/VT-x in your settings. If it’s UEFI, you’re gonna have to Google it.

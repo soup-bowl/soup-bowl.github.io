@@ -48,9 +48,9 @@ Both of the above need a way of providing power via USB, as the Raspberry Pi is 
 An idea to go forward with is in regards to the UK law. Here you can [get a 6 point fine for distracted driving](https://www.gov.uk/using-mobile-phones-when-driving-the-law), mostly with regards to mobile phone use. This already borders on the law by how much it blocks the view (I fold this right down once I’m finished setting up, not got a Police confirmation on this), and I don’t feel like rustling an Officer’s jimmies by fiddling around with it while driving. So I would like to:
 
 *   Consider a more efficient screen solution.
-    *   Mounting the screen below the dashboard (tricky without modifications).
-    *   Using a smaller, more satnav-sized screen.
-    *   Lay it flat and go off window reflections (screen is reversible via software).
+	*   Mounting the screen below the dashboard (tricky without modifications).
+	*   Using a smaller, more satnav-sized screen.
+	*   Lay it flat and go off window reflections (screen is reversible via software).
 *   Use a control form without screen interaction.
 
 The latter got me considering a custom Arduino-based solution to making a rotary controller-based system to control the Pi without needing to physically touch the screen.
