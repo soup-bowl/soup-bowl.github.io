@@ -234,6 +234,14 @@ pre, code,
 	}
 }
 
+.pagination {
+	text-align: center;
+
+	span.previous, span.next {
+		color: $grey-color;
+	}
+}
+
 .error {
 	text-align: center;
 
