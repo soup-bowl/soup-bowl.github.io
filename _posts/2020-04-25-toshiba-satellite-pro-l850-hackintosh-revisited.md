@@ -2,7 +2,7 @@
 layout: post
 title:  "Toshiba Satellite Pro L850, Hackintosh Revisited"
 image:  /assets/img/IMG_20200424_111621-1200x900.jpg
-tags: 	Hackintosh, Mac
+tags: 	[Hackintosh, Mac]
 ---
 
 [Back in 2018]({% post_url 2018-08-08-hackintoshing-a-toshiba-satellite-pro-l850-1uj %}) I turned my laptop into a Hackintosh device, running High Sierra. I had a donor MacBook mid-2010 that I used to run TonyMac tools to get Hackintosh working. It was a fun if complicated process of trial and error, but the result was always impressive – a craptop unexpectedly booting macOS.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Replace LAMP with Docker, the Easy way"
-tags:   Development, Guides
+tags:   [Development, Guides]
 ---
 
 **Just about to install LAMP, XAMPP, or MAMP? Stop. Right. Now.** Docker’s gotchu, fam.

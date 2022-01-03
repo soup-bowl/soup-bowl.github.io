@@ -15,6 +15,7 @@ theme: minima
 header_pages:
   - projects/index.md
   - blog/index.html
+  - guides.html
 
 paginate: 5
 paginate_path: "/blog/page/:num/"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using PHP 7 on Ubuntu 14.04 with Codeanywhere"
-tags:   Development
+tags:   [Development]
 ---
 
 I am a big fan of online IDEs. For me this enables me to do web development pretty much anywhere, on any device. My particular favourites are [Codeanywhere](https://codeanywhere.com/) and [Codenvy](http://codenvy.io/). While both have their pros and cons, I pretty much use Codeanywhere free for my day-to-day development. It gives you a temporary VPS for your code, easily accessible, great no-nonsense IDE and easy to use SSH access. Perfect, I simply fire up the container and get to work.

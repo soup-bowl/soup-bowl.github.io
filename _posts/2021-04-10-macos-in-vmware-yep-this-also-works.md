@@ -2,7 +2,7 @@
 layout: post
 title:  "MacOS in VMware. Yep, This Also Works"
 image:  /assets/img/Screenshot_20210410_170530-1024x872.png
-tags:   Guides, Mac
+tags:   [Guides, Mac]
 ---
 
 [macOS Mojave worked great(ish) in Virtualbox]({% post_url 2020-04-25-macos-in-virtualbox %})**. Does it work in VMware? Turns out, yes – works great, and has guest additions.**

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Chromeboard, an Experiment Killed by Security"
-tags:   Development
+tags:   [Development]
 ---
 
 You wouldn’t be wrong if you’ve come to the assumption that I’ve stopped supporting [Chromeboard](https://www.soupbowl.io/chromeboard/). [You can see from the commit log](https://github.com/soup-bowl/Chromeboard/commits) that I haven’t made a significant change since March of last year. This was largely unintentional, but there was a main reason as to why I chose to unofficially abandon the extension – I call it ‘[Issue 9 of Death](https://github.com/soup-bowl/Chromeboard/issues/9)‘.

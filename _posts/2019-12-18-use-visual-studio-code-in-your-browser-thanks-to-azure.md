@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Use Visual Studio Code in your browser, thanks to Azure"
-tags:   Development
+tags:   [Development]
 ---
 
 Yes, the Electron-based Visual Studio Code – an app built in HTML and JavaScript – is not usable in a web browser. What a weird world we live in.

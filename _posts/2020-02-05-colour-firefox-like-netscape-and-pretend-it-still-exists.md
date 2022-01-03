@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Colour Firefox like Netscape and Pretend it still exists"
-tags:   Miscellaneous
+tags:   [Miscellaneous]
 ---
 **I love Netscape. I still haven’t forgiven AOL [for the event that occurred February 2008](https://www.engadget.com/2014/05/10/history-of-netscape/).**
 
