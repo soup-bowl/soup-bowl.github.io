@@ -178,9 +178,38 @@ pre, code,
 	}
 
 	a {
+		color: $grey-color;
 		display: inline-block;
 		height: 4.4rem;
 		width: 4.4rem;
+	}
+
+	a:hover {
+		color: $text-color;
+	}
+
+	.s-gitlab:hover {
+		color: #F96424;
+	}
+
+	.s-wordpress:hover {
+		color: #0085BA;
+	}
+
+	.s-google:hover {
+		color: #4285F4;
+	}
+
+	.s-lastfm:hover {
+		color: #BA0000;
+	}
+
+	.s-twitter:hover {
+		color: #1D9BD0;
+	}
+
+	.s-insta:hover {
+		color: #F04B5D;
 	}
 }
 
