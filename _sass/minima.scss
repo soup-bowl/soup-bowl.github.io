@@ -213,6 +213,27 @@ pre, code,
 	}
 }
 
+.aligncentre {
+	text-align: center;
+}
+
+.button {
+	background-color: $brand-color;
+	color: $background-color;
+	padding: 20px;
+	display: inline-block;
+	text-align: center;
+	font-weight: 600;
+
+	a {
+		color: $background-color;
+	}
+
+	a:hover {
+		color: $text-color;
+	}
+}
+
 .error {
 	text-align: center;
 

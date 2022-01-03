@@ -26,8 +26,9 @@ It can also be run via :whale: **Docker**! Take a gander at the Dockerhub page t
 
 Grab WordPress Generator from:
 
-[BRE Digital GitHub](https://github.com/bredigital/wordpress-generator)
-
-[Dockerhub](https://hub.docker.com/r/bredigital/wordpress-generator)
+<div class="aligncentre">
+	<p class="button"><a href="https://github.com/bredigital/wordpress-generator">GitHub</a></p>
+	<p class="button"><a href="https://hub.docker.com/r/bredigital/wordpress-generator">Dockerhub</a></p>
+</div>
 
 :arrow_left: _Back to [projects]({% link projects/index.md %})_.

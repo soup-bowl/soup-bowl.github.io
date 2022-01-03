@@ -3,7 +3,7 @@ layout: page
 title: WordPress OpenSimulator Bridge
 ---
 
-![](/assets/img/wp-os-150x150.png)
+<div class="aligncentre"><img src="/assets/img/wp-os-150x150.png"></div>
 
 **Did you ever want to link your WordPress account to your standalone OpenSimulator account? No? Oh… Well, you can now.**
 
@@ -25,6 +25,9 @@ What this plugin-
 
 Give it a shot now!
 
-[WordPress](https://wordpress.org/plugins/opensimulator-bridge/) & [GitHub](https://github.com/soup-bowl/wordpress-opensim-bridge)
+<div class="aligncentre">
+	<p class="button"><a href="https://wordpress.org/plugins/opensimulator-bridge">WordPress</a></p>
+	<p class="button"><a href="https://github.com/soup-bowl/wordpress-opensim-bridge">GitHub</a></p>
+</div>
 
 :arrow_left: _Back to [projects]({% link projects/index.md %})_.

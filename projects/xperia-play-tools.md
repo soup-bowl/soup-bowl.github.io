@@ -19,6 +19,6 @@ Future additions will include:
 
 Check out the GitHub page to find out more about this project, and how you can try it out for yourself.
 
-[Xperia Tools on GitHub](https://github.com/soup-bowl/XperiaPlay-Tools)
+<div class="aligncentre"><p class="button"><a href="https://github.com/soup-bowl/XperiaPlay-Tools">GitHub</a></p></div>
 
 :arrow_left: _Back to [projects]({% link projects/index.md %})_.

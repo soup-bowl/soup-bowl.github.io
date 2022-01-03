@@ -4,7 +4,7 @@ title: WordPress Simple SMTP
 ---
 ![](/assets/img/wpsmtp-scrot.png)
 
-![](/assets/img/wp-ssmtp-150x150.png)
+<div class="aligncentre"><img src="/assets/img/wp-ssmtp-150x150.png"></div>
 
 **Configure your emails within WordPress. No mess, no ads.**
 
@@ -21,8 +21,9 @@ WordPress Simple SMTP gives you:
 *   Paid premium version.
 *   Strange, crazy, whacky UI visuals.
 
-Find the plugin on [WordPress](https://wordpress.org/plugins/simple-smtp) or [GitHub](https://github.com/soup-bowl/wp-simple-smtp)
-
-[![](https://github.com/soup-bowl/wp-simple-smtp/actions/workflows/test.yml/badge.svg)](https://github.com/soup-bowl/wp-simple-smtp/actions/workflows/test.yml)
+<div class="aligncentre">
+	<p class="button"><a href="https://wordpress.org/plugins/simple-smtp">WordPress</a></p>
+	<p class="button"><a href="https://github.com/soup-bowl/wp-simple-smtp">GitHub</a></p>
+</div>
 
 :arrow_left: _Back to [projects]({% link projects/index.md %})_.

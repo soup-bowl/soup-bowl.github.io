@@ -18,8 +18,9 @@ The Dashboard is a **Node.js Electron** application, using Bootstrap for a stand
 
 The counterpart informational API, this **Python HTTP** application provides a low-overhead JSON API that contains system information and – optionally – network scan data that the Dashboard can access. Exchange is done with the option of an agreed secret key, so “can I have the WiFI password?” doesn’t lead to an unintended yield of information.
 
-[Dashboard](https://github.com/soup-bowl/deskdash)
-
-[Communicator](https://github.com/soup-bowl/deskdash-communicator)
+<div class="aligncentre">
+	<p class="button"><a href="https://github.com/soup-bowl/deskdash">Dashboard</a></p>
+	<p class="button"><a href="https://github.com/soup-bowl/deskdash-communicator">Communicator</a></p>
+</div>
 
 :arrow_left: _Back to [projects]({% link projects/index.md %})_.
