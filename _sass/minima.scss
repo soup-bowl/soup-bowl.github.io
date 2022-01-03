@@ -140,6 +140,10 @@ pre, code,
   	}
 }
 
+.site-footer {
+	font-weight: 400;
+}
+
 .footer-col-1 {
 	width: -webkit-calc(50% - (#{$spacing-unit} / 2));
 	width:         calc(50% - (#{$spacing-unit} / 2));
