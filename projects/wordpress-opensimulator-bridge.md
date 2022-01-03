@@ -27,4 +27,4 @@ Give it a shot now!
 
 [WordPress](https://wordpress.org/plugins/opensimulator-bridge/) & [GitHub](https://github.com/soup-bowl/wordpress-opensim-bridge)
 
-:arrow_left: _Back to [projects](/projects)_.
+:arrow_left: _Back to [projects]({% link projects/index.md %})_.

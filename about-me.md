@@ -10,7 +10,7 @@ permalink: /me/
 ### Web Development
 My language of choice is **PHP** for the past **4 years**. I have learned the art through an apprenticeship with the *Building Research Establishment* since I was 19. The team was a mixed bag of different development styles, so I know how to code by the book, quickly in an emergency, how to test and debug other peoples’ work, and how to quickly grasp and maintain legacy code.
 
-**WordPress** is my speciality CMS. The sheer flexibility of WordPress is my favourite aspect, and always leaves me [trying to push it to the extremes](https://www.soupbowl.io/kebabble/). I am experienced at hook/filter development and minor theme-related developments, and regularly attend WordPress Meetups to share knowledge with the wider community.
+**WordPress** is my speciality CMS. The sheer flexibility of WordPress is my favourite aspect, and always leaves me [trying to push it to the extremes]({% link projects/kebabble.md %}). I am experienced at hook/filter development and minor theme-related developments, and regularly attend WordPress Meetups to share knowledge with the wider community.
 
 The tools of my PHP trade are:
 * Composer.

@@ -21,4 +21,4 @@ Check out the GitHub page to find out more about this project, and how you can t
 
 [Xperia Tools on GitHub](https://github.com/soup-bowl/XperiaPlay-Tools)
 
-:arrow_left: _Back to [projects](/projects)_.
+:arrow_left: _Back to [projects]({% link projects/index.md %})_.

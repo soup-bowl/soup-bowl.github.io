@@ -39,4 +39,4 @@ To change the bookmark bar layout, open up the bookmark manager (ctrl-shift-o) a
 
 [Source code](https://gitlab.com/soup-bowl/nutab)
 
-:arrow_left: _Back to [projects](/projects)_.
+:arrow_left: _Back to [projects]({% link projects/index.md %})_.

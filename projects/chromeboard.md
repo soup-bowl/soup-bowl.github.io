@@ -59,4 +59,4 @@ This will open Chrome/Chromium in kiosk mode, and hopefully open the rotation pa
 
 [Source Code](https://github.com/soup-bowl/chromeboard)
 
-:arrow_left: _Back to [projects](/projects)_.
+:arrow_left: _Back to [projects]({% link projects/index.md %})_.

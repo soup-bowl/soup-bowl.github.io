@@ -22,4 +22,4 @@ The counterpart informational API, this **Python HTTP** application provides a l
 
 [Communicator](https://github.com/soup-bowl/deskdash-communicator)
 
-:arrow_left: _Back to [projects](/projects)_.
+:arrow_left: _Back to [projects]({% link projects/index.md %})_.

@@ -11,4 +11,4 @@ ReviveToday is a website designed to give guides, feedback and developments that
 
 [ReviveToday](https://revive.today)
 
-:arrow_left: _Back to [projects](/projects)_.
+:arrow_left: _Back to [projects]({% link projects/index.md %})_.

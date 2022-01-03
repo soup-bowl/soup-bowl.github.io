@@ -25,4 +25,4 @@ Find the plugin on [WordPress](https://wordpress.org/plugins/simple-smtp) or [Gi
 
 [![](https://github.com/soup-bowl/wp-simple-smtp/actions/workflows/test.yml/badge.svg)](https://github.com/soup-bowl/wp-simple-smtp/actions/workflows/test.yml)
 
-:arrow_left: _Back to [projects](/projects)_.
+:arrow_left: _Back to [projects]({% link projects/index.md %})_.
