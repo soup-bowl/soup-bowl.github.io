@@ -11,13 +11,21 @@ footnote: Hello from London.
 
 exclude: ['.github', 'README.md', 'LICENSE', 'docker-compose.yml', 'Gemfile.lock', 'Gemfile']
 
-twitter_username: jekyllrb
-
 theme: minima
 header_pages:
   - projects/index.md
   - blog/index.html
   - guides.html
+
+soupy:
+  socials:
+    twitter: https://twitter.com/TheAlmightyWord
+    instagram: https://www.instagram.com/thealmightyword/
+    github: https://github.com/soup-bowl
+    gitlab: https://gitlab.com/soup-bowl
+    wordpress: https://profiles.wordpress.org/soupbowl
+    google: https://g.dev/soupbowl
+    lastfm: https://www.last.fm/user/soup-bowl
 
 paginate: 5
 paginate_path: "/blog/page/:num/"

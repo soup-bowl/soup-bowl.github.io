@@ -170,6 +170,20 @@ pre, code,
 	}
 }
 
+.social-media-list {
+	text-align: center;
+
+	li {
+		display: inline;
+	}
+
+	a {
+		display: inline-block;
+		height: 4.4rem;
+		width: 4.4rem;
+	}
+}
+
 .error {
 	text-align: center;
 
