@@ -4,7 +4,9 @@ title: WordPress Simple SMTP
 ---
 ![](/assets/img/wpsmtp-scrot.png)
 
-<div class="aligncentre"><img src="/assets/img/wp-ssmtp-150x150.png"></div>
+{:refdef: style="text-align: center;"}
+![](/assets/img/wp-ssmtp-150x150.png)
+{: refdef}
 
 **Configure your emails within WordPress. No mess, no ads.**
 

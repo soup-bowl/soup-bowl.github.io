@@ -3,7 +3,9 @@ layout: page
 title: WordPress OpenSimulator Bridge
 ---
 
-<div class="aligncentre"><img src="/assets/img/wp-os-150x150.png"></div>
+{:refdef: style="text-align: center;"}
+![](/assets/img/wp-os-150x150.png)
+{: refdef}
 
 **Did you ever want to link your WordPress account to your standalone OpenSimulator account? No? Oh… Well, you can now.**
 
