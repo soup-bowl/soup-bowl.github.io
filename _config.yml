@@ -11,6 +11,8 @@ footnote: Hello from London.
 
 exclude: ['.github', 'README.md', 'LICENSE', 'docker-compose.yml', 'Gemfile.lock', 'Gemfile']
 
+twitter_username: jekyllrb
+
 theme: minima
 header_pages:
   - projects/index.md
