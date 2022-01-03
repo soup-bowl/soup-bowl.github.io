@@ -138,7 +138,7 @@ You can register a parent PHP version and it will affect all children sites. If 
 #### PHP Manually – Advanced
 
 {:refdef: style="text-align: center;"}
-![](![](/assets/img/202001U2.png))
+![](/assets/img/202001U2.png)
 {: refdef}
 
 If you opt not to go for IIS manager (not a fan of community IIS modules), then you can still go ahead configuring PHP manually to the IIS container.
