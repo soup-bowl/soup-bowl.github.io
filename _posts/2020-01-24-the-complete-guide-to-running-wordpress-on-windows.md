@@ -6,7 +6,9 @@ tags:   [Development, Guides, Windows]
 
 So you’ve discovered to your absolute horror that the WordPress site your company has inherited is running on Windows… on IIS?
 
+{:refdef: style="text-align: center;"}
 ![](https://media.giphy.com/media/jquDWJfPUMCiI/source.gif)
+{: refdef}
 
 Before you stand up, throw your computer chair out the Window, maliciously eat your co-workers salad and enjoy it, or drop all the production databases, relax. We’ve got you covered.
 
@@ -18,7 +20,9 @@ So what’s the problem?
 
 ### :angry: Support
 
+{:refdef: style="text-align: center;"}
 ![](https://media.giphy.com/media/wofftnAdDtx4s/giphy.gif)
+{: refdef}
 
 Zilch. Nada. No dice. WordPress is absolutely **not** designed to be run on IIS and probably never will be. This doesn’t mean your server is going to burst into flames when you run the site, but means that when support is needed you can be damn well sure your first bit of advice will be “don’t use Windows”.
 
@@ -91,17 +95,23 @@ Create a Site as regular, and double-click on it. You should have an option in *
 
 :question: **No Web Platform Installer?** It’s not installed by default. Click your server name in the Connections left-hand panel. In the now-visible right-hand panel, click on **Get New Web Platform Components**. Follow the Microsoft instructions and you’ll have the aforementioned button.
 
-![](https://www.soupbowl.io/wp-content/uploads/2020/06/1-1024x540.png)
+{:refdef: style="text-align: center;"}
+![](/assets/img/1-1024x540.png)
+{: refdef}
 
 Now for configurations, you should generally always separate up your servers (e.g. web and database are separate). But sometimes, you just want a get going quickly on a development site. This installer has a neat trick. If you do not have a database server, and the current machine doesn’t have MySQL installed, **it will create a MySQL server instance for you**!
 
-![](https://www.soupbowl.io/wp-content/uploads/2020/06/2.png)
+{:refdef: style="text-align: center;"}
+![](/assets/img/2.png)
+{: refdef}
 
 If done correctly, you should be at this screen. It will by default try to create **localhost/wordpress**. Make sure you’ve got the right Web Site selected, and – if desired – the right subfolder configuration. If something is wrong, it will need to be changed manually afterwards.
 
 Hit Continue, and go grab a coffee. When you return, **WordPress is installed**! Easy as that, you’ve got your first WordPress installation.
 
-![](https://www.soupbowl.io/wp-content/uploads/2020/06/5-1024x721.png)
+{:refdef: style="text-align: center;"}
+![](/assets/img/5-1024x721.png)
+{: refdef}
 
 For the technical information:
 
@@ -115,7 +125,9 @@ For the technical information:
 
 #### PHP Manager IIS Plugin – Intermediate
 
-![](https://www.soupbowl.io/wp-content/uploads/2020/01/VirtualBox_windywoo_23_01_2020_22_13_53.png)
+{:refdef: style="text-align: center;"}
+![](/assets/img/VirtualBox_windywoo_23_01_2020_22_13_53.png)
+{: refdef}
 
 There is a plugin for IIS called **[PHP Manager](https://www.iis.net/downloads/community/2018/05/php-manager-150-for-iis-10)**, which is able to do most of the heavy-lifting for you in configuring PHP. This will enable you to register new PHP versions, adjust plugins, edit configurations and even split containers to different IIS versions as simply as possible via GUI.
 
@@ -125,7 +137,9 @@ You can register a parent PHP version and it will affect all children sites. If 
 
 #### PHP Manually – Advanced
 
-![](https://www.soupbowl.io/wp-content/uploads/2020/01/Untitled.png)
+{:refdef: style="text-align: center;"}
+![](![](/assets/img/202001U2.png))
+{: refdef}
 
 If you opt not to go for IIS manager (not a fan of community IIS modules), then you can still go ahead configuring PHP manually to the IIS container.
 
@@ -182,7 +196,9 @@ In the folder you bound to the container, extract the WordPress installation zip
 
 Run through the installation as per a normal site, and **congratulations** – you have a WordPress site running on IIS!
 
+{:refdef: style="text-align: center;"}
 ![](https://media2.giphy.com/media/uihiEh31AiOCQ/giphy.gif?cid=790b76113f3975ca802e55917a842138c9bf733a2d6fadaf&rid=giphy.gif)
+{: refdef}
 
 ## :star: Special Thanks
 
@@ -193,7 +209,9 @@ In the hopes of keeping the information up to date and relevant, the following c
 
 ## :information_source: FAQ
 ### **\* Did Microsoft drop support for PHP on Windows?**
+{:refdef: style="text-align: center;"}
 ![](https://media3.giphy.com/media/SVgKToBLI6S6DUye1Y/giphy.gif)
+{: refdef}
 
 Microsoft have, community have not.
 
@@ -209,7 +227,9 @@ In each download segment [on the downloads website](https://windows.php.net/down
 If – for whatever reason – you are installing the **Legacy 5.6 releases**, download the **32-bit redistributable**, regardless of your server architecture type.
 
 ### I recieved an error: 500.21 Handler “xyz” has a bad module “FastCGIModule” in its module list.
-![](https://www.soupbowl.io/wp-content/uploads/2020/06/3-1-1024x721.png)
+{:refdef: style="text-align: center;"}
+![](/assets/img/3-1-1024x721.png)
+{: refdef}
 
 When installing **Internet Information Services (IIS)**, PHP runs through **CGI**. This lets IIS pass the processing of non-Microsoft language code to it’s relevant processor. For us, it enables IIS to chuck .php code at PHP.
 
@@ -219,7 +239,9 @@ Open up **Server Manager**. At the top right, open up **Manage**, then **Add Rol
 
 Next next next it through until you get to Roles. In **Web Server (IIS) > Web Server > Application Development >** Check **CGI**. Click Install (or next until you can), and your IIS server should now support CGI, including FastCGI
 
-![](https://www.soupbowl.io/wp-content/uploads/2020/06/4.png)
+{:refdef: style="text-align: center;"}
+![](/assets/img/4.png)
+{: refdef}
 
 ### Pretty Permalinks, and .htaccess
 WordPress is smart enough to know it’s on IIS, so when you go to adjust permalinks instead of creating **.htaccess**, they will create a **web.config** file, which is the IIS equivalent. If you need additional rules the IIS rewrite module can attempt to parse your htaccess file in the IIS module.
@@ -251,7 +273,9 @@ Between **WordPress 5.6 and 5.9** (the speculative fix date) there is a bug affe
 ### How do I set permissions?
 The container will default to using the account **IUSR**, which won’t have access rights by default. For starting out, you could simply give **IUSR** full permissions to the folder, and your website will work. Updates will occur, cache will write, all gold.
 
-![](https://www.soupbowl.io/wp-content/uploads/2020/01/Untitled-1.png)
+{:refdef: style="text-align: center;"}
+![](/assets/img/202001U1.png)
+{: refdef}
 
 This sometimes does not work, in which an alternative you can do is change **Anonymous authentication** in **Authentication** on the container to Application Pool identity, and give **IUSRS** group full access.
 

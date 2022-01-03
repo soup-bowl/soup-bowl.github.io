@@ -44,7 +44,9 @@ _\* You can go for a higher RAM, but emulation mostly requires more powerful CPU
 
 ## :book: The Plan
 
+{:refdef: style="text-align: center;"}
 ![Purchased PS One console before modifications.](/assets/img/IMG-20201125-WA0002-1024x557.jpg)
+{: refdef}
 
 Dead PSOne from a bodged-up mod chip job.
 
@@ -69,7 +71,9 @@ Unfortunately I found with my spacers that the Pi was an extremely snug fit, whi
 
 ## :construction: Hardware, the complex bit
 
+{:refdef: style="text-align: center;"}
 ![Eagle view of the modified PS One with the circuits exposed.](/assets/img/IMG_20201221_122256-1024x768.jpg)
+{: refdef}
 
 Top view of the circuit. Pi is upside down for a future fan addition, and the power port (unpictured) is in-line with the port gap.
 
