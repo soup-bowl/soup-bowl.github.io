@@ -13,6 +13,8 @@ permalink: /:year/:month/:title:output_ext
 exclude: ['.github', 'README.md', 'LICENSE', 'docker-compose.yml', 'Gemfile.lock', 'Gemfile']
 
 theme: minima
+minima:
+  date_format: "%-d %B %Y"
 header_pages:
   - projects/index.md
   - blog/index.html
