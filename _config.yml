@@ -8,6 +8,7 @@ description: >-
 baseurl: ""
 url: "https://beta.soupbowl.io"
 footnote: Hello from London.
+permalink: /:year/:month/:title:output_ext
 
 exclude: ['.github', 'README.md', 'LICENSE', 'docker-compose.yml', 'Gemfile.lock', 'Gemfile']
 
