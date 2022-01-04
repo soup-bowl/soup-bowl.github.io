@@ -29,6 +29,11 @@ layout: default
 						<span class="p-author h-card" itemprop="name">{{ author }}</span></span>
 						{%- if forloop.last == false %}, {% endif -%}
 				{% endfor %}
+			{%- endif -%}
+			{%- if page.tags.size > 0 -%}
+				&nbsp;• {% for tag in page.tags %}
+					{{ tag }}{% if forloop.last == false %},{% else %}.{% endif %}
+				{% endfor %}
 			{%- endif -%}</p>
 	</header>
 
