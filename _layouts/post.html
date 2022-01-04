@@ -32,7 +32,12 @@ layout: default
 			{%- endif -%}
 			{%- if page.tags.size > 0 -%}
 				&nbsp;• {% for tag in page.tags %}
-					{{ tag }}{% if forloop.last == false %},{% else %}.{% endif %}
+					{%- if tag == "Guides" -%}
+					<a href="{% link guides.html %}">{{ tag }}</a>
+					{%- else -%}
+					{{ tag }}
+					{%- endif -%}
+					{% if forloop.last == false %},{% endif %}
 				{% endfor %}
 			{%- endif -%}</p>
 	</header>
