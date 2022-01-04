@@ -4,7 +4,7 @@ title: WordPress Simple SMTP
 ---
 ![](/assets/img/wpsmtp-scrot.png)
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/wp-ssmtp-150x150.png)
 {: refdef}
 

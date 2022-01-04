@@ -110,7 +110,7 @@ You will now boot up to see the vmware logo, then an Apple logo that pops up wit
 
 If all goes well, you’ll be greeted (after a _long wait_) with a the macOS reinstallation screen. Hooray! First things first, pop open **Utilities > Disk Utility** and full-erase and format the VMware empty disk with **Apple Filesystem (APFS)** or **Mac OS Extended**.
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/Screenshot-2021-04-11-at-01.05.59-1024x673.png)
 {: refdef}
 
@@ -120,7 +120,7 @@ After a million hours, a few questions for initialisation, potentially a fruitle
 
 ## :question: What works?
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/Screenshot_20210410_170530-1024x872.png)
 {: refdef}
 

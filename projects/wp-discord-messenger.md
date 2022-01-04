@@ -3,7 +3,7 @@ layout: page
 title: Discord Messenger
 ---
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/wp-discord-150x150.png)
 {: refdef}
 

@@ -3,7 +3,7 @@ layout: page
 title: WordPress OpenSimulator Bridge
 ---
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/wp-os-150x150.png)
 {: refdef}
 

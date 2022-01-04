@@ -16,7 +16,7 @@ And then I saw the **[Mini Mac on Instructables](https://www.instructables.com/M
 
 ## :thinking: What did I use?
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/IMG_20210423_181904-edited-scaled.jpg)
 {: refdef}
 
@@ -131,7 +131,7 @@ The commands, broken down, do:
 
 If all has gone correctly, your Pi screen drivers will be ready for us to connect the LCD display onto! I’ll move onto the ‘hardware’ setup for now, and come back to the emulation software in a bit.
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/original_893ddc20-fa1b-4f8f-98e8-b4fa8c095e32_IMG_20210418_022309-1024x792.jpg)
 {: refdef}
 
@@ -139,7 +139,7 @@ For the security conscious, I don’t recommend switching off SSH yet as we will
 
 ## :hammer_and_wrench: Constructing the Cardboard Macintosh
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/IMG_20210422_182005-edited-scaled.jpg)
 {: refdef}
 
@@ -181,7 +181,7 @@ Inside the **Mac701.zip** is a folder **Mac701**. This contains a load of floppy
 
 Finally, the **mac753.zip** and **mac755up.zip** archives contain .img files. Move both these .img files into your **Macintosh** directory. This will boost our cardboard Macintosh from 7.0.1 to 7.5.5.
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/cardboardmac-image-8.png)
 {: refdef}
 
@@ -208,19 +208,19 @@ We’re now moving to the Pi to setup System 7. If you find the screen too small
 
 On your Pi, open up file explorer and go to your **Macintosh** folder. Double click on **Mini\_vMac\_ARM** and select ‘Execute’. Suddenly, you’ll be greeted to a full screen view of a Macintosh screen with a flashing floppy disk icon. Don’t worry, this is expected.
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/cardboardmac-image-9.png)
 {: refdef}
 
 Press **ctrl – F** to **exit full screen** mode. Outside the emulator, open the **Mac701** folder, and drag **Install 1.image** onto the emulator screen. This will virtually mount the image file as a Floppy disk in your emulator. Neat! Go back up a folder and drag your **disk1.dsk** into the emulator screen. Your cardboard Macintosh should now ask if you want to install System 7 onto **Mac500M**. Now click install.
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/cardboardmac-image-10.png)
 {: refdef}
 
 It will ask you to mount various disks during the installation process. All of the ones it needs are in **Mac701** directory, so drag them onto the screen when prompted. It won’t take too long, and you’ll soon reboot into System 7. Congratulations!
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/cardboardmac-image-11.png)
 {: refdef}
 
@@ -232,7 +232,7 @@ You can stop here if you wish, but we can take it right up to the latest version
 
 Upgrading is very different to the installation. Boot your cardboard Macintosh, and once you’re in the system, drag **mac753.img** onto the screen. This will then appear underneath your hard drive in the virtual Mac. Double click on this, and click on Installer (for 7.5.5, click the first part, click agree, then it mounts). Follow the instructions, and you’ll soon be on System 7.5.3.
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/cardboardmac-image-12.png)
 {: refdef}
 
@@ -274,31 +274,31 @@ You should be greeted with a message saying the folder has been mounted. Great! 
 
 Now let’s check we have all the correct drives mounted. We should have a blank C drive where we will install Windows to, a G drive for our installation media, and a Z drive used by Dosbox. Run **mount** with no arguments to list all drives, and they should look like this:
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/cardboardmac-image-1.png)
 {: refdef}
 
 All good? Type **SETUP** and press enter. The install window will appear!
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/cardboardmac-image-2.png)
 {: refdef}
 
 Press **Enter**, and again to select the Express Setup mode. If you get a red prompt to say it can’t write to the drive, check to make sure a ‘drive’ is mounted to C in the instructions above.
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/cardboardmac-image-3.png)
 {: refdef}
 
 Once this segment finishes (it will take about 1-2 minutes), you’ll then see a more familiar setup screen. Enter a name and company (you don’t need a product number), then continue.
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/cardboardmac-image-4.png)
 {: refdef}
 
 After this, get a drink while the install process takes some time (~6-8 minutes).
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/cardboardmac-image-5.png)
 {: refdef}
 
@@ -308,13 +308,13 @@ It will now ask about network settings. Press enter or click continue to skip th
 
 Windows 3.11 will now briefly flash up a visual folder walk where it sets up all the different aspects of the system, and then it will ask if you wish to visit a tutorial. You can go through this if you want an introduction, otherwise I clicked **Skip Tutorial**.
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/cardboardmac-image-6.png)
 {: refdef}
 
 It will now ask if you wish to restart or return to MS-DOS. Click **Restart** and it will close Dosbox. Congratulations, you’ve installed **Windows for Workgroups 3.11**!
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/cardboardmac-image-7.png)
 {: refdef}
 
@@ -326,7 +326,7 @@ Unfortunately the cursor does not work so well when Dosbox is run in windowed mo
 
 ## :question: Finished
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](https://media4.giphy.com/media/wYyTHMm50f4Dm/giphy.gif)
 {: refdef}
 
@@ -344,7 +344,7 @@ The next steps for this cardboard Macintosh is:
 
 ## Cardboard Macintosh 3 months later…
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/IMG_20210623_144042-edited.jpg)
 {: refdef}
 
@@ -358,7 +358,7 @@ For the side USB ports, I used a **[cheap 3-port USB hub](https://www.aliexpress
 
 For the power port, I used a **female MicroUSB to male MicroUSB** variant of the ribbon cable, however the port wasn’t too strong for the repeated connecting of the power cable, so I eventually replaced it with a **[generic extender lead](https://www.ebay.co.uk/itm/153878133658)**.
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/IMG_20210616_181249-1024x1021.jpg)
 {: refdef}
 
@@ -368,7 +368,7 @@ For the HDMI port, I used a **[female HDMI to male mini HDMI ribbon cable](https
 
 the front-facing SD slot was the most problematic. Since I’d already glued everything together, I used my [knife](https://www.amazon.co.uk/Draper-Redline-67677-Retractable-Segment/dp/B0144NEUY0/ref=sr_1_11?dchild=1&keywords=crafting+knife&qid=1624462614&sr=8-11) to effectively carve out the required gap for the card slot. I also discovered the gap between Pi and wall wasn’t big enough for the converter to fit comfortably in. Using a combination of a **[very tiny MicroSD extender](https://www.aliexpress.com/item/32982519053.html)** and a **[MicroSD to regular SD](https://www.aliexpress.com/item/4000275747655.html)** cables, I was able to get the front panel slot working.
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](/assets/img/IMG_20210623_112020-939x1024.jpg)
 {: refdef}
 
@@ -378,7 +378,7 @@ The speaker was **incredibly quiet**. So it does work, but you have to be point 
 
 ### Software
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](https://user-images.githubusercontent.com/11209477/117720836-0e3e9700-b1d7-11eb-8f55-941694225e3a.png)
 {: refdef}
 

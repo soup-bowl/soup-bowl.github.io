@@ -7,7 +7,7 @@ tags:   [Development, Guides]
 
 **Just about to install LAMP, XAMPP, or MAMP? Stop. Right. Now.** Docker’s gotchu, fam.
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](https://media0.giphy.com/media/lRmjNrQZkKVuE/giphy.gif)
 {: refdef}
 
@@ -33,7 +33,7 @@ Oh no, you got a cryptolocker virus! You backed up your code like a good human, 
 
 You spend some time to install your chosen LAMP stack again… Wait, why isn’t it working…
 
-{:refdef: style="text-align: center;"}
+{:refdef: class="article-image"}
 ![](https://media1.giphy.com/media/heIX5HfWgEYlW/giphy.gif)
 {: refdef}
 

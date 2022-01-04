@@ -115,6 +115,16 @@ pre, code,
 	}
 }
 
+.page-content {
+	.article-image {
+		text-align: center;
+
+		img {
+			max-width: 600px;
+		}
+	}
+}
+
 .site-footer {
 	font-weight: 400;
 
