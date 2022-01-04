@@ -97,6 +97,15 @@ pre, code,
 		.menu-icon > svg {
 			fill: $grey-color-light;
 		}
+
+		@include media-query($on-palm) {
+			text-align: left;
+
+			.page-link {
+				font-size: $base-font-size * 1.5;
+				padding: 10px;
+			}
+		}
 	}
 
 	@media screen and (max-width: 700px) {
