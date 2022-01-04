@@ -120,42 +120,42 @@ pre, code,
 
 	.social-media-list {
 		text-align: center;
-	
+
 		li {
 			display: inline;
 		}
-	
+
 		a {
 			color: $grey-color;
 			display: inline-block;
 			height: 4.4rem;
 			width: 4.4rem;
 		}
-	
+
 		a:hover {
 			color: $text-color;
 		}
-	
+
 		.s-gitlab:hover {
 			color: #F96424;
 		}
-	
+
 		.s-wordpress:hover {
 			color: #0085BA;
 		}
-	
+
 		.s-google:hover {
 			color: #4285F4;
 		}
-	
+
 		.s-lastfm:hover {
 			color: #BA0000;
 		}
-	
+
 		.s-twitter:hover {
 			color: #1D9BD0;
 		}
-	
+
 		.s-insta:hover {
 			color: #F04B5D;
 		}
@@ -180,6 +180,18 @@ pre, code,
 .post-header {
 	h1, .post-meta {
 		text-align: center;
+	}
+
+	.post-featured {
+		background-size: cover;
+		background-position: 50%;
+		margin-bottom: 15px;
+		padding-top: 200px;
+
+		  h1 {
+			padding: 10px;
+			background-color: rgba(0, 0, 0, 0.50);
+		  }
 	}
 }
 
@@ -211,18 +223,6 @@ pre, code,
 		color: $text-color;
 	}
   }
-}
-
-.post-featured {
-	background-size: cover;
-	background-position: 50%;
-	margin-bottom: 15px;
-	padding-top: 200px;
-
-  	h1 {
-		padding: 10px;
-		background-color: rgba(0, 0, 0, 0.50);
-  	}
 }
 
 .aligncentre {
