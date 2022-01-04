@@ -121,7 +121,7 @@ pre, code,
 
 	p {
 		font-weight: 500;
-		padding-left: 10px;
+		padding: 10px;
 		background-color: rgba(0, 0, 0, 0.50);
 
 	a {
@@ -137,6 +137,7 @@ pre, code,
 	padding-top: 200px;
 
   	h1 {
+		padding: 10px;
 		background-color: rgba(0, 0, 0, 0.50);
   	}
 }
