@@ -53,50 +53,133 @@ $on-laptop:        800px !default;
 	"minima/syntax-highlighting"
 ;
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, strong {
 	font-weight: 700;
-}
-
-strong {
-	font-weight: bold;
 }
 
 pre, code,
 .highlighter-rouge .highlight,
 .highlight .err {
-	background-color: $grey-color-dark;
+	background-color: #000;
+	border-color: $grey-color-dark;
 }
 
-.site-title {
-	font-size: $base-font-size;
-	font-weight: 700;
-	&, &:visited {
-		color: $grey-color-light;
+.site-header {
+	.site-title {
+		font-size: $base-font-size;
+		font-weight: 700;
+
+		&, &:visited {
+			color: $grey-color-light;
+		}
 	}
-}
 
-.site-subtitle {
-	@include relative-font-size(1.625);
-	font-weight: 500;
-	line-height: $base-line-height * $base-font-size * 2.25;
-	letter-spacing: -1px;
-	margin-left: 1rem;
-	margin-bottom: 0;
-	color: $grey-color;
-	font-size: $base-font-size;
-}
-
-@media screen and (max-width: 700px) {
 	.site-subtitle {
-		display: none;
+		@include relative-font-size(1.625);
+		font-weight: 500;
+		line-height: $base-line-height * $base-font-size * 2.25;
+		letter-spacing: -1px;
+		margin-left: 1rem;
+		margin-bottom: 0;
+		color: $grey-color;
+		font-size: $base-font-size;
+	}
+
+	.site-nav {
+		font-size: $base-font-size;
+		font-weight: 500;
+		border: none;
+
+		.page-link {
+			color: $brand-color;
+		}
+
+		.menu-icon > svg {
+			fill: $grey-color-light;
+		}
+	}
+
+	@media screen and (max-width: 700px) {
+		.site-subtitle {
+			display: none;
+		}
 	}
 }
 
-.site-nav {
-	font-size: $base-font-size;
-	font-weight: 500;
-	.page-link {
-		color: $brand-color;
+.site-footer {
+	font-weight: 400;
+
+	.footer-col-1, .footer-col-2 {
+		width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+		width:         calc(50% - (#{$spacing-unit} / 2));
+	}
+
+	.footer-col-2 {
+		text-align: right;
+	}
+
+	.social-media-list {
+		text-align: center;
+	
+		li {
+			display: inline;
+		}
+	
+		a {
+			color: $grey-color;
+			display: inline-block;
+			height: 4.4rem;
+			width: 4.4rem;
+		}
+	
+		a:hover {
+			color: $text-color;
+		}
+	
+		.s-gitlab:hover {
+			color: #F96424;
+		}
+	
+		.s-wordpress:hover {
+			color: #0085BA;
+		}
+	
+		.s-google:hover {
+			color: #4285F4;
+		}
+	
+		.s-lastfm:hover {
+			color: #BA0000;
+		}
+	
+		.s-twitter:hover {
+			color: #1D9BD0;
+		}
+	
+		.s-insta:hover {
+			color: #F04B5D;
+		}
+	}
+
+	strong {
+		color: $text-color;
+	}
+
+	a {
+		color: $grey-color;
+	}
+
+	@include media-query($on-laptop) {
+		.footer-col-1, .footer-col-2 {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+
+.post-header {
+	h1, .post-meta {
+		text-align: center;
 	}
 }
 
@@ -140,78 +223,6 @@ pre, code,
 		padding: 10px;
 		background-color: rgba(0, 0, 0, 0.50);
   	}
-}
-
-.site-footer {
-	font-weight: 400;
-}
-
-.footer-col-1 {
-	width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-	width:         calc(50% - (#{$spacing-unit} / 2));
-	strong {
-		color: $text-color;
-	}
-
-	a {
-		color: $grey-color;
-	}
-}
-
-.footer-col-2 {
-	width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-	width:         calc(50% - (#{$spacing-unit} / 2));
-	text-align: right;
-}
-
-@include media-query($on-laptop) {
-	.footer-col-1, .footer-col-2 {
-		width: 100%;
-		text-align: center;
-	}
-}
-
-.social-media-list {
-	text-align: center;
-
-	li {
-		display: inline;
-	}
-
-	a {
-		color: $grey-color;
-		display: inline-block;
-		height: 4.4rem;
-		width: 4.4rem;
-	}
-
-	a:hover {
-		color: $text-color;
-	}
-
-	.s-gitlab:hover {
-		color: #F96424;
-	}
-
-	.s-wordpress:hover {
-		color: #0085BA;
-	}
-
-	.s-google:hover {
-		color: #4285F4;
-	}
-
-	.s-lastfm:hover {
-		color: #BA0000;
-	}
-
-	.s-twitter:hover {
-		color: #1D9BD0;
-	}
-
-	.s-insta:hover {
-		color: #F04B5D;
-	}
 }
 
 .aligncentre {
