@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Use Visual Studio Code in your browser, thanks to Azure"
+author: Casey (Soupbowl)
 tags:   [Development]
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Linux it up like 2008 with Wubi, which still exists"
+author: Casey (Soupbowl)
 tags:   [Linux]
 ---
 

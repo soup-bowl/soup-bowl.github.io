@@ -2,6 +2,7 @@
 layout: post
 title:  "MacOS in VMware. Yep, This Also Works"
 image:  /assets/img/Screenshot_20210410_170530-1024x872.png
+author: Casey (Soupbowl)
 tags:   [Guides, Mac]
 ---
 

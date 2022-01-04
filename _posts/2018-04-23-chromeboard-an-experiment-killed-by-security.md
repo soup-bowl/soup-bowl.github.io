@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Chromeboard, an Experiment Killed by Security"
+author: Casey (Soupbowl)
 tags:   [Development]
 ---
 

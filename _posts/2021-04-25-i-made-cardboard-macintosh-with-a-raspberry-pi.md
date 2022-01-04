@@ -2,6 +2,7 @@
 layout: post
 title:  "I made: Cardboard Macintosh with a Raspberry Pi"
 image:  /assets/img/IMG_20210423_110928-c.jpg
+author: Casey (Soupbowl)
 tags:   [Gadgets, Guides, Mac, Raspberry Pi]
 ---
 

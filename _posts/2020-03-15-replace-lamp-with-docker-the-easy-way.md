@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Replace LAMP with Docker, the Easy way"
+author: Casey (Soupbowl)
 tags:   [Development, Guides]
 ---
 

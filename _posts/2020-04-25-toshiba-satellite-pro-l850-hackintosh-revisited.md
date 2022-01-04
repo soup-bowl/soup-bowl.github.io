@@ -2,6 +2,7 @@
 layout: post
 title:  "Toshiba Satellite Pro L850, Hackintosh Revisited"
 image:  /assets/img/IMG_20200424_111621-1200x900.jpg
+author: Casey (Soupbowl)
 tags: 	[Hackintosh, Mac]
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "The Complete Guide to Running WordPress on Windows/IIS"
+author: Casey (Soupbowl)
 tags:   [Development, Guides, Windows]
 ---
 

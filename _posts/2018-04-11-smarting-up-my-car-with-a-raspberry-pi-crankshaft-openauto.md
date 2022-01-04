@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Smarting up my Car with a Raspberry Pi, Crankshaft & OpenAuto"
+author: Casey (Soupbowl)
 tags:   [Raspberry Pi]
 ---
 

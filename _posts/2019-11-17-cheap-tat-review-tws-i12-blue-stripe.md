@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Cheap Tat Review – TWS i12 (blue stripe)"
+author: Casey (Soupbowl)
 tags:   [Gadgets]
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title:  "Hackintoshing a Toshiba Satellite Pro L850-1UJ"
 image:  /assets/img/IMG_20180803_134221.jpg
+author: Casey (Soupbowl)
 tags:   [Hackintosh, Mac]
 ---
 
