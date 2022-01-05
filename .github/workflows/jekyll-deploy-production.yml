@@ -1,0 +1,29 @@
+name: Build & Deploy Site
+
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Compile Site
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site -e "JEKYLL_ENV=production" \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    - name: Deploy to Server
+      uses: wlixcc/SFTP-Deploy-Action@v1.0
+      with:
+        username: 'ghdeploy'
+        server: ${{ secrets.GHD_SERVER_IP }}
+        ssh_private_key: ${{ secrets.GHD_SERVER_PKEY }}
+        local_path: './_site/*'
+        remote_path: '/deployments/www.soupbowl.io'
+        args: '-o ConnectTimeout=5'
