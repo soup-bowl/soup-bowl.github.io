@@ -1,9 +1,9 @@
-name: Build & Deploy Site
+name: Build & Deploy Site (Beta)
 
 on:
   push:
     branches:
-    - main
+    - beta
   workflow_dispatch:
 
 jobs:
