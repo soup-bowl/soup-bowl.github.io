@@ -13,6 +13,7 @@ I eventually wiped macOS and re-installed Windows for a WordCamp coding session.
 So, let’s Hackintosh it – **[again]({% post_url 2018-08-08-hackintoshing-a-toshiba-satellite-pro-l850-1uj %})**!
 
 ## :stop_sign: If You’re Attempting This…
+
 I hate it when some guides forget to do this, but if you want to try this yourself, you **absolutely must** have the following or you won’t be able to do it:
 
 *   An **existing Mac** or **Hackintosh** to build the USB on.
@@ -26,9 +27,11 @@ I hate it when some guides forget to do this, but if you want to try this yourse
 If you can’t fufill these, then **stop now**. You’ll be wasting your time. If you want to see roughly how Hackintosh works or how my experience was, then please read on!
 
 ## :thinking: What Does and Does not Work?
+
 This is from my current setup. They might actually have working configs that I’ve yet to find. If you know any, please comment below!
 
 #### :heavy_check_mark: Does
+
 *   Screen (full graphics).
 *   Display brightness.
 *   Keyboard & trackpad.
@@ -38,6 +41,7 @@ This is from my current setup. They might actually have working configs that I�
 *   Speaker audio.
 
 #### :x: Does not
+
 *   Suspend.
 *   WiFi.
 *   Keyboard brightness controls.
@@ -45,6 +49,7 @@ This is from my current setup. They might actually have working configs that I�
 The L850 has a **Qualcomm Atheros AR9462**, which does not work in macOS. I happened to have both the Edimax and TP-Link USB wireless adapters, [which worked with Chris1111 drivers](https://github.com/chris1111/Wireless-USB-Adapter-Clover).
 
 ## :clock4: Changes from 2018
+
 Instead of relying on [TonyMac](http://www.tonymacx86.com) software, I’ve decided to attempt [Hackintosh Vanilla](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). To quote the website:
 
 > A vanilla setup implies that the OS itself remains relatively untouched – and that the bulk of the Hackintosh-related kexts, patches, etc are contained on the EFI partition. For all intents and purposes, a vanilla install’s main partition is _identical_ to that of an official Apple computer.
@@ -60,10 +65,13 @@ Other than the different approach, I had the following caveats:
 \*An important point I must raise here. I bought my mac from an eBay listing a few years back. One day I plugged it in and it literally **blew up**. Smoke came from the plug and I had a residual shock. I put the MacBook and the dead charger in a cupboard and forgot about it. Recently, I pried open the plug to find it was a fake (or a non-recall), and the fuse was bypassed. Please, **check your chargers**! I now have a plug in RCD when using eBay auction purchases, just in case…
 
 ## :woman_technologist: The Process
+
 ### Setting up a Bootable USB
+
 My trusty SanDisk Cruiser was still lying around, but I’d long since wiped it. So I wiped it without a moment’s consideration of the content (not recommended, of course) and prepped it for being a macOS conduit!
 
 #### Installer expires?!
+
 Now I keep an archive of macOS installers because… Well, I don’t really know why. Using my partner’s Mac I created a bootable macOS drive using an archived Mojave, only to find I got the error:
 
 > This copy of the Install macOS Mojave application is damaged, and can’t be used to install macOS
@@ -81,6 +89,7 @@ In my previous attempt I had a config.plist that worked wonders with my current 
 I ran the Clover Installer package, changed the location to my USB drive, and didn’t change a damn setting. Install, and (safely) yanked that newly primed Hackintosh stick out.
 
 ### UEFI/BIOS Changes
+
 This laptop comes with UEFI and legacy BIOS mode. Supposedly Clover works with both, but for my install I enabled **UEFI mode** and **disabled safe boot**. Saved changes and exited.
 
 Smashing F12 like the refresh button, My trusty Toshiba asked what to boot from. What else but the Macintosh conversion stick?!
@@ -94,6 +103,7 @@ Excluding the certificate expiry, the installation ran without a hitch. My netwo
 Storm through the install like a regular Mac. After a lot of waiting and reboots, you’ll be greeted with the Mac screen. Hooray, you’re done(ish)!
 
 ### :hammer_and_wrench: Getting Stuff Working
+
 Most things are working at this point, or at least the most important stuff. **Networking, sound, and laptop detection** are not.
 
 As a basepoint, I found this [config.plist from RehabMan](https://github.com/RehabMan/OS-X-Clover-Laptop-Config/blob/master/config_HD4000_1366x768.plist) worked well as a jumping point. I renamed the existing plist as ‘legacy.plist’ and used this file ([with a few modifications](https://gist.github.com/soup-bowl/2da067860a3a1d953e90f8832ff15d69)) as the main driver.
@@ -113,7 +123,10 @@ Great. With the above, your **keyboard, trackpad, audio, battery, brightness & w
 Native backlighting took some jiggling to get working. [RehabMan on TonyMac has a great guide](https://www.tonymacx86.com/threads/guide-laptop-backlight-control-using-applebacklightfixup-kext.218222/) to getting this working (I installed the kext into Clover, not MacOS).
 
 ## :thinking: The Verdict
+
+{:refdef: class="article-image"}
 ![](/assets/img/Screenshot-2020-04-25-at-11.43.50.png)
+{: refdef}
 
 I’ve actually been finding the performance on this base-spec (inc. original hard drive) runs really well on MacOS. There are slowdowns, and I have not tried gaming on this machine, but nothing more than I would expect from a **very old** machine. Plus Apple tends to care for their ageing old Intel machines really well, so I’m not _too_ surprised.
 
@@ -122,7 +135,10 @@ The lack of sound and wireless networking is troublesome though. I make do with 
 So, I’m gonna keep it!
 
 ## Catalina?
+
+{:refdef: class="article-image"}
 ![](/assets/img/Screenshot-2020-08-16-at-23.21.18-1.png)
+{: refdef}
 
 The upgrade to Catalina was a sucess! However, some changes were needed first.
 
@@ -133,6 +149,7 @@ I had to add an EC ACPI patch to allow the macOS Catalina installer to run past 
 After the installation of Catalina, my screen brightness controls stopped working. To remedy this, I installed [**WhateverGreen**](https://github.com/acidanthera/WhateverGreen) kext and enabled **SetIntelBacklight** and **SetIntelMaxBacklight** (Devices in Clover Configurator). **AddPNLF** might be needed from **ACPI** section.
 
 ## Big Sur and Beyond?
+
 Alas, I’ve hit a roadblock. Easy to blame Apple on this, but at this point not only is **Ivy Bridge nearly 10 years old**, but Apple are also moving to **ARM architecture**. Catalina was rocky enough!
 
 I’ve tried adjusting my Clover for support and simply facing constant kernel panic. At this point for other purposes I **reinstalled Windows for a year**, and it seems community progress has come a long way, so I will not give up just yet.
@@ -140,6 +157,7 @@ I’ve tried adjusting my Clover for support and simply facing constant kernel p
 Since the community has moved from **Clover** to **OpenCore**, I’ll be trying that off the bat to continue the progress of this Hackintosh. If all goes well, I’ll make a seperate post so watch this space.
 
 ## :robot: The Future
+
 With no dire need to use this laptop (the battery is **really** dead), I’m going to persist on trying to get Hackintosh to work as much as possible. It really does feel rewarding, and you never get tired of the shock some people have when they see your craptop suddenly boot MacOS.
 
 _Although they will question “**why not buy a real Mac**“_…

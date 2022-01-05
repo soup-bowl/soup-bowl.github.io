@@ -209,7 +209,9 @@ In the hopes of keeping the information up to date and relevant, the following c
 *   **John Wilkin** for pointing out I did not cover **web.config**.
 
 ## :information_source: FAQ
+
 ### **\* Did Microsoft drop support for PHP on Windows?**
+
 {:refdef: class="article-image"}
 ![](https://media3.giphy.com/media/SVgKToBLI6S6DUye1Y/giphy.gif)
 {: refdef}
@@ -221,6 +223,7 @@ Microsoft have stopped _compiling_ PHP for Windows past PHP 8, so technically **
 SaraMG provides the [missing context in this Reddit post](https://www.reddit.com/r/PHP/comments/ho9dgq/microsoft_not_going_to_officially_support_php_8/). This is well worth checking out, as the community have been providing alternative options you can use post-official builds. We will update this entry with some recommendations once PHP 8 is released.
 
 ### I received an error: 500 The FastCGI Processed exited unexpectedly.
+
 Each version of PHP for Windows depends on a **Visual C++ Redist** package, which is mentioned in the download title. Normally recieving this error means your system does not have the one it needs, causing the CGI process to error.
 
 In each download segment [on the downloads website](https://windows.php.net/download/), check for **VCXX** (X being numerical). The left-hand sidebar will tell you which redistributable package you need and how to obtain it. Once installed, this error will stop.
@@ -228,6 +231,7 @@ In each download segment [on the downloads website](https://windows.php.net/down
 If – for whatever reason – you are installing the **Legacy 5.6 releases**, download the **32-bit redistributable**, regardless of your server architecture type.
 
 ### I recieved an error: 500.21 Handler “xyz” has a bad module “FastCGIModule” in its module list.
+
 {:refdef: class="article-image"}
 ![](/assets/img/3-1-1024x721.png)
 {: refdef}
@@ -245,11 +249,13 @@ Next next next it through until you get to Roles. In **Web Server (IIS) > Web Se
 {: refdef}
 
 ### Pretty Permalinks, and .htaccess
+
 WordPress is smart enough to know it’s on IIS, so when you go to adjust permalinks instead of creating **.htaccess**, they will create a **web.config** file, which is the IIS equivalent. If you need additional rules the IIS rewrite module can attempt to parse your htaccess file in the IIS module.
 
 If you create a .htaccess file, **it will be ignored** – IIS rewrite can attempt to _convert_ these files, but not _use_ them.
 
 ### How do I disable xmlrpc via IIS?
+
 In my years of WordPress, this only recently popped up for me – people abusing the xmlrpc.php interface. There’s a range of options to deal with this in WordPress, but they all involve WordPress loading. I personally think it’s better to use IIS to block the interface instead.
 
 **Via web.config**
@@ -267,11 +273,13 @@ Locate the `<system.webServer>` block, and add this (normally at the bottom):
 Any **contoso.com/xmlrpc.php** request will now serve a request denied error, instead of passing through to the interface. This stops WordPress processing said requests, therefore stop wasting processing power on these bogus requests.
 
 ### Upload issues unique to IIS WordPress 5.6-5.8 Multisite?
+
 Between **WordPress 5.6 and 5.9** (the speculative fix date) there is a bug affecting multisites that [can cause media uploads to fail](https://wordpress.org/support/topic/iis-wordpress-5-6-multi-sites-file-upload-hang/). Since IIS isn’t an officially supported platform, the bug slipped past testing and has unfortunately been causing pain to IIS administrators.
 
 [The plugin block posted by Joseph Dickson](https://wordpress.org/support/topic/iis-wordpress-5-6-multi-sites-file-upload-hang/#post-14754922) should help to alleviate the issue if you are being impacted. From the Trac report, there is a community maintainer discussion ongoing about getting Windows/IIS included in the auto-tests, and getting the bug fixed for WordPress 5.9.
 
 ### How do I set permissions?
+
 The container will default to using the account **IUSR**, which won’t have access rights by default. For starting out, you could simply give **IUSR** full permissions to the folder, and your website will work. Updates will occur, cache will write, all gold.
 
 {:refdef: class="article-image"}
@@ -283,9 +291,11 @@ This sometimes does not work, in which an alternative you can do is change **Ano
 Both of these are **not recommended** for production use, as in the event of a compromise the hacker will have full write access. You can [check out the guide on permissions](https://wordpress.org/support/article/changing-file-permissions/) from WordPress, as the permission fundamentals are similar.
 
 ### How do I enable HTTP/2?
+
 **HTTP/2** is only supported in **IIS 10** or above, which requires **Windows Server 2016** or higher.
 
 ### How do I increase the runtime limits?
+
 In **PHP Manager**, on the container you wish to adjust, click on **Set runtime limits**. This will show the php.ini config options to quickly change these limits. For everyone else, you can find the limits within php.ini like always.
 
 If you wish to increase the **maximum execution time**, please note that both PHP and IIS track timeouts differently. As well as increasing this via either PHP Manager or php.ini, you will need to tell IIS too.
@@ -293,12 +303,15 @@ If you wish to increase the **maximum execution time**, please note that both PH
 Pop over to the root (underneath **Start Page** on the left panel in IIS). Open **FastCGI Settings**, and find the CGI you wish to modify. Click edit, and you should see two settings called **Activity Timeout** and **Request Timeout**. Set these both to whatever limit you want, and make sure all three (inc. PHP’s **max\_execution\_time**) match. Your timeout should now be sufficiently increased!
 
 ### Should I choose Windows over Linux for WordPress?
+
 **No**. Absolutely not.
 
 ### Can I hook WordPress into Microsoft SQL Server?
+
 [**Project Nami**](https://projectnami.org/) is a fork of WordPress that is designed to work with **Microsoft SQL Server** in place of **MySQL**. This team has replaced all MySQL functionality and added some beneficial functionality from SQL Server. This is well worth checking out!
 
 ### Can I run multiple versions of PHP?
+
 **Yes!** Arguably this is one of the only benefits of running PHP on IIS, you can run multiple PHP versions.
 
 When you are looking at the **Module Mappings** segment (either site or server-wide), there should be an option on the right-hand side column that says **View Ordered List…**. **The topmost version of PHP will be the chosen version**, so use this to your advantage to change which version your site operates with.

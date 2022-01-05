@@ -4,6 +4,7 @@ title:  "Raspberry Pi Gameboy and Mega Drive – My Retro Setup"
 author: Casey (Soupbowl)
 tags:   [Gadgets, Gaming, Raspberry Pi]
 ---
+
 **In my quest for all things retro, I discovered that the company I bought a Mega Drive Pi case from makes a really convincing Game Boy case.** I promise this isn’t sponsored.
 
 It’s no secret that [I have a love for retro](https://www.soupbowl.io/projects/revivetoday/), and I also have a love for Raspberry Pi. For ages I’ve always recommended setting up a [Raspberry Pi as the ideal retro machine](https://revive.today/diy/raspberry-pi/).

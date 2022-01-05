@@ -14,6 +14,7 @@ The aptly named [Visual Studio Online](https://visualstudio.microsoft.com/servic
 Visual Studio Online hooks up to a Azure cloud instance that will run a full copy of Visual Studio Code. Basically, the web version (basically a pseudo-copy) will stream all the changes back to this real copy. Woohoo, programming – Netflix style!
 
 ## But I’m too poor to afford Azure…
+
 Don’t worry, my financially-challenged friend. No regular human can afford Azure.
 
 You can install [Visual Studio Online plugin](https://marketplace.visualstudio.com/items?itemName=ms-vsonline.vsonline) on a computer of choice, and use that as your streamable programming buddy. This means you can use your home PC, a virtual machine, Raspberry Pi, just about anything that can run the latest version of Visual Studio Code.
@@ -21,6 +22,7 @@ You can install [Visual Studio Online plugin](https://marketplace.visualstudio.c
 To do this, you still need a Microsoft Azure account on a minimum subscription of pay-as-you-go. You don’t have to rent out any of their expensive packages, you just need the account to link your remote VSCode setup to.
 
 ## First Impressions
+
 Microsoft are keen to point out this is **insider quality**, and is not yet ready for production usage. This is also made obvious by the fact it is **not compatible with Firefox**. Likely this stems from the regular editor being built upon Electron.
 
 I tried this out by setting up an Ubuntu Hyper-V container, installing Visual Studio Code with Online, and hooking it up to my Azure account.

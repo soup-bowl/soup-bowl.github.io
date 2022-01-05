@@ -149,7 +149,9 @@ Once this is complete and you filled all the required details in, congratulation
 {: refdef}
 
 ## :question: What works?
+
 #### :heavy_check_mark: Does
+
 *   Screen (No 3D).
 *   Regular input methods (mouse sharing).
 *   Networking.
@@ -157,6 +159,7 @@ Once this is complete and you filled all the required details in, congratulation
 *   Mac App Store.
 
 #### :x: Does not
+
 *   Full graphics.
 *   Audio.
 *   Guest additions.

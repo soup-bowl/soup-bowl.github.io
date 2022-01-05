@@ -18,6 +18,7 @@ The developer behind Crankshaft – Huan Truong – is especially involved in hi
 _Author’s note – The project has since been moved into an organisation and has multiple developers now. [See their GitHub](https://github.com/opencardev/crankshaft)._
 
 ## The Equipment
+
 For what sounds like a rather large uptake, the resources needed for the project are small. Especially in my case, I am **not** intending to hook the system up to the CAMBUS, or splice any of the current electrical wiring for power. Luckily, the Kia Rio I own comes with two 12V ports in the front.
 
 *   Raspberry Pi 3.
@@ -32,6 +33,7 @@ Setting up the software was an absolute doddle. Simply [grab the IMG file from t
 Once I had set the software up and put together the screen and Pi in a case, it was time to whack it in the car!
 
 ## The Car
+
 ![](/assets/img/IMG_20180411_163056.jpg)
 
 Placed the unit on the dashboard, hooked up a Micro USB cable to the power from a 12V USB adapter, connect up my phone and job done – working Android Auto, basically.
@@ -39,6 +41,7 @@ Placed the unit on the dashboard, hooked up a Micro USB cable to the power from 
 I can best describe this as basically operating as a dumb dual screen. My phone remains connected to the stereo, so my steering wheel controls work the same way they did before. The USB connection streams over visuals to the Raspberry Pi, which then displays the Android Auto interface.
 
 ## Next Steps
+
 While the whole system works pretty well as it does now, it does come with some bugs to fix. There are some things I would like to change as part of the ongoing project. These include:
 
 *   Dedicated mic for OK Google.

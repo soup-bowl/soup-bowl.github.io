@@ -146,8 +146,12 @@ The performance is not great, and is not much different from the Virtualbox coun
 For powerful enough machines, this can be a great way to bridge the gap of requirements sometimes needed by Apple devices, such as the need for **xcode**, managing iPod devices with native iTunes, and even plundering hard drives that have been formatted with Apple-only partition formats.
 
 ## :bug: Troubleshooting
+
 ### Kernel Panic after updating VMware Player/Workstation.
+
+{:refdef: class="article-image"}
 ![The message "Your computer restarted because of a problem. Press a key or wait a few seconds to continue starting up" is shown with a background image of a power button.](/assets/img/kernelpanic.png)
+{: refdef}
 
 The message "Your computer restarted because of a problem. Press a key or wait a few seconds to continue starting up" is shown with a background image of a power button.Womp, womp.
 

@@ -22,11 +22,13 @@ I write this now on a Hackintosh **laptop**. This isn’t any old laptop however
 **Notice:** _Since 2020, my MacBook white exploded so I’ve returned to this, [which can be seen here](https://www.soupbowl.io/2020/04/toshiba-satellite-pro-l850-hackintosh-revisited/) (Hackintosh, not my laptop exploding)._
 
 ## Back Story
+
 I recently traded my trusty MacBook White mid-2010 for my girlfriend’s university laptop Toshiba Satellite Pro L850. Since leaving uni she no longer needed a laptop in general, and was happy to take a lower-spec Apple machine to compliment her iPhone. Receiving a much higher spec machine in return, we swapped. I immediately (no joke – first **two hours** of receiving it) turned it into a Linux machine, using Ubuntu and later, elementaryOS.
 
 I then wished to contribute to a Windows extension development, in which I needed Windows again for. eyeing up the old trusty Mac again, I realised I was in the best position to Hackintosh – pre-existing Mac and a machine that can be clean-wiped. And so it began.
 
 ## How?
+
 I would like to take this moment to say this would not be possible without the amazing community work that goes into it. I simply configured this laptop to use Hackintosh, the real developers and hard-workers can all be [found at the TonyMac86 community](https://www.tonymacx86.com). If you’re impressed by this, or tried it yourself, please direct all the praise to those amazing people.
 
 ### What Does & Doesn’t Work
@@ -56,6 +58,7 @@ Take this with a pinch of salt, as Apple never intended for you to install this.
 For most of the non-working elements, any USB peripherals claiming to be Mac-compliant _should_ work in their place. Your experience may differ.
 
 ### Quick Steps
+
 *   Enabled UEFI, but disabled secure boot in BIOS.
 *   Download the macOS High Sierra installer from the App Store, on the existing Mac.
 *   Download and run [Unibeast](https://www.tonymacx86.com/resources/unibeast-8-3-2.383/) (set for UEFI).
@@ -81,6 +84,7 @@ For most of the non-working elements, any USB peripherals claiming to be Mac-com
 Many, many, many steps to go through, but so long as everything is done correctly, this should be a completely rewarding experience afterwards.
 
 ## Required Kexts
+
 [Kexts](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KEXTConcept/KEXTConceptIntro/introduction.html) are basically driver packages used by macOS to understand what your various input devices are telling it. Without usable kexts, if macOS doesn’t know what a device does it will simply ignore it. There’s no Windows Update to grab them for you.
 
 Clover and Unibeast does a Hell of a job packaging all the essentials in to your USB key, but especially for this laptop there are some missing essentials. Most notably, the keyboard and trackpad won’t work, which can make things slightly problematic.
@@ -100,6 +104,7 @@ If you wish to install kexts to Clover, then [grab this utility](https://www.ton
 ![](https://www.soupbowl.io/wp-content/uploads/2018/08/Untitled.png)
 
 ## Boot via Hard Drive
+
 If you haven’t already got frustrated about needing to boot via USB, then your patience knows no bounds. However, you can set up Clover to reside on your main hard drive EFI partition rather than just the USB drive.
 
 Personally, if you can do so I would recommend either leaving the USB drive as it is or taking an image backup after successfully being able to boot via Hard Drive. The reason being is that you can use this memory stick as a rescue device, and boot your laptop again in case a faulty configuration or a software update kills the boot process.
@@ -113,6 +118,7 @@ Plug in your bootable USB Installer drive and use the EFI Mounter utility to mou
 So far, on each boot up I currently go into Config and change the config selection. There are ways to modify the main config to boot straight into macOS, however all my config file modifications ended in disaster, so I’ve kept it operating this way.
 
 ## Personal Verdict
+
 Hackintosh deserves a new name. While originally it was a small list of supported machines, today the amount of eligible machines is insane. As long as the system remains stable to use, then I would absolutely continue to use macOS as my primary.
 
 If you have a spare laptop and technical expertise, I would totally recommend trying it out. The experience is rewarding, and slightly baffling at the same time. Nothing is weirder than seeing the macOS login appear without the use of virtualization technology.

@@ -167,9 +167,7 @@ Looks awful, right? [Here’s a highighted gist version.](https://gist.github.co
 This is what this bad boy does:
 
 *   Creates a **MySQL Server**.
-
     *   Stored (persisted) in a folder called ‘database’ where your compose file is.
-
     *   The ‘command’ switches new MySQL back to the old auth type, supported by most PHP apps.
 *   Creates a **phpMyAdmin** access point.
     *   Web GUI accessible on port **8082**.

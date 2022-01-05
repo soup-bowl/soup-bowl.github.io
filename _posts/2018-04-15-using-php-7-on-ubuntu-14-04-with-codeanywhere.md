@@ -12,6 +12,7 @@ I do have a problem with it however, and it isn’t something you can fault them
 They _do_ have a PHP 7 container available if you go down the CentOS route, but I personally encountered dependency issues running their version. However your milage may vary, so if you are a fan of CentOS, you don’t need to continue.
 
 ## Container Creation and Update
+
 Once you’ve logged in to Codeanywhere, it will ask you what container you want to setup (otherwise, File > New Connection > Container). In this instance, we will select the Ubuntu 14.04 version of the PHP containers.
 
 ![Screenshot of Codeanywhere container screen showing PHP options](/assets/img/20180415-Capture.png)
@@ -29,6 +30,7 @@ In my scenario, it asks if you want to replace some pre-existing system configur
 Once finished, you’ll have an up-to-date container. We can now move up to PHP 7.
 
 ## Updating PHP 5.4 to PHP 7
+
 The current repositories for 14.04 do not use PHP 7, supporting 5.4 as the maximum. So we need to add a new repository to do this. Now, for some reason certain system functionality from base Linux have been removed, so we need to re-add these features. Use the following command:
 
 ```
@@ -71,6 +73,7 @@ sudo service apache2 restart
 Now you should be ready to develop using the latest version of PHP. With this repository, you should also receive the latest updates to PHP whenever you run the update command, so you should be good going forward!
 
 ## Checking PHP Version
+
 If you want to check which version of PHP you’re running, then you need to do it _twice_. PHP can often be used in command line as well as on a back-end server techonology like Apache or NGINX. It is possible for your Linux installation to use one version of PHP, and your web server application to use another.
 
 To check your _command line_ PHP version, simply run the following command:
@@ -88,6 +91,7 @@ To check the _Apache_ version of PHP, create a new PHP file in the root of your 
 Now browse to it in your browser (right click the container, and click run. Then, add /info.php at the end of the URL). It should give you a full dump of the server technology, with the version right at the top.
 
 ## Bonus – Quick WordPress Installation
+
 This will install WordPress to /wordpress directory of your cabox. Run this command first which will [set up the brilliant WP-CLI](https://wp-cli.org/) on your container.
 
 ```
