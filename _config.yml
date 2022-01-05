@@ -20,6 +20,9 @@ header_pages:
   - blog/index.html
   - guides.html
 
+disqus:
+  shortname: soup-bowl
+
 soupy:
   socials:
     twitter: https://twitter.com/TheAlmightyWord
