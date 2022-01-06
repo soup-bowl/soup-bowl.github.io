@@ -28,7 +28,7 @@ disqus:
   show_policy: true
 
 soupy:
-  css_version: 1
+  css_version: 2
   socials:
     twitter: https://twitter.com/TheAlmightyWord
     instagram: https://www.instagram.com/thealmightyword/
