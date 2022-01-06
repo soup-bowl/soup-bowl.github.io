@@ -3,7 +3,7 @@ layout: page
 title: Nutab
 ---
 
-![](/assets/img/0170219.png)
+![](/assets/img/0170219.webp)
 
 ## Description
 
@@ -13,7 +13,7 @@ Background photographs are sourced from the free and incredible [unSplash API](h
 
 ## Installation
 
-[![Available on the Chrome Store](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_340x96.png)](https://chrome.google.com/webstore/detail/nutab-new-tab-replacer/gakefcipoclekkcillingdakceienkkm)
+[![Available on the Chrome Store](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_340x96.webp)](https://chrome.google.com/webstore/detail/nutab-new-tab-replacer/gakefcipoclekkcillingdakceienkkm)
 
 The latest version release (0.1) is currently available (albeit hidden due to Alpha) in the Chrome store.
 

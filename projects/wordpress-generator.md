@@ -2,7 +2,7 @@
 layout: page
 title: WordPress Generator
 ---
-![](/assets/img/wpgen-scrot.png)
+![](/assets/img/wpgen-scrot.webp)
 
 **Quickly create WordPress setups for development and testing. [5 minute install be damned](https://wordpress.org/support/article/how-to-install-wordpress/), how’s 0?**
 

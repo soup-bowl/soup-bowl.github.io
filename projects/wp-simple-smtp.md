@@ -2,10 +2,10 @@
 layout: page
 title: WordPress Simple SMTP
 ---
-![](/assets/img/wpsmtp-scrot.png)
+![](/assets/img/wpsmtp-scrot.webp)
 
 {:refdef: class="article-image"}
-![](/assets/img/wp-ssmtp-150x150.png)
+![](/assets/img/wp-ssmtp-150x150.webp)
 {: refdef}
 
 **Configure your emails within WordPress. No mess, no ads.**

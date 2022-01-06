@@ -11,11 +11,11 @@ I was happy enough with my [red label i12]({% post_url 2019-03-26-cheap-tat-revi
 
 ### Pods & their case
 
-![AirPods case resting flat with the lid shut](/assets/img/IMG_0313-scaled-e1574032179639.jpg)
+![AirPods case resting flat with the lid shut](/assets/img/IMG_0313-scaled-e1574032179639.webp)
 
 Exactly the same as shape as the Apple ones, but a tiny bit smaller. Obviously a completely different colour. The exterior of the case is entirely matte black, except for the charger connector and hinge. While not metal, the hinge is coated in a reflective material to make it look metallic.
 
-![AirPods held slightly tilted with the case lid opened to expose the head of the pods](/assets/img/IMG_0314.jpg)
+![AirPods held slightly tilted with the case lid opened to expose the head of the pods](/assets/img/IMG_0314.webp)
 
 Case uses a genuine Apple lightning style connector. The case LED flashes red during the charging process, and goes solid red when fully charged.
 

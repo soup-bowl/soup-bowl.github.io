@@ -17,7 +17,7 @@ Welcome, **Wubiuefi**!
 
 ## What does WubiUEFI do?
 
-![](/assets/img/EO5kLfjU8AAHaui.png)
+![](/assets/img/EO5kLfjU8AAHaui.webp)
 
 WubiUEFI installs a **full Ubuntu flavour** into a **virtual hard drive**, stored on your Windows machine. It then instructs Windows to add an entry to your bootloader to boot up the installation on this virtual drive.
 
@@ -41,7 +41,7 @@ Probably one of the best things about a WubiUEFI installation, **yes!** Removing
 
 If you want to do the **reverse** however, you may be out of luck. While it’s possible, it’s an incredibly long-winded and risky approach. [It has be done before on older versions](https://askubuntu.com/a/36904), but your mileage may vary. A full manual installation would be recommended if you wish to move _away_ from Windows.
 
-![](/assets/img/Screenshot_20200122_205624-1024x576.png)
+![](/assets/img/Screenshot_20200122_205624-1024x576.webp)
 
 After some jiggery-pokery, my finished Wubi-installed Kubuntu.
 

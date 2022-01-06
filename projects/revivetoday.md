@@ -3,7 +3,7 @@ layout: page
 title: ReviveToday
 ---
 
-![](/assets/img/20191117_221226.jpg)
+![](/assets/img/20191117_221226.webp)
 
 generation console out and the previous gen console gets either sold or put in a cupboard and forgotten about. But they still have so much to give us yet!
 

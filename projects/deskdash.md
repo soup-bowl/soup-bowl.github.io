@@ -2,7 +2,7 @@
 layout: page
 title: Deskdash
 ---
-![](/assets/img/Screenshot_20210515_091230.png)
+![](/assets/img/Screenshot_20210515_091230.webp)
 
 **Computer and network information, always visible.**
 

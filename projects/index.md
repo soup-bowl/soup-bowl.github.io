@@ -4,19 +4,19 @@ title: Projects
 ---
 
 ## Main Contributions
-<div class="showy-banner" style="background-image:url(/assets/img/20191117_221226.jpg)">
+<div class="showy-banner" style="background-image:url(/assets/img/20191117_221226.webp)">
 	<p><a href="/projects/revivetoday">ReviveToday</a></p>
 </div>
 
-<div class="showy-banner" style="background-image:url(/assets/img/Screenshot_20210515_091230.png)">
+<div class="showy-banner" style="background-image:url(/assets/img/Screenshot_20210515_091230.webp)">
 	<p><a href="/projects/deskdash">Deskdash</a></p>
 </div>
 
-<div class="showy-banner" style="background-image:url(/assets/img/wpsmtp-scrot.png)">
+<div class="showy-banner" style="background-image:url(/assets/img/wpsmtp-scrot.webp)">
 	<p><a href="/projects/wp-simple-smtp">WP Simple SMTP</a></p>
 </div>
 
-<div class="showy-banner" style="background-image:url(/assets/img/wpgen-scrot.png)">
+<div class="showy-banner" style="background-image:url(/assets/img/wpgen-scrot.webp)">
 	<p><a href="/projects/wordpress-generator">WordPress Generator</a></p>
 </div>
 

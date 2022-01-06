@@ -15,7 +15,7 @@ I couldn’t resist, with some extreme case of lockdown boredom, I bought the **
 
 ## MEGAPi, The Mega Drive Case
 
-![](/assets/img/IMG_20200814_165945-Large-1024x952.jpeg)
+![](/assets/img/IMG_20200814_165945-Large-1024x952.webp)
 
 I am super impressed with the quality of this case. On the outside this looks very much like a genuine SEGA revival product! In goes my trusty Raspberry Pi 3.
 
@@ -31,7 +31,7 @@ But now I wanted portable (let’s just forget [the one I made earlier](https://
 
 ## Retroflag GPi, the Modern Gameboy I Always Wanted
 
-![](/assets/img/IMG-20200905-WA0014-edited-scaled.jpeg)
+![](/assets/img/IMG-20200905-WA0014-edited-scaled.webp)
 
 I simply cannot overstate how much I love the detail in this case. To make an absolute classic handheld into a form factor that closely resembles it, but also providing usable modern features, is a hellish a task.
 

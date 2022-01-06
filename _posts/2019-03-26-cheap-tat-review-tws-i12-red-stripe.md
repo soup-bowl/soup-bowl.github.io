@@ -9,7 +9,7 @@ find the concept of wireless apple earbuds really funny. Endless memes of how th
 
 For knock-offs, these tend to retail quite high at prices around £50-60. However, after browsing AliExpress for a bit I discovered a highly reputed listing for much lower (£25 when I ordered). For that price, I just couldn’t overlook it.
 
-![](/assets/img/IMG_20190321_163844-e1553621392445-1024x774.jpg)
+![](/assets/img/IMG_20190321_163844-e1553621392445-1024x774.webp)
 
 I ordered at the worst time (late January), when they’d shut for the lead-up to Chinese New year. They arrived Mid-March from China, so the wait was something strong. However, the wait was worth it considering the full prices on eBay.
 
@@ -17,7 +17,7 @@ I ordered at the worst time (late January), when they’d shut for the lead-up t
 
 ### Pod Case
 
-![Reverse of the i12 pod case, showing the metal pivot clasp](/assets/img/IMG_20190321_164034-e1553621259844-1024x837.jpg)
+![Reverse of the i12 pod case, showing the metal pivot clasp](/assets/img/IMG_20190321_164034-e1553621259844-1024x837.webp)
 
 The case is a close match to the original article. The give-aways for me is that the case lid does not shut flush, and there is no ‘Designed in California’ slogan written on the back. Other than those minor details, it’s a damn close match.
 
@@ -25,7 +25,7 @@ The case uses genuine Lightning to charge, so iPhone users will be in luck. If y
 
 ### Pods
 
-![](/assets/img/IMG_20190321_164054-1024x576.jpg)
+![](/assets/img/IMG_20190321_164054-1024x576.webp)
 
 The pods are close in design, however they are missing a black dot on the earpiece. This dot is largely obscured, but is apparently noticeable by Apple Aficionados.
 
@@ -54,7 +54,7 @@ They also support single-pod operation, much like a hands-free device. I haven�
 
 ## Conclusion
 
-![](/assets/img/IMG_20190321_164040-e1553621679379-1024x865.jpg)
+![](/assets/img/IMG_20190321_164040-e1553621679379-1024x865.webp)
 
 I can’t say this enough, **I love them!** As my first entry into cheap tech I find this to work fantastically. The audio quality leaves something to be desired, but for £25 what more can you ask for? Visually they’re extremely close, but Apple fanboys will be able to spot the differences.
 

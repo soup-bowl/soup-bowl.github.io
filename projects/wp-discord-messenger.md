@@ -4,7 +4,7 @@ title: Discord Messenger
 ---
 
 {:refdef: class="article-image"}
-![](/assets/img/wp-discord-150x150.png)
+![](/assets/img/wp-discord-150x150.webp)
 {: refdef}
 
 **Post your latest and greatest content straight to Discord.**

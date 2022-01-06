@@ -34,7 +34,7 @@ Once I had set the software up and put together the screen and Pi in a case, it 
 
 ## The Car
 
-![](/assets/img/IMG_20180411_163056.jpg)
+![](/assets/img/IMG_20180411_163056.webp)
 
 Placed the unit on the dashboard, hooked up a Micro USB cable to the power from a 12V USB adapter, connect up my phone and job done – working Android Auto, basically.
 

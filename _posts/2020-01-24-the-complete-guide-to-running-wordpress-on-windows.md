@@ -97,13 +97,13 @@ Create a Site as regular, and double-click on it. You should have an option in *
 :question: **No Web Platform Installer?** It’s not installed by default. Click your server name in the Connections left-hand panel. In the now-visible right-hand panel, click on **Get New Web Platform Components**. Follow the Microsoft instructions and you’ll have the aforementioned button.
 
 {:refdef: class="article-image"}
-![](/assets/img/1-1024x540.png)
+![](/assets/img/1-1024x540.webp)
 {: refdef}
 
 Now for configurations, you should generally always separate up your servers (e.g. web and database are separate). But sometimes, you just want a get going quickly on a development site. This installer has a neat trick. If you do not have a database server, and the current machine doesn’t have MySQL installed, **it will create a MySQL server instance for you**!
 
 {:refdef: class="article-image"}
-![](/assets/img/2.png)
+![](/assets/img/2.webp)
 {: refdef}
 
 If done correctly, you should be at this screen. It will by default try to create **localhost/wordpress**. Make sure you’ve got the right Web Site selected, and – if desired – the right subfolder configuration. If something is wrong, it will need to be changed manually afterwards.
@@ -111,7 +111,7 @@ If done correctly, you should be at this screen. It will by default try to creat
 Hit Continue, and go grab a coffee. When you return, **WordPress is installed**! Easy as that, you’ve got your first WordPress installation.
 
 {:refdef: class="article-image"}
-![](/assets/img/5-1024x721.png)
+![](/assets/img/5-1024x721.webp)
 {: refdef}
 
 For the technical information:
@@ -127,7 +127,7 @@ For the technical information:
 #### PHP Manager IIS Plugin – Intermediate
 
 {:refdef: class="article-image"}
-![](/assets/img/VirtualBox_windywoo_23_01_2020_22_13_53.png)
+![](/assets/img/VirtualBox_windywoo_23_01_2020_22_13_53.webp)
 {: refdef}
 
 There is a plugin for IIS called **[PHP Manager](https://www.iis.net/downloads/community/2018/05/php-manager-150-for-iis-10)**, which is able to do most of the heavy-lifting for you in configuring PHP. This will enable you to register new PHP versions, adjust plugins, edit configurations and even split containers to different IIS versions as simply as possible via GUI.
@@ -139,7 +139,7 @@ You can register a parent PHP version and it will affect all children sites. If 
 #### PHP Manually – Advanced
 
 {:refdef: class="article-image"}
-![](/assets/img/202001U2.png)
+![](/assets/img/202001U2.webp)
 {: refdef}
 
 If you opt not to go for IIS manager (not a fan of community IIS modules), then you can still go ahead configuring PHP manually to the IIS container.
@@ -233,7 +233,7 @@ If – for whatever reason – you are installing the **Legacy 5.6 releases**, d
 ### I recieved an error: 500.21 Handler “xyz” has a bad module “FastCGIModule” in its module list.
 
 {:refdef: class="article-image"}
-![](/assets/img/3-1-1024x721.png)
+![](/assets/img/3-1-1024x721.webp)
 {: refdef}
 
 When installing **Internet Information Services (IIS)**, PHP runs through **CGI**. This lets IIS pass the processing of non-Microsoft language code to it’s relevant processor. For us, it enables IIS to chuck .php code at PHP.
@@ -245,7 +245,7 @@ Open up **Server Manager**. At the top right, open up **Manage**, then **Add Rol
 Next next next it through until you get to Roles. In **Web Server (IIS) > Web Server > Application Development >** Check **CGI**. Click Install (or next until you can), and your IIS server should now support CGI, including FastCGI
 
 {:refdef: class="article-image"}
-![](/assets/img/4.png)
+![](/assets/img/4.webp)
 {: refdef}
 
 ### Pretty Permalinks, and .htaccess
@@ -283,7 +283,7 @@ Between **WordPress 5.6 and 5.9** (the speculative fix date) there is a bug affe
 The container will default to using the account **IUSR**, which won’t have access rights by default. For starting out, you could simply give **IUSR** full permissions to the folder, and your website will work. Updates will occur, cache will write, all gold.
 
 {:refdef: class="article-image"}
-![](/assets/img/202001U1.png)
+![](/assets/img/202001U1.webp)
 {: refdef}
 
 This sometimes does not work, in which an alternative you can do is change **Anonymous authentication** in **Authentication** on the container to Application Pool identity, and give **IUSRS** group full access.

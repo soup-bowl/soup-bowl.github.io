@@ -27,11 +27,11 @@ Microsoft are keen to point out this is **insider quality**, and is not yet read
 
 I tried this out by setting up an Ubuntu Hyper-V container, installing Visual Studio Code with Online, and hooking it up to my Azure account.
 
-![](/assets/img/Untitled-1024x768.png)
+![](/assets/img/Untitled-1024x768.webp)
 
 As far as what I tried, it works just as I would expect the desktop version to work. Extensions all appear to be the same, project and installation settings work (I assume client settings are per-browser, as it lost mine frequently), and the terminal works really well on the existing machine.
 
-![](/assets/img/2019-12-18-3-1024x645.png)
+![](/assets/img/2019-12-18-3-1024x645.webp)
 
 This works really well combined with **[Docker](https://www.docker.com/)** and **[ngrok](https://ngrok.com/)**, or with a forwarded port open via the home broadband router. All my extensions were compatible, and even Intellisense kept up well despite both a struggling VM and broadband.
 
