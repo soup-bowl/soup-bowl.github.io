@@ -55,6 +55,11 @@ h1, h2, h3, h4, strong {
 	font-weight: 700;
 }
 
+hr {
+	margin: 25px 0 25px 0;
+	border-color: $grey-color-dark;
+}
+
 pre, code,
 .highlighter-rouge .highlight,
 .highlight .err {
@@ -257,6 +262,9 @@ pre, code,
 	display: inline-block;
 	text-align: center;
 	font-weight: 700;
+	border: none;
+	font-size: $base-font-size;
+	cursor: pointer;
 
 	a {
 		color: $background-color;
