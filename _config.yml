@@ -20,6 +20,9 @@ header_pages:
   - blog/index.html
   - guides.html
 
+sass:
+  style: compressed
+
 disqus:
   shortname: soup-bowl
 
