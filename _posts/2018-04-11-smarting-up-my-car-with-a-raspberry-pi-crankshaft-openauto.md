@@ -26,7 +26,9 @@ For what sounds like a rather large uptake, the resources needed for the project
 *   Official 7″ Touch screen.
 *   SmartPi enclosure.
 
-![](/assets/img/IMG_20180410_084557.jpg)
+{:refdef: class="article-image"}
+![](/assets/img/IMG_20180410_084557.webp)
+{: refdef}
 
 Setting up the software was an absolute doddle. Simply [grab the IMG file from the Crankshaft website](http://getcrankshaft.com/), and install it to your Raspberry Pi’s MicroSD card (I recommend using [Etcher](https://etcher.io/)). Configuration files are kept in the FAT partition, so if you need to change settings you can do so easily.
 
@@ -34,7 +36,9 @@ Once I had set the software up and put together the screen and Pi in a case, it 
 
 ## The Car
 
+{:refdef: class="article-image"}
 ![](/assets/img/IMG_20180411_163056.webp)
+{: refdef}
 
 Placed the unit on the dashboard, hooked up a Micro USB cable to the power from a 12V USB adapter, connect up my phone and job done – working Android Auto, basically.
 

@@ -3,7 +3,9 @@ layout: page
 title: Chromeboard
 ---
 
-![](/assets/img/79EK6Hx.gif)
+{:refdef: class="article-image"}
+![](/assets/img/79EK6Hx.webp)
+{: refdef}
 
 Using a dedicated extension page, the extension will cycle user-selected websites continuously. Intended for wallboards that cycle through pages on display.
 

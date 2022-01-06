@@ -3,7 +3,9 @@ layout: page
 title: Nutab
 ---
 
+{:refdef: class="article-image"}
 ![](/assets/img/0170219.webp)
+{: refdef}
 
 ## Description
 
@@ -37,6 +39,6 @@ To change the bookmark bar layout, open up the bookmark manager (ctrl-shift-o) a
 
 ---
 
-[Source code](https://gitlab.com/soup-bowl/nutab)
+[Source code](https://github.com/soup-bowl/nutab)
 
 :arrow_left: _Back to [projects]({% link projects/index.md %})_.
