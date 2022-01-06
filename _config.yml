@@ -25,6 +25,7 @@ sass:
 
 disqus:
   shortname: soup-bowl
+  show_policy: true
 
 soupy:
   css_version: 1

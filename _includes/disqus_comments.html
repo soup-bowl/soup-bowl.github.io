@@ -4,6 +4,9 @@
 
 	<div id="load_disqus" class="aligncentre">
 		<button class="button" onclick="load_comments()">Load Discussion (Disqus)</button>
+		{%- if site.disqus.show_policy == true -%}
+		<p>By clicking on this button you are agreeing to the <a href="https://help.disqus.com/en/articles/1717103-disqus-privacy-policy">Disqus privacy policy</a>.</p>
+		{%- endif -%}
 	</div>
 
 	<div id="disqus_thread"></div>
