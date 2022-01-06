@@ -27,6 +27,7 @@ disqus:
   shortname: soup-bowl
 
 soupy:
+  css_version: 1
   socials:
     twitter: https://twitter.com/TheAlmightyWord
     instagram: https://www.instagram.com/thealmightyword/
