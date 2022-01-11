@@ -19,6 +19,8 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   #gem "jekyll-remote-theme"
   gem "jemoji"
+  # And (always) last, the sitemap.
+  gem "jekyll-sitemap"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
