@@ -6,7 +6,7 @@ description: >-
   Personal blog for Casey - a back-end developer specialising in PHP, primarily for WordPress developments.
   Primarily a source of niche setup guides, cool Raspberry Pi builds, and general ranting.
 baseurl: ""
-url: "https://www.soupbowl.io"
+url: "https://soupbowl.io"
 footnote: Hello from London.
 permalink: /:year/:month/:title:output_ext
 
