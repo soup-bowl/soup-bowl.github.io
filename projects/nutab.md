@@ -3,9 +3,8 @@ layout: page
 title: Nutab
 ---
 
-{:refdef: class="article-image"}
 ![](/assets/img/0170219.webp)
-{: refdef}
+{: .article-image}
 
 ## Description
 

@@ -74,17 +74,15 @@ Virtualbox has the option for a MacOS virtual machine in it’s New VM dialog, b
 
 Pop open Virtualbox, and Create a new Virtual Machine. Name this **MacOS Mojave**, and set it to **Mac OS X (64-bit)**.
 
-{:refdef: class="article-image"}
 ![Screenshot of the 'Create Virtual Machine' dialog from Virtualbox. In the screenshot, 'name' is set to 'MacOS Mojave', 'Type' is set to 'Mac OS X' and 'Version' is set to 'Mac OS X (64-bit)'.](/assets/img/Screenshot-from-2020-04-25-02-57-54.webp)
-{: refdef}
+{: .article-image}
 
 Set the **RAM** to **4096 MB** (or higher if you can achieve it!).
 
 When creating the disk, you can use either format versions. **Dynamic** will not immediately take up the storage size you chose, whereas **Static** immediately reserves the chosen size for the VM. The latter is slightly better for performance.
 
-{:refdef: class="article-image"}
 ![Screenshot of the 'Create Virtual Hard Disk' dialog, with 40 gigabytes set to the storage size.](/assets/img/Screenshot-from-2020-04-25-02-58-52.webp)
-{: refdef}
+{: .article-image}
 
 Now you should have a new, primed MacOS machine. But you will need to run some commands now. **This can be hit-and-miss**, and may require some Google-fu. The following works for my **AMD FX** computer:
 
@@ -120,9 +118,8 @@ With all that done, we’re ready to start the VM!
 
 You should be greeted with the following screen:
 
-{:refdef: class="article-image"}
 ![The 'Select start-up disk' dialog is shown, with the default 'host drive' currently selected.](/assets/img/Screenshot-from-2020-04-25-03-13-47.webp)
-{: refdef}
+{: .article-image}
 
 Click on the folder icon, and find your ISO created on the Mac before, then click Start.
 
@@ -132,21 +129,18 @@ If all has gone well, you should be greeted by the MacOS installer language sele
 
 There should be a disk named **VBOX HARDDISK** or similar. This is the VDI you created during the setup process, and not your actual hard drive. So go ahead and full-erase this disk, with **Mac OS Extended (Journaled)** and **GUID Partition Map**.
 
-{:refdef: class="article-image"}
 ![A screenshot of Disk utility on MacOS, intending to erase VBOX HARDDISK Media. The Name is set to Untitled, Format set to Mac OS Extended (Journaled), and scheme set to GUID Partition Map.](/assets/img/Screenshot-2020-04-25-at-03.45.51-1024x673.webp)
-{: refdef}
+{: .article-image}
 
 Once the disk formatting has completed, close it down. You should now be able to start the installation!
 
-{:refdef: class="article-image"}
 ![](/assets/img/Screenshot-from-2020-04-21-16-01-47-1024x831.webp)
-{: refdef}
+{: .article-image}
 
 Once this is complete and you filled all the required details in, congratulations! You’re running MacOS Mojave within Virtualbox!
 
-{:refdef: class="article-image"}
 ![](/assets/img/Screenshot-from-2020-04-21-17-50-11-1024x831.webp)
-{: refdef}
+{: .article-image}
 
 ## :question: What works?
 
@@ -181,9 +175,8 @@ This required **a lot of Googling**, and these are the people who saved me at th
 
 ### You get Guru Meditation, “A critical error has occurred while running the virtual machine and the machine execution has been stopped” when machine gets to RandomSeed.
 
-{:refdef: class="article-image"}
 ![](/assets/img/Annotation-2020-05-22-183438-2.webp)
-{: refdef}
+{: .article-image}
 
 This is a difficult one, and will require investigation. I checked the logs as the error message said, and discovered:
 

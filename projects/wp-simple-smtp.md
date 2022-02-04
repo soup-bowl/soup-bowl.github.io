@@ -4,9 +4,8 @@ title: WordPress Simple SMTP
 ---
 ![](/assets/img/wpsmtp-scrot.webp)
 
-{:refdef: class="article-image"}
 ![](/assets/img/wp-ssmtp-150x150.webp)
-{: refdef}
+{: .article-image}
 
 **Configure your emails within WordPress. No mess, no ads.**
 

@@ -124,9 +124,8 @@ Native backlighting took some jiggling to get working. [RehabMan on TonyMac has 
 
 ## :thinking: The Verdict
 
-{:refdef: class="article-image"}
 ![](/assets/img/Screenshot-2020-04-25-at-11.43.50.webp)
-{: refdef}
+{: .article-image}
 
 I’ve actually been finding the performance on this base-spec (inc. original hard drive) runs really well on MacOS. There are slowdowns, and I have not tried gaming on this machine, but nothing more than I would expect from a **very old** machine. Plus Apple tends to care for their ageing old Intel machines really well, so I’m not _too_ surprised.
 
@@ -136,9 +135,8 @@ So, I’m gonna keep it!
 
 ## Catalina?
 
-{:refdef: class="article-image"}
 ![](/assets/img/Screenshot-2020-08-16-at-23.21.18-1.webp)
-{: refdef}
+{: .article-image}
 
 The upgrade to Catalina was a sucess! However, some changes were needed first.
 

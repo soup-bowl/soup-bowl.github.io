@@ -3,9 +3,8 @@ layout: page
 title: WordPress OpenSimulator Bridge
 ---
 
-{:refdef: class="article-image"}
 ![](/assets/img/wp-os-150x150.webp)
-{: refdef}
+{: .article-image}
 
 **Did you ever want to link your WordPress account to your standalone OpenSimulator account? No? Oh… Well, you can now.**
 

@@ -7,9 +7,8 @@ tags:   [Development, Guides]
 
 **Just about to install LAMP, XAMPP, or MAMP? Stop. Right. Now.** Docker’s gotchu, fam.
 
-{:refdef: class="article-image"}
 ![](https://media0.giphy.com/media/lRmjNrQZkKVuE/giphy.gif)
-{: refdef}
+{: .article-image}
 
 LAMP stacks are great. They are an absolute fundamental to development, unless you enjoy the thrill of writing your code on your production environments.
 
@@ -33,9 +32,8 @@ Oh no, you got a cryptolocker virus! You backed up your code like a good human, 
 
 You spend some time to install your chosen LAMP stack again… Wait, why isn’t it working…
 
-{:refdef: class="article-image"}
 ![](https://media1.giphy.com/media/heIX5HfWgEYlW/giphy.gif)
-{: refdef}
+{: .article-image}
 
 Here’s a joyful problem – differences in environment. This can be painful when sharing code, as your great new changes are broken on someone else’s machine. There could be a whole range of causes; The LAMP build you now have has a tiny build problem, Dave gave you a corrupted font file, or you didn’t realise you’re using PHP 5 instead of PHP 7.
 

@@ -110,9 +110,8 @@ You will now boot up to see the vmware logo, then an Apple logo that pops up wit
 
 If all goes well, you’ll be greeted (after a _long wait_) with a the macOS reinstallation screen. Hooray! First things first, pop open **Utilities > Disk Utility** and full-erase and format the VMware empty disk with **Apple Filesystem (APFS)** or **Mac OS Extended**.
 
-{:refdef: class="article-image"}
 ![](/assets/img/Screenshot-2021-04-11-at-01.05.59-1024x673.webp)
-{: refdef}
+{: .article-image}
 
 Once done, you can now click on the **(re)install macOS Mojave** option. It will then ask for your drive that you formatted earlier, and then run the installer. You’ll probably need another drink at this point.
 
@@ -120,9 +119,8 @@ After a million hours, a few questions for initialisation, potentially a fruitle
 
 ## :question: What works?
 
-{:refdef: class="article-image"}
 ![](/assets/img/Screenshot_20210410_170530-1024x872.webp)
-{: refdef}
+{: .article-image}
 
 #### :heavy_check_mark: Does
 
@@ -149,9 +147,8 @@ For powerful enough machines, this can be a great way to bridge the gap of requi
 
 ### Kernel Panic after updating VMware Player/Workstation.
 
-{:refdef: class="article-image"}
 ![The message "Your computer restarted because of a problem. Press a key or wait a few seconds to continue starting up" is shown with a background image of a power button.](/assets/img/kernelpanic.webp)
-{: refdef}
+{: .article-image}
 
 The message "Your computer restarted because of a problem. Press a key or wait a few seconds to continue starting up" is shown with a background image of a power button.Womp, womp.
 
