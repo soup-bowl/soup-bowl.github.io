@@ -56,7 +56,7 @@ For one of my projects - **WordPress Simple SMTP** - I had configured GitPod to 
 
 (If you want to see this script, [you can find it here](https://github.com/soup-bowl/wp-simple-smtp/blob/main/.gitpod.yml)).
 
-So far I've also tried GitPod with [Laravel][tr-l], an [SSO project with WordPress & MediaWiki][tr-mw], a [Jekyll theme][tr-jt], and a whole bunch of other private repository codebases. In fact, this website (currently closed source but runs on Jekyll) is built on GitPod! Once [ReviveToday](https://revive.today) is opened-up the GitPod configuration will be visible.
+So far I've also tried GitPod with [Laravel][tr-l], an [SSO project with WordPress & MediaWiki][tr-mw], a [Jekyll theme][tr-jt], and a whole bunch of other private repository codebases. In fact, this website (currently closed source but runs on Jekyll) was edited on GitPod! Once [ReviveToday](https://revive.today) is opened-up the GitPod configuration will be visible.
 
 ## Cost & Conclusion
 
