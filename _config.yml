@@ -11,7 +11,7 @@ footnote: Hello from London.
 permalink: /:year/:month/:title:output_ext
 
 include: ['_redirects']
-exclude: ['.github', 'README.md', 'LICENSE', 'docker-compose.yml', 'Gemfile.lock', 'Gemfile']
+exclude: ['.github', '.vscode', 'README.md', 'LICENSE', 'docker-compose.yml', 'Gemfile.lock', 'Gemfile']
 
 theme: minima
 minima:
