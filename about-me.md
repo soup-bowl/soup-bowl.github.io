@@ -8,17 +8,9 @@ permalink: /me/
 
 ## :computer: Speciality
 ### Web Development
-My language of choice is **PHP** for the past **4 years**. I have learned the art through an apprenticeship with the *Building Research Establishment* since I was 19. The team was a mixed bag of different development styles, so I know how to code by the book, quickly in an emergency, how to test and debug other peoples’ work, and how to quickly grasp and maintain legacy code.
+My front-end library of choice is **React**, and my back-end language of choice is **C#** and **Python** (replaced **PHP** in 2022). I have learned the art of programming since the age of 19 when I started as an apprentice. My experiences in the field since mean I know how to code by the book, quickly in an emergency, how to test and debug other peoples’ work, and how to quickly grasp and maintain legacy code.
 
 **WordPress** is my speciality CMS. The sheer flexibility of WordPress is my favourite aspect, and always leaves me [trying to push it to the extremes]({% link projects/kebabble.md %}). I am experienced at hook/filter development and minor theme-related developments, and regularly attend WordPress Meetups to share knowledge with the wider community.
-
-The tools of my PHP trade are:
-* Composer.
-* Phpunit.
-* Codesniffer (WordPress Coding Standards).
-* WP-CLI (also built CLI extensions).
-
-I am also currently teaching myself **Java** and **Python**, having learned **C#** during my apprenticeship. I am fond of cross-platform interoperability which put me off continuing with C#. It’s no longer the case with .NET Core, but Java has won me over.
 
 ### Databases
 Due to my work with WordPress my database experience is both **MySQL** and **MariaDB**, however I am also experienced with **Microsoft SQL** due to a large portion of systems I have dealt with being Windows-based.
