@@ -3,7 +3,7 @@
 ![image][h]
 
 ![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fsoupbowl.io)
-[![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fsoupbowl.io)](https://securityheaders.com/)
+[![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fsoupbowl.io)](https://securityheaders.com/?q=soupbowl.io&followRedirects=on)
 [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade-score/soupbowl.io?publish)](https://observatory.mozilla.org/analyze/soupbowl.io)
 
 The main **[soupbowl.io][s]** website, but in automatic build-and-deploy [Jekyll][j] flavour.
