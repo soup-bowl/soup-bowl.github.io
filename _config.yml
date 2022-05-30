@@ -8,7 +8,7 @@ description: >-
 baseurl: ""
 url: "https://soupbowl.io"
 footnote: Hello from London.
-permalink: /:year/:month/:title:output_ext
+permalink: /:year/:month/:title
 
 include: ['_redirects']
 exclude: ['.github', '.vscode', 'README.md', 'LICENSE', 'docker-compose.yml', 'Gemfile.lock', 'Gemfile']
