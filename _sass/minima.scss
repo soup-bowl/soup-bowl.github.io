@@ -141,6 +141,11 @@ pre, code,
 .site-footer {
 	font-weight: 500;
 
+	.copyright {
+		color: $text-color;
+		font-weight: 700;
+	}
+
 	.footer-col-1, .footer-col-2 {
 		width: -webkit-calc(50% - (#{$spacing-unit} / 2));
 		width:         calc(50% - (#{$spacing-unit} / 2));

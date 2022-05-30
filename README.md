@@ -9,17 +9,11 @@
 
 The main **[soupbowl.io][s]** website, but in automatic build-and-deploy [Jekyll][j] flavour.
 
-This site is currently hosted using **[Cloudflare Pages][c]**.
+**This is a personal blog - Pull Requests will not be accepted.** This site is currently hosted using **[GitHub Pages][c]**.
 
 ## 🧪 Compiling with Jekyll
 
 Installation of Ruby, Gem, Jekyll, etc is **not necessary**, as the **Docker Compose** script included with the repository will run the process for you. Upon running `docker-compose up`, the `_site` directory will be created and re-populated upon each edit.
-
-## Cloudflare Pages Setup
-
-Custom changes for CloudFlare support:
-
-* `_redirects` file for setting up [Pages-syntax redirections][cr].
 
 ## NGINX Configuration
 
