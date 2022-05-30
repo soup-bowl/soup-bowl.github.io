@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '.github/**'
+      - '.vscode/**'
+      - '.gitignore'
+      - '.gitpod.yml'
+      - 'LICENSE'
+      - 'README.md'
+      - 'docker-compose.yml'
 
 jobs:
   github-pages:
