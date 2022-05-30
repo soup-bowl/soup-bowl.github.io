@@ -10,7 +10,7 @@
 
 The main **[soupbowl.io][s]** website, but in automatic build-and-deploy [Jekyll][j] flavour.
 
-**This is a personal blog - Pull Requests will not be accepted.** This site is currently hosted using **[GitHub Pages][c]**.
+**This is a personal blog - Pull Requests will not be accepted.** This site is currently hosted using **[GitHub Pages][gh]**.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/soup-bowl/soupbowl.io)
 
@@ -55,6 +55,5 @@ server {
 
 [h]:  https://user-images.githubusercontent.com/11209477/147856239-c7eb65c9-ba89-44fa-bf32-1e68568dc48b.png
 [s]:  https://www.soupbowl.io
-[c]:  https://developers.cloudflare.com/pages
-[cr]: https://developers.cloudflare.com/pages/platform/redirects
+[gh]: https://docs.github.com/en/pages
 [j]:  https://jekyllrb.com/
