@@ -12,6 +12,8 @@ The main **[soupbowl.io][s]** website, but in automatic build-and-deploy [Jekyll
 
 **This is a personal blog - Pull Requests will not be accepted.** This site is currently hosted using **[GitHub Pages][c]**.
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/soup-bowl/soupbowl.io)
+
 ## 🧪 Compiling with Jekyll
 
 Installation of Ruby, Gem, Jekyll, etc is **not necessary**, as the **Docker Compose** script included with the repository will run the process for you. Upon running `docker-compose up`, the `_site` directory will be created and re-populated upon each edit.
