@@ -5,8 +5,6 @@
 [![License CC BY-SA](https://img.shields.io/github/license/soup-bowl/soupbowl.io)](http://creativecommons.org/licenses/by-sa/4.0/)
 ![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fsoupbowl.io)
 [![CodeFactor](https://www.codefactor.io/repository/github/soup-bowl/soupbowl.io/badge)](https://www.codefactor.io/repository/github/soup-bowl/soupbowl.io)
-[![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fsoupbowl.io)](https://securityheaders.com/?q=soupbowl.io&followRedirects=on)
-[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade-score/soupbowl.io?publish)](https://observatory.mozilla.org/analyze/soupbowl.io)
 
 The main **[soupbowl.io][s]** website, but in automatic build-and-deploy [Jekyll][j] flavour.
 
