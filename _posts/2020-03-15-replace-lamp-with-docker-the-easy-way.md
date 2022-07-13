@@ -60,18 +60,18 @@ Here’s a script, **docker-compose.yml** –
 ```yml
 version: '3.6'
 services:
-	db:
-	image: mysql:latest
-	environment:
-		MYSQL_ROOT_PASSWORD: password
-	www:
-	depends_on:
-	- db
-	image: php:apache
-	volumes:
-	- "./www:/var/www/html"
-	ports:
-	- 8080:80
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+  www:
+    depends_on:
+    - db
+    image: php:apache
+    volumes:
+    - "./www:/var/www/html"
+    ports:
+    - 8080:80
 ```
 
 Now what does this do?
@@ -100,6 +100,10 @@ services:
     image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: password
+  mail:
+    image: mailhog/mailhog:latest
+    ports:
+    - 8081:8025
   www:
     depends_on:
     - db
@@ -108,11 +112,6 @@ services:
     - "./www:/var/www/html"
     ports:
     - 8080:80
-  mail:
-mail:
-    image: mailhog/mailhog:latest
-    ports:
-    - 8081:8025
 ```
 
 Simple! Using [Mailhog](https://hub.docker.com/r/mailhog/mailhog)‘s Dockerhub container, we now have a great development catch-all email server. We can access the GUI via http://localhost:8081, and configure the application to send email to hostname **mail** on port **1025**.
@@ -128,36 +127,36 @@ Okay okay, enough with the lecturing. Here’s a full LAMP stack I whipped up ea
 ```yaml
 version: '3.6'
 services:
-	db:
-	image: mysql:latest
-	command: --default-authentication-plugin=mysql_native_password
-	environment:
-		MYSQL_ROOT_PASSWORD: e9w86036f78sd9
-	volumes:
-	- "./database:/var/lib/mysql"
-	db_pma:
-	image: phpmyadmin/phpmyadmin:latest
-	depends_on:
-	- db
-	ports:
-	- 8082:80
-	environment:
-		MYSQL_ROOT_PASSWORD: e9w86036f78sd9
-		PMA_USER: root
-		PMA_PASSWORD: e9w86036f78sd9
-	mail:
-	image: mailhog/mailhog:latest
-	ports:
-	- 8081:8025
-	www:
-	depends_on:
-	- db
-	- mail
-	image: php:apache
-	volumes:
-	- "./www:/var/www/html"
-	ports:
-	- 8080:80
+  db:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: e9w86036f78sd9
+    volumes:
+    - "./database:/var/lib/mysql"
+  db_pma:
+    image: phpmyadmin/phpmyadmin:latest
+    depends_on:
+    - db
+    ports:
+    - 8082:80
+    environment:
+      MYSQL_ROOT_PASSWORD: e9w86036f78sd9
+      PMA_USER: root
+      PMA_PASSWORD: e9w86036f78sd9
+  mail:
+    image: mailhog/mailhog:latest
+    ports:
+    - 8081:8025
+  www:
+    depends_on:
+    - db
+    - mail
+    image: php:apache
+    volumes:
+    - "./www:/var/www/html"
+    ports:
+    - 8080:80
 ```
 
 Looks awful, right? [Here’s a highighted gist version.](https://gist.github.com/soup-bowl/f3880a446ea27f2088b4243d3e8f2c65)
