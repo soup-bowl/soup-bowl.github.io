@@ -72,6 +72,10 @@ h1, h2, h3, h4 {
 	}
 }
 
+h1:not(.post-featured-title), .header-pop {
+	filter: drop-shadow(4px 4px 0px $alternate-color-dark);
+}
+
 /*strong {
 	font-family: $header-font-family;
 }*/
