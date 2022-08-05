@@ -4,3 +4,8 @@ tasks:
       docker-compose pull
     command: |
       docker-compose up
+
+ports:
+  - port: 4000
+    name: Jekyll
+    description: Jekyll autobuild instance.
