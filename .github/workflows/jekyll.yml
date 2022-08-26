@@ -13,18 +13,31 @@ on:
       - 'LICENSE'
       - 'README.md'
       - 'docker-compose.yml'
+  workflow_dispatch:
 
 jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - name: Cache Build Resources
+        uses: actions/cache@v2
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      - uses: helaili/jekyll-action@2.3.1
+      - name: Compile Site
+        uses: helaili/jekyll-action@2.3.1
         with:
+          target_path: out
+          build_only: true
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy Site
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          projectName: soupbowl
+          directory: out
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
