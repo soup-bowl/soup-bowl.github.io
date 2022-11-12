@@ -26,5 +26,6 @@ Kebabble now integrates with the Slackbot API, so you can communicate with it vi
 [![](https://api.travis-ci.org/soup-bowl/kebabble.svg?branch=master)](https://travis-ci.org/github/soup-bowl/kebabble)
 
 :arrow_left: _Back to [projects]({% link projects/index.md %})_.
+{: .aligncentre}
 
 [![This project is licensed under the MIT license, some rights reserved](https://www.soupbowl.io/wp-content/uploads/2018/04/mit-license-300x106.webp)](https://github.com/soup-bowl/kebabble/blob/master/LICENSE)

@@ -3,7 +3,8 @@ layout: page
 title: ReviveToday
 ---
 
-![](/assets/img/20191117_221226.webp)
+![](/assets/img/devices-revivetoday.webp)
+{: .article-image}
 
 generation console out and the previous gen console gets either sold or put in a cupboard and forgotten about. But they still have so much to give us yet!
 
@@ -12,3 +13,4 @@ ReviveToday is a website designed to give guides, feedback and developments that
 <div class="aligncentre"><p class="button"><a href="https://revive.today">ReviveToday</a></p></div>
 
 :arrow_left: _Back to [projects]({% link projects/index.md %})_.
+{: .aligncentre}

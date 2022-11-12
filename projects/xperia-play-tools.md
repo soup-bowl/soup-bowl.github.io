@@ -22,3 +22,4 @@ Check out the GitHub page to find out more about this project, and how you can t
 <div class="aligncentre"><p class="button"><a href="https://github.com/soup-bowl/XperiaPlay-Tools">GitHub</a></p></div>
 
 :arrow_left: _Back to [projects]({% link projects/index.md %})_.
+{: .aligncentre}

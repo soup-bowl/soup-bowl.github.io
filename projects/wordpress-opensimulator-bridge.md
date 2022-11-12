@@ -32,3 +32,4 @@ Give it a shot now!
 </div>
 
 :arrow_left: _Back to [projects]({% link projects/index.md %})_.
+{: .aligncentre}

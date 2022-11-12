@@ -2,7 +2,9 @@
 layout: page
 title: What's This?
 ---
-![](/assets/img/project-whatsthis.webp)
+
+![](/assets/img/devices-whatsthis.webp)
+{: .article-image}
 
 **Quickly check what technology a website is using.**
 
@@ -25,3 +27,4 @@ This project consists of two parts:
 </div>
 
 :arrow_left: _Back to [projects]({% link projects/index.md %})_.
+{: .aligncentre}
