@@ -116,7 +116,7 @@ interface CardProps {
 
 export const Social = ({ url, icon, color, onClick, children }: CardProps) => {
 	return (
-		<SocialSet href={url} target="_blank" color={color} onClick={onClick}>
+		<SocialSet rel="me" href={url} target="_blank" color={color} onClick={onClick}>
 			<Icon datatype="icon">
 				<FontAwesomeIcon icon={icon} />
 			</Icon>
