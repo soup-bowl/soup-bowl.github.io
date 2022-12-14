@@ -21,6 +21,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,7 +34,7 @@ jobs:
           cache: 'npm'
       
       - name: Build
-        run: npm run build
+        run: npm ci && npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
