@@ -23,6 +23,9 @@ export const SocialPanel = styled.div({
 				fontSize: "3rem"
 			}
 		}
+	},
+	'@media only screen and (max-width: 400px)': {
+		gridTemplateColumns: "auto"
 	}
 });
 
@@ -107,12 +110,13 @@ interface CardProps {
 	url: string;
 	icon: IconDefinition;
 	color: string;
+	onClick?: (e:any) => void;
 	children: ReactNode;
 }
 
-export const Social = ({ url, icon, color, children }: CardProps) => {
+export const Social = ({ url, icon, color, onClick, children }: CardProps) => {
 	return (
-		<SocialSet href={url} target="_blank" color={color}>
+		<SocialSet href={url} target="_blank" color={color} onClick={onClick}>
 			<Icon datatype="icon">
 				<FontAwesomeIcon icon={icon} />
 			</Icon>

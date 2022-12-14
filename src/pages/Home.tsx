@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import { faGithub, faGitlab, faLastfm, faMastodon, faTwitter, faWordpress } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faGithub, faGitlab, faLastfm, faMastodon, faReddit, faTwitter, faWordpress } from "@fortawesome/free-brands-svg-icons";
+import { useEffect } from "react";
 import { Social, SocialPanel } from "../components/Social";
 
 const PageHeader = styled.div({
@@ -7,11 +8,15 @@ const PageHeader = styled.div({
 	padding: 20,
 	marginTop: 200,
 	borderRadius: '25px 25px 0 0',
+	backdropFilter: 'blur(10px)',
 	'& > h1': {
 		fontSize: '48px'
 	},
 	'& > p': {
 		fontSize: '24px'
+	},
+	'@media only screen and (max-width: 650px)': {
+		marginTop: 20
 	}
 });
 
@@ -28,6 +33,8 @@ const PageBody = styled.div({
 });
 
 export default function Home() {
+	useEffect(() => { document.title = 'Soupbowl Portfolio' });
+
 	return (
 		<div>
 			<PageHeader>
@@ -54,6 +61,12 @@ export default function Home() {
 						</Social>
 						<Social url="https://mstdn.social/@soupbowl" icon={faMastodon} color="#6364ff">
 							soupbowl<br />@mstdn.social
+						</Social>
+						<Social url="https://www.reddit.com/user/MySQL-Error" icon={faReddit} color="#de5833">
+							MySQL-Error
+						</Social>
+						<Social url="#" icon={faDiscord} color="#5865f2" onClick={(e) => e.preventDefault() }>
+							soupbowl<br />#9999
 						</Social>
 					</SocialPanel>
 				</div>
