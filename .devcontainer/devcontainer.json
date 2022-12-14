@@ -7,7 +7,6 @@
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	},
 	"postCreateCommand": "npm install",
-	"postStartCommand": "echo \"PUBLIC_URL=https://${CODESPACE_NAME}-3000.preview.app.github.dev\" > .env.development.local",
 	"postAttachCommand": "npm start",
 	"forwardPorts": [3000]
 }
