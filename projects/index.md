@@ -26,7 +26,7 @@ title: Projects
 *   **[Modern Modoki for Firefox](https://github.com/soup-bowl/Modoki-Firefox)**
 *   **[OpenSimulator Bridge]({% link projects/wordpress-opensimulator-bridge.md %})**
 
-And a bunch of [experimental constructs](https://labs.soupbowl.io), [and even more](https://github.com/soup-bowl)!
+And a bunch of [experimental constructs](https://soupbowl.dev/labs), [and even more](https://github.com/soup-bowl)!
 
 ## Discontinued
 
