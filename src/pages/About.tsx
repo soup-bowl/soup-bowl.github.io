@@ -13,7 +13,7 @@ const Link = styled.a({
 });
 
 export default function About() {
-	useEffect(() => { document.title = 'Casey LP - Soupbowl Portfolio' });
+	useEffect(() => { document.title = 'Casey LP - Soupbowl Portfolio' }, []);
 
 	return (
 		<PageBody>

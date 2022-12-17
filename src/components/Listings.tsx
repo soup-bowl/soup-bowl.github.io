@@ -27,6 +27,7 @@ const Image = styled.div({
 
 const Label = styled.div({
 	padding: 10,
+	width: "100%",
 
 	'& > h2': {
 		overflow: 'hidden',
@@ -57,15 +58,17 @@ export const ListingItemGroup = styled.div({
 
 interface Props {
 	title: string;
-	image: string;
+	image?: string;
 	url: string;
 	children: ReactNode;
 }
 
-export function ListingItem({ title, image, url, children }: Props) {
+export function ListingItem({ title, image = undefined, url, children }: Props) {
 	return (
 		<Item>
+			{image !== undefined ?
 			<Image style={{ backgroundImage: `url(${image})` }} />
+			: null}
 			<Label>
 				<h2><a href={url}>{title}</a></h2>
 				{children}

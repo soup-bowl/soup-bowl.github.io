@@ -10,7 +10,7 @@ export const PageBody = styled.div({
 	borderRadius: '25px 25px 0 0',
 	boxShadow: '0px 0px 15px 1px rgba(0, 0, 0, 0.5)',
 
-	'& > h1': {
+	'& > h1, & > h2': {
 		textAlign: 'center'
 	}
 });

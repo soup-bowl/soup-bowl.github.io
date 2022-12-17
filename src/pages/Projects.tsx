@@ -1,13 +1,27 @@
-import { useEffect } from "react";
+import { request as GitHubRequest } from "@octokit/request";
+import { useEffect, useState } from "react";
 import { PageBody } from "../components/Layout";
 import { ListingItem, ListingItemGroup } from "../components/Listings";
+import { IGitHubRepos } from "../interfaces";
+import RepoImages from "../RepositoryImages.json";
 
 export default function Projects() {
-	useEffect(() => { document.title = 'Projects - Soupbowl Portfolio' });
+	const [repos, setRepos] = useState<IGitHubRepos[]>([]);
+
+	useEffect(() => { document.title = 'Projects - Soupbowl Portfolio' }, []);
+
+	useEffect(() => {
+		GitHubRequest("GET /users/{username}/repos{?sort,per_page}", {
+			username: "soup-bowl",
+			sort: "updated",
+			per_page: 5
+		}).then(response => setRepos(response.data));
+	}, []);
 
 	return (
 		<PageBody>
 			<h1>Projects</h1>
+			<h2>Featured</h2>
 			<ListingItemGroup>
 				<ListingItem
 					title="What's This?"
@@ -33,17 +47,17 @@ export default function Projects() {
 					</p>
 				</ListingItem>
 				<ListingItem
-                    title="WordPress Simple SMTP"
+					title="WordPress Simple SMTP"
 					url="https://github.com/soup-bowl/wp-simple-smtp"
 					image="https://soupbowl.io/assets/img/wpsmtp-scrot.webp"
 				>
 					<p>
-                        My years of being a professional WordPress developer were often frustrated by the sheer amount
+						My years of being a professional WordPress developer were often frustrated by the sheer amount
 						of spam you recieved from installling a plugin. This was compacted when I found similar garbage
 						when just wishing to configure SMTP. This plugin was made to add in what I felt was missing, but
 						add it in WordPress-styling, like it was native. This also has environmental override support for
 						deployment goodness.
-                    </p>
+					</p>
 				</ListingItem>
 				<ListingItem
 					title="Modoki Firefox"
@@ -56,6 +70,25 @@ export default function Projects() {
 						back to Firefox 80 and beyond.
 					</p>
 				</ListingItem>
+			</ListingItemGroup>
+			<h2>Recent</h2>
+			<ListingItemGroup>
+				{repos && repos.map((repo: IGitHubRepos) => {
+					let repoImg = RepoImages.filter((e) => {
+						return e.repo === repo.full_name
+					})[0]?.image ?? undefined;
+
+					return (
+						<ListingItem
+							key={repo.id}
+							title={repo.name}
+							url={repo.html_url}
+							image={repoImg}
+						>
+							<p>{repo.description}</p>
+						</ListingItem>
+					);
+				})}
 			</ListingItemGroup>
 		</PageBody>
 	);

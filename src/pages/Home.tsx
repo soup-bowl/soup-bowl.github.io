@@ -33,7 +33,7 @@ const PageBody = styled.div({
 });
 
 export default function Home() {
-	useEffect(() => { document.title = 'Soupbowl Portfolio' });
+	useEffect(() => { document.title = 'Soupbowl Portfolio' }, []);
 
 	return (
 		<div>
