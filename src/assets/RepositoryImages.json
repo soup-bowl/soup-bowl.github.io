@@ -22,5 +22,9 @@
 	{
 		"repo": "soup-bowl/labs",
 		"image": "https://repository-images.githubusercontent.com/365781860/ab5cb970-167f-40ad-82c8-6f11f0c2d471"
+	},
+	{
+		"repo": "soup-bowl/chromeboard",
+		"image": "https://soupbowl.io/assets/img/79EK6Hx.webp"
 	}
 ]
