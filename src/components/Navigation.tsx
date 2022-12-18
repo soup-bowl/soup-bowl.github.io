@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
+import { ReactComponent as Soup } from '../assets/soup.svg';
 
 export default function Navigation() {
 	const navigate = useNavigate();
@@ -36,7 +37,7 @@ export default function Navigation() {
 
 	const NavItemSeparator = NavItem.withComponent('span');
 
-	const Logo = styled.img(props => ({
+	const Logo = styled.div(props => ({
 		width: 40,
 		filter: "drop-shadow(0px 0px 5px #000)",
 
@@ -47,7 +48,9 @@ export default function Navigation() {
 
 	return (
 		<Nav>
-			<Logo onClick={() => navigate('/')} src="img/logo.png" />
+			<Logo onClick={() => navigate('/')}>
+				<Soup />
+			</Logo>
 			<span>
 				<NavItem onClick={() => navigate('/')}>soup-bowl</NavItem>
 			</span>

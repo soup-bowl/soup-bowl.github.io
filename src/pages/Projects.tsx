@@ -3,7 +3,7 @@ import GitHubAPI from "../api/GitHub";
 import { PageBody } from "../components/Layout";
 import { ListingItem, ListingItemGroup } from "../components/Listings";
 import { IGitHubRepos } from "../interfaces";
-import RepoImages from "../RepositoryImages.json";
+import RepoImages from "../assets/RepositoryImages.json";
 
 export default function Projects() {
 	const [popularRepos, setPopularRepos] = useState<IGitHubRepos[]>([]);
