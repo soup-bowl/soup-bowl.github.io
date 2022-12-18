@@ -57,6 +57,10 @@ export default function Navigation() {
 			<NavItemSeparator>|</NavItemSeparator>
 			<NavItem onClick={() => navigate('/me')}>About</NavItem>
 			<NavItem onClick={() => navigate('/projects')}>Projects</NavItem>
+			<NavItem onClick={() => {
+				window.location.href = 'https://soupbowl.io';
+				return null;
+			}}>Blog</NavItem>
 		</Nav>
 	);
 }
