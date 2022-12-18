@@ -7,13 +7,19 @@ import RepoImages from "../assets/RepositoryImages.json";
 
 export default function Projects() {
 	const [popularRepos, setPopularRepos] = useState<IGitHubRepos[]>([]);
+	const [PopularReposErr, setPopularReposErr] = useState<boolean>(false);
 	const [recentRepos, setRecentRepos] = useState<IGitHubRepos[]>([]);
+	const [recentReposErr, setRecentReposErr] = useState<boolean>(false);
 
 	useEffect(() => { document.title = 'Projects - Soupbowl Portfolio' }, []);
 
 	useEffect(() => {
-		GitHubAPI.searchUser('soup-bowl', 'updated', 5).then(response => setPopularRepos(response.data.items));
-		GitHubAPI.repository('soup-bowl', 'updated', 5).then(response => setRecentRepos(response.data));
+		GitHubAPI.searchUser('soup-bowl', 'updated', 3)
+			.then(response => (setPopularRepos(response.data.items)))
+			.catch(() => setPopularReposErr(true));
+		GitHubAPI.repository('soup-bowl', 'updated', 3)
+			.then(response => setRecentRepos(response.data))
+			.catch(() => setRecentReposErr(true));
 	}, []);
 
 	function displayer(data: IGitHubRepos[]): ReactNode {
@@ -35,17 +41,34 @@ export default function Projects() {
 		});
 	}
 
+	function ErrorDisplay() {
+		return (
+			<div style={{ textAlign: 'center' }}>
+				<p style={{ fontSize: '4rem', lineHeight: 0 }}>:(</p>
+				<p>An error occurred getting the info, sorry about that</p>
+			</div>
+		);
+	}
+
 	return (
 		<PageBody>
 			<h1>Projects</h1>
 			<h2>Featured</h2>
-			<ListingItemGroup>
-				{popularRepos && displayer(popularRepos)}
-			</ListingItemGroup>
+			{!PopularReposErr ?
+				<ListingItemGroup>
+					{popularRepos && displayer(popularRepos)}
+				</ListingItemGroup>
+				:
+				<ErrorDisplay />
+			}
 			<h2>Recent</h2>
-			<ListingItemGroup>
-				{recentRepos && displayer(recentRepos)}
-			</ListingItemGroup>
+			{!recentReposErr ?
+				<ListingItemGroup>
+					{recentRepos && displayer(recentRepos)}
+				</ListingItemGroup>
+				:
+				<ErrorDisplay />
+			}
 		</PageBody>
 	);
 }
