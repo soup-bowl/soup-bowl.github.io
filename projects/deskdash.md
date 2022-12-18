@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: deprecated
 title: Deskdash
 ---
 ![](/assets/img/Screenshot_20210515_091230.webp)

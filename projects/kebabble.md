@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: deprecated
 title: WordPress Simple SMTP
 ---
 ![](/assets/img/kebs.webp)

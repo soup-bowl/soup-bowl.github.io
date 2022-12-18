@@ -17,7 +17,6 @@ theme: minima
 minima:
   date_format: "%-d %B %Y"
 header_pages:
-  - projects/index.md
   - blog/index.html
   - guides.html
 

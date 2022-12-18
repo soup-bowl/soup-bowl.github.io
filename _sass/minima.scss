@@ -348,3 +348,15 @@ pre, code,
 		font-family: monospace;
 	}
 }
+
+.banner {
+	background-color: #de004e;
+	filter: drop-shadow(6px 6px 0px #0f93bf);	
+	border-radius: 15px;
+	padding: 10px;
+
+	a {
+		color: white;
+		text-decoration: underline;
+	}
+}

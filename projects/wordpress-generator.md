@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: deprecated
 title: WordPress Generator
 ---
 ![](/assets/img/wpgen-scrot.webp)

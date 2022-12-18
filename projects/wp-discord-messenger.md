@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: deprecated
 title: Discord Messenger
 ---
 
