@@ -5,7 +5,7 @@ import { ReactComponent as Soup } from '../assets/soup.svg';
 export default function Navigation() {
 	const navigate = useNavigate();
 
-	const Nav = styled.nav(props => ({
+	const Nav = styled.div({
 		display: 'flex',
 		alignItems: 'center',
 		margin: 14,
@@ -19,9 +19,9 @@ export default function Navigation() {
 				display: 'none'
 			}
 		}
-	}));
+	});
 
-	const NavItem = styled.button(props => ({
+	const NavItem = styled.button({
 		textDecoration: 'none',
 		border: 'none',
 		backgroundColor: 'inherit',
@@ -33,18 +33,18 @@ export default function Navigation() {
 		'&:hover': {
 			cursor: 'pointer'
 		}
-	}));
+	});
 
 	const NavItemSeparator = NavItem.withComponent('span');
 
-	const Logo = styled.div(props => ({
+	const Logo = styled.div({
 		width: 40,
 		filter: "drop-shadow(0px 0px 5px #000)",
 
 		'&:hover': {
 			cursor: 'pointer'
 		}
-	}));
+	});
 
 	function redirect(url:string) {
 		window.location.href = url;
