@@ -30,7 +30,7 @@ export function Error404() {
 	return (
 		<PageBody>
 			<div>
-				<img src="https://soupbowl.io/assets/cassette.png" alt="Error 404" />
+				<img src="https://soupbowl.blog/assets/cassette.png" alt="Error 404" />
 			</div>
 		</PageBody>
 	);

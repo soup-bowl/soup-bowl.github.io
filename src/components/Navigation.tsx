@@ -62,7 +62,7 @@ export default function Navigation() {
 			<NavItemSeparator>|</NavItemSeparator>
 			<NavItem onClick={() => navigate('/me')}>About</NavItem>
 			<NavItem onClick={() => navigate('/projects')}>Projects</NavItem>
-			<NavItem onClick={() => redirect('https://soupbowl.io')}>Blog</NavItem>
+			<NavItem onClick={() => redirect('https://soupbowl.blog')}>Blog</NavItem>
 		</Nav>
 	);
 }

@@ -20,7 +20,7 @@ export default function About() {
 			<h1>About me</h1>
 			<div style={{ display: 'flex', flexWrap: 'wrap', flexGrow: 1, justifyContent: 'center' }}>
 				<div>
-					<Logo src="https://i.redd.it/snoovatar/avatars/1c0ae1be-94a6-4e5e-9326-1a7600c38d73.png" alt="" />
+					<Logo src="https://i.redd.it/snoovatar/avatars/nftv2_bmZ0X2VpcDE1NToxMzdfYzhkM2EzYTgzYmRlNWRhZDA2ZDQzNjY5NGUzZTIyYWMzZTY0ZDU3N180OTI2NTk3_rare_9db00129-70d9-445d-b04f-c877165849b0.png" alt="" />
 				</div>
 				<div style={{ width: '60%' }}>
 					<p>
@@ -39,7 +39,7 @@ export default function About() {
 						<strong>Azure</strong>, with minor experience in <strong>Amazon Web Services</strong>. 
 					</p>
 					<p>
-						If you wish to see more about me, please <Link href="https://soupbowl.io">check out my main website</Link>.
+						If you wish to see more about me, please <Link href="https://soupbowl.blog">check out my blog</Link>.
 					</p>
 				</div>
 			</div>
