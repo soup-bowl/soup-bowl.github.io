@@ -59,7 +59,7 @@ Instead of relying on [TonyMac](http://www.tonymacx86.com) software, I’ve deci
 Other than the different approach, I had the following caveats:
 
 *   Instead of High Sierra, I’m installing **Mojave**.
-*   My MacBook blew up\*, so I’m using a combination of **[Virtualbox](https://www.soupbowl.io/2020/04/macos-in-virtualbox/)** and my partner’s **Macbook Air**.
+*   My MacBook blew up\*, so I’m using a combination of **[Virtualbox](https://soupbowl.blog/2020/04/macos-in-virtualbox/)** and my partner’s **Macbook Air**.
 *   This time, I will **not** be undoing it. This will be a continuous project until the laptop dies.
 
 \*An important point I must raise here. I bought my mac from an eBay listing a few years back. One day I plugged it in and it literally **blew up**. Smoke came from the plug and I had a residual shock. I put the MacBook and the dead charger in a cupboard and forgot about it. Recently, I pried open the plug to find it was a fake (or a non-recall), and the fuse was bypassed. Please, **check your chargers**! I now have a plug in RCD when using eBay auction purchases, just in case…

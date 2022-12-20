@@ -8,7 +8,7 @@ tags:   [Guides, Mac]
 
 **You can run MacOS in Virtualbox. Because? Because.**
 
-In the [pursuit of Hackintosh](https://www.soupbowl.io/category/mac/hackintosh/), you need a Mac. That’s well and great, but I didn’t want to screw around with my partner’s Macbook. So what if you want to sandbox something? Virtualbox!
+In the [pursuit of Hackintosh](https://soupbowl.blog/category/mac/hackintosh/), you need a Mac. That’s well and great, but I didn’t want to screw around with my partner’s Macbook. So what if you want to sandbox something? Virtualbox!
 
 I had **no expectations** that this was going to work. OS X has always been runnable in Virtualbox for a while, but the performance has normally been lacklustre. While it’s not exactly daily-driver level, the performance in Virtualbox wasn’t too bad!
 

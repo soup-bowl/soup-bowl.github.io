@@ -10,16 +10,16 @@ tags:   [Hackintosh, Mac]
 
 While I am a technical person, the Hackintosh community is scores ahead of what I know. The work put in by the awesome community supporting the movement for macOS/OS X on other machines is incredible. I’ve watched the progress since I was 11, but never branched into it. Recently, it all changed.
 
-![macOS High Sierra about screenshot, showing the version details](https://www.soupbowl.io/wp-content/uploads/2018/08/macOS.webp)
+![macOS High Sierra about screenshot, showing the version details](https://soupbowl.blog/wp-content/uploads/2018/08/macOS.webp)
 
 I write this now on a Hackintosh **laptop**. This isn’t any old laptop however… This is a laptop that is not _technically_ supported. I googled for hours to see the achievements of other Satellite owners and found nothing. However, with trial and error (and years of configuring crap experience), I was graced with the Apple logo appearing on my non-Apple laptop.
 
 [Laptop Specification (PDF)
-](https://www.soupbowl.io/wp-content/uploads/2018/08/Satellite-Pro-L850-1UJ.pdf)
+](https://soupbowl.blog/wp-content/uploads/2018/08/Satellite-Pro-L850-1UJ.pdf)
 
 **Notice:** _Since 2019 I have removed Hackintosh from my laptop, this is primarily as I have received by MacBook White back and so now use the laptop for Linux distributions instead._
 
-**Notice:** _Since 2020, my MacBook white exploded so I’ve returned to this, [which can be seen here](https://www.soupbowl.io/2020/04/toshiba-satellite-pro-l850-hackintosh-revisited/) (Hackintosh, not my laptop exploding)._
+**Notice:** _Since 2020, my MacBook white exploded so I’ve returned to this, [which can be seen here](https://soupbowl.blog/2020/04/toshiba-satellite-pro-l850-hackintosh-revisited/) (Hackintosh, not my laptop exploding)._
 
 ## Back Story
 
@@ -35,7 +35,7 @@ I would like to take this moment to say this would not be possible without the a
 
 Take this with a pinch of salt, as Apple never intended for you to install this. Whatever does work is an absolute miracle, and often smaller problems can be overcome with additional hardware.
 
-![](https://www.soupbowl.io/wp-content/uploads/2018/08/IMG_20180802_222431.webp)
+![](https://soupbowl.blog/wp-content/uploads/2018/08/IMG_20180802_222431.webp)
 
 ### Does Work
 
@@ -101,7 +101,7 @@ Instead of installing them on the system, I opted (and is not recommended) to in
 
 If you wish to install kexts to Clover, then [grab this utility](https://www.tonymacx86.com/resources/efi-mounter-v3.280/) to mount your EFI partition. Then you can whack your additional kext files into **CLOVER > kexts > Other**. Clover will then inject these into the boot process.
 
-![](https://www.soupbowl.io/wp-content/uploads/2018/08/Untitled.webp)
+![](https://soupbowl.blog/wp-content/uploads/2018/08/Untitled.webp)
 
 ## Boot via Hard Drive
 
