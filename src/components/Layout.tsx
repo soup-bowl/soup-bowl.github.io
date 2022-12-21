@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Outlet, useLocation } from "react-router-dom";
 import Navigation from "./Navigation";
 
-export const PageBody = styled.div({
+export const PageBody = styled.main({
 	backgroundColor: '#1B1A1B',
 	padding: 20,
 	minHeight: '90vh',

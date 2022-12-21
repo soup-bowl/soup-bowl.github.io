@@ -5,7 +5,7 @@ import { ReactComponent as Soup } from '../assets/soup.svg';
 export default function Navigation() {
 	const navigate = useNavigate();
 
-	const Nav = styled.div({
+	const Nav = styled.header({
 		display: 'flex',
 		alignItems: 'center',
 		margin: 14,
