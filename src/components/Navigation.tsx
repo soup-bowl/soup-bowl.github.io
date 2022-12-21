@@ -26,6 +26,7 @@ export default function Navigation() {
 		border: 'none',
 		backgroundColor: 'inherit',
 		fontSize: 'inherit',
+		fontFamily: 'inherit',
 		marginLeft: 15,
 		color: '#fff',
 		textShadow: '0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 5px #000',
