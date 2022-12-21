@@ -26,7 +26,8 @@ const theme = {
 const globalTheme = {
 	body: {
 		margin: 0,
-		fontFamily: 'sans-serif',
+		fontFamily: '\'Open Sans\', sans-serif',
+		fontWeight: 300,
 		fontSize: '1.125rem',
 		color: theme.colors.white,
 		backgroundColor: theme.colors.background,

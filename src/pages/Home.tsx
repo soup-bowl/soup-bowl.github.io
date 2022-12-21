@@ -47,7 +47,7 @@ export default function Home() {
 		<div>
 			<PageHeader>
 				<h1>soup-bowl</h1>
-				<p>DevOps and Web Developer from Hertfordshire, UK</p>
+				<p><strong>DevOps</strong> and <strong>Web Developer</strong> from <strong>Hertfordshire, UK</strong></p>
 			</PageHeader>
 			<PageBody>
 				<div>
