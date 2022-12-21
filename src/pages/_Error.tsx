@@ -14,6 +14,7 @@ const PageBody = styled.div({
 
 		'& > img': {
 			width: '50%',
+			maxWidth: '750px',
 			filter: "drop-shadow(0px 0px 50px #000)",
 
 			'@media only screen and (max-width: 650px)': {

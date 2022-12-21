@@ -49,6 +49,7 @@ const SocialSet = styled.a(props => ({
 		opacity: 0,
 		zIndex: 1,
 		backgroundColor: `${props.color}c2`,
+		borderRadius: "15px",
 		backdropFilter: "blur(5px)",
 		transition: "0.4s ease"
 	},
@@ -100,14 +101,14 @@ interface CardProps {
 	url: string;
 	icon: IconDefinition;
 	color: string;
-	onClick?: (e:any) => void;
+	onClick?: (e: any) => void;
 	children: ReactNode;
 }
 
 export const Social = ({ url, icon, color, onClick, children }: CardProps) => {
 	return (
 		<SocialSet rel="me" href={url} target="_blank" color={color} onClick={onClick}>
-			<Icon datatype="icon"  color={color}>
+			<Icon datatype="icon" color={color}>
 				<FontAwesomeIcon icon={icon} />
 			</Icon>
 			<Label datatype="text">
