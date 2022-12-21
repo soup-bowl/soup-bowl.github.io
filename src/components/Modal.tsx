@@ -25,8 +25,9 @@ const ModalBackground = styled.div({
     alignItems: "center"
 });
 
-const ModalBox = styled.div({
-    backgroundColor: "#1B1A1B",
+const ModalBox = styled.div(props => ({
+    // @ts-ignore
+    backgroundColor: props.theme.colors.background,
     margin: "32px",
     position: "relative",
     overflowY: "auto",
@@ -41,19 +42,21 @@ const ModalBox = styled.div({
         rgb(0 0 0 / 14%) 0px 24px 38px 3px,
         rgb(0 0 0 / 12%) 0px 9px 46px 8px`
     ]
-});
+}));
 
-const ModalCloseBox = styled.button({
+const ModalCloseBox = styled.button(props => ({
     cursor: "pointer",
-    backgroundColor: "#0a0a0a",
     fontSize: "1.5em",
-    color: "white",
+    // @ts-ignore
+    backgroundColor: props.theme.colors.primary,
+    // @ts-ignore
+    color: props.theme.colors.secondary,
     border: "inherit",
     borderRadius: "100px",
     position: "absolute",
     top: "10px",
     right: "10px"
-});
+}));
 
 export const ModalHeader = styled.h2({
     padding: "16px",

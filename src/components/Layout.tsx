@@ -1,14 +1,10 @@
 import { Global, Interpolation, Theme, ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Navigation from "./Navigation";
 
 export const PageBody = styled.div({
-	backgroundColor: '#1B1A1B',
 	padding: 20,
-	minHeight: '90vh',
-	borderRadius: '25px 25px 0 0',
-	boxShadow: '0px 0px 15px 1px rgba(0, 0, 0, 0.5)',
 
 	'& > h1, & > h2': {
 		textAlign: 'center'
@@ -17,44 +13,61 @@ export const PageBody = styled.div({
 
 const theme = {
 	colors: {
-		primary: '#ef1a1a',
-		white: '#fff',
-		background: '#1b1a1b'
+		// Based on the Pantone Colour of the Year.
+		// https://www.pantone.com/uk/en/color-of-the-year
+		// 2023 - VIVA MAGENTA - https://www.pantone.com/uk/en/color-of-the-year/2023
+		primary: '#BE3455',
+		secondary: '#fff',
+		background: '#30040f',
+		// 2022 - VERY PERI - https://www.pantone.com/color-of-the-year-2022
+		//primary: '#6667ab',
+		//secondary: '#fff',
+		//background: '#070846',
 	}
 };
 
 const globalTheme = {
 	body: {
 		margin: 0,
-		fontFamily: 'sans-serif',
+		fontFamily: '\'Open Sans\' , sans-serif',
 		fontSize: '1.125rem',
-		color: theme.colors.white,
-		backgroundColor: theme.colors.background,
+		fontWeight: 300,
+		color: theme.colors.secondary,
+		//backgroundColor: theme.colors.background,
+
+		'a, h1': {
+			color: theme.colors.primary
+		}
 	}
 } as Interpolation<Theme>;
 
-const BackgroundImage = styled.div(props => ({
-	width: '100%',
-	height: '100%',
-	position: 'absolute',
+const BackingDisplay = styled.div(props => ({
+	backgroundImage: "url(/img/background.jpg)",
+	backgroundSize: "cover",
+	backgroundPositionX: "center",
+	position: 'fixed',
 	top: 0,
+	bottom: 0,
 	left: 0,
-	backgroundImage: 'url(/img/background.jpg)',
-	backgroundPositionX: 'center',
-	backgroundSize: 'cover',
-	backgroundRepeat: 'no-repeat',
-	filter: (props.color === 'mattberry') ? 'none' : 'blur(10px)',
-	zIndex: -1
+	right: 0,
+	zIndex: -1,
+
+	'& > div': {
+		backgroundColor: theme.colors.background,
+		width: '100%',
+		height: '100%',
+		opacity: 0.9
+	}
 }));
 
 export default function Layout() {
-	const location = useLocation();
-
 	return (
 		<ThemeProvider theme={theme}>
 			<Global styles={globalTheme} />
-			<BackgroundImage color={location.pathname !== '/' ? 'thistotallydidntneedtobejsonly' : 'mattberry'} />
 			<Navigation />
+			<BackingDisplay>
+				<div></div>
+			</BackingDisplay>
 			<Outlet />
 		</ThemeProvider>
 	);

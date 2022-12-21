@@ -4,25 +4,12 @@ import { useEffect, useState } from "react";
 import { Modal, ModalBody, ModalHeader } from "../components/Modal";
 import { Social, SocialPanel } from "../components/Social";
 
-const PageHeader = styled.div({
-	backgroundColor: 'rgb(0 0 0 / 60%)',
+const PageHeader = styled.div(props => ({
+	textAlign: 'center',
 	padding: 20,
-	marginTop: 200,
-	borderRadius: '25px 25px 0 0',
-	backdropFilter: 'blur(10px)',
-	'& > h1': {
-		fontSize: '48px'
-	},
-	'& > p': {
-		fontSize: '24px'
-	},
-	'@media only screen and (max-width: 650px)': {
-		marginTop: 20
-	}
-});
+}));
 
 const PageBody = styled.div({
-	backgroundColor: '#1B1A1B',
 	padding: 20,
 	minHeight: '50vh',
 	'& > div': {
@@ -46,8 +33,8 @@ export default function Home() {
 	return (
 		<div>
 			<PageHeader>
-				<h1>soup-bowl</h1>
-				<p>DevOps and Web Developer from Hertfordshire, UK</p>
+				<h1 style={{ fontSize: '48px' }}>soup-bowl</h1>
+				<p style={{ fontSize: '24px' }}><strong>DevOps</strong> and <strong>Web Developer</strong> from <strong>Hertfordshire, UK</strong></p>
 			</PageHeader>
 			<PageBody>
 				<div>

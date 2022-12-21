@@ -30,52 +30,42 @@ export const SocialPanel = styled.div({
 });
 
 const SocialSet = styled.a(props => ({
-	backgroundColor: props.color,
+	// @ts-ignore
+	backgroundColor: props.theme.colors.primary,
+	borderRadius: "15px",
 	position: "relative",
 	width: "18rem",
 	height: "10rem",
 	float: "left",
 	overflow: "hidden",
 	textAlign: "center",
-	'::before, ::after': {
+	'::before': {
 		content: '""',
 		position: "absolute",
 		right: 0,
 		left: 0,
-		zIndex: 1,
-		backgroundColor: "black",
-		transition: "0.4s ease"
-	},
-	'::before': {
 		top: 0,
 		bottom: 0,
-		opacity: 0
-	},
-	'::after': {
-		top: "10rem",
-		bottom: 0,
-		opacity: 0.25
+		opacity: 0,
+		zIndex: 1,
+		backgroundColor: `${props.color}c2`,
+		backdropFilter: "blur(5px)",
+		transition: "0.4s ease"
 	},
 	':hover, :active, :focus': {
 		outline: "none",
 		'::before': {
-			bottom: "10rem"
-		},
-		'::after': {
-			top: 0
-		},
-		'[datatype="icon"]': {
-			bottom: "10rem",
-			top: "-10rem"
+			opacity: 1
 		},
 		'[datatype="text"]': {
-			top: 0
+			opacity: 1
 		}
 	}
 }));
 
-const Label = styled.div({
-	color: "white",
+const Label = styled.div(props => ({
+	// @ts-ignore
+	color: props.theme.colors.secondary,
 	position: "absolute",
 	height: "100%",
 	width: "100%",
@@ -85,17 +75,17 @@ const Label = styled.div({
 	justifyContent: "center",
 	transition: "0.4s ease",
 
-	top: "10rem",
+	opacity: 0,
 	fontWeight: "500",
 	fontSize: "1.5rem",
-});
+}));
 
-const Icon = styled.div({
-	color: "white",
+const Icon = styled.div(props => ({
+	// @ts-ignore
+	color: props.theme.colors.secondary,
 	position: "absolute",
 	height: "100%",
 	width: "100%",
-	zIndex: 10,
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
@@ -104,7 +94,7 @@ const Icon = styled.div({
 	top: 0,
 	right: 0,
 	fontSize: "4rem",
-});
+}));
 
 interface CardProps {
 	url: string;
@@ -117,7 +107,7 @@ interface CardProps {
 export const Social = ({ url, icon, color, onClick, children }: CardProps) => {
 	return (
 		<SocialSet rel="me" href={url} target="_blank" color={color} onClick={onClick}>
-			<Icon datatype="icon">
+			<Icon datatype="icon"  color={color}>
 				<FontAwesomeIcon icon={icon} />
 			</Icon>
 			<Label datatype="text">

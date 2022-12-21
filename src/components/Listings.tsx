@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
 import { ReactNode } from "react";
 
-const Item = styled.div({
-	backgroundColor: '#292929',
+const Item = styled.div(props => ({
+	// @ts-ignore
+    backgroundColor: props.theme.colors.background,
 	borderRadius: '25px',
 	boxShadow: '0px 0px 15px 1px rgba(0, 0, 0, 0.5)',
 	display: 'flex',
@@ -10,7 +11,7 @@ const Item = styled.div({
 	'@media only screen and (max-width: 750px)': {
 		flexDirection: 'column'
 	}
-});
+}));
 
 const Image = styled.div({
 	minHeight: '200px',
@@ -25,7 +26,7 @@ const Image = styled.div({
 	}
 });
 
-const Label = styled.div({
+const Label = styled.div(props => ({
 	padding: 10,
 	width: "100%",
 
@@ -35,9 +36,10 @@ const Label = styled.div({
 		maxWidth: '95%'
 	},
 	a: {
-        color: 'white',
+		// @ts-ignore
+        color: props.theme.colors.primary,
 	}
-});
+}));
 
 export const ListingItemGroup = styled.div({
 	display: "grid",

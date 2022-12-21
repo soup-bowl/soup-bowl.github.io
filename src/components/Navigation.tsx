@@ -5,41 +5,36 @@ import { ReactComponent as Soup } from '../assets/soup.svg';
 export default function Navigation() {
 	const navigate = useNavigate();
 
-	const Nav = styled.div({
+	const Nav = styled.div(props => ({
 		display: 'flex',
 		alignItems: 'center',
+		justifyContent: 'center',
 		margin: 14,
-		color: 'red',
 		fontSize: '24px',
-
-		'@media only screen and (max-width: 650px)': {
-			justifyContent: 'center',
-
-			'span': {
-				display: 'none'
-			}
-		}
-	});
+		// @ts-ignore
+		backgroundColor: props.theme.colors.primary,
+		// @ts-ignore
+		color: props.theme.colors.secondary,
+		padding: '10px',
+		borderRadius: '15px',
+	}));
 
 	const NavItem = styled.button({
 		textDecoration: 'none',
 		border: 'none',
 		backgroundColor: 'inherit',
+		fontFamily: 'inherit',
 		fontSize: 'inherit',
+		color: 'inherit',
 		marginLeft: 15,
-		color: '#fff',
-		textShadow: '0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 5px #000',
 
 		'&:hover': {
 			cursor: 'pointer'
 		}
 	});
 
-	const NavItemSeparator = NavItem.withComponent('span');
-
 	const Logo = styled.div({
 		width: 40,
-		filter: "drop-shadow(0px 0px 5px #000)",
 
 		'&:hover': {
 			cursor: 'pointer'
@@ -56,10 +51,6 @@ export default function Navigation() {
 			<Logo onClick={() => navigate('/')}>
 				<Soup />
 			</Logo>
-			<span>
-				<NavItem onClick={() => navigate('/')}>soup-bowl</NavItem>
-			</span>
-			<NavItemSeparator>|</NavItemSeparator>
 			<NavItem onClick={() => navigate('/me')}>About</NavItem>
 			<NavItem onClick={() => navigate('/projects')}>Projects</NavItem>
 			<NavItem onClick={() => redirect('https://soupbowl.blog')}>Blog</NavItem>
