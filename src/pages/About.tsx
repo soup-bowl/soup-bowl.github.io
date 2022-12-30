@@ -20,7 +20,7 @@ export default function About() {
 			<h1>About me</h1>
 			<div style={{ display: 'flex', flexWrap: 'wrap', flexGrow: 1, justifyContent: 'center' }}>
 				<div>
-					<Logo src="https://i.redd.it/snoovatar/avatars/nftv2_bmZ0X2VpcDE1NToxMzdfYzhkM2EzYTgzYmRlNWRhZDA2ZDQzNjY5NGUzZTIyYWMzZTY0ZDU3N180OTI2NTk3_rare_9db00129-70d9-445d-b04f-c877165849b0.png" alt="" />
+					<Logo src="https://i.redd.it/snoovatar/avatars/nftv2_bmZ0X2VpcDE1NToxMzdfYzhkM2EzYTgzYmRlNWRhZDA2ZDQzNjY5NGUzZTIyYWMzZTY0ZDU3N180OTI2NTk3_rare_f725335d-d07d-4d46-b8d7-c41af5f6feb4.png" alt="" />
 				</div>
 				<div style={{ width: '60%' }}>
 					<p>
