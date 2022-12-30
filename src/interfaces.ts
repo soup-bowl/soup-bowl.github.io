@@ -22,3 +22,14 @@ export interface IRepoImages {
 	repo: string;
 	image: string;
 }
+
+export interface IBlogPost {
+	id: string;
+	title: string;
+	thumbnail?: string;
+	summary: string;
+	link: string;
+	author: string;
+	published: Date;
+	updated: Date;
+}
