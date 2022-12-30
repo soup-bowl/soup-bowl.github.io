@@ -8,10 +8,6 @@ const Logo = styled.img({
 	}
 });
 
-const Link = styled.a({
-	color: 'red'
-});
-
 export default function About() {
 	useEffect(() => { document.title = 'Me - Soupbowl Portfolio' }, []);
 
@@ -39,7 +35,7 @@ export default function About() {
 						<strong>Azure</strong>, with minor experience in <strong>Amazon Web Services</strong>. 
 					</p>
 					<p>
-						If you wish to see more about me, please <Link href="https://soupbowl.blog">check out my blog</Link>.
+						If you wish to see more about me, please <a href="https://soupbowl.blog">check out my blog</a>.
 					</p>
 				</div>
 			</div>

@@ -12,6 +12,10 @@ export const PageBody = styled.main({
 
 	'& > h1, & > h2': {
 		textAlign: 'center'
+	},
+
+	'a': {
+		color: 'red'
 	}
 });
 
