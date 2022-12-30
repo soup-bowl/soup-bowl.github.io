@@ -28,7 +28,6 @@ const Image = styled.div({
 
 const Label = styled.div(props => ({
 	padding: 10,
-	width: "100%",
 
 	'& > h2': {
 		overflow: 'hidden',

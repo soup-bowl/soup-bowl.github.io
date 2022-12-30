@@ -41,11 +41,6 @@ export default function Navigation() {
 		}
 	});
 
-	function redirect(url:string) {
-		window.location.href = url;
-		return null;
-	}
-
 	return (
 		<Nav>
 			<Logo onClick={() => navigate('/')}>
@@ -53,7 +48,7 @@ export default function Navigation() {
 			</Logo>
 			<NavItem onClick={() => navigate('/me')}>About</NavItem>
 			<NavItem onClick={() => navigate('/projects')}>Projects</NavItem>
-			<NavItem onClick={() => redirect('https://soupbowl.blog')}>Blog</NavItem>
+			<NavItem onClick={() => navigate('/blog')}>Blog</NavItem>
 		</Nav>
 	);
 }

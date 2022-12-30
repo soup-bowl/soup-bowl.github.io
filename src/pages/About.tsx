@@ -9,7 +9,7 @@ const Logo = styled.img({
 });
 
 export default function About() {
-	useEffect(() => { document.title = 'Casey LP - Soupbowl Portfolio' }, []);
+	useEffect(() => { document.title = 'Me - Soupbowl Portfolio' }, []);
 
 	return (
 		<PageBody>

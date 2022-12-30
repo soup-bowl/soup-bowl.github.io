@@ -8,6 +8,10 @@ export const PageBody = styled.div({
 
 	'& > h1, & > h2': {
 		textAlign: 'center'
+	},
+
+	'a': {
+		color: 'red'
 	}
 });
 

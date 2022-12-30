@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import About from './pages/About';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import Blog from './pages/Blog';
 import { Error404 } from './pages/_Error';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
@@ -22,6 +23,7 @@ root.render(
 					<Route path="me" element={<About />} />
 					<Route path="about" element={<Navigate replace to="/me" />} />
 					<Route path="projects" element={<Projects />} />
+					<Route path="blog" element={<Blog />} />
 					<Route path="*" element={<Error404 />} />
 				</Route>
 			</Routes>
