@@ -27,6 +27,7 @@ const Image = styled.div({
 
 const Label = styled.div({
 	padding: 10,
+	flexGrow: 1,
 
 	'& > h2': {
 		overflow: 'hidden',
