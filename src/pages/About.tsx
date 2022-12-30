@@ -2,9 +2,22 @@ import styled from "@emotion/styled";
 import { useEffect } from "react";
 import { PageBody } from "../components/Layout";
 
-const Logo = styled.img({
-	'@media only screen and (max-width: 1000px)': {
-		maxWidth: "200px"
+const ProfileDisplay = styled.div({
+	display: 'flex',
+	flexWrap: 'wrap',
+	flexGrow: 1,
+	justifyContent: 'center',
+	'.picture img': {
+		'@media only screen and (max-width: 1000px)': {
+			maxWidth: "200px"
+		}
+	},
+	'.description': {
+		width: '60%',
+		'@media only screen and (max-width: 600px)': {
+			width: '100%',
+			textAlign: 'center'
+		}
 	}
 });
 
@@ -14,11 +27,11 @@ export default function About() {
 	return (
 		<PageBody>
 			<h1>About me</h1>
-			<div style={{ display: 'flex', flexWrap: 'wrap', flexGrow: 1, justifyContent: 'center' }}>
-				<div>
-					<Logo src="https://i.redd.it/snoovatar/avatars/nftv2_bmZ0X2VpcDE1NToxMzdfYzhkM2EzYTgzYmRlNWRhZDA2ZDQzNjY5NGUzZTIyYWMzZTY0ZDU3N180OTI2NTk3_rare_f725335d-d07d-4d46-b8d7-c41af5f6feb4.png" alt="" />
+			<ProfileDisplay>
+				<div className="picture">
+					<img src="https://i.redd.it/snoovatar/avatars/nftv2_bmZ0X2VpcDE1NToxMzdfYzhkM2EzYTgzYmRlNWRhZDA2ZDQzNjY5NGUzZTIyYWMzZTY0ZDU3N180OTI2NTk3_rare_f725335d-d07d-4d46-b8d7-c41af5f6feb4.png" alt="" />
 				</div>
-				<div style={{ width: '60%' }}>
+				<div className="description">
 					<p>
 						Hello! My name is <strong>Casey LP</strong> and I am a developer from Hertfordshire, United
 						Kingdom. I work as an <strong>Azure-based DevOps Engineer</strong> for the <strong>National
@@ -38,7 +51,7 @@ export default function About() {
 						If you wish to see more about me, please <a href="https://soupbowl.blog">check out my blog</a>.
 					</p>
 				</div>
-			</div>
+			</ProfileDisplay>
 		</PageBody>
 	);
 }
