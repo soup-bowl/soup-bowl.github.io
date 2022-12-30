@@ -31,7 +31,7 @@ export default function Home() {
 	useEffect(() => { document.title = 'Soupbowl Portfolio' }, []);
 
 	return (
-		<div>
+		<main>
 			<PageHeader>
 				<h1 style={{ fontSize: '48px' }}>soup-bowl</h1>
 				<p style={{ fontSize: '24px' }}><strong>DevOps</strong> and <strong>Web Developer</strong> from <strong>Hertfordshire, UK</strong></p>
@@ -79,6 +79,6 @@ export default function Home() {
 					</SocialPanel>
 				</div>
 			</PageBody>
-		</div>
+		</main>
 	);
 }
