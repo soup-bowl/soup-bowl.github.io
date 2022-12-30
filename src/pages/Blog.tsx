@@ -10,19 +10,18 @@ export default function Blog() {
 	useEffect(() => { document.title = 'Blog - Soupbowl Portfolio' }, []);
 
 	useEffect(() => {
-		const r = new Request('https://soupbowl.blog/feed.xml');
-		fetch(r)
-			.then((response:Response) => response.text())
-			.then((response:string) => new window.DOMParser().parseFromString(response, "text/xml"))
-			.then((response:Document) => {
+		fetch('https://soupbowl.blog/feed.xml')
+			.then((response: Response) => response.text())
+			.then((response: string) => new window.DOMParser().parseFromString(response, "text/xml"))
+			.then((response: Document) => {
 				const items = response.querySelectorAll("entry");
-				let collect:IBlogPost[] = [];
+				let collect: IBlogPost[] = [];
 
-				items.forEach((item:any) => {
+				items.forEach((item: any) => {
 					let article = {} as IBlogPost;
 					article.id = item.querySelector("id").innerHTML;
 					article.title = item.querySelector("title").innerHTML;
-					article.summary = item.querySelector("summary").innerHTML.replace(/^<!\[CDATA\[|\]\]>$/g,'');
+					article.summary = item.querySelector("summary").innerHTML.replace(/^<!\[CDATA\[|\]\]>$/g, '');
 					article.thumbnail = item.getElementsByTagName('media:thumbnail')[0]?.getAttribute("url");
 					article.author = item.querySelector("author name").innerHTML;
 					article.link = item.querySelector("link").getAttribute("href");
@@ -45,23 +44,26 @@ export default function Blog() {
 				at <a href="https://soupbowl.blog" style={{ fontWeight: "bold" }}>soupbowl.blog</a>
 			</p>
 			{!loading ?
-			<ListingItemGroup>
-				{items.map((item) => (
-					<ListingItem
-						key={item.id}
-						title={item.title}
-						url={item.link}
-						image={item.thumbnail}
-					>
-						<p>{item.summary}</p>
-					</ListingItem>
-				))}
-			</ListingItemGroup>
-			:
-			<div style={{ textAlign: "center" }}>
-				<p>Loading...</p>
-			</div>
+				<ListingItemGroup>
+					{items.map((item) => (
+						<ListingItem
+							key={item.id}
+							title={item.title}
+							url={item.link}
+							image={item.thumbnail}
+						>
+							<p>{item.summary}</p>
+						</ListingItem>
+					))}
+				</ListingItemGroup>
+				:
+				<div style={{ textAlign: "center" }}>
+					<p>Loading...</p>
+				</div>
 			}
+			<p style={{ textAlign: "center" }}>
+				You can find more at <a href="https://soupbowl.blog/blog/" style={{ fontWeight: "bold" }}>soupbowl.blog</a>
+			</p>
 		</PageBody>
 	);
 }
