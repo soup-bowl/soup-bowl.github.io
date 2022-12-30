@@ -4,13 +4,14 @@ import { ListingItem, ListingItemGroup } from "../components/Listings";
 import { IBlogPost } from "../interfaces";
 
 export default function Blog() {
+	const blogURL = 'https://soupbowl.blog';
 	const [items, setItems] = useState<IBlogPost[]>([]);
 	const [loading, setLoading] = useState<boolean>(true);
 
 	useEffect(() => { document.title = 'Blog - Soupbowl Portfolio' }, []);
 
 	useEffect(() => {
-		fetch('https://soupbowl.blog/feed.xml')
+		fetch(`${blogURL}/feed.xml`)
 			.then((response: Response) => response.text())
 			.then((response: string) => new window.DOMParser().parseFromString(response, "text/xml"))
 			.then((response: Document) => {
@@ -18,17 +19,16 @@ export default function Blog() {
 				let collect: IBlogPost[] = [];
 
 				items.forEach((item: any) => {
-					let article = {} as IBlogPost;
-					article.id = item.querySelector("id").innerHTML;
-					article.title = item.querySelector("title").innerHTML;
-					article.summary = item.querySelector("summary").innerHTML.replace(/^<!\[CDATA\[|\]\]>$/g, '');
-					article.thumbnail = item.getElementsByTagName('media:thumbnail')[0]?.getAttribute("url");
-					article.author = item.querySelector("author name").innerHTML;
-					article.link = item.querySelector("link").getAttribute("href");
-					article.published = item.querySelector("published").innerHTML;
-					article.updated = item.querySelector("updated").innerHTML;
-
-					collect.push(article);
+					collect.push({
+						id: item.querySelector("id").innerHTML,
+						title: item.querySelector("title").innerHTML,
+						summary: item.querySelector("summary").innerHTML.replace(/^<!\[CDATA\[|\]\]>$/g, ''),
+						thumbnail: item.getElementsByTagName('media:thumbnail')[0]?.getAttribute("url"),
+						author: item.querySelector("author name").innerHTML,
+						link: item.querySelector("link").getAttribute("href"),
+						published: item.querySelector("published").innerHTML,
+						updated: item.querySelector("updated").innerHTML,
+					});
 				});
 
 				setItems(collect);
@@ -41,7 +41,7 @@ export default function Blog() {
 			<h1>Blog</h1>
 			<p style={{ textAlign: "center" }}>
 				You can visit my full blog
-				at <a href="https://soupbowl.blog" style={{ fontWeight: "bold" }}>soupbowl.blog</a>
+				at <a href={blogURL} style={{ fontWeight: "bold" }}>soupbowl.blog</a>
 			</p>
 			{!loading ?
 				<ListingItemGroup>
@@ -57,12 +57,10 @@ export default function Blog() {
 					))}
 				</ListingItemGroup>
 				:
-				<div style={{ textAlign: "center" }}>
-					<p>Loading...</p>
-				</div>
+				<p style={{ textAlign: "center" }}>Loading...</p>
 			}
 			<p style={{ textAlign: "center" }}>
-				You can find more at <a href="https://soupbowl.blog/blog/" style={{ fontWeight: "bold" }}>soupbowl.blog</a>
+				You can find more at <a href={`${blogURL}/blog/`} style={{ fontWeight: "bold" }}>soupbowl.blog</a>
 			</p>
 		</PageBody>
 	);
