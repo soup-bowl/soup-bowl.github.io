@@ -30,6 +30,6 @@ export interface IBlogPost {
 	summary: string;
 	link: string;
 	author: string;
-	published: Date;
-	updated: Date;
+	published: string;
+	updated: string;
 }

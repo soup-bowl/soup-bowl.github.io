@@ -1,5 +1,8 @@
 import styled from "@emotion/styled";
 import { ReactNode } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock, faPenToSquare, faStar, IconDefinition } from "@fortawesome/free-regular-svg-icons";
+
 
 const Item = styled.div({
 	backgroundColor: '#292929',
@@ -39,6 +42,16 @@ const Label = styled.div({
 	}
 });
 
+const InfoBites = styled.div({
+	display: 'flex',
+	flexDirection: 'row',
+	color: 'lightgray',
+
+	'div': {
+		marginRight: '15px'
+	}
+});
+
 export const ListingItemGroup = styled.div({
 	display: "grid",
 	gridGap: "20px",
@@ -56,14 +69,39 @@ export const ListingItemGroup = styled.div({
 	}
 });
 
+interface InfoProps {
+	icon: IconDefinition;
+	children: ReactNode;
+}
+
+function ItemInfo({icon, children}:InfoProps) {
+	return(
+		<div>
+			<FontAwesomeIcon icon={icon} />&nbsp;
+			{children}
+		</div>
+	);
+}
+
 interface Props {
 	title: string;
 	image?: string;
+	date?: Date;
+	lastCommit?: Date;
+	stars?: number;
 	url: string;
 	children: ReactNode;
 }
 
-export function ListingItem({ title, image = undefined, url, children }: Props) {
+export function ListingItem({
+	title,
+	image = undefined,
+	date = undefined,
+	lastCommit = undefined,
+	stars = undefined,
+	url,
+	children
+}: Props) {
 	return (
 		<Item>
 			{image !== undefined ?
@@ -71,6 +109,11 @@ export function ListingItem({ title, image = undefined, url, children }: Props) 
 			: null}
 			<Label>
 				<h2><a href={url}>{title}</a></h2>
+				<InfoBites>
+					{date ? <ItemInfo icon={faClock}>{date.toLocaleDateString('en-GB')}</ItemInfo> : null}
+					{lastCommit ? <ItemInfo icon={faPenToSquare}>{((Date.now() - lastCommit.getTime()) / 86400000).toFixed(0)} days ago</ItemInfo> : null}
+					{stars !== undefined ? <ItemInfo icon={faStar}>{stars}</ItemInfo> : null}
+				</InfoBites>
 				{children}
 			</Label>
 		</Item>

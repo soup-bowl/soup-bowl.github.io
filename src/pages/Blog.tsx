@@ -51,6 +51,7 @@ export default function Blog() {
 							title={item.title}
 							url={item.link}
 							image={item.thumbnail}
+							date={new Date(item.published)}
 						>
 							<p>{item.summary}</p>
 						</ListingItem>
