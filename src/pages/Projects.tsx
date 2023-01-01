@@ -14,7 +14,7 @@ export default function Projects() {
 	useEffect(() => { document.title = 'Projects - Soupbowl Portfolio' }, []);
 
 	useEffect(() => {
-		GitHubAPI.searchUser('soup-bowl', 'updated', 3)
+		GitHubAPI.searchUser('soup-bowl', 'stargazers', 3)
 			.then(response => (setPopularRepos(response.data.items)))
 			.catch(() => setPopularReposErr(true));
 		GitHubAPI.repository('soup-bowl', 'updated', 3)
