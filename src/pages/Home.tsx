@@ -87,7 +87,7 @@ export default function Home() {
 							MySQL-Error
 						</Social>
 						<Social url="#" icon={faDiscord} color="#5865f2" onClick={openDialog}>
-							soupbowl<br />#9999
+							soupbowl<br />#9573
 						</Social>
 					</SocialPanel>
 				</div>
