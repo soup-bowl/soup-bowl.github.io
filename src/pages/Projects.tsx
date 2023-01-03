@@ -14,7 +14,7 @@ export default function Projects() {
 	useEffect(() => { document.title = 'Projects - Soupbowl Portfolio' }, []);
 
 	useEffect(() => {
-		GitHubAPI.searchUser('soup-bowl', 'updated', 3)
+		GitHubAPI.searchUser('soup-bowl', 'stargazers', 3)
 			.then(response => (setPopularRepos(response.data.items)))
 			.catch(() => setPopularReposErr(true));
 		GitHubAPI.repository('soup-bowl', 'updated', 3)
@@ -34,6 +34,9 @@ export default function Projects() {
 					title={repo.name}
 					url={repo.html_url}
 					image={repoImg}
+					stars={repo.stargazers_count}
+					date={new Date(repo.created_at)}
+					lastCommit={new Date(repo.pushed_at)}
 				>
 					<p>{repo.description}</p>
 				</ListingItem>
