@@ -1,11 +1,8 @@
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-import About from './pages/About';
 import Home from './pages/Home';
-import Projects from './pages/Projects';
-import Blog from './pages/Blog';
 import { Error404 } from './pages/_Error';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
