@@ -107,6 +107,7 @@ const Icon = styled.div({
 });
 
 interface CardProps {
+	id?: string;
 	url: string;
 	icon: IconDefinition;
 	color: string;
@@ -114,9 +115,9 @@ interface CardProps {
 	children: ReactNode;
 }
 
-export const Social = ({ url, icon, color, onClick, children }: CardProps) => {
+export const Social = ({ id, url, icon, color, onClick, children }: CardProps) => {
 	return (
-		<SocialSet rel="me" href={url} target="_blank" color={color} onClick={onClick}>
+		<SocialSet id={id} rel="me" href={url} target="_blank" color={color} onClick={onClick}>
 			<Icon datatype="icon">
 				<FontAwesomeIcon icon={icon} />
 			</Icon>

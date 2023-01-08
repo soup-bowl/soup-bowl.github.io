@@ -33,9 +33,9 @@ const ModalBox = styled.div({
 	overflowY: "auto",
 	display: "flex",
 	flexDirection: "column",
+	width: "100%",
 	maxHeight: "calc(100% - 64px)",
 	minWidth: "200px",
-	maxWidth: "600px",
 	borderRadius: "5px",
 	boxShadow: [
 		`rgb(0 0 0 / 20%) 0px 11px 15px -7px,
@@ -77,17 +77,18 @@ const ModalBody = styled.div({
 interface ModalProps {
 	title: string;
 	open?: boolean;
+	large?: boolean;
 	onClose: () => void;
 	children: ReactNode;
 }
 
-export function Modal({ title, open, onClose, children }: ModalProps) {
+export function Modal({ title, open, large, onClose, children }: ModalProps) {
 	if (open) {
 		return (
 			<ModalControl>
 				<ModalBackdrop />
 				<ModalBackground>
-					<ModalBox>
+					<ModalBox style={{ maxWidth: large ? '1200px' : '600px' }}>
 						<ModalHeader>
 							{title}
 							<ModalCloseBox onClick={onClose}>

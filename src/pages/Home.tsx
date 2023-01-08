@@ -3,6 +3,7 @@ import { faDiscord, faGithub, faGitlab, faLastfm, faMastodon, faReddit, faTwitte
 import { useEffect, useState } from "react";
 import { Modal } from "../components/Modal";
 import { Social, SocialPanel } from "../components/Social";
+import Projects from "./Projects";
 
 const PageHeader = styled.div({
 	backgroundColor: 'rgb(0 0 0 / 60%)',
@@ -34,11 +35,15 @@ const PageBody = styled.div({
 });
 
 export default function Home() {
-	const [open, setOpen] = useState<boolean>(false);
+	const [open, setOpen] = useState<string>("0");
 
 	const openDialog = (e: any) => {
 		e.preventDefault();
-		setOpen(true);
+		setOpen(e.target.parentElement.id);
+	};
+
+	const closeDialog = () => {
+		setOpen("0");
 	};
 
 	useEffect(() => { document.title = 'Soupbowl Portfolio' }, []);
@@ -51,18 +56,18 @@ export default function Home() {
 			</PageHeader>
 			<PageBody>
 				<div>
-					<Modal title="Talking on Discord" open={open} onClose={() => setOpen(false)}>
-							<p>There's no direct link to <strong>Discord</strong>, so to start a chat:</p>
-							<ul>
-								<li>Open the Discord app (desktop, mobile, whatever).</li>
-								<li>Click on <strong>Find or Start a Conversation</strong>.</li>
-								<li>Paste in <strong>soupbowl#9573</strong>.</li>
-								<li>???</li>
-								<li>Profit!</li>
-							</ul>
+					<Modal title="Talking on Discord" open={(open === "1") ? true : false} onClose={closeDialog}>
+						<p>There's no direct link to <strong>Discord</strong>, so to start a chat:</p>
+						<ul>
+							<li>Open the Discord app (desktop, mobile, whatever).</li>
+							<li>Click on <strong>Find or Start a Conversation</strong>.</li>
+							<li>Paste in <strong>soupbowl#9573</strong>.</li>
+							<li>???</li>
+							<li>Profit!</li>
+						</ul>
 					</Modal>
 					<SocialPanel>
-						<Social url="https://github.com/soup-bowl" icon={faGithub} color="#2d333b">
+					<Social url="https://github.com/soup-bowl" icon={faGithub} color="#2d333b">
 							soup-bowl
 						</Social>
 						<Social url="https://gitlab.com/soup-bowl" icon={faGitlab} color="#F96424">
@@ -83,7 +88,7 @@ export default function Home() {
 						<Social url="https://www.reddit.com/user/MySQL-Error" icon={faReddit} color="#de5833">
 							MySQL-Error
 						</Social>
-						<Social url="#" icon={faDiscord} color="#5865f2" onClick={openDialog}>
+						<Social id="1" url="#" icon={faDiscord} color="#5865f2" onClick={openDialog}>
 							soupbowl<br />#9573
 						</Social>
 					</SocialPanel>
