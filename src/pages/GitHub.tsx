@@ -4,7 +4,7 @@ import { ListingItem, ListingItemGroup } from "../components/Listings";
 import { IGitHubRepos } from "../interfaces";
 import RepoImages from "../assets/RepositoryImages.json";
 
-export default function Projects() {
+export default function GitHub() {
 	const [popularRepos, setPopularRepos] = useState<IGitHubRepos[]>([]);
 	const [PopularReposErr, setPopularReposErr] = useState<boolean>(false);
 	const [recentRepos, setRecentRepos] = useState<IGitHubRepos[]>([]);

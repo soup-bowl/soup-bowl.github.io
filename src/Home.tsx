@@ -4,12 +4,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 import { Timeline } from "react-twitter-widgets";
-import Layout from "../components/Layout";
-import { Modal } from "../components/Modal";
-import { Social, SocialPanel } from "../components/Social";
-import About from "./About";
-import Blog from "./Blog";
-import Projects from "./Projects";
+import Layout from "./components/Layout";
+import { Modal } from "./components/Modal";
+import { Social, SocialPanel } from "./components/Social";
+import About from "./pages/About";
+import Blog from "./pages/Blog";
+import GitHub from "./pages/GitHub";
 
 const PageHeader = styled.div({
 	backgroundColor: 'rgb(0 0 0 / 60%)',
@@ -66,7 +66,7 @@ export default function Home() {
 						<Blog />
 					</Modal>
 					<Modal large title="GitHub" open={(open === "2") ? true : false} onClose={closeDialog}>
-						<Projects />
+						<GitHub />
 					</Modal>
 					<Modal large title="Twitter" open={(open === "5") ? true : false} onClose={closeDialog}>
 						<Timeline
