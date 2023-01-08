@@ -7,24 +7,30 @@ import { Timeline } from "react-twitter-widgets";
 import Layout from "./components/Layout";
 import { Modal } from "./components/Modal";
 import { Social, SocialPanel } from "./components/Social";
+
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import GitHub from "./pages/GitHub";
 
 const PageHeader = styled.div({
-	backgroundColor: 'rgb(0 0 0 / 60%)',
-	padding: 20,
-	marginTop: 200,
-	borderRadius: '25px 25px 0 0',
-	backdropFilter: 'blur(10px)',
-	'& > h1': {
-		fontSize: '48px'
-	},
-	'& > p': {
-		fontSize: '24px'
-	},
-	'@media only screen and (max-width: 650px)': {
-		marginTop: 20
+	display: 'flex',
+	alignItems: 'end',
+	height: '100vh',
+	div: {
+		width: '100%',
+		backgroundColor: 'rgb(0 0 0 / 60%)',
+		padding: 20,
+		borderRadius: '25px 25px 0 0',
+		backdropFilter: 'blur(10px)',
+		'& > h1': {
+			fontSize: '48px'
+		},
+		'& > p': {
+			fontSize: '24px'
+		},
+		'@media only screen and (max-width: 650px)': {
+			marginTop: 20
+		}
 	}
 });
 
@@ -57,9 +63,11 @@ export default function Home() {
 	return (
 		<Layout>
 			<main>
-				<PageHeader id="500" onClick={openDialog}>
-					<h1>soup-bowl</h1>
-					<p><strong>DevOps</strong> and <strong>Web Developer</strong> from <strong>Hertfordshire, UK</strong></p>
+				<PageHeader>
+					<div id="500" onClick={openDialog}>
+						<h1>soup-bowl</h1>
+						<p><strong>DevOps</strong> and <strong>Web Developer</strong> from <strong>Hertfordshire, UK</strong></p>
+					</div>
 				</PageHeader>
 				<PageBody>
 					<Modal large title="Blog" open={(open === "1") ? true : false} onClose={closeDialog}>
@@ -68,7 +76,7 @@ export default function Home() {
 					<Modal large title="GitHub" open={(open === "2") ? true : false} onClose={closeDialog}>
 						<GitHub />
 					</Modal>
-					<Modal large title="Twitter" open={(open === "5") ? true : false} onClose={closeDialog}>
+					<Modal title="Twitter" open={(open === "5") ? true : false} onClose={closeDialog}>
 						<Timeline
 							dataSource={{
 								sourceType: 'profile',
