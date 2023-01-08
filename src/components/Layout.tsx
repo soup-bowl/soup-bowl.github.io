@@ -35,6 +35,9 @@ const globalTheme = {
 		fontSize: '1.125rem',
 		color: theme.colors.white,
 		backgroundColor: theme.colors.background,
+	},
+	':root': {
+		colorScheme: 'dark'
 	}
 } as Interpolation<Theme>;
 
