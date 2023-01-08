@@ -1,9 +1,6 @@
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
 import Home from './pages/Home';
-import { Error404 } from './pages/_Error';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
@@ -13,14 +10,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
 	<StrictMode>
-		<HashRouter>
-			<Routes>
-				<Route path="/" element={<Layout />}>
-					<Route index element={<Home />} />
-					<Route path="*" element={<Error404 />} />
-				</Route>
-			</Routes>
-		</HashRouter>
+		<Home />
 	</StrictMode>
 );
 

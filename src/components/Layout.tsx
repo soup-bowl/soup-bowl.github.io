@@ -1,6 +1,6 @@
 import { Global, Interpolation, Theme, ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
-import { Outlet, useLocation } from "react-router-dom";
+import { ReactNode } from "react";
 
 export const PageBody = styled.main({
 	backgroundColor: '#1B1A1B',
@@ -40,28 +40,29 @@ const globalTheme = {
 	}
 } as Interpolation<Theme>;
 
-const BackgroundImage = styled.div(props => ({
+const BackgroundImage = styled.div({
 	width: '100%',
 	height: '100%',
-	position: 'absolute',
+	position: 'fixed',
 	top: 0,
 	left: 0,
 	backgroundImage: 'url(/img/background.jpg)',
 	backgroundPositionX: 'center',
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',
-	filter: (props.color === 'mattberry') ? 'none' : 'blur(10px)',
 	zIndex: -1
-}));
+});
 
-export default function Layout() {
-	const location = useLocation();
+interface Props {
+	children: ReactNode;
+}
 
+export default function Layout({children}:Props) {
 	return (
 		<ThemeProvider theme={theme}>
 			<Global styles={globalTheme} />
-			<BackgroundImage color={location.pathname !== '/' ? 'thistotallydidntneedtobejsonly' : 'mattberry'} />
-			<Outlet />
+			<BackgroundImage />
+			{children}
 		</ThemeProvider>
 	);
 }
