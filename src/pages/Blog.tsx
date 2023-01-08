@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { PageBody } from "../components/Layout";
 import { ListingItem, ListingItemGroup } from "../components/Listings";
 import { IBlogPost } from "../interfaces";
 
@@ -37,8 +36,7 @@ export default function Blog() {
 	}, []);
 
 	return (
-		<PageBody>
-			<h1>Blog</h1>
+		<>
 			<p style={{ textAlign: "center" }}>
 				You can visit my full blog
 				at <a href={blogURL} style={{ fontWeight: "bold" }}>soupbowl.blog</a>
@@ -60,9 +58,6 @@ export default function Blog() {
 				:
 				<p style={{ textAlign: "center" }}>Loading...</p>
 			}
-			<p style={{ textAlign: "center" }}>
-				You can find more at <a href={`${blogURL}/blog/`} style={{ fontWeight: "bold" }}>soupbowl.blog</a>
-			</p>
-		</PageBody>
+		</>
 	);
 }

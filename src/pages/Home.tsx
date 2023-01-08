@@ -1,8 +1,13 @@
 import styled from "@emotion/styled";
-import { faDiscord, faGithub, faGitlab, faLastfm, faMastodon, faReddit, faTwitter, faWordpress } from "@fortawesome/free-brands-svg-icons";
+import {
+	faBloggerB, faDiscord, faGithub, faGitlab, faLastfm, faMastodon, faReddit, faTwitter, faWordpress
+} from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
+import { Timeline } from "react-twitter-widgets";
 import { Modal } from "../components/Modal";
 import { Social, SocialPanel } from "../components/Social";
+import About from "./About";
+import Blog from "./Blog";
 import Projects from "./Projects";
 
 const PageHeader = styled.div({
@@ -50,24 +55,49 @@ export default function Home() {
 
 	return (
 		<main>
-			<PageHeader>
+			<PageHeader id="500" onClick={openDialog}>
 				<h1>soup-bowl</h1>
 				<p><strong>DevOps</strong> and <strong>Web Developer</strong> from <strong>Hertfordshire, UK</strong></p>
 			</PageHeader>
 			<PageBody>
+				<Modal large title="Blog" open={(open === "1") ? true : false} onClose={closeDialog}>
+					<Blog />
+				</Modal>
+				<Modal large title="GitHub" open={(open === "2") ? true : false} onClose={closeDialog}>
+					<Projects />
+				</Modal>
+				<Modal large title="Twitter" open={(open === "5") ? true : false} onClose={closeDialog}>
+					<Timeline
+						dataSource={{
+							sourceType: 'profile',
+							screenName: 'TheAlmightyWord'
+						}}
+						options={{
+							height: '400',
+							theme: 'dark'
+						}}
+					/>
+				</Modal>
+				<Modal title="Talking on Discord" open={(open === "8") ? true : false} onClose={closeDialog}>
+					<p>There's no direct link to <strong>Discord</strong>, so to start a chat:</p>
+					<ul>
+						<li>Open the Discord app (desktop, mobile, whatever).</li>
+						<li>Click on <strong>Find or Start a Conversation</strong>.</li>
+						<li>Paste in <strong>soupbowl#9573</strong>.</li>
+						<li>???</li>
+						<li>Profit!</li>
+					</ul>
+				</Modal>
+				<Modal large title="About me" open={(open === "500") ? true : false} onClose={closeDialog}>
+					<About />
+				</Modal>
+
 				<div>
-					<Modal title="Talking on Discord" open={(open === "1") ? true : false} onClose={closeDialog}>
-						<p>There's no direct link to <strong>Discord</strong>, so to start a chat:</p>
-						<ul>
-							<li>Open the Discord app (desktop, mobile, whatever).</li>
-							<li>Click on <strong>Find or Start a Conversation</strong>.</li>
-							<li>Paste in <strong>soupbowl#9573</strong>.</li>
-							<li>???</li>
-							<li>Profit!</li>
-						</ul>
-					</Modal>
 					<SocialPanel>
-					<Social url="https://github.com/soup-bowl" icon={faGithub} color="#2d333b">
+						<Social id="1" url="#" icon={faBloggerB} color="#29132e" onClick={openDialog}>
+							soupbowl.blog
+						</Social>
+						<Social id="2" url="#" icon={faGithub} color="#2d333b" onClick={openDialog}>
 							soup-bowl
 						</Social>
 						<Social url="https://gitlab.com/soup-bowl" icon={faGitlab} color="#F96424">
@@ -79,7 +109,7 @@ export default function Home() {
 						<Social url="https://last.fm/user/soup-bowl" icon={faLastfm} color="#BA0000">
 							soup-bowl
 						</Social>
-						<Social url="https://twitter.com/TheAlmightyWord" icon={faTwitter} color="#1D9BD0">
+						<Social id="5" url="#" icon={faTwitter} color="#1D9BD0" onClick={openDialog}>
 							TheAlmightyWord
 						</Social>
 						<Social url="https://mstdn.social/@soupbowl" icon={faMastodon} color="#6364ff">
@@ -88,7 +118,7 @@ export default function Home() {
 						<Social url="https://www.reddit.com/user/MySQL-Error" icon={faReddit} color="#de5833">
 							MySQL-Error
 						</Social>
-						<Social id="1" url="#" icon={faDiscord} color="#5865f2" onClick={openDialog}>
+						<Social id="8" url="#" icon={faDiscord} color="#5865f2" onClick={openDialog}>
 							soupbowl<br />#9573
 						</Social>
 					</SocialPanel>

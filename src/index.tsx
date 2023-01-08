@@ -20,10 +20,6 @@ root.render(
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />
-					<Route path="me" element={<About />} />
-					<Route path="about" element={<Navigate replace to="/me" />} />
-					<Route path="projects" element={<Projects />} />
-					<Route path="blog" element={<Blog />} />
 					<Route path="*" element={<Error404 />} />
 				</Route>
 			</Routes>

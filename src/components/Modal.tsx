@@ -33,7 +33,7 @@ const ModalBox = styled.div({
 	overflowY: "auto",
 	display: "flex",
 	flexDirection: "column",
-	width: "100%",
+	width: "90vw",
 	maxHeight: "calc(100% - 64px)",
 	minWidth: "200px",
 	borderRadius: "5px",

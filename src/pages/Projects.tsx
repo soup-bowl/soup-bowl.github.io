@@ -1,6 +1,5 @@
 import { ReactNode, useEffect, useState } from "react";
 import GitHubAPI from "../api/GitHub";
-import { PageBody } from "../components/Layout";
 import { ListingItem, ListingItemGroup } from "../components/Listings";
 import { IGitHubRepos } from "../interfaces";
 import RepoImages from "../assets/RepositoryImages.json";
@@ -54,8 +53,7 @@ export default function Projects() {
 	}
 
 	return (
-		<PageBody>
-			<h1>Projects</h1>
+		<>
 			<h2>Featured</h2>
 			{!PopularReposErr ?
 				<ListingItemGroup>
@@ -72,6 +70,6 @@ export default function Projects() {
 				:
 				<ErrorDisplay />
 			}
-		</PageBody>
+		</>
 	);
 }

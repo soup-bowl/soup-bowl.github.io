@@ -1,7 +1,6 @@
 import { Global, Interpolation, Theme, ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Outlet, useLocation } from "react-router-dom";
-import Navigation from "./Navigation";
 
 export const PageBody = styled.main({
 	backgroundColor: '#1B1A1B',
@@ -62,7 +61,6 @@ export default function Layout() {
 		<ThemeProvider theme={theme}>
 			<Global styles={globalTheme} />
 			<BackgroundImage color={location.pathname !== '/' ? 'thistotallydidntneedtobejsonly' : 'mattberry'} />
-			<Navigation />
 			<Outlet />
 		</ThemeProvider>
 	);
