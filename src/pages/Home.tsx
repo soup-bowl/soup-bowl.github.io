@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { faDiscord, faGithub, faGitlab, faLastfm, faMastodon, faReddit, faTwitter, faWordpress } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
-import { Modal, ModalBody, ModalHeader } from "../components/Modal";
+import { Modal } from "../components/Modal";
 import { Social, SocialPanel } from "../components/Social";
 
 const PageHeader = styled.div({
@@ -51,9 +51,7 @@ export default function Home() {
 			</PageHeader>
 			<PageBody>
 				<div>
-					<Modal open={open} onClose={() => setOpen(false)}>
-						<ModalHeader>Talking on Discord</ModalHeader>
-						<ModalBody>
+					<Modal title="Talking on Discord" open={open} onClose={() => setOpen(false)}>
 							<p>There's no direct link to <strong>Discord</strong>, so to start a chat:</p>
 							<ul>
 								<li>Open the Discord app (desktop, mobile, whatever).</li>
@@ -62,7 +60,6 @@ export default function Home() {
 								<li>???</li>
 								<li>Profit!</li>
 							</ul>
-						</ModalBody>
 					</Modal>
 					<SocialPanel>
 						<Social url="https://github.com/soup-bowl" icon={faGithub} color="#2d333b">

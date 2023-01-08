@@ -36,7 +36,7 @@ const ModalBox = styled.div({
 	maxHeight: "calc(100% - 64px)",
 	minWidth: "200px",
 	maxWidth: "600px",
-	borderRadius: "20px",
+	borderRadius: "5px",
 	boxShadow: [
 		`rgb(0 0 0 / 20%) 0px 11px 15px -7px,
 		rgb(0 0 0 / 14%) 0px 24px 38px 3px,
@@ -60,33 +60,43 @@ const ModalCloseBox = styled.button({
 	}
 });
 
-export const ModalHeader = styled.h2({
-	padding: "16px",
-	paddingBottom: 0
+const ModalHeader = styled.h2({
+	padding: "16px 24px",
+	flex: "0 0 auto",
+	lineHeight: 0,
+	fontSize: "1.25rem"
 });
 
-export const ModalBody = styled.div({
-	padding: "16px",
-	paddingTop: 0
+const ModalBody = styled.div({
+	padding: "16px 24px",
+	flex: "1 1 auto",
+	overflowY: "auto",
+	borderTop: "1px solid rgba(255, 255, 255, 0.12)"
 });
 
 interface ModalProps {
+	title: string;
 	open?: boolean;
 	onClose: () => void;
 	children: ReactNode;
 }
 
-export function Modal({ open, onClose, children }: ModalProps) {
+export function Modal({ title, open, onClose, children }: ModalProps) {
 	if (open) {
 		return (
 			<ModalControl>
+				<ModalBackdrop />
 				<ModalBackground>
-					<ModalBackdrop />
 					<ModalBox>
-						<ModalCloseBox onClick={onClose}>
-							<CloseButton />
-						</ModalCloseBox>
-						{children}
+						<ModalHeader>
+							{title}
+							<ModalCloseBox onClick={onClose}>
+								<CloseButton />
+							</ModalCloseBox>
+						</ModalHeader>
+						<ModalBody>
+							{children}
+						</ModalBody>
 					</ModalBox>
 				</ModalBackground>
 			</ModalControl>
