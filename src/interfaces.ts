@@ -33,3 +33,37 @@ export interface IBlogPost {
 	published: string;
 	updated: string;
 }
+
+export interface IWordPressPluginListing {
+	name: string;
+	author: string;
+	author_profile: string;
+	added: string;
+	last_updated: string;
+	downloaded: number;
+	homepage: string;
+	sections: IWordPressPluginTexts;
+	num_ratings: number;
+	rating: number;
+	ratings: IWordPressRatings;
+	requires: string;
+	requires_php: string;
+	slug: string;
+	tested: string;
+	version: string;
+}
+
+export interface IWordPressPluginTexts {
+	description?: string;
+	installation?: string;
+	changelog?: string;
+	faq?: string;
+}
+
+export interface IWordPressRatings {
+	1: number;
+	2: number;
+	3: number;
+	4: number;
+	5: number;
+}

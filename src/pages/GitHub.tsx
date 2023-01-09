@@ -13,12 +13,9 @@ export default function GitHub() {
 	useEffect(() => { document.title = 'Projects - Soupbowl Portfolio' }, []);
 
 	useEffect(() => {
-		GitHubAPI.searchUser('soup-bowl', 'stargazers', 3)
+		GitHubAPI.searchUser('soup-bowl', 'stargazers', 6)
 			.then(response => (setPopularRepos(response.data.items)))
 			.catch(() => setPopularReposErr(true));
-		GitHubAPI.repository('soup-bowl', 'updated', 3)
-			.then(response => setRecentRepos(response.data))
-			.catch(() => setRecentReposErr(true));
 	}, []);
 
 	function displayer(data: IGitHubRepos[]): ReactNode {
@@ -54,18 +51,10 @@ export default function GitHub() {
 
 	return (
 		<>
-			<h2>Featured</h2>
+			<h2>Featured Repositories</h2>
 			{!PopularReposErr ?
 				<ListingItemGroup>
 					{popularRepos && displayer(popularRepos)}
-				</ListingItemGroup>
-				:
-				<ErrorDisplay />
-			}
-			<h2>Recent</h2>
-			{!recentReposErr ?
-				<ListingItemGroup>
-					{recentRepos && displayer(recentRepos)}
 				</ListingItemGroup>
 				:
 				<ErrorDisplay />

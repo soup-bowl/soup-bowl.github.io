@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { ReactNode } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faPenToSquare, faStar, IconDefinition } from "@fortawesome/free-regular-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 
 const Item = styled.div({
@@ -71,13 +72,14 @@ export const ListingItemGroup = styled.div({
 
 interface InfoProps {
 	icon: IconDefinition;
+	alt: string;
 	children: ReactNode;
 }
 
-function ItemInfo({icon, children}:InfoProps) {
+function ItemInfo({icon, alt, children}:InfoProps) {
 	return(
 		<div>
-			<FontAwesomeIcon icon={icon} />&nbsp;
+			<FontAwesomeIcon icon={icon} title={alt} />&nbsp;
 			{children}
 		</div>
 	);
@@ -89,6 +91,7 @@ interface Props {
 	date?: Date;
 	lastCommit?: Date;
 	stars?: number;
+	downloads?: number;
 	url: string;
 	children: ReactNode;
 }
@@ -98,7 +101,8 @@ export function ListingItem({
 	image = undefined,
 	date = undefined,
 	lastCommit = undefined,
-	stars = undefined,
+	stars = 0,
+	downloads = 0,
 	url,
 	children
 }: Props) {
@@ -110,9 +114,10 @@ export function ListingItem({
 			<Label>
 				<h2><a href={url}>{title}</a></h2>
 				<InfoBites>
-					{date ? <ItemInfo icon={faClock}>{date.toLocaleDateString('en-GB')}</ItemInfo> : null}
-					{lastCommit ? <ItemInfo icon={faPenToSquare}>{((Date.now() - lastCommit.getTime()) / 86400000).toFixed(0)} days ago</ItemInfo> : null}
-					{stars !== undefined ? <ItemInfo icon={faStar}>{stars}</ItemInfo> : null}
+					{date ? <ItemInfo icon={faClock} alt="Created">{date.toLocaleDateString('en-GB')}</ItemInfo> : null}
+					{lastCommit ? <ItemInfo icon={faPenToSquare} alt="Last change">{((Date.now() - lastCommit.getTime()) / 86400000).toFixed(0)} days ago</ItemInfo> : null}
+					{stars > 0 ? <ItemInfo icon={faStar} alt="Stars">{stars}</ItemInfo> : null}
+					{downloads > 0 ? <ItemInfo icon={faDownload} alt="Downloads">{downloads.toLocaleString('en-GB')}</ItemInfo> : null}
 				</InfoBites>
 				{children}
 			</Label>

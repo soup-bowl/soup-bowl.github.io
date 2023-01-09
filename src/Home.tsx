@@ -12,6 +12,7 @@ import { Social, SocialPanel } from "./components/Social";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import GitHub from "./pages/GitHub";
+import WordPress from "./pages/WordPress";
 
 const PageHeader = styled.div({
 	display: 'flex',
@@ -86,6 +87,9 @@ export default function Home() {
 			<Modal large title="GitHub" open={(open === "2") ? true : false} onClose={closeDialog}>
 				<GitHub />
 			</Modal>
+			<Modal title="WordPress" open={(open === "4") ? true : false} onClose={closeDialog}>
+				<WordPress />
+			</Modal>
 			<Modal title="Twitter" open={(open === "5") ? true : false} onClose={closeDialog}>
 				<Timeline
 					dataSource={{
@@ -130,7 +134,7 @@ export default function Home() {
 							<Social url="https://gitlab.com/soup-bowl" icon={faGitlab} color="#F96424">
 								soup-bowl
 							</Social>
-							<Social url="https://profiles.wordpress.org/soupbowl" icon={faWordpress} color="#0085BA">
+							<Social id="4" url="#" icon={faWordpress} color="#0085BA" onClick={openDialog}>
 								soupbowl
 							</Social>
 							<Social url="https://last.fm/user/soup-bowl" icon={faLastfm} color="#BA0000">

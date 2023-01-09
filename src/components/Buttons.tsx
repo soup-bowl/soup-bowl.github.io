@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface STTProps {
 	visible: boolean;
@@ -33,7 +35,7 @@ export const ScrollToTopButton = ({ visible }:STTProps) => {
 			}}
 			style={{ opacity: (visible) ? 1 : 0 }}
 		>
-			&#8679;
+			<FontAwesomeIcon icon={faChevronUp} />
 		</ScrollButton>
 	);
 }
