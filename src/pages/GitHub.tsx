@@ -7,8 +7,6 @@ import RepoImages from "../assets/RepositoryImages.json";
 export default function GitHub() {
 	const [popularRepos, setPopularRepos] = useState<IGitHubRepos[]>([]);
 	const [PopularReposErr, setPopularReposErr] = useState<boolean>(false);
-	const [recentRepos, setRecentRepos] = useState<IGitHubRepos[]>([]);
-	const [recentReposErr, setRecentReposErr] = useState<boolean>(false);
 
 	useEffect(() => { document.title = 'Projects - Soupbowl Portfolio' }, []);
 
