@@ -3,6 +3,7 @@ import GitHubAPI from "../api/GitHub";
 import { ListingItem, ListingItemGroup } from "../components/Listings";
 import { IGitHubRepos } from "../interfaces";
 import RepoImages from "../assets/RepositoryImages.json";
+import { AttentionButton } from "../components/Buttons";
 
 export default function GitHub() {
 	const [popularRepos, setPopularRepos] = useState<IGitHubRepos[]>([]);
@@ -49,7 +50,12 @@ export default function GitHub() {
 
 	return (
 		<>
-			<h2>Featured Repositories</h2>
+			<div style={{ textAlign: 'center' }}>
+				<AttentionButton onClick={() => window.location.href = "https://github.com/soup-bowl"}>
+					GitHub Account
+				</AttentionButton>
+			</div>
+			<h2 style={{ textAlign: 'center' }}>Popular</h2>
 			{!PopularReposErr ?
 				<ListingItemGroup>
 					{popularRepos && displayer(popularRepos)}

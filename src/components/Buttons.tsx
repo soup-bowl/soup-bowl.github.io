@@ -6,6 +6,17 @@ interface STTProps {
 	visible: boolean;
 }
 
+export const AttentionButton = styled.button(props => ({
+	cursor: "pointer",
+	// @ts-ignore
+	backgroundColor: props.theme.colors.primary,
+	borderRadius: "5px",
+	padding: "5px 10px 5px 10px",
+	fontSize: "1.5em",
+	color: "white",
+	border: "inherit",
+}));
+
 export const ScrollToTopButton = ({ visible }:STTProps) => {
 	const ScrollButton = styled.button(props => ({
 		position: 'fixed',
