@@ -14,7 +14,7 @@ const ModalBackdrop = styled.div({
 	alignItems: "center",
 	justifyContent: "center",
 	inset: "0px",
-	backgroundColor: "rgba(0, 0, 0, 0.5)",
+	backgroundColor: "rgba(0, 0, 0, 0.75)",
 	zIndex: -1
 });
 

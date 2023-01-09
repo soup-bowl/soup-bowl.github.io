@@ -34,23 +34,40 @@ const PageHeader = styled.div({
 	}
 });
 
-const PageBody = styled.div({
-	backgroundColor: '#1B1A1B',
+const PageBody = styled.div(props => ({
+	backgroundColor: props.color,
 	padding: 20,
 	minHeight: '100vh',
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'center',
-	'& > div': {
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-		height: '100%'
-	}
+}));
+
+const SocialContainer = styled.div({
+	display: 'flex',
+	alignItems: 'center',
+	justifyContent: 'center',
+	height: '100%'
 });
+
+const ScrollButton = styled.button(props => ({
+	position: 'fixed',
+	bottom: '20px',
+	right: '20px',
+	cursor: 'pointer',
+	borderRadius: '250em',
+	border: 'none',
+	// @ts-ignore
+	backgroundColor: props.theme.colors.primary,
+	fontSize: '2em',
+	width: '50px',
+	height: '50px',
+	transition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms'
+}));
 
 export default function Home() {
 	const [open, setOpen] = useState<string>("0");
+	const [showTopButton, setShowTopButton] = useState<boolean>(false);
 
 	const openDialog = (e: any) => {
 		e.preventDefault();
@@ -63,49 +80,62 @@ export default function Home() {
 
 	useEffect(() => { document.title = 'Soupbowl Portfolio' }, []);
 
+	useEffect(() => {
+		window.addEventListener("scroll", () => {
+			if (window.pageYOffset > 300) {
+				setShowTopButton(true);
+			} else {
+				setShowTopButton(false);
+			}
+		});
+	}, []);
+
+	const scrollTo = (location:string) => {
+		document.getElementById(location)?.scrollIntoView({ behavior: 'smooth' })
+	}
+
 	return (
 		<Layout>
+			<Modal large title="Blog" open={(open === "1") ? true : false} onClose={closeDialog}>
+				<Blog />
+			</Modal>
+			<Modal large title="GitHub" open={(open === "2") ? true : false} onClose={closeDialog}>
+				<GitHub />
+			</Modal>
+			<Modal title="Twitter" open={(open === "5") ? true : false} onClose={closeDialog}>
+				<Timeline
+					dataSource={{
+						sourceType: 'profile',
+						screenName: 'TheAlmightyWord'
+					}}
+					options={{
+						height: '400',
+						theme: 'dark'
+					}}
+				/>
+			</Modal>
+			<Modal title="Talking on Discord" open={(open === "8") ? true : false} onClose={closeDialog}>
+				<p>There's no direct link to <strong>Discord</strong>, so to start a chat:</p>
+				<ul>
+					<li>Open the Discord app (desktop, mobile, whatever).</li>
+					<li>Click on <strong>Find or Start a Conversation</strong>.</li>
+					<li>Paste in <strong>soupbowl#9573</strong>.</li>
+					<li>???</li>
+					<li>Profit!</li>
+				</ul>
+			</Modal>
+
 			<main>
-				<PageHeader>
+				<PageHeader id="start">
 					<div id="500" onClick={openDialog}>
 						<h1>soup-bowl</h1>
 						<p><strong>DevOps</strong> and <strong>Web Developer</strong> from <strong>Hertfordshire, UK</strong></p>
 					</div>
 				</PageHeader>
-				<PageBody>
-					<Modal large title="Blog" open={(open === "1") ? true : false} onClose={closeDialog}>
-						<Blog />
-					</Modal>
-					<Modal large title="GitHub" open={(open === "2") ? true : false} onClose={closeDialog}>
-						<GitHub />
-					</Modal>
-					<Modal title="Twitter" open={(open === "5") ? true : false} onClose={closeDialog}>
-						<Timeline
-							dataSource={{
-								sourceType: 'profile',
-								screenName: 'TheAlmightyWord'
-							}}
-							options={{
-								height: '400',
-								theme: 'dark'
-							}}
-						/>
-					</Modal>
-					<Modal title="Talking on Discord" open={(open === "8") ? true : false} onClose={closeDialog}>
-						<p>There's no direct link to <strong>Discord</strong>, so to start a chat:</p>
-						<ul>
-							<li>Open the Discord app (desktop, mobile, whatever).</li>
-							<li>Click on <strong>Find or Start a Conversation</strong>.</li>
-							<li>Paste in <strong>soupbowl#9573</strong>.</li>
-							<li>???</li>
-							<li>Profit!</li>
-						</ul>
-					</Modal>
-					<Modal large title="About me" open={(open === "500") ? true : false} onClose={closeDialog}>
-						<About />
-					</Modal>
 
-					<div>
+				<PageBody id="socials" color='#1B1A1B'>
+
+					<SocialContainer>
 						<SocialPanel>
 							<Social id="1" url="#" icon={faBloggerB} color="#29132e" onClick={openDialog}>
 								soupbowl.blog
@@ -135,9 +165,17 @@ export default function Home() {
 								soupbowl<br />#9573
 							</Social>
 						</SocialPanel>
-					</div>
+					</SocialContainer>
+				</PageBody>
+
+				<PageBody id="about" color='#101010'>
+					<About />
 				</PageBody>
 			</main>
+
+			<ScrollButton onClick={() => scrollTo('start')} style={{ opacity: (showTopButton) ? 1 : 0 }}>
+				&#8679;
+			</ScrollButton>
 		</Layout>
 	);
 }
