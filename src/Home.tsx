@@ -38,7 +38,8 @@ const PageHeader = styled.div({
 			fontSize: '24px'
 		},
 		'@media only screen and (max-width: 650px)': {
-			marginTop: 20
+			marginTop: 20,
+			paddingBottom: 50
 		}
 	}
 });
@@ -49,6 +50,9 @@ const PageBody = styled.div(props => ({
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'center',
+	'@media only screen and (max-width: 650px)': {
+		paddingBottom: 50
+	}
 }));
 
 const SocialContainer = styled.div({
