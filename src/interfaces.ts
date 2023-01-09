@@ -23,6 +23,14 @@ export interface IRepoImages {
 	image: string;
 }
 
+export interface ILabs {
+	lab: string;
+	description: string;
+	type: string;
+	logo: string;
+	url: string;
+}
+
 export interface IBlogPost {
 	id: string;
 	title: string;

@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import {
-	faDiscord, faGithub, faGitlab, faLastfm, faMastodon, faReddit, faTwitter, faWordpress
+	faDiscord, faGithub, faLastfm, faMastodon, faReddit, faTwitter, faWordpress
 } from "@fortawesome/free-brands-svg-icons";
-import { faBlog } from "@fortawesome/free-solid-svg-icons";
+import { faBlog, faVial } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { Timeline } from "react-twitter-widgets";
 import Layout from "./components/Layout";
@@ -13,6 +13,7 @@ import { Social, SocialPanel } from "./components/Social";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import GitHub from "./pages/GitHub";
+import Labs from "./pages/Labs";
 import WordPress from "./pages/WordPress";
 
 const PageOrder = [
@@ -79,7 +80,10 @@ export default function Home() {
 			<Modal large title="Blog" open={(open === "1") ? true : false} onClose={closeDialog}>
 				<Blog />
 			</Modal>
-			<Modal large title="GitHub" open={(open === "2") ? true : false} onClose={closeDialog}>
+			<Modal large title="Experiments" open={(open === "2") ? true : false} onClose={closeDialog}>
+				<Labs />
+			</Modal>
+			<Modal large title="GitHub" open={(open === "3") ? true : false} onClose={closeDialog}>
 				<GitHub />
 			</Modal>
 			<Modal title="WordPress" open={(open === "4") ? true : false} onClose={closeDialog}>
@@ -122,10 +126,10 @@ export default function Home() {
 							<Social id="1" icon={faBlog} color="#29132e" onClick={openDialog}>
 								soupbowl.blog
 							</Social>
-							<Social id="2" icon={faGithub} color="#2d333b" onClick={openDialog}>
-								soup-bowl
+							<Social id="2" icon={faVial} color="#00ad2b" onClick={openDialog}>
+								Experiments
 							</Social>
-							<Social url="https://gitlab.com/soup-bowl" icon={faGitlab} color="#F96424">
+							<Social id="3" icon={faGithub} color="#2d333b" onClick={openDialog}>
 								soup-bowl
 							</Social>
 							<Social id="4" icon={faWordpress} color="#0085BA" onClick={openDialog}>
