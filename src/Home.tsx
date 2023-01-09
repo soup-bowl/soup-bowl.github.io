@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 import {
-	faBloggerB, faDiscord, faGithub, faGitlab, faLastfm, faMastodon, faReddit, faTwitter, faWordpress
+	faDiscord, faGithub, faGitlab, faLastfm, faMastodon, faReddit, faTwitter, faWordpress
 } from "@fortawesome/free-brands-svg-icons";
+import { faBlog } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { Timeline } from "react-twitter-widgets";
 import { ScrollToTopButton } from "./components/Buttons";
@@ -77,7 +78,7 @@ export default function Home() {
 		});
 	}, []);
 
-	const scrollTo = (location:string) => {
+	const scrollTo = (location: string) => {
 		document.getElementById(location)?.scrollIntoView({ behavior: 'smooth' });
 	}
 
@@ -127,7 +128,7 @@ export default function Home() {
 
 					<SocialContainer>
 						<SocialPanel>
-							<Social id="1" icon={faBloggerB} color="#29132e" onClick={openDialog}>
+							<Social id="1" icon={faBlog} color="#29132e" onClick={openDialog}>
 								soupbowl.blog
 							</Social>
 							<Social id="2" icon={faGithub} color="#2d333b" onClick={openDialog}>
