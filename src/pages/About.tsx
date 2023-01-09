@@ -21,8 +21,6 @@ const ProfileDisplay = styled.div({
 });
 
 export default function About() {
-	useEffect(() => { document.title = 'Me - Soupbowl Portfolio' }, []);
-
 	return (
 		<ProfileDisplay>
 			<div className="picture">

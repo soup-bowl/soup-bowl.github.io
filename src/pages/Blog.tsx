@@ -7,8 +7,6 @@ export default function Blog() {
 	const [items, setItems] = useState<IBlogPost[]>([]);
 	const [loading, setLoading] = useState<boolean>(true);
 
-	useEffect(() => { document.title = 'Blog - Soupbowl Portfolio' }, []);
-
 	useEffect(() => {
 		fetch(`${blogURL}/feed.xml`)
 			.then((response: Response) => response.text())

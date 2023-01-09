@@ -7,8 +7,6 @@ export default function WordPress() {
 	const [plugins, setPlugins] = useState<IWordPressPluginListing[]>([]);
 	const [PluginErr, setPluginErr] = useState<boolean>(false);
 
-	useEffect(() => { document.title = 'Projects - Soupbowl Portfolio' }, []);
-
 	useEffect(() => {
 		Promise.all([
 			WPAPI.getPlugin('simple-smtp'),

@@ -9,8 +9,6 @@ export default function GitHub() {
 	const [popularRepos, setPopularRepos] = useState<IGitHubRepos[]>([]);
 	const [PopularReposErr, setPopularReposErr] = useState<boolean>(false);
 
-	useEffect(() => { document.title = 'Projects - Soupbowl Portfolio' }, []);
-
 	useEffect(() => {
 		GitHubAPI.searchUser('soup-bowl', 'stargazers', 6)
 			.then(response => (setPopularRepos(response.data.items)))
