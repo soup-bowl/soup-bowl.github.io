@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { useEffect } from "react";
 
 const ProfileDisplay = styled.div({
 	display: 'flex',
