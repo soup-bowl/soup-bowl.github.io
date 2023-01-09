@@ -77,7 +77,9 @@ export default function Home() {
 		});
 	}, []);
 
-	//const scrollTo = (location:string) => { document.getElementById(location)?.scrollIntoView({ behavior: 'smooth' }) }
+	const scrollTo = (location:string) => {
+		document.getElementById(location)?.scrollIntoView({ behavior: 'smooth' });
+	}
 
 	return (
 		<Layout>
@@ -115,7 +117,7 @@ export default function Home() {
 
 			<main>
 				<PageHeader id="start">
-					<div id="500" onClick={openDialog}>
+					<div onClick={() => scrollTo("socials")}>
 						<h1>soup-bowl</h1>
 						<p><strong>DevOps</strong> and <strong>Web Developer</strong> from <strong>Hertfordshire, UK</strong></p>
 					</div>
