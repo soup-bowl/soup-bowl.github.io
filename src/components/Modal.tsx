@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactNode } from "react";
-import { ReactComponent as CloseButton } from '../assets/close.svg';
 
 const ModalControl = styled.div({
 	position: "fixed",
@@ -54,10 +55,6 @@ const ModalCloseBox = styled.button({
 	position: "absolute",
 	top: "10px",
 	right: "10px",
-	svg: {
-		width: "20px",
-		height: "20px",
-	}
 });
 
 const ModalHeader = styled.h2({
@@ -92,7 +89,7 @@ export function Modal({ title, open, large, onClose, children }: ModalProps) {
 						<ModalHeader>
 							{title}
 							<ModalCloseBox onClick={onClose}>
-								<CloseButton />
+								<FontAwesomeIcon icon={faXmark} />
 							</ModalCloseBox>
 						</ModalHeader>
 						<ModalBody>
