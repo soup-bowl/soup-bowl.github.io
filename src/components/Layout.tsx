@@ -11,10 +11,6 @@ export const PageBody = styled.main({
 
 	'& > h1, & > h2': {
 		textAlign: 'center'
-	},
-
-	'a': {
-		color: 'red'
 	}
 });
 
@@ -34,6 +30,9 @@ const globalTheme = {
 		fontSize: '1.125rem',
 		color: theme.colors.white,
 		backgroundColor: theme.colors.background,
+	},
+	a: {
+		color: theme.colors.primary
 	},
 	':root': {
 		colorScheme: 'dark'
