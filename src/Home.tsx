@@ -127,22 +127,22 @@ export default function Home() {
 
 					<SocialContainer>
 						<SocialPanel>
-							<Social id="1" url="#" icon={faBloggerB} color="#29132e" onClick={openDialog}>
+							<Social id="1" icon={faBloggerB} color="#29132e" onClick={openDialog}>
 								soupbowl.blog
 							</Social>
-							<Social id="2" url="#" icon={faGithub} color="#2d333b" onClick={openDialog}>
+							<Social id="2" icon={faGithub} color="#2d333b" onClick={openDialog}>
 								soup-bowl
 							</Social>
 							<Social url="https://gitlab.com/soup-bowl" icon={faGitlab} color="#F96424">
 								soup-bowl
 							</Social>
-							<Social id="4" url="#" icon={faWordpress} color="#0085BA" onClick={openDialog}>
+							<Social id="4" icon={faWordpress} color="#0085BA" onClick={openDialog}>
 								soupbowl
 							</Social>
 							<Social url="https://last.fm/user/soup-bowl" icon={faLastfm} color="#BA0000">
 								soup-bowl
 							</Social>
-							<Social id="5" url="#" icon={faTwitter} color="#1D9BD0" onClick={openDialog}>
+							<Social id="5" icon={faTwitter} color="#1D9BD0" onClick={openDialog}>
 								TheAlmightyWord
 							</Social>
 							<Social url="https://mstdn.social/@soupbowl" icon={faMastodon} color="#6364ff">
@@ -151,7 +151,7 @@ export default function Home() {
 							<Social url="https://www.reddit.com/user/MySQL-Error" icon={faReddit} color="#de5833">
 								MySQL-Error
 							</Social>
-							<Social id="8" url="#" icon={faDiscord} color="#5865f2" onClick={openDialog}>
+							<Social id="8" icon={faDiscord} color="#5865f2" onClick={openDialog}>
 								soupbowl<br />#9573
 							</Social>
 						</SocialPanel>
