@@ -59,10 +59,16 @@ const ScrollButton = styled.button(props => ({
 	border: 'none',
 	// @ts-ignore
 	backgroundColor: props.theme.colors.primary,
-	fontSize: '2em',
-	width: '50px',
-	height: '50px',
-	transition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms'
+	fontSize: '3em',
+	width: '75px',
+	height: '75px',
+	transition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+
+	'@media only screen and (max-width: 650px)': {
+		fontSize: '2em',
+		width: '50px',
+		height: '50px',
+	}
 }));
 
 export default function Home() {
