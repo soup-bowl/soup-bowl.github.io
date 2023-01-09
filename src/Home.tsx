@@ -4,6 +4,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 import { Timeline } from "react-twitter-widgets";
+import { ScrollToTopButton } from "./components/Buttons";
 import Layout from "./components/Layout";
 import { Modal } from "./components/Modal";
 import { Social, SocialPanel } from "./components/Social";
@@ -49,27 +50,6 @@ const SocialContainer = styled.div({
 	justifyContent: 'center',
 	height: '100%'
 });
-
-const ScrollButton = styled.button(props => ({
-	position: 'fixed',
-	bottom: '20px',
-	right: '20px',
-	cursor: 'pointer',
-	borderRadius: '250em',
-	border: 'none',
-	// @ts-ignore
-	backgroundColor: props.theme.colors.primary,
-	fontSize: '3em',
-	width: '75px',
-	height: '75px',
-	transition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-
-	'@media only screen and (max-width: 650px)': {
-		fontSize: '2em',
-		width: '50px',
-		height: '50px',
-	}
-}));
 
 export default function Home() {
 	const [open, setOpen] = useState<string>("0");
@@ -179,9 +159,7 @@ export default function Home() {
 				</PageBody>
 			</main>
 
-			<ScrollButton onClick={() => scrollTo('start')} style={{ opacity: (showTopButton) ? 1 : 0 }}>
-				&#8679;
-			</ScrollButton>
+			<ScrollToTopButton visible={showTopButton} />
 		</Layout>
 	);
 }
