@@ -76,9 +76,7 @@ export default function Home() {
 		});
 	}, []);
 
-	const scrollTo = (location:string) => {
-		document.getElementById(location)?.scrollIntoView({ behavior: 'smooth' })
-	}
+	//const scrollTo = (location:string) => { document.getElementById(location)?.scrollIntoView({ behavior: 'smooth' }) }
 
 	return (
 		<Layout>
