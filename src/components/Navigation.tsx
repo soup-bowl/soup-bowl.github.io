@@ -27,10 +27,11 @@ export const Scroller = ({ pages }:Props) => {
 		let page = -1;
 		for (let index = 0; index < pages.length; index++) {
 			let elementTarget = document.getElementById(pages[index].label);
-			
-			// @ts-ignore
-			if (window.scrollY >= (elementTarget.offsetTop + elementTarget.offsetHeight)) {
-				page = pages[index].id;
+
+			if (elementTarget !== null) {
+				if (window.scrollY >= (elementTarget.offsetTop + elementTarget.offsetHeight)) {
+					page = pages[index].id;
+				}
 			}
 		}
 		return (page + 1);
