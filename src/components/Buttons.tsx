@@ -1,10 +1,7 @@
 import styled from "@emotion/styled";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-interface STTProps {
-	visible: boolean;
-}
+import { useEffect, useState } from "react";
 
 export const AttentionButton = styled.button(props => ({
 	cursor: "pointer",
@@ -17,7 +14,52 @@ export const AttentionButton = styled.button(props => ({
 	border: "inherit",
 }));
 
-export const ScrollToTopButton = ({ visible }:STTProps) => {
+interface SBProps {
+	onUp: () => void;
+	onDown: () => void;
+}
+
+export const ScrollButtons = ({ onUp, onDown }: SBProps) => {
+	const ScrollButton = styled.div(props => ({
+		position: 'fixed',
+		bottom: '20px',
+		right: '20px',
+		button: {
+			cursor: 'pointer',
+			border: 'none',
+			backgroundColor: 'transparent',
+			fontSize: '3em',
+			width: '75px',
+			height: '75px',
+			transition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+		}
+	}));
+
+	return (
+		<ScrollButton>
+			<button onClick={onDown}>
+				<FontAwesomeIcon icon={faChevronDown} />
+			</button>
+			<button onClick={onUp}>
+				<FontAwesomeIcon icon={faChevronUp} />
+			</button>
+		</ScrollButton>
+	);
+}
+
+export const ScrollToTopButton = () => {
+	const [showTopButton, setShowTopButton] = useState<boolean>(false);
+
+	useEffect(() => {
+		window.addEventListener("scroll", () => {
+			if (window.pageYOffset > 300) {
+				setShowTopButton(true);
+			} else {
+				setShowTopButton(false);
+			}
+		});
+	}, []);
+
 	const ScrollButton = styled.button(props => ({
 		position: 'fixed',
 		bottom: '20px',
@@ -31,7 +73,7 @@ export const ScrollToTopButton = ({ visible }:STTProps) => {
 		width: '75px',
 		height: '75px',
 		transition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-	
+
 		'@media only screen and (max-width: 650px)': {
 			fontSize: '2em',
 			width: '50px',
@@ -39,12 +81,12 @@ export const ScrollToTopButton = ({ visible }:STTProps) => {
 		}
 	}));
 
-	return(
+	return (
 		<ScrollButton
 			onClick={() => {
 				window.scrollTo({ top: 0, behavior: 'smooth' });
 			}}
-			style={{ opacity: (visible) ? 1 : 0 }}
+			style={{ opacity: (showTopButton) ? 1 : 0 }}
 		>
 			<FontAwesomeIcon icon={faChevronUp} />
 		</ScrollButton>

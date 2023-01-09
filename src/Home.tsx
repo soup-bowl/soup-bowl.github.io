@@ -3,17 +3,23 @@ import {
 	faDiscord, faGithub, faGitlab, faLastfm, faMastodon, faReddit, faTwitter, faWordpress
 } from "@fortawesome/free-brands-svg-icons";
 import { faBlog } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Timeline } from "react-twitter-widgets";
-import { ScrollToTopButton } from "./components/Buttons";
 import Layout from "./components/Layout";
 import { Modal } from "./components/Modal";
+import Scroller from "./components/Navigation";
 import { Social, SocialPanel } from "./components/Social";
 
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import GitHub from "./pages/GitHub";
 import WordPress from "./pages/WordPress";
+
+const PageOrder = [
+	{ id: 0, label: 'start' },
+	{ id: 1, label: 'socials' },
+	{ id: 2, label: 'about' },
+];
 
 const PageHeader = styled.div({
 	display: 'flex',
@@ -39,7 +45,6 @@ const PageHeader = styled.div({
 
 const PageBody = styled.div(props => ({
 	backgroundColor: props.color,
-	padding: 20,
 	minHeight: '100vh',
 	display: 'flex',
 	alignItems: 'center',
@@ -55,7 +60,6 @@ const SocialContainer = styled.div({
 
 export default function Home() {
 	const [open, setOpen] = useState<string>("0");
-	const [showTopButton, setShowTopButton] = useState<boolean>(false);
 
 	const openDialog = (e: any) => {
 		e.preventDefault();
@@ -65,22 +69,6 @@ export default function Home() {
 	const closeDialog = () => {
 		setOpen("0");
 	};
-
-	useEffect(() => { document.title = 'Soupbowl Portfolio' }, []);
-
-	useEffect(() => {
-		window.addEventListener("scroll", () => {
-			if (window.pageYOffset > 300) {
-				setShowTopButton(true);
-			} else {
-				setShowTopButton(false);
-			}
-		});
-	}, []);
-
-	const scrollTo = (location: string) => {
-		document.getElementById(location)?.scrollIntoView({ behavior: 'smooth' });
-	}
 
 	return (
 		<Layout>
@@ -117,15 +105,14 @@ export default function Home() {
 			</Modal>
 
 			<main>
-				<PageHeader id="start">
-					<div onClick={() => scrollTo("socials")}>
+				<PageHeader id={PageOrder[0].label}>
+					<div>
 						<h1>soup-bowl</h1>
 						<p><strong>DevOps</strong> and <strong>Web Developer</strong> from <strong>Hertfordshire, UK</strong></p>
 					</div>
 				</PageHeader>
 
-				<PageBody id="socials" color='#1B1A1B'>
-
+				<PageBody id={PageOrder[1].label} color='#1B1A1B'>
 					<SocialContainer>
 						<SocialPanel>
 							<Social id="1" icon={faBlog} color="#29132e" onClick={openDialog}>
@@ -159,12 +146,11 @@ export default function Home() {
 					</SocialContainer>
 				</PageBody>
 
-				<PageBody id="about" color='#101010'>
+				<PageBody id={PageOrder[2].label} color='#101010'>
 					<About />
 				</PageBody>
 			</main>
-
-			<ScrollToTopButton visible={showTopButton} />
+			<Scroller pages={PageOrder} />
 		</Layout>
 	);
 }

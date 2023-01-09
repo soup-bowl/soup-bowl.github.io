@@ -47,14 +47,14 @@ const ModalBox = styled.div({
 
 const ModalCloseBox = styled.button({
 	cursor: "pointer",
-	backgroundColor: "#0a0a0a",
+	backgroundColor: "transparent",
 	fontSize: "1.5em",
 	color: "white",
 	border: "inherit",
 	borderRadius: "10px",
 	position: "absolute",
-	top: "10px",
-	right: "10px",
+	top: "15px",
+	right: "15px",
 });
 
 const ModalHeader = styled.h2({
