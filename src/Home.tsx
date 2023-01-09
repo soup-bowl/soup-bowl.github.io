@@ -37,12 +37,15 @@ const PageHeader = styled.div({
 const PageBody = styled.div({
 	backgroundColor: '#1B1A1B',
 	padding: 20,
-	minHeight: '50vh',
+	minHeight: '100vh',
+	display: 'flex',
+	alignItems: 'center',
+	justifyContent: 'center',
 	'& > div': {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		marginTop: 25
+		height: '100%'
 	}
 });
 
