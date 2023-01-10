@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 
 const ModalControl = styled.div({
 	position: "fixed",
@@ -79,16 +79,32 @@ interface ModalProps {
 	children: ReactNode;
 }
 
+function onCloseInteraction(onClose: () => void) {
+	document.body.style.overflow = 'visible';
+	onClose();
+}
+
 export function Modal({ title, open, large, onClose, children }: ModalProps) {
+	useEffect(() => {
+		document.getElementById("modal")?.addEventListener("click", (e) => {
+			if (e.target instanceof HTMLElement) {
+				if (!e.target.closest("#modalbox")) {
+					onCloseInteraction(onClose);
+				}
+			}
+		});
+	}, [onClose]);
+
 	if (open) {
+		document.body.style.overflow = 'hidden';
 		return (
-			<ModalControl>
+			<ModalControl id="modal">
 				<ModalBackdrop />
 				<ModalBackground>
-					<ModalBox style={{ maxWidth: large ? '1200px' : '600px' }}>
+					<ModalBox id="modalbox" style={{ maxWidth: large ? '1200px' : '600px' }}>
 						<ModalHeader>
 							{title}
-							<ModalCloseBox onClick={onClose}>
+							<ModalCloseBox onClick={() => onCloseInteraction(onClose)}>
 								<FontAwesomeIcon icon={faXmark} />
 							</ModalCloseBox>
 						</ModalHeader>
