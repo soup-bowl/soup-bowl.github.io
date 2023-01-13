@@ -24,7 +24,7 @@ export default function Labs() {
 						<ListingItem
 							key={i}
 							title={item.lab}
-							url={item.url}
+							url={(item.url.startsWith("/")) ? `https://soupbowl.dev/labs${item.url}` : item.url}
 							image={item.logo}
 						>
 							<p>{item.description}</p>
