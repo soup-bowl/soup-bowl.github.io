@@ -109,17 +109,22 @@ const Icon = styled.div({
 interface CardProps {
 	id?: string;
 	url?: string;
-	icon: IconDefinition;
+	icon?: IconDefinition;
+	iconSvg?: any;
 	color: string;
 	onClick?: (e:any) => void;
 	children: ReactNode;
 }
 
-export const Social = ({ id, url = '#', icon, color, onClick, children }: CardProps) => {
+export const Social = ({ id, url = '#', icon, iconSvg, color, onClick, children }: CardProps) => {
 	return (
 		<SocialSet id={id} rel="me" href={url} color={color} onClick={onClick}>
 			<Icon datatype="icon">
+				{icon !== undefined ?
 				<FontAwesomeIcon icon={icon} />
+				:
+				<>{iconSvg}</>
+				}
 			</Icon>
 			<Label datatype="text">
 				{children}

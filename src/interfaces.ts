@@ -75,3 +75,43 @@ export interface IWordPressRatings {
 	4: number;
 	5: number;
 }
+
+export interface IOpenSimulatorStats {
+	Dilatn: string;
+	SimFPS: string;
+	PhyFPS: string;
+	AgntUp: string;
+	RootAg: string;
+	ChldAg: string;
+	NPCAg: string;
+	Prims: string;
+	AtvPrm: string;
+	AtvScr: string;
+	ScrLPS: string;
+	ScrEPS: string;
+	PktsIn: string;
+	PktOut: string;
+	PendDl: string;
+	PendUl: string;
+	UnackB: string;
+	TotlFt: string;
+	NetFt: string;
+	PhysFt: string;
+	OthrFt: string;
+	AgntFt: string;
+	ImgsFt: string;
+	FrameDilatn: string;
+	"Logging in Users": string;
+	GeoPrims: string;
+	"Mesh Objects": string;
+	"Script Engine Thread Count": string;
+	RegionName: string;
+	"Util Thread Count": string;
+	"System Thread Count": string;
+	"System Thread Active": string;
+	ProcMem: string;
+	Memory: string;
+	Uptime: string;
+	UptimeObject?: any;
+	Version: string;
+}

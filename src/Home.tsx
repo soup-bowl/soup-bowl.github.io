@@ -1,10 +1,9 @@
 import styled from "@emotion/styled";
 import {
-	faDiscord, faGithub, faLastfm, faMastodon, faReddit, faTwitter, faWordpress
+	faDiscord, faGithub, faLastfm, faMastodon, faReddit, faWordpress
 } from "@fortawesome/free-brands-svg-icons";
 import { faBlog, faVial } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { Timeline } from "react-twitter-widgets";
 import Layout from "./components/Layout";
 import { Modal } from "./components/Modal";
 import Scroller from "./components/Navigation";
@@ -14,6 +13,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import GitHub from "./pages/GitHub";
 import Labs from "./pages/Labs";
+import OpenSim from "./pages/OpenSimulator";
 import WordPress from "./pages/WordPress";
 
 const PageOrder = [
@@ -89,17 +89,8 @@ export default function Home() {
 			<Modal title="WordPress" open={(open === "4") ? true : false} onClose={closeDialog}>
 				<WordPress />
 			</Modal>
-			<Modal title="Twitter" open={(open === "5") ? true : false} onClose={closeDialog}>
-				<Timeline
-					dataSource={{
-						sourceType: 'profile',
-						screenName: 'TheAlmightyWord'
-					}}
-					options={{
-						height: '400',
-						theme: 'dark'
-					}}
-				/>
+			<Modal title="OSgrid Estate" open={(open === "5") ? true : false} onClose={closeDialog}>
+				<OpenSim />
 			</Modal>
 			<Modal title="Talking on Discord" open={(open === "8") ? true : false} onClose={closeDialog}>
 				<p>There's no direct link to <strong>Discord</strong>, so to start a chat:</p>
@@ -138,8 +129,13 @@ export default function Home() {
 							<Social url="https://last.fm/user/soup-bowl" icon={faLastfm} color="#BA0000">
 								soup-bowl
 							</Social>
-							<Social id="5" icon={faTwitter} color="#1D9BD0" onClick={openDialog}>
-								TheAlmightyWord
+							<Social id="5" iconSvg={
+								<svg style={{ height: '1em' }} aria-hidden="true" focusable="false" data-prefix="fab" data-icon="osgrid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+									<path fill="currentColor"
+										d="m 211.03302,495.50159 -28.64472,2.60404 -80.72625,-61.19568 -1.30198,-18.22855 61.19568,-44.26921 -148.432112,-95.04862 -10.4162758,-22.1346 24.7387098,-92.44454 18.228445,-6.51018 178.378953,109.37101 -19.53057,76.8201 62.49773,-44.2692 71.61205,49.47736 -33.85301,-84.63234 63.79978,-48.17533 -80.72625,2.60407 -24.73866,-70.30994 -22.1346,72.91401 -95.04861,-1.30198 -32.55095,-20.83258 57.28959,-179.680948 24.73871,-13.0203587 93.74658,3.9061137 15.62441,18.228512 -23.43658,62.497714 h 171.86869 l 16.92647,9.114247 37.75901,96.35065 -9.11422,15.62443 -79.42419,1.30198 65.10176,171.86873 -6.51012,23.43667 -85.93438,58.59161 -16.92647,-6.51012 -23.43666,-69.00795 z" />
+								</svg>
+							} color="#FFCB00" onClick={openDialog}>
+								Soupbowl
 							</Social>
 							<Social url="https://mstdn.social/@soupbowl" icon={faMastodon} color="#6364ff">
 								soupbowl<br />@mstdn.social
