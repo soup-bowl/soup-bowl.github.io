@@ -26,5 +26,13 @@
 	{
 		"repo": "soup-bowl/chromeboard",
 		"image": "https://soupbowl.blog/assets/img/79EK6Hx.webp"
+	},
+	{
+		"repo": "soup-bowl/opensimulator-docker",
+		"image": "https://repository-images.githubusercontent.com/594410735/49360e49-c97c-47b7-9fc4-7491780fb31e"
+	},
+	{
+		"repo": "soup-bowl/opensim-sandbox",
+		"image": "https://repository-images.githubusercontent.com/594410735/49360e49-c97c-47b7-9fc4-7491780fb31e"
 	}
 ]
