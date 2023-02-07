@@ -8,8 +8,9 @@ export const AttentionButton = styled.button(props => ({
 	// @ts-ignore
 	backgroundColor: props.theme.colors.primary,
 	borderRadius: "5px",
-	padding: "5px 10px 5px 10px",
-	fontSize: "1.5em",
+	boxShadow: "#121212 0px 2px 5px",
+	padding: "10px 15px 10px 15px",
+	fontSize: "1.25em",
 	color: "white",
 	border: "inherit",
 }));
