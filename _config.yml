@@ -38,6 +38,7 @@ soupy:
     wordpress: https://profiles.wordpress.org/soupbowl
     google:    https://g.dev/soupbowl
     lastfm:    https://last.fm/user/soup-bowl
+    osgrid:    hop://osgrid.org:80/soupbowl/128/128/30
 
 paginate: 5
 paginate_path: "/blog/page/:num/"
