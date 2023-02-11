@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import GitHub from "./pages/GitHub";
 import Labs from "./pages/Labs";
+import Mastodon from "./pages/Mastodon";
 import OpenSim from "./pages/OpenSimulator";
 import WordPress from "./pages/WordPress";
 
@@ -92,6 +93,9 @@ export default function Home() {
 			<Modal title="OSgrid Estate" open={(open === "5") ? true : false} onClose={closeDialog}>
 				<OpenSim />
 			</Modal>
+			<Modal large title="Mastodon" open={(open === "6") ? true : false} onClose={closeDialog}>
+				<Mastodon />
+			</Modal>
 			<Modal title="Talking on Discord" open={(open === "8") ? true : false} onClose={closeDialog}>
 				<p>There's no direct link to <strong>Discord</strong>, so to start a chat:</p>
 				<ul>
@@ -137,7 +141,7 @@ export default function Home() {
 							} color="#FFCB00" onClick={openDialog}>
 								Soupbowl
 							</Social>
-							<Social url="https://mstdn.social/@soupbowl" icon={faMastodon} color="#6364ff">
+							<Social id="6" icon={faMastodon} color="#6364ff" onClick={openDialog}>
 								soupbowl<br />@mstdn.social
 							</Social>
 							<Social url="https://www.reddit.com/user/MySQL-Error" icon={faReddit} color="#de5833">
