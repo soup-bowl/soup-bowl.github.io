@@ -19,6 +19,7 @@ export default function Mastodon() {
 				<ListingItemGroup>
 					{statuses
 						.filter((item) => (item.content === '' ? false : true))
+						.slice(0, 5)
 						.map((item, i) => (
 							<ListingSocialItem
 								key={i}
