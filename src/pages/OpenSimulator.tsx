@@ -27,7 +27,7 @@ export default function OpenSim() {
 				come check it out!
 			</p>
 			<div style={{ textAlign: 'center' }}>
-				<AttentionButton onClick={() => window.location.href = "hop://osgrid.org:80/soupbowl/128/128/30"}>
+				<AttentionButton onClick={() => window.location.href = "hop://hg.osgrid.org:80/Oxanhenge/195/25/25"}>
 					Visit In-world
 				</AttentionButton>
 			</div>
