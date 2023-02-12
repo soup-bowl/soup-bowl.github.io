@@ -16,6 +16,13 @@ const Item = styled.div({
 	}
 });
 
+const ItemBlock = styled.div({
+	backgroundColor: '#292929',
+	borderRadius: '25px',
+	boxShadow: '0px 0px 15px 1px rgba(0, 0, 0, 0.5)',
+	padding: '10px'
+});
+
 const Image = styled.div({
 	minHeight: '200px',
 	flexBasis: '300px',
@@ -39,7 +46,7 @@ const Label = styled.div({
 		maxWidth: '95%'
 	},
 	a: {
-        color: 'white',
+		color: 'white',
 	}
 });
 
@@ -50,6 +57,26 @@ const InfoBites = styled.div({
 
 	'div': {
 		marginRight: '15px'
+	}
+});
+
+const Socialview = styled.div({
+	display: 'flex',
+	justifyContent: 'space-between',
+	flexDirection: 'row-reverse',
+
+	a: {
+		display: 'flex',
+		alignItems: 'center',
+		gap: '10px',
+		lineHeight: '1px',
+		textDecoration: 'none',
+
+		img: {
+			height: '46px',
+			width: '46px',
+			borderRadius: '10px'
+		}
 	}
 });
 
@@ -64,7 +91,7 @@ export const ListingItemGroup = styled.div({
 	'@media only screen and (max-width: 1280px)': {
 		gridTemplateColumns: "auto"
 	},*/
-	
+
 	'@media only screen and (max-width: 750px)': {
 		margin: 0
 	}
@@ -76,8 +103,8 @@ interface InfoProps {
 	children: ReactNode;
 }
 
-function ItemInfo({icon, alt, children}:InfoProps) {
-	return(
+function ItemInfo({ icon, alt, children }: InfoProps) {
+	return (
 		<div>
 			<FontAwesomeIcon icon={icon} title={alt} />&nbsp;
 			{children}
@@ -109,8 +136,8 @@ export function ListingItem({
 	return (
 		<Item>
 			{image !== undefined ?
-			<Image style={{ backgroundImage: `url(${image})` }} />
-			: null}
+				<Image style={{ backgroundImage: `url(${image})` }} />
+				: null}
 			<Label>
 				<h2><a href={url}>{title}</a></h2>
 				<InfoBites>
@@ -122,5 +149,55 @@ export function ListingItem({
 				{children}
 			</Label>
 		</Item>
+	);
+}
+
+interface SocialProps {
+	avatar: string;
+	name: string;
+	profileUrl: string;
+	handle: string;
+	date: Date;
+	url: string;
+	image?: string;
+	children: ReactNode;
+}
+
+export function ListingSocialItem({
+	avatar,
+	name,
+	profileUrl,
+	handle,
+	url,
+	date,
+	image = undefined,
+	children
+}: SocialProps) {
+	return (
+		<ItemBlock>
+			<Socialview>
+				<a href={url} style={{ color: 'grey' }}>
+					{date.toLocaleDateString()}
+				</a>
+				<a href={profileUrl}>
+					<div>
+						<img src={avatar} alt="" />
+					</div>
+					<div>
+						<p style={{ fontWeight: 'bold', color: 'white' }}>{name}</p>
+						<p style={{ color: 'grey' }}>{handle}</p>
+					</div>
+				</a>
+			</Socialview>
+			<div>
+				{children}
+				{!!image ?
+					<img src={image} alt="" style={{
+						width: '100%',
+						borderRadius: '25px'
+					}} />
+				: null}
+			</div>
+		</ItemBlock>
 	);
 }

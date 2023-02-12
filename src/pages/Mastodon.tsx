@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { ListingItem, ListingItemGroup } from "../components/Listings";
+import { ListingItemGroup, ListingSocialItem } from "../components/Listings";
 import { IMastodonStatus } from "../interfaces";
 import MastoAPI from "../api/Mastodon";
-import { AttentionButton } from "../components/Buttons";
 
 export default function Mastodon() {
 	const [statuses, setStatuses] = useState<IMastodonStatus[]>([]);
@@ -16,26 +15,23 @@ export default function Mastodon() {
 
 	return (
 		<>
-			<div style={{ textAlign: 'center' }}>
-				<AttentionButton onClick={() => window.location.href = "https://mstdn.social/@soupbowl"}>
-					My Account
-				</AttentionButton>
-			</div>
-			{!MasErr ?
+			{!MasErr && statuses.length > 0 ?
 				<ListingItemGroup>
 					{statuses
 						.filter((item) => (item.content === '' ? false : true))
 						.map((item, i) => (
-							<ListingItem
+							<ListingSocialItem
 								key={i}
-								title={`Post from ${item.account.display_name} (${item.account.username})`}
+								avatar={item.account.avatar}
+								handle={`@${item.account.username}`}
+								name={item.account.display_name}
+								profileUrl={item.account.url}
 								url={item.url}
-								stars={item.favourites_count}
 								image={item.media_attachments?.[0]?.url}
 								date={new Date(item.created_at)}
 							>
 								<div dangerouslySetInnerHTML={{ __html: item.content }} />
-							</ListingItem>
+							</ListingSocialItem>
 						))}
 				</ListingItemGroup>
 				:
