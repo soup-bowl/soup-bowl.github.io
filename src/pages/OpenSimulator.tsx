@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import { AttentionButton } from "../components/Buttons";
+import { EState } from "../enums";
 import { IOpenSimulatorStats } from "../interfaces";
 
 const BigA = styled.a({
@@ -9,13 +10,16 @@ const BigA = styled.a({
 
 export default function OpenSim() {
 	const [estateInfo, setEstateInfo] = useState<IOpenSimulatorStats | undefined>(undefined);
+	const [requestState, setRequestState] = useState<EState>(EState.Started);
 
 	useEffect(() => {
 		fetch('https://mv.soupbowl.io/stats')
 			.then((response) => response.json())
 			.then((response: IOpenSimulatorStats) => {
 				setEstateInfo(response);
-			});
+				setRequestState(EState.Complete);
+			})
+			.catch(() => setRequestState(EState.Error));
 	}, []);
 
 	return (
@@ -39,7 +43,7 @@ export default function OpenSim() {
 			
 			<div>
 				<h2>Estate Stats</h2>
-				{estateInfo !== undefined ?
+				{requestState === EState.Complete && estateInfo !== undefined ?
 				<ul>
 					<li>State: <strong style={{ color: "green" }}>Online</strong></li>
 					<li>Name: <strong>{estateInfo.RegionName}</strong></li>

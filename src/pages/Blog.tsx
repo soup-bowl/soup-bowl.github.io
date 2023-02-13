@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+import { ErrorMessage, LoadingMessage } from "../components/Common";
 import { ListingItem, ListingItemGroup } from "../components/Listings";
+import { EState } from "../enums";
 import { IBlogPost } from "../interfaces";
 
 export default function Blog() {
 	const blogURL = 'https://soupbowl.blog';
 	const [items, setItems] = useState<IBlogPost[]>([]);
-	const [loading, setLoading] = useState<boolean>(true);
+	const [requestState, setRequestState] = useState<EState>(EState.Started);
 
 	useEffect(() => {
 		fetch(`${blogURL}/feed.xml`)
@@ -29,8 +31,9 @@ export default function Blog() {
 				});
 
 				setItems(collect);
-				setLoading(false);
-			});
+				setRequestState(EState.Complete);
+			})
+			.catch(() => setRequestState(EState.Error));
 	}, []);
 
 	return (
@@ -39,7 +42,7 @@ export default function Blog() {
 				You can visit my full blog
 				at <a href={blogURL} style={{ fontWeight: "bold" }}>soupbowl.blog</a>
 			</p>
-			{!loading ?
+			{requestState === EState.Complete ?
 				<ListingItemGroup>
 					{items.map((item) => (
 						<ListingItem
@@ -54,7 +57,13 @@ export default function Blog() {
 					))}
 				</ListingItemGroup>
 				:
-				<p style={{ textAlign: "center" }}>Loading...</p>
+				<>
+					{requestState === EState.Started ?
+						<LoadingMessage />
+						:
+						<ErrorMessage />
+					}
+				</>
 			}
 		</>
 	);

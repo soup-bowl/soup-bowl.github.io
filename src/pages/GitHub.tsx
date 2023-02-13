@@ -4,15 +4,20 @@ import { ListingItem, ListingItemGroup } from "../components/Listings";
 import { IGitHubRepos } from "../interfaces";
 import RepoImages from "../assets/RepositoryImages.json";
 import { AttentionButton } from "../components/Buttons";
+import { EState } from "../enums";
+import { ErrorMessage, LoadingMessage } from "../components/Common";
 
 export default function GitHub() {
 	const [popularRepos, setPopularRepos] = useState<IGitHubRepos[]>([]);
-	const [PopularReposErr, setPopularReposErr] = useState<boolean>(false);
+	const [requestState, setRequestState] = useState<EState>(EState.Started);
 
 	useEffect(() => {
 		GitHubAPI.searchUser('soup-bowl', 'stargazers', 6)
-			.then(response => (setPopularRepos(response.data.items)))
-			.catch(() => setPopularReposErr(true));
+			.then(response => {
+				setPopularRepos(response.data.items);
+				setRequestState(EState.Complete);
+			})
+			.catch(() => setRequestState(EState.Error));
 	}, []);
 
 	function displayer(data: IGitHubRepos[]): ReactNode {
@@ -37,15 +42,6 @@ export default function GitHub() {
 		});
 	}
 
-	function ErrorDisplay() {
-		return (
-			<div style={{ textAlign: 'center' }}>
-				<p style={{ fontSize: '4rem', lineHeight: 0 }}>:(</p>
-				<p>An error occurred getting the info, sorry about that</p>
-			</div>
-		);
-	}
-
 	return (
 		<>
 			<div style={{ textAlign: 'center' }}>
@@ -54,12 +50,18 @@ export default function GitHub() {
 				</AttentionButton>
 			</div>
 			<h2 style={{ textAlign: 'center' }}>Popular</h2>
-			{!PopularReposErr ?
+			{requestState === EState.Complete ?
 				<ListingItemGroup>
 					{popularRepos && displayer(popularRepos)}
 				</ListingItemGroup>
 				:
-				<ErrorDisplay />
+				<>
+					{requestState === EState.Started ?
+						<LoadingMessage />
+						:
+						<ErrorMessage />
+					}
+				</>
 			}
 		</>
 	);
