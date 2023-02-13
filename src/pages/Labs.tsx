@@ -25,18 +25,23 @@ export default function Labs() {
 
 	if (requestState === EState.Complete) {
 		return (
-			<ListingItemGroup>
-				{items.map((item, i) => (
-					<ListingItem
-						key={i}
-						title={item.lab}
-						url={(item.url.startsWith("/")) ? `https://soupbowl.dev/labs${item.url}` : item.url}
-						image={item.logo}
-					>
-						<p>{item.description}</p>
-					</ListingItem>
-				))}
-			</ListingItemGroup>
+			<>
+				<p style={{ textAlign: "center" }}>
+					Sources can be <a href="https://soupbowl.dev/labs/">found here</a>
+				</p>
+				<ListingItemGroup>
+					{items.map((item, i) => (
+						<ListingItem
+							key={i}
+							title={item.lab}
+							url={(item.url.startsWith("/")) ? `https://soupbowl.dev/labs${item.url}` : item.url}
+							image={item.logo}
+						>
+							<p>{item.description}</p>
+						</ListingItem>
+					))}
+				</ListingItemGroup>
+			</>
 		);
 	}
 
