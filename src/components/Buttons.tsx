@@ -29,9 +29,11 @@ export const ScrollButtons = ({ onUp, onDown }: SBProps) => {
 			cursor: 'pointer',
 			border: 'none',
 			backgroundColor: 'transparent',
+			color: 'white',
 			fontSize: '3em',
 			width: '75px',
 			height: '75px',
+			filter: 'drop-shadow(0px 0px 5px black)',
 			transition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
 		}
 	}));
