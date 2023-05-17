@@ -4,7 +4,7 @@ import { ListingItem, ListingItemGroup } from "../components/Listings";
 import { EState } from "../enums";
 import { IBlogPost } from "../interfaces";
 
-export default function Blog() {
+const Blog = () => {
 	const blogURL = 'https://soupbowl.blog';
 	const [items, setItems] = useState<IBlogPost[]>([]);
 	const [requestState, setRequestState] = useState<EState>(EState.Started);
@@ -68,3 +68,5 @@ export default function Blog() {
 		</>
 	);
 }
+
+export default Blog;

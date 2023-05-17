@@ -103,7 +103,7 @@ interface InfoProps {
 	children: ReactNode;
 }
 
-function ItemInfo({ icon, alt, children }: InfoProps) {
+const ItemInfo = ({ icon, alt, children }: InfoProps) => {
 	return (
 		<div>
 			<FontAwesomeIcon icon={icon} title={alt} />&nbsp;
@@ -123,7 +123,7 @@ interface Props {
 	children: ReactNode;
 }
 
-export function ListingItem({
+export const ListingItem = ({
 	title,
 	image = undefined,
 	date = undefined,
@@ -132,7 +132,7 @@ export function ListingItem({
 	downloads = 0,
 	url,
 	children
-}: Props) {
+}: Props) => {
 	return (
 		<Item>
 			{image !== undefined ?
@@ -163,7 +163,7 @@ interface SocialProps {
 	children: ReactNode;
 }
 
-export function ListingSocialItem({
+export const ListingSocialItem = ({
 	avatar,
 	name,
 	profileUrl,
@@ -172,7 +172,7 @@ export function ListingSocialItem({
 	date,
 	image = undefined,
 	children
-}: SocialProps) {
+}: SocialProps) => {
 	return (
 		<ItemBlock>
 			<Socialview>

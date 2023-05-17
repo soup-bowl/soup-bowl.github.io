@@ -79,12 +79,12 @@ interface ModalProps {
 	children: ReactNode;
 }
 
-function onCloseInteraction(onClose: () => void) {
+const onCloseInteraction = (onClose: () => void) => {
 	document.body.style.overflow = 'visible';
 	onClose();
 }
 
-export function Modal({ title, open, large, onClose, children }: ModalProps) {
+export const Modal = ({ title, open, large, onClose, children }: ModalProps) => {
 	useEffect(() => {
 		document.getElementById("modal")?.addEventListener("click", (e) => {
 			if (e.target instanceof HTMLElement) {

@@ -19,7 +19,7 @@ const ProfileDisplay = styled.div({
 	}
 });
 
-export default function About() {
+const About = () => {
 	return (
 		<ProfileDisplay>
 			<div className="picture">
@@ -39,3 +39,5 @@ export default function About() {
 		</ProfileDisplay>
 	);
 }
+
+export default About;

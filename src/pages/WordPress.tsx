@@ -5,7 +5,7 @@ import { IWordPressPluginListing } from "../interfaces";
 import { EState } from "../enums";
 import { ErrorMessage, LoadingMessage } from "../components/Common";
 
-export default function WordPress() {
+const WordPress = () => {
 	const [plugins, setPlugins] = useState<IWordPressPluginListing[]>([]);
 	const [requestState, setRequestState] = useState<EState>(EState.Started);
 
@@ -52,3 +52,5 @@ export default function WordPress() {
 
 	return (<ErrorMessage />);
 }
+
+export default WordPress;

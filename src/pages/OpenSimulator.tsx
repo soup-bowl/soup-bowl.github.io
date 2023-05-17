@@ -8,7 +8,7 @@ const BigA = styled.a({
 	fontWeight: 'bold'
 });
 
-export default function OpenSim() {
+const OpenSim = () => {
 	const [estateInfo, setEstateInfo] = useState<IOpenSimulatorStats | undefined>(undefined);
 	const [requestState, setRequestState] = useState<EState>(EState.Started);
 
@@ -60,3 +60,5 @@ export default function OpenSim() {
 		</>
 	);
 }
+
+export default OpenSim;

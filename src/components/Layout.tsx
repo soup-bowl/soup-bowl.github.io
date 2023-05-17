@@ -56,7 +56,7 @@ interface Props {
 	children: ReactNode;
 }
 
-export default function Layout({children}:Props) {
+const Layout = ({children}:Props) => {
 	return (
 		<ThemeProvider theme={theme}>
 			<Global styles={globalTheme} />
@@ -65,3 +65,5 @@ export default function Layout({children}:Props) {
 		</ThemeProvider>
 	);
 }
+
+export default Layout;

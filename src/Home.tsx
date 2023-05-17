@@ -8,14 +8,7 @@ import Layout from "./components/Layout";
 import { Modal } from "./components/Modal";
 import Scroller from "./components/Navigation";
 import { Social, SocialPanel } from "./components/Social";
-
-import About from "./pages/About";
-import Blog from "./pages/Blog";
-import GitHub from "./pages/GitHub";
-import Labs from "./pages/Labs";
-import Mastodon from "./pages/Mastodon";
-import OpenSim from "./pages/OpenSimulator";
-import WordPress from "./pages/WordPress";
+import { About, Blog, GitHub, Labs, Mastodon, OpenSim, WordPress } from "./pages";
 
 const PageOrder = [
 	{ id: 0, label: 'start' },
@@ -64,7 +57,7 @@ const SocialContainer = styled.div({
 	height: '100%'
 });
 
-export default function Home() {
+const Home = () => {
 	const [open, setOpen] = useState<string>("0");
 
 	const openDialog = (e: any) => {
@@ -162,3 +155,5 @@ export default function Home() {
 		</Layout>
 	);
 }
+
+export default Home;

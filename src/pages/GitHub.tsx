@@ -7,7 +7,7 @@ import { AttentionButton } from "../components/Buttons";
 import { EState } from "../enums";
 import { ErrorMessage, LoadingMessage } from "../components/Common";
 
-export default function GitHub() {
+const GitHub = () => {
 	const [popularRepos, setPopularRepos] = useState<IGitHubRepos[]>([]);
 	const [requestState, setRequestState] = useState<EState>(EState.Started);
 
@@ -20,7 +20,7 @@ export default function GitHub() {
 			.catch(() => setRequestState(EState.Error));
 	}, []);
 
-	function displayer(data: IGitHubRepos[]): ReactNode {
+	const displayer = (data: IGitHubRepos[]): ReactNode => {
 		return data.map((repo) => {
 			let repoImg = RepoImages.filter((e) => {
 				return e.repo === repo.full_name
@@ -66,3 +66,5 @@ export default function GitHub() {
 		</>
 	);
 }
+
+export default GitHub;

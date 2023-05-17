@@ -4,7 +4,7 @@ import { ListingItem, ListingItemGroup } from "../components/Listings";
 import { EState } from "../enums";
 import { ILabs } from "../interfaces";
 
-export default function Labs() {
+const Labs = () => {
 	const blogURL = 'https://soupbowl.dev/labs';
 	const [items, setItems] = useState<ILabs[]>([]);
 	const [requestState, setRequestState] = useState<EState>(EState.Started);
@@ -47,3 +47,5 @@ export default function Labs() {
 
 	return (<ErrorMessage />);
 }
+
+export default Labs;

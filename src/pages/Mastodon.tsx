@@ -5,7 +5,7 @@ import MastoAPI from "../api/Mastodon";
 import { EState } from "../enums";
 import { ErrorMessage, LoadingMessage } from "../components/Common";
 
-export default function Mastodon() {
+const Mastodon = () => {
 	const [statuses, setStatuses] = useState<IMastodonStatus[]>([]);
 	const [requestState, setRequestState] = useState<EState>(EState.Started);
 
@@ -48,3 +48,5 @@ export default function Mastodon() {
 
 	return (<ErrorMessage />);
 }
+
+export default Mastodon;
