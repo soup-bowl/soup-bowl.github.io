@@ -18,13 +18,19 @@ jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/checkout@v3
+
+      - name: 📦 Compile Site
+        run: |
+          docker run \
+          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+
+      - name: 🚀 Pre-Deploy Site
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-      - uses: helaili/jekyll-action@2.3.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          path: './_site'
+
+      - name: 🚀 Deploy Site
+        id: deployment
+        uses: actions/deploy-pages@v1
