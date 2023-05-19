@@ -5,6 +5,7 @@
 [![License CC BY-SA](https://img.shields.io/github/license/soup-bowl/blog)](http://creativecommons.org/licenses/by-sa/4.0/)
 ![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fsoupbowl.blog)
 [![CodeFactor](https://www.codefactor.io/repository/github/soup-bowl/blog/badge)](https://www.codefactor.io/repository/github/soup-bowl/blog)
+[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade-score/soupbowl.blog)](https://observatory.mozilla.org/analyze/soupbowl.blog)
 
 My blog website, in automatic build-and-deploy [Jekyll][j] flavour. Portfolio site is [soupbowl.dev][p].
 
