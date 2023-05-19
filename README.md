@@ -4,6 +4,7 @@
 
 ![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fsoupbowl.dev)
 [![CodeFactor](https://www.codefactor.io/repository/github/soup-bowl/soup-bowl.github.io/badge)](https://www.codefactor.io/repository/github/soup-bowl/soup-bowl.github.io)
+[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade-score/soupbowl.dev)](https://observatory.mozilla.org/analyze/soupbowl.dev)
 
 Counterpart [soupbowl.blog][s] site, serving as a small portfolio site to head the initative domain.
 
