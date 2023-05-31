@@ -106,7 +106,7 @@ const Home = () => {
 			<main>
 				<PageHeader id={PageOrder[0].label}>
 					<div>
-						<h1>soup-bowl</h1>
+						<h1>soupbowl</h1>
 						<p><strong>DevOps</strong> and <strong>Web Developer</strong> from <strong>Hertfordshire, UK</strong></p>
 					</div>
 				</PageHeader>
