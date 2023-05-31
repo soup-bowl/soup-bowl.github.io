@@ -7,7 +7,7 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const Item = styled.div({
 	backgroundColor: '#292929',
-	borderRadius: '25px',
+	borderRadius: '10px',
 	boxShadow: '0px 0px 15px 1px rgba(0, 0, 0, 0.5)',
 	display: 'flex',
 
@@ -18,7 +18,7 @@ const Item = styled.div({
 
 const ItemBlock = styled.div({
 	backgroundColor: '#292929',
-	borderRadius: '25px',
+	borderRadius: '10px',
 	boxShadow: '0px 0px 15px 1px rgba(0, 0, 0, 0.5)',
 	padding: '10px'
 });
@@ -27,12 +27,12 @@ const Image = styled.div({
 	minHeight: '200px',
 	flexBasis: '300px',
 	flexShrink: 0,
-	borderRadius: '25px 0 0 25px',
+	borderRadius: '10px 0 0 10px',
 	backgroundPosition: 'center',
 	backgroundSize: 'cover',
 
 	'@media only screen and (max-width: 750px)': {
-		borderRadius: '25px 25px 0 0'
+		borderRadius: '10px 10px 0 0'
 	}
 });
 
@@ -195,7 +195,7 @@ export const ListingSocialItem = ({
 					<div style={{ textAlign: 'center' }}>
 						<img src={image} alt="" style={{
 							maxWidth: '100%',
-							borderRadius: '25px'
+							borderRadius: '10px'
 						}} />
 					</div>
 				: null}
