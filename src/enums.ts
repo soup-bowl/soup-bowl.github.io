@@ -3,3 +3,14 @@ export enum EState {
 	Complete,
 	Error
 }
+
+export enum EPage {
+	Blog,
+	Labs,
+	GitHub,
+	WordPress,
+	LastFm,
+	Mastodon,
+	OpenSim,
+	Discord
+}

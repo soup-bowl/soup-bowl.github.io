@@ -26,9 +26,6 @@ const Labs = () => {
 	if (requestState === EState.Complete) {
 		return (
 			<>
-				<p style={{ textAlign: "center" }}>
-					Sources can be <a href="https://soupbowl.dev/labs/">found here</a>
-				</p>
 				<ListingItemGroup>
 					{items.map((item, i) => (
 						<ListingItem

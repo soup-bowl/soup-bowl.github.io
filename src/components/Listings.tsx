@@ -192,10 +192,12 @@ export const ListingSocialItem = ({
 			<div>
 				{children}
 				{!!image ?
-					<img src={image} alt="" style={{
-						width: '100%',
-						borderRadius: '25px'
-					}} />
+					<div style={{ textAlign: 'center' }}>
+						<img src={image} alt="" style={{
+							maxWidth: '100%',
+							borderRadius: '25px'
+						}} />
+					</div>
 				: null}
 			</div>
 		</ItemBlock>
