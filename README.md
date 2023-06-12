@@ -7,7 +7,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/soup-bowl/blog/badge)](https://www.codefactor.io/repository/github/soup-bowl/blog)
 [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade-score/blog.soupbowl.io)](https://observatory.mozilla.org/analyze/blog.soupbowl.io)
 
-My blog website, in automatic build-and-deploy [Jekyll][j] flavour. Portfolio site is [soupbowl.dev][p].
+My blog website, in automatic build-and-deploy [Jekyll][j] flavour.
 
 **This is a personal blog - Pull Requests will not be accepted.** This site is currently hosted using **[GitHub Pages][gh]**.
 
@@ -19,6 +19,5 @@ Installation of Ruby, Gem, Jekyll, etc is **not necessary**, as the **Docker Com
 
 [h]:  https://user-images.githubusercontent.com/11209477/147856239-c7eb65c9-ba89-44fa-bf32-1e68568dc48b.png
 [s]:  https://blog.soupbowl.io
-[p]:  https://github.com/soup-bowl/soup-bowl.github.io
 [gh]: https://docs.github.com/en/pages
 [j]:  https://jekyllrb.com/
