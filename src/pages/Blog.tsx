@@ -5,7 +5,7 @@ import { EState } from "../enums";
 import { IBlogPost } from "../interfaces";
 
 const Blog = () => {
-	const blogURL = 'https://soupbowl.blog';
+	const blogURL = 'https://blog.soupbowl.io';
 	const [items, setItems] = useState<IBlogPost[]>([]);
 	const [requestState, setRequestState] = useState<EState>(EState.Started);
 
@@ -40,7 +40,7 @@ const Blog = () => {
 		<>
 			<p style={{ textAlign: "center" }}>
 				You can visit my full blog
-				at <a href={blogURL} style={{ fontWeight: "bold" }}>soupbowl.blog</a>
+				at <a href={blogURL} style={{ fontWeight: "bold" }}>blog.soupbowl.io</a>
 			</p>
 			{requestState === EState.Complete ?
 				<ListingItemGroup>
