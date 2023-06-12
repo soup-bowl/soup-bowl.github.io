@@ -36,7 +36,7 @@ Everything should work on the main 3 platforms (Windows, macOS and Linux) that V
 
 ## :cd: Getting the Mojave Install Medium
 
-The way of extracting the install medium for Mojave has not changed, so if you want to grab the macOS ISO, [follow the guided segment on the Virtualbox guide](https://soupbowl.blog/2020/04/macos-in-virtualbox/) (Creating the ISO). Once you’ve got your Mojave.iso file, come back to this guide and we can proceed with infecting your VMWare with Apple.
+The way of extracting the install medium for Mojave has not changed, so if you want to grab the macOS ISO, [follow the guided segment on the Virtualbox guide](https://blog.soupbowl.io/2020/04/macos-in-virtualbox/) (Creating the ISO). Once you’ve got your Mojave.iso file, come back to this guide and we can proceed with infecting your VMWare with Apple.
 
 ## :key: Unlocking macOS in VMware Windows & Linux
 

@@ -5,7 +5,7 @@ author: Casey (Soupbowl)
 tags:   [Development]
 ---
 
-You wouldn’t be wrong if you’ve come to the assumption that I’ve stopped supporting [Chromeboard](https://soupbowl.blog/chromeboard/). [You can see from the commit log](https://github.com/soup-bowl/Chromeboard/commits) that I haven’t made a significant change since March of last year. This was largely unintentional, but there was a main reason as to why I chose to unofficially abandon the extension – I call it ‘[Issue 9 of Death](https://github.com/soup-bowl/Chromeboard/issues/9)‘.
+You wouldn’t be wrong if you’ve come to the assumption that I’ve stopped supporting [Chromeboard](https://blog.soupbowl.io/chromeboard/). [You can see from the commit log](https://github.com/soup-bowl/Chromeboard/commits) that I haven’t made a significant change since March of last year. This was largely unintentional, but there was a main reason as to why I chose to unofficially abandon the extension – I call it ‘[Issue 9 of Death](https://github.com/soup-bowl/Chromeboard/issues/9)‘.
 
 ![](/assets/img/20180423-Capture.webp)
 
@@ -43,10 +43,10 @@ My plans for Chromeboard going forward are:
 4. ???
 5. Not-for) profit!
 
-Electron being a full application instead of being just a browser allows me some flexibility in approach. I can keep the app as a Kiosk terminal, however it is able to run web instances which allows Chromeboard to be seen as a web browser instead of a spoofing client. Since wallboards mostly reside on the IoT, I will be ensuring that this works on the [Raspberry Pi](https://soupbowl.blog/category/raspberry-pi/).
+Electron being a full application instead of being just a browser allows me some flexibility in approach. I can keep the app as a Kiosk terminal, however it is able to run web instances which allows Chromeboard to be seen as a web browser instead of a spoofing client. Since wallboards mostly reside on the IoT, I will be ensuring that this works on the [Raspberry Pi](https://blog.soupbowl.io/category/raspberry-pi/).
 
 I will keep posted as things develop, but hopefully this will clear up as to why progress for the Chromeboard plugin has completely stopped.
 
-[Nutab](https://soupbowl.blog/nutab/)? Oh my, that’s a completely different story.
+[Nutab](https://blog.soupbowl.io/nutab/)? Oh my, that’s a completely different story.
 
 **Note: Since this article was published, Chromeboard was issued a takedown due to copyright infringement (Chrome in the name, and in the logo). It has since been rebranded as Wallboard Lite.**
