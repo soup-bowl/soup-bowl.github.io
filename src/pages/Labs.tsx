@@ -5,7 +5,7 @@ import { EState } from "../enums";
 import { ILabs } from "../interfaces";
 
 const Labs = () => {
-	const blogURL = 'https://soupbowl.dev/labs';
+	const blogURL = 'https://soupbowl.io/labs';
 	const [items, setItems] = useState<ILabs[]>([]);
 	const [requestState, setRequestState] = useState<EState>(EState.Started);
 
@@ -31,7 +31,7 @@ const Labs = () => {
 						<ListingItem
 							key={i}
 							title={item.lab}
-							url={(item.url.startsWith("/")) ? `https://soupbowl.dev/labs${item.url}` : item.url}
+							url={(item.url.startsWith("/")) ? `https://soupbowl.io/labs${item.url}` : item.url}
 							image={item.logo}
 						>
 							<p>{item.description}</p>
