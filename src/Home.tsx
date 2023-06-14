@@ -97,7 +97,7 @@ const Home = () => {
 				<ul>
 					<li>Open the Discord app (desktop, mobile, whatever).</li>
 					<li>Click on <strong>Find or Start a Conversation</strong>.</li>
-					<li>Paste in <strong>soupbowl#9573</strong>.</li>
+					<li>Paste in <strong>soupbowl1</strong>.</li>
 					<li>???</li>
 					<li>Profit!</li>
 				</ul>
