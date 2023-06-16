@@ -141,7 +141,7 @@ const Home = () => {
 								Oxanhenge<br />Balthazar Swindon
 							</Social>
 							<Social id="9" icon={faDiscord} color="#5865f2" onClick={openDialog}>
-								soupbowl<br />#9573
+								soupbowl1
 							</Social>
 						</SocialPanel>
 					</SocialContainer>
