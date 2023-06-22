@@ -40,6 +40,7 @@ export interface IBlogPost {
 	author: string;
 	published: string;
 	updated: string;
+	categories: string[];
 }
 
 export interface IWordPressPluginListing {

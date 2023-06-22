@@ -27,6 +27,7 @@ const Blog = () => {
 						link: item.querySelector("link").getAttribute("href"),
 						published: item.querySelector("published").innerHTML,
 						updated: item.querySelector("updated").innerHTML,
+						categories: Array.from(item.querySelectorAll("category")).map((category: any) => category.getAttribute("term")),
 					});
 				});
 
