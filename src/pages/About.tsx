@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 const ProfileDisplay = styled.div({
+	padding: 20,
 	display: 'flex',
 	flexWrap: 'wrap',
 	flexGrow: 1,

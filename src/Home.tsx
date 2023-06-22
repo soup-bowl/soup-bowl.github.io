@@ -6,7 +6,6 @@ import { faBlog, faVial } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Layout from "./components/Layout";
 import { Modal } from "./components/Modal";
-import Scroller from "./components/Navigation";
 import { Social, SocialPanel } from "./components/Social";
 import { About, Blog, GitHub, Labs, Lastfm, Mastodon, OpenSim, WordPress } from "./pages";
 
@@ -153,7 +152,6 @@ const Home = () => {
 					<About />
 				</PageBody>
 			</main>
-			<Scroller pages={PageOrder} />
 		</Layout>
 	);
 }
