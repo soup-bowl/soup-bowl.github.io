@@ -1,7 +1,12 @@
-import styled from "@emotion/styled";
+import { Theme } from "@emotion/react";
+import styled, { StyledComponent } from "@emotion/styled";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import { ButtonHTMLAttributes, useEffect, useState } from "react";
+
+interface NormalButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+	active?: boolean;
+}
 
 export const AttentionButton = styled.button(props => ({
 	cursor: "pointer",
@@ -14,6 +19,29 @@ export const AttentionButton = styled.button(props => ({
 	color: "white",
 	border: "inherit",
 }));
+
+const NormalButtonDefinition: StyledComponent<NormalButtonProps, NormalButtonProps, Theme> = styled.button(props => ({
+	cursor: "pointer",
+	// @ts-ignore
+	backgroundColor: props.active ? props.theme.colors.primary : "#292929",
+	borderRadius: "5px",
+	boxShadow: "#121212 0px 2px 5px",
+	padding: "10px 15px 10px 15px",
+	fontSize: "1.25em",
+	color: "white",
+	border: "inherit",
+}));
+
+export const NormalButton: React.FC<NormalButtonProps> = ({ active, ...rest }) => {
+	return <NormalButtonDefinition active={active} {...rest} />;
+};
+
+export const ButtonGroup = styled.div({
+	display: "flex",
+	width: "100%",
+	gap: 10,
+	justifyContent: "center",
+});
 
 interface SBProps {
 	onUp: () => void;
