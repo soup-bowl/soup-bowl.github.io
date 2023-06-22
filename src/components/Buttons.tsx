@@ -41,6 +41,7 @@ export const ButtonGroup = styled.div({
 	width: "100%",
 	gap: 10,
 	justifyContent: "center",
+	flexWrap: "wrap",
 });
 
 interface SBProps {

@@ -34,7 +34,7 @@ const Labs = () => {
 			<>
 				<ButtonGroup>
 					<NormalButton active={(filter === undefined)} key="all" onClick={() => setFilter(undefined)}>all</NormalButton>
-					{Array.from(categories).map((item) => ( // @ts-ignore
+					{Array.from(categories).map((item) => (
 						<NormalButton active={(item === filter)} key={item} onClick={() => setFilter(item)}>
 							{item}
 						</NormalButton>

@@ -3,10 +3,13 @@ import { ErrorMessage, LoadingMessage } from "../components/Common";
 import { ListingItem, ListingItemGroup } from "../components/Listings";
 import { EState } from "../enums";
 import { IBlogPost } from "../interfaces";
+import { ButtonGroup, NormalButton } from "../components/Buttons";
 
 const Blog = () => {
 	const blogURL = 'https://blog.soupbowl.io';
 	const [items, setItems] = useState<IBlogPost[]>([]);
+	const [categories, setCategories] = useState<Set<string>>(new Set());
+	const [filter, setFilter] = useState<string | undefined>();
 	const [requestState, setRequestState] = useState<EState>(EState.Started);
 
 	useEffect(() => {
@@ -31,6 +34,10 @@ const Blog = () => {
 					});
 				});
 
+				collect.forEach(post => post.categories.forEach((cat) => {
+					setCategories((prev) => new Set([...prev, cat]));
+				}));
+
 				setItems(collect);
 				setRequestState(EState.Complete);
 			})
@@ -43,9 +50,17 @@ const Blog = () => {
 				You can visit my full blog
 				at <a href={blogURL} style={{ fontWeight: "bold" }}>blog.soupbowl.io</a>
 			</p>
+			<ButtonGroup>
+				<NormalButton active={(filter === undefined)} key="all" onClick={() => setFilter(undefined)}>all</NormalButton>
+				{Array.from(categories).map((item) => (
+					<NormalButton active={(item === filter)} key={item} onClick={() => setFilter(item)}>
+						{item}
+					</NormalButton>
+				))}
+			</ButtonGroup>
 			{requestState === EState.Complete ?
 				<ListingItemGroup>
-					{items.map((item) => (
+					{items.filter((item) => filter === undefined || item.categories.includes(filter)).map((item) => (
 						<ListingItem
 							key={item.id}
 							title={item.title}
