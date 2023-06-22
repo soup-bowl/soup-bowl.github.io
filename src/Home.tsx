@@ -16,10 +16,11 @@ const PageOrder = [
 	{ id: 2, label: 'about' },
 ];
 
-const PageHeader = styled.div({
+const PageHeader = styled.section({
 	display: 'flex',
 	alignItems: 'end',
 	height: '100vh',
+	scrollSnapAlign: "start",
 	div: {
 		width: '100%',
 		backgroundColor: 'rgb(0 0 0 / 60%)',
@@ -39,12 +40,13 @@ const PageHeader = styled.div({
 	}
 });
 
-const PageBody = styled.div(props => ({
+const PageBody = styled.section(props => ({
 	backgroundColor: props.color,
 	minHeight: '100vh',
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'center',
+	scrollSnapAlign: "start",
 	'@media only screen and (max-width: 650px)': {
 		paddingBottom: 50
 	}

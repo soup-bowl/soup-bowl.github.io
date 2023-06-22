@@ -23,6 +23,10 @@ const theme = {
 };
 
 const globalTheme = {
+	html: {
+		scrollSnapType: "y mandatory",
+		scrollSnapPointsY: "repeat(100vh)",
+	},
 	body: {
 		margin: 0,
 		fontFamily: '\'Open Sans\', sans-serif',
