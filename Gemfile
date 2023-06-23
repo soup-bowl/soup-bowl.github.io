@@ -16,7 +16,7 @@ gem "minima", "~> 2.5.1"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed"
-  gem "jekyll-paginate"
+  gem "jekyll-paginate-v2"
   #gem "jekyll-remote-theme"
   gem "jemoji"
   # And (always) last, the sitemap.

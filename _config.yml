@@ -40,8 +40,14 @@ soupy:
     lastfm:    https://last.fm/user/soup-bowl
     osgrid:    hop://hg.osgrid.org:80/Oxanhenge/195/25/25
 
-paginate: 5
-paginate_path: "/blog/page/:num/"
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 
 defaults:
   - scope:
