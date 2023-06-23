@@ -49,6 +49,14 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
+autopages:
+  enabled: true
+  tags: 
+    enabled: true
+    permalink: '/tags/:tag'
+    layouts: 
+      - autopage_collection.html
+
 defaults:
   - scope:
       path: "assets/img"

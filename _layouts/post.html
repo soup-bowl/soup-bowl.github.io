@@ -32,12 +32,8 @@ layout: default
 			{%- endif -%}
 			{%- if page.tags.size > 0 -%}
 				&nbsp;• {% for tag in page.tags %}
-					{%- if tag == "Guides" -%}
-					<a href="{% link guides.html %}">{{ tag }}</a>
-					{%- else -%}
-					{{ tag }}
-					{%- endif -%}
-					{% if forloop.last == false %},{% endif %}
+					{% assign lowercaseTag = tag | downcase %}
+					<a href="{{ '/tags/' | relative_url }}{{ lowercaseTag }}">{{ tag }}</a>{% if forloop.last == false %},{% endif %}
 				{% endfor %}
 			{%- endif -%}</p>
 	</header>
