@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-	background-color: $alternate-color-dark;
+	background-color: $background-head-color;
 	min-height: $spacing-unit * 1.865;
 
 	// Positioning context for the mobile navigation icon
@@ -11,6 +11,7 @@
 
 .site-title {
 	@include relative-font-size(1.625);
+	font-weight: 400;
 	line-height: $base-line-height * $base-font-size * 2.25;
 	letter-spacing: -1px;
 	margin-bottom: 0;
@@ -24,6 +25,7 @@
 
 .site-nav {
 	float: right;
+	font-weight: 400;
 	line-height: $base-line-height * $base-font-size * 2.25;
 
 	.nav-trigger {
@@ -48,7 +50,7 @@
 		position: absolute;
 		top: 9px;
 		right: $spacing-unit / 2;
-		background-color: $alternate-color-darker;
+		background-color: $background-color;
 		border: 1px solid $grey-color-light;
 		border-radius: 5px;
 		text-align: right;

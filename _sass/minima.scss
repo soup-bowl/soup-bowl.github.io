@@ -2,25 +2,20 @@
 
 // Define defaults for each variable.
 
-$base-font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif !default;
+$base-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif !default;
 $base-font-size:   21px !default;
 $base-font-weight: 200 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
-$header-font-family: 'Permanent Marker', cursive, sans-serif;
 
 $spacing-unit:     30px !default;
 
 $text-color:            #fff !default;
-$background-color:      #29132e !default;
-$background-head-color: #321450 !default;
-$brand-color:           #de004e !default;
+$background-color:      #0c0c0c !default;
+$background-head-color: #0f0f0f !default;
+$brand-color:           #ef1a1a !default;
 
-$alternate-color: #baf9ff !default;
-$alternate-color-dark: #0f93bf !default;
-$alternate-color-darker: #003b4e !default;
-
-$grey-color:       #f887ff !default;
+$grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
@@ -60,25 +55,9 @@ body {
 	overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-	font-family: $header-font-family;
-
-	a:visited {
-		color: $brand-color;
-	}
-
-	a:hover {
-		color: $text-color !important;
-	}
+h1, h2, h3, h4, strong {
+	font-weight: 700;
 }
-
-h1:not(.post-featured-title), .header-pop {
-	filter: drop-shadow(4px 4px 0px $alternate-color-dark);
-}
-
-/*strong {
-	font-family: $header-font-family;
-}*/
 
 hr {
 	margin: 25px 0;
@@ -93,11 +72,9 @@ pre, code,
 }
 
 .site-header {
-	filter: drop-shadow(0 2px 5px #000);
-
 	.site-title {
-		font-family: $header-font-family;
 		font-size: $base-font-size;
+		font-weight: 700;
 
 		&, &:visited {
 			color: $grey-color-light;
@@ -106,13 +83,12 @@ pre, code,
 
 	.site-subtitle {
 		@include relative-font-size(1.625);
-		font-family: $header-font-family;
 		font-weight: 500;
 		line-height: $base-line-height * $base-font-size * 2.25;
 		letter-spacing: -1px;
 		margin-left: 1rem;
 		margin-bottom: 0;
-		color: $alternate-color;
+		color: $grey-color;
 		font-size: $base-font-size;
 	}
 
@@ -122,11 +98,11 @@ pre, code,
 		border: none;
 
 		.page-link {
-			color: $alternate-color;
+			color: $brand-color;
 		}
 
 		.menu-icon > svg {
-			fill: $alternate-color;
+			fill: $grey-color-light;
 		}
 
 		@include media-query($on-palm) {
@@ -148,7 +124,6 @@ pre, code,
 
 .page-content {
 	padding: 0;
-	background: url("memphis.svg") repeat;
 
 	.article-image {
 		text-align: center;
@@ -164,8 +139,7 @@ pre, code,
 }
 
 .site-footer {
-	font-family: $header-font-family;
-	filter: drop-shadow(0 2px 5px #000);
+	font-weight: 500;
 
 	.copyright {
 		color: $text-color;
@@ -215,10 +189,6 @@ pre, code,
 			color: #BA0000;
 		}
 
-		.s-mastodon:hover {
-			color: #6364ff;
-		}
-
 		.s-twitter:hover {
 			color: #1D9BD0;
 		}
@@ -257,10 +227,6 @@ pre, code,
 		padding-top: 20px;
 	}
 
-	a {
-		color: $text-color;
-	}
-
 	.post-featured {
 		background-size: cover;
 		background-position: 50%;
@@ -283,14 +249,13 @@ pre, code,
 }
 
 .home-banner {
-	background: url("https://soupbowl.io/labs/miami/vice-miami.svg") no-repeat center center;
 	background-size: cover;
+	background-position: 50%;
 	text-align: center;
 	margin-bottom: 15px;
 }
 
 .showy-banner {
-	font-family: $header-font-family;
 	font-size: 38px;
 	background-size: cover;
 	background-position: 50%;
@@ -299,6 +264,7 @@ pre, code,
 	background-color: #0f0000;
 
 	p {
+		font-weight: 500;
 		padding: 10px;
 		background-color: rgba(0, 0, 0, 0.50);
 
@@ -334,7 +300,6 @@ pre, code,
 
 .pagination {
 	text-align: center;
-	margin-bottom: 25px;
 
 	span.previous, span.next {
 		color: $grey-color;
@@ -347,17 +312,5 @@ pre, code,
 	h1 {
 		font-size: ($base-font-size * 5);
 		font-family: monospace;
-	}
-}
-
-.banner {
-	background-color: #de004e;
-	filter: drop-shadow(6px 6px 0px #0f93bf);	
-	border-radius: 15px;
-	padding: 10px;
-
-	a {
-		color: white;
-		text-decoration: underline;
 	}
 }

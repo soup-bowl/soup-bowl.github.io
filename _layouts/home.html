@@ -7,7 +7,7 @@
 
 		{%- include header.html -%}
 
-		<div class="home-banner">
+		<div class="home-banner" style="background-image:url(assets/img/anton.webp)">
 			<img src="assets/img/icon.webp">
 		</div>
 
@@ -17,7 +17,7 @@
 					{{ content }}
 
 					{%- if site.posts.size > 0 -%}
-						<h2 class="post-list-heading header-pop">Fresh from the Bowl</h2>
+						<h2 class="post-list-heading">Fresh from the Bowl</h2>
 						<ul class="post-list">
 							{%- for post in site.posts limit:5 -%}
 							<li>
