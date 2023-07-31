@@ -1,13 +1,11 @@
 import styled from "@emotion/styled";
-import {
-	faDiscord, faGithub, faLastfm, faMastodon, faWordpress
-} from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faGithub, faWordpress } from "@fortawesome/free-brands-svg-icons";
 import { faBlog, faVial } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Layout from "./components/Layout";
 import { Modal } from "./components/Modal";
 import { Social, SocialPanel } from "./components/Social";
-import { About, Blog, GitHub, Labs, Lastfm, Mastodon, OpenSim, WordPress } from "./pages";
+import { About, Blog, GitHub, Labs, OpenSim, WordPress } from "./pages";
 
 const PageOrder = [
 	{ id: 0, label: 'start' },
@@ -84,14 +82,8 @@ const Home = () => {
 			<Modal title="WordPress" open={(open === "4") ? true : false} onClose={closeDialog}>
 				<WordPress />
 			</Modal>
-			<Modal large title="Last.fm" open={(open === "5") ? true : false} onClose={closeDialog}>
-				<Lastfm />
-			</Modal>
 			<Modal title="OSgrid Estate" open={(open === "6") ? true : false} onClose={closeDialog}>
 				<OpenSim />
-			</Modal>
-			<Modal large title="Mastodon" open={(open === "7") ? true : false} onClose={closeDialog}>
-				<Mastodon />
 			</Modal>
 			<Modal title="Talking on Discord" open={(open === "9") ? true : false} onClose={closeDialog}>
 				<p>There's no direct link to <strong>Discord</strong>, so to start a chat:</p>
@@ -126,12 +118,6 @@ const Home = () => {
 							</Social>
 							<Social id="4" icon={faWordpress} color="#0085BA" onClick={openDialog}>
 								soupbowl
-							</Social>
-							<Social id="5" icon={faLastfm} color="#BA0000"  onClick={openDialog}>
-								soup-bowl
-							</Social>
-							<Social id="7" icon={faMastodon} color="#6364ff" onClick={openDialog}>
-								soupbowl<br />@mstdn.social
 							</Social>
 							<Social id="6" iconSvg={
 								<svg style={{ height: '1em' }} aria-hidden="true" focusable="false" data-prefix="fab" data-icon="osgrid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
