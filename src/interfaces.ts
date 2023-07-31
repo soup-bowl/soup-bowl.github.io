@@ -219,3 +219,25 @@ export interface IMastodonMediaSize {
 	size: string;
 	aspect: number;
 }
+
+export interface IDockerRepos {
+	count: number;
+	results: IDockerRepo[];
+}
+
+export interface IDockerRepo {
+	name: string;
+	namespace: string;
+	repository_type: string;
+	status: number;
+	status_description: string;
+	description: string;
+	is_private: boolean;
+	star_count: number;
+	pull_count: number;
+	last_updated: Date;
+	date_registered: Date;
+	affiliation: string;
+	media_types: string[];
+	content_types: string[];
+}
