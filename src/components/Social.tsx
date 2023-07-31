@@ -3,6 +3,18 @@ import styled from "@emotion/styled";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const hexColorToBlackOrWhite = (hexColor: string): string => {
+	const hex = hexColor.replace("#", "");
+	const r = parseInt(hex.slice(0, 2), 16);
+	const g = parseInt(hex.slice(2, 4), 16);
+	const b = parseInt(hex.slice(4, 6), 16);
+
+	const perceivedBrightness = (r * 299 + g * 587 + b * 114) / 1000;
+	const primaryColor = perceivedBrightness >= 128 ? "#000000" : "#FFFFFF";
+
+	return primaryColor;
+};
+
 export const SocialPanel = styled.div({
 	display: "grid",
 	gridGap: "20px",
@@ -74,8 +86,8 @@ const SocialSet = styled.a(props => ({
 	}
 }));
 
-const Label = styled.div({
-	color: "white",
+const Label = styled.div(props => ({
+	color: hexColorToBlackOrWhite(props.color ?? '#ffffff'),
 	position: "absolute",
 	height: "100%",
 	width: "100%",
@@ -88,10 +100,10 @@ const Label = styled.div({
 	top: "10rem",
 	fontWeight: "500",
 	fontSize: "1.5rem",
-});
+}));
 
-const Icon = styled.div({
-	color: "white",
+const Icon = styled.div(props => ({
+	color: hexColorToBlackOrWhite(props.color ?? '#ffffff'),
 	position: "absolute",
 	height: "100%",
 	width: "100%",
@@ -104,7 +116,7 @@ const Icon = styled.div({
 	top: 0,
 	right: 0,
 	fontSize: "4rem",
-});
+}));
 
 interface CardProps {
 	id?: string;
@@ -112,21 +124,21 @@ interface CardProps {
 	icon?: IconDefinition;
 	iconSvg?: any;
 	color: string;
-	onClick?: (e:any) => void;
+	onClick?: (e: any) => void;
 	children: ReactNode;
 }
 
 export const Social = ({ id, url = '#', icon, iconSvg, color, onClick, children }: CardProps) => {
 	return (
 		<SocialSet id={id} rel="me" href={url} color={color} onClick={onClick}>
-			<Icon datatype="icon">
+			<Icon color={color} datatype="icon">
 				{icon !== undefined ?
-				<FontAwesomeIcon icon={icon} />
-				:
-				<>{iconSvg}</>
+					<FontAwesomeIcon icon={icon} />
+					:
+					<>{iconSvg}</>
 				}
 			</Icon>
-			<Label datatype="text">
+			<Label color={color} datatype="text">
 				{children}
 			</Label>
 		</SocialSet>
