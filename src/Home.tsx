@@ -6,6 +6,7 @@ import Layout from "./components/Layout";
 import { Modal } from "./components/Modal";
 import { Social, SocialPanel } from "./components/Social";
 import { About, Blog, GitHub, Labs, OpenSim, WordPress } from "./pages";
+import { AttentionButton } from "./components/Buttons";
 
 const PageOrder = [
 	{ id: 0, label: 'start' },
@@ -94,6 +95,12 @@ const Home = () => {
 					<li>???</li>
 					<li>Profit!</li>
 				</ul>
+				<p>Alternatively, click below to open my profile.</p>
+				<div style={{ textAlign: 'center' }}>
+					<AttentionButton onClick={() => window.location.href = "https://discord.com/users/555374749019013141"}>
+						Discord Profile
+					</AttentionButton>
+				</div>
 			</Modal>
 
 			<main>
