@@ -10,7 +10,7 @@ const hexColorToBlackOrWhite = (hexColor: string): string => {
 	const b = parseInt(hex.slice(4, 6), 16);
 
 	const perceivedBrightness = (r * 299 + g * 587 + b * 114) / 1000;
-	const primaryColor = perceivedBrightness >= 128 ? "#000000" : "#FFFFFF";
+	const primaryColor = perceivedBrightness >= 128 ? "#1B1A1B" : "#FFFFFF";
 
 	return primaryColor;
 };
