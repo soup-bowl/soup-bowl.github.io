@@ -24,7 +24,7 @@ const About = () => {
 	return (
 		<ProfileDisplay>
 			<div className="picture">
-				<img src="https://i.redd.it/snoovatar/avatars/nftv2_bmZ0X2VpcDE1NToxMzdfYzhkM2EzYTgzYmRlNWRhZDA2ZDQzNjY5NGUzZTIyYWMzZTY0ZDU3N180OTI2NTk3_rare_6c64c43b-23fb-44f7-b9d0-7a809098239d.png" alt="" />
+				<img src={`${process.env.PUBLIC_URL}/img/avatar.png`} alt="" />
 			</div>
 			<div className="description">
 				<p>
