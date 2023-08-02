@@ -122,9 +122,9 @@ interface CardProps {
 	id?: string;
 	url?: string;
 	icon?: IconDefinition;
-	iconSvg?: any;
+	iconSvg?: React.SVGProps<SVGSVGElement>;
 	color: string;
-	onClick?: (e: any) => void;
+	onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 	children: ReactNode;
 }
 

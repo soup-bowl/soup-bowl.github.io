@@ -22,7 +22,7 @@ const GitHub = () => {
 
 	const displayer = (data: IGitHubRepos[]): ReactNode => {
 		return data.map((repo) => {
-			let repoImg = RepoImages.filter((e) => {
+			const repoImg = RepoImages.filter((e) => {
 				return e.repo === repo.full_name
 			})[0]?.image ?? undefined;
 

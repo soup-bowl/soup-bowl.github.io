@@ -10,14 +10,14 @@ export const Scroller = ({ pages }:Props) => {
 	}
 	
 	const NavigateUp = () => {
-		let move = WhereAmI() - 1;
+		const move = WhereAmI() - 1;
 		if (move >= 0) {
 			scrollTo(pages[move].label);
 		}
 	}
 
 	const NavigateDown = () => {
-		let move = WhereAmI() + 1;
+		const move = WhereAmI() + 1;
 		if (move < pages.length) {
 			scrollTo(pages[move].label);
 		}
@@ -26,7 +26,7 @@ export const Scroller = ({ pages }:Props) => {
 	const WhereAmI = () => {
 		let page = -1;
 		for (let index = 0; index < pages.length; index++) {
-			let elementTarget = document.getElementById(pages[index].label);
+			const elementTarget = document.getElementById(pages[index].label);
 
 			if (elementTarget !== null) {
 				if (window.scrollY >= (elementTarget.offsetTop + elementTarget.offsetHeight)) {

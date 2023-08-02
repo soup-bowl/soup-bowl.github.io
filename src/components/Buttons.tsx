@@ -10,7 +10,6 @@ interface NormalButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const AttentionButton = styled.button(props => ({
 	cursor: "pointer",
-	// @ts-ignore
 	backgroundColor: props.theme.colors.primary,
 	borderRadius: "5px",
 	boxShadow: "#121212 0px 2px 5px",
@@ -22,7 +21,6 @@ export const AttentionButton = styled.button(props => ({
 
 const NormalButtonDefinition: StyledComponent<NormalButtonProps, NormalButtonProps, Theme> = styled.button(props => ({
 	cursor: "pointer",
-	// @ts-ignore
 	backgroundColor: props.active ? props.theme.colors.primary : "#292929",
 	borderRadius: "5px",
 	boxShadow: "#121212 0px 2px 5px",
@@ -33,6 +31,7 @@ const NormalButtonDefinition: StyledComponent<NormalButtonProps, NormalButtonPro
 }));
 
 export const NormalButton: React.FC<NormalButtonProps> = ({ active, ...rest }) => {
+	// @ts-ignore
 	return <NormalButtonDefinition active={active} {...rest} />;
 };
 
@@ -50,7 +49,7 @@ interface SBProps {
 }
 
 export const ScrollButtons = ({ onUp, onDown }: SBProps) => {
-	const ScrollButton = styled.div(props => ({
+	const ScrollButton = styled.div({
 		position: 'fixed',
 		bottom: '20px',
 		right: '20px',
@@ -65,7 +64,7 @@ export const ScrollButtons = ({ onUp, onDown }: SBProps) => {
 			filter: 'drop-shadow(0px 0px 5px black)',
 			transition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
 		}
-	}));
+	});
 
 	return (
 		<ScrollButton>
@@ -99,7 +98,6 @@ export const ScrollToTopButton = () => {
 		cursor: 'pointer',
 		borderRadius: '250em',
 		border: 'none',
-		// @ts-ignore
 		backgroundColor: props.theme.colors.primary,
 		fontSize: '3em',
 		width: '75px',

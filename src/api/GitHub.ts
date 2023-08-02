@@ -1,7 +1,8 @@
 import { request } from "@octokit/request";
+import { RequestParameters } from "@octokit/types";
 
 const requests = {
-	get: (url: string, params: any) => request(url, params).then((response) => response),
+	get: (url: string, params: RequestParameters) => request(url, params).then((response) => response),
 };
 
 const GitHubAPI = {

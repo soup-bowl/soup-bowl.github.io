@@ -191,7 +191,7 @@ export const ListingSocialItem = ({
 			</Socialview>
 			<div>
 				{children}
-				{!!image ?
+				{image !== undefined ?
 					<div style={{ textAlign: 'center' }}>
 						<img src={image} alt="" style={{
 							maxWidth: '100%',

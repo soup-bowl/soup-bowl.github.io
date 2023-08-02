@@ -18,19 +18,19 @@ const Blog = () => {
 			.then((response: string) => new window.DOMParser().parseFromString(response, "text/xml"))
 			.then((response: Document) => {
 				const items = response.querySelectorAll("entry");
-				let collect: IBlogPost[] = [];
+				const collect: IBlogPost[] = [];
 
-				items.forEach((item: any) => {
+				items.forEach((item: Element) => {
 					collect.push({
-						id: item.querySelector("id").innerHTML,
-						title: item.querySelector("title").innerHTML,
-						summary: item.querySelector("summary").innerHTML.replace(/^<!\[CDATA\[|\]\]>$/g, ''),
-						thumbnail: item.getElementsByTagName('media:thumbnail')[0]?.getAttribute("url"),
-						author: item.querySelector("author name").innerHTML,
-						link: item.querySelector("link").getAttribute("href"),
-						published: item.querySelector("published").innerHTML,
-						updated: item.querySelector("updated").innerHTML,
-						categories: Array.from(item.querySelectorAll("category")).map((category: any) => category.getAttribute("term")),
+						id: item.querySelector("id")?.innerHTML ?? "",
+						title: item.querySelector("title")?.innerHTML ?? "",
+						summary: item.querySelector("summary")?.innerHTML.replace(/^<!\[CDATA\[|\]\]>$/g, '') ?? "",
+						thumbnail: item.getElementsByTagName('media:thumbnail')[0]?.getAttribute("url") ?? "",
+						author: item.querySelector("author name")?.innerHTML ?? "",
+						link: item.querySelector("link")?.getAttribute("href") ?? "",
+						published: item.querySelector("published")?.innerHTML ?? "",
+						updated: item.querySelector("updated")?.innerHTML ?? "",
+						categories: Array.from(item.querySelectorAll("category")).map((category: Element) => category.getAttribute("term") ?? ""),
 					});
 				});
 

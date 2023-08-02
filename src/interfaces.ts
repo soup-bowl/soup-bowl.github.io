@@ -113,7 +113,6 @@ export interface IOpenSimulatorStats {
 	ProcMem: string;
 	Memory: string;
 	Uptime: string;
-	UptimeObject?: any;
 	Version: string;
 }
 
@@ -138,7 +137,6 @@ export interface IMastodonUser {
 	statuses_count: number;
 	last_status_at: string;
 	noindex: boolean;
-	emojis: any[];
 	fields: {
 		name: string;
 		value: string;
