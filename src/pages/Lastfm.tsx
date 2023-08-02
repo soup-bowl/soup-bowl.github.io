@@ -39,8 +39,9 @@ const Lastfm = () => {
 						My Last.fm
 					</AttentionButton>
 				</div>
-				{/* @ts-ignore */}
-				<img src={htw.media_attachments[0].url} style={{ maxWidth: '100%' }} alt={`A collage of top listened bands this week, in order: ${bandNames}.`} />
+				{htw.media_attachments && htw.media_attachments[0]?.url && (
+					<img src={htw.media_attachments[0].url} style={{ maxWidth: '100%' }} alt={`A collage of top listened bands this week, in order: ${bandNames}.`} />
+				)}
 				<p><a href={htw.url} style={{ color: '#bbb' }}>Sourced from Mstdn.social at {new Date(htw.created_at).toLocaleDateString()}</a></p>
 			</div>
 		);

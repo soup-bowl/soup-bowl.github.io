@@ -24,7 +24,7 @@ const About = () => {
 	return (
 		<ProfileDisplay>
 			<div className="picture">
-				<img src={`${process.env.PUBLIC_URL}/img/avatar.png`} alt="" />
+				<img src="/img/avatar.png" alt="" />
 			</div>
 			<div className="description">
 				<p>

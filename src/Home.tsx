@@ -60,8 +60,9 @@ const SocialContainer = styled.div({
 const Home = () => {
 	const [open, setOpen] = useState<string>("0");
 
-	const openDialog = (e: any) => {
+	const openDialog = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
+		// @ts-ignore
 		setOpen(e.target.parentElement.id);
 	};
 
