@@ -1,25 +1,35 @@
 import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import { AttentionButton } from "../components/Buttons";
-import { EState } from "../enums";
-import { IOpenSimulatorStats } from "../interfaces";
+import { IOpenSimulatorInstance, IOpenSimulatorStats } from "../interfaces";
+
+const conf: IOpenSimulatorInstance[] = [
+	{ url: "https://mv01.soupbowl.io/stats", slurl: "hop://hg.osgrid.org:80/Willowbourne%20South/123/125/26", purpose: "Raspberry Pi Estate" },
+	{ url: "https://mv02.soupbowl.io/stats", slurl: "hop://hg.osgrid.org:80/Soupbowl%20Test/133/122/26", purpose: "Debugging connection problems" }
+]
 
 const BigA = styled.a({
 	fontWeight: 'bold'
 });
 
 const OpenSim = () => {
-	const [estateInfo, setEstateInfo] = useState<IOpenSimulatorStats | undefined>(undefined);
-	const [requestState, setRequestState] = useState<EState>(EState.Started);
+	const [config, setConfig] = useState<IOpenSimulatorInstance[]>(conf);
 
 	useEffect(() => {
-		fetch('https://mv.soupbowl.io/stats')
-			.then((response) => response.json())
-			.then((response: IOpenSimulatorStats) => {
-				setEstateInfo(response);
-				setRequestState(EState.Complete);
-			})
-			.catch(() => setRequestState(EState.Error));
+		conf.forEach((instance, index) => {
+			fetch(instance.url)
+				.then(response => response.json())
+				.then((data: IOpenSimulatorStats) => {
+					setConfig(prevInstances => {
+						const updatedInstances = [...prevInstances];
+						updatedInstances[index] = {
+							...updatedInstances[index],
+							stats: data
+						};
+						return updatedInstances;
+					});
+				});
+		});
 	}, []);
 
 	return (
@@ -40,22 +50,29 @@ const OpenSim = () => {
 				to detect when this occurs and reboots the region. This always happens when nobody is online, but just a
 				heads up that it may temporarily be down due to this yet-diagnosed issue.
 			</p>
-			
+
 			<div>
 				<h2>Estate Stats</h2>
-				{requestState === EState.Complete && estateInfo !== undefined ?
-				<ul>
-					<li>State: <strong style={{ color: "green" }}>Online</strong></li>
-					<li>Name: <strong>{estateInfo.RegionName}</strong></li>
-					<li>Version: <strong>{estateInfo.Version}</strong></li>
-					<li>Uptime: <strong>{estateInfo.Uptime.split('.')[0]}</strong></li>
-					<li>Primitives on-site: <strong>{estateInfo.Prims}</strong></li>
-				</ul>
-				:
-				<ul>
-					<li>State: <strong style={{ color: "red" }}>Offline</strong></li>
-				</ul>
-				}
+				{config.map((instance, index) => {
+					if (instance.stats !== undefined) {
+						return (
+							<ul key={index}>
+								<li>State: <strong style={{ color: "green" }}>Online</strong></li>
+								<li>Name: <strong>{instance.stats.RegionName}</strong></li>
+								<li>Purpose: <strong>{instance.purpose}</strong></li>
+								<li>Version: <strong>{instance.stats.Version}</strong></li>
+								<li>Uptime: <strong>{instance.stats.Uptime.split('.')[0]}</strong></li>
+								<li>Primitives: <strong>{instance.stats.Prims}</strong></li>
+							</ul>
+						);
+					} else {
+						return (
+							<ul key={index}>
+								<li>State: <strong style={{ color: "red" }}>Offline</strong></li>
+							</ul>
+						);
+					}
+				})}
 			</div>
 		</>
 	);
