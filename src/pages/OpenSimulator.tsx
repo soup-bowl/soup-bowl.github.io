@@ -7,13 +7,13 @@ const conf: IOpenSimulatorInstance[] = [
 	{
 		name: "Willowbourne South",
 		url: "https://mv01.soupbowl.io/stats",
-		slurl: "hop://hg.osgrid.org:80/Willowbourne%20South/123/125/26",
+		slurl: "hop://hg.osgrid.org:80/Soupbowl2/123/125/26",
 		purpose: "Raspberry Pi Estate"
 	},
 	{
 		name: "Soupbowl Test",
 		url: "https://mv02.soupbowl.io/stats",
-		slurl: "hop://hg.osgrid.org:80/Soupbowl%20Test/133/122/26",
+		slurl: "hop://hg.osgrid.org:80/Soupbowl1/133/122/26",
 		purpose: "Debugging connection problems"
 	}
 ]
