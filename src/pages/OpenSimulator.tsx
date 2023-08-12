@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
-import { AttentionButton } from "../components/Buttons";
+import { AttentionLink } from "../components/Buttons";
 import { IOpenSimulatorInstance, IOpenSimulatorStats } from "../interfaces";
 
 const conf: IOpenSimulatorInstance[] = [
@@ -56,7 +56,7 @@ const OpenSim = () => {
 				{config.map((instance, index) => {
 					if (instance.stats !== undefined) {
 						return (
-							<div key={index}>
+							<div key={index} style={{ marginBottom: 20 }}>
 								<ul>
 									<li>Name: <strong>{instance.name}</strong></li>
 									<li>State: <strong style={{ color: "green" }}>Online</strong></li>
@@ -66,9 +66,9 @@ const OpenSim = () => {
 									<li>Primitives: <strong>{instance.stats.Prims}</strong></li>
 								</ul>
 								<div style={{ textAlign: 'center' }}>
-									<AttentionButton onClick={() => window.location.href = instance.slurl}>
+									<AttentionLink href={instance.slurl}>
 										Visit In-world
-									</AttentionButton>
+									</AttentionLink>
 								</div>
 							</div>
 						);
@@ -79,6 +79,11 @@ const OpenSim = () => {
 									<li>Name: <strong>{instance.name}</strong></li>
 									<li>State: <strong style={{ color: "red" }}>Offline</strong></li>
 								</ul>
+								<div style={{ textAlign: 'center' }}>
+									<AttentionLink disabled>
+										Visit In-world
+									</AttentionLink>
+								</div>
 							</div>
 						);
 					}

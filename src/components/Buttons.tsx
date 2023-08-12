@@ -19,6 +19,22 @@ export const AttentionButton = styled.button(props => ({
 	border: "inherit",
 }));
 
+interface AttentionLinkProps {
+	disabled?: boolean;
+	theme?: { colors: { primary: string } };
+  }
+
+export const AttentionLink = styled.a<AttentionLinkProps>(props => ({
+	backgroundColor: props.disabled ? 'grey' : props.theme.colors.primary,
+	borderRadius: '5px',
+	boxShadow: '#121212 0px 2px 5px',
+	padding: '10px 15px',
+	fontSize: '1.25em',
+	color: 'white',
+	textDecoration: 'none',
+	pointerEvents: props.disabled ? 'none' : 'auto',
+  }));
+
 const NormalButtonDefinition: StyledComponent<NormalButtonProps, NormalButtonProps, Theme> = styled.button(props => ({
 	cursor: "pointer",
 	backgroundColor: props.active ? props.theme.colors.primary : "#292929",
