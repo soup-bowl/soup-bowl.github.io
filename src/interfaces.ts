@@ -78,9 +78,10 @@ export interface IWordPressRatings {
 }
 
 export interface IOpenSimulatorInstance {
+	name: string;
+	purpose: string;
 	url: string;
 	slurl: string;
-	purpose: string
 	stats?: IOpenSimulatorStats;
 }
 
