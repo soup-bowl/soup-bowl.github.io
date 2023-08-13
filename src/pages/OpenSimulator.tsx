@@ -5,16 +5,10 @@ import { IOpenSimulatorInstance, IOpenSimulatorStats } from "../interfaces";
 
 const conf: IOpenSimulatorInstance[] = [
 	{
-		name: "Willowbourne North",
-		url: "https://mv01.soupbowl.io/stats",
-		slurl: "hop://hg.osgrid.org:80/Soupbowl2/123/125/26",
-		purpose: "Raspberry Pi Estate"
-	},
-	{
-		name: "Willowbourne South",
-		url: "https://mv02.soupbowl.io/stats",
-		slurl: "hop://hg.osgrid.org:80/Soupbowl1/133/122/26",
-		purpose: "Debugging connection problems"
+		name: "Willowbourne",
+		url: "https://meta.subo.dev/stats",
+		slurl: "hop://hg.osgrid.org:80/Soupbowl1/123/125/26",
+		purpose: "Development Land"
 	}
 ]
 
