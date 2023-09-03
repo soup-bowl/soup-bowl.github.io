@@ -14,7 +14,7 @@ Next minute I’ve bought a dead PSOne off eBay, a Pi from the Pi Hut, and waved
 
 The idea was incredibly simple – Whack a Pi 4 inside a PSOne shell, with the toggle button and LED still functioning. With such a simple project, the idea can expand in phases (powered USB ports, hard drive storage, etc).
 
-:information_source: This article has been in the works since February, just left unpublished.
+:warning: **Since this article came out, Retroflag now offer a [Pi 4 case inspired by the PlayStation Classic](https://retroflag.com/pistation-case.html). I recommend this method far more than cannibalising an existing PSone, and can come with a screen option if you so wish.**
 
 ## :shopping_cart: What I Bought
 
