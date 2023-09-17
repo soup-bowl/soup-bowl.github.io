@@ -1,4 +1,4 @@
-name: Build and deploy Jekyll site to GitHub Pages
+name: Build and deploy
 
 on:
   push:
@@ -14,11 +14,6 @@ on:
       - 'README.md'
       - 'docker-compose.yml'
   workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
 
 jobs:
   github-pages:
