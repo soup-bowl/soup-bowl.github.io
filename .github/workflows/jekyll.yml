@@ -6,7 +6,6 @@ on:
       - main
     paths-ignore:
       - '.devcontainer/**'
-      - '.github/**'
       - '.vscode/**'
       - '.gitignore'
       - '.gitpod.yml'
@@ -37,6 +36,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          projectName: soupbowl
-          directory: ./_site
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectName: soupbowl
+          directory: _site
+          wranglerVersion: '3'
