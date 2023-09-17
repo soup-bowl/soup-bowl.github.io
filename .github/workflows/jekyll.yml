@@ -18,6 +18,11 @@ on:
 jobs:
   github-pages:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      deployments: write
+
     steps:
       - uses: actions/checkout@v3
 
