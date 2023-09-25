@@ -56,7 +56,6 @@ const OpenSim = () => {
 									<li>State: <strong style={{ color: "green" }}>Online</strong></li>
 									<li>Purpose: <strong>{instance.purpose}</strong></li>
 									<li>Version: <strong>{instance.stats.Version}</strong></li>
-									<li>Uptime: <strong>{instance.stats.Uptime.split('.')[0]}</strong></li>
 									<li>Primitives: <strong>{instance.stats.Prims}</strong></li>
 								</ul>
 								<div style={{ textAlign: 'center' }}>
