@@ -1,42 +1,42 @@
 [
 	{
 		"repo": "soup-bowl/whatsth.is",
-		"image": "https://files.soupbowl.io/i/r/wt.webp" 
+		"image": "https://f.subo.dev/i/r/wt.webp" 
 	},
 	{
 		"repo": "soup-bowl/pressify",
-		"image": "https://files.soupbowl.io/i/r/press.webp"
+		"image": "https://f.subo.dev/i/r/press.webp"
 	},
 	{
 		"repo": "soup-bowl/Modoki-Firefox",
-		"image": "https://files.soupbowl.io/i/r/mm.webp"
+		"image": "https://f.subo.dev/i/r/mm.webp"
 	},
 	{
 		"repo": "soup-bowl/wp-simple-smtp",
-		"image": "https://files.soupbowl.io/i/r/wpss.webp"
+		"image": "https://f.subo.dev/i/r/wpss.webp"
 	},
 	{
 		"repo": "soup-bowl/soup-bowl.github.io",
-		"image": "https://files.soupbowl.io/i/r/sb.webp"
+		"image": "https://f.subo.dev/i/r/sb.webp"
 	},
 	{
 		"repo": "soup-bowl/labs",
-		"image": "https://files.soupbowl.io/i/r/lab.webp"
+		"image": "https://f.subo.dev/i/r/lab.webp"
 	},
 	{
 		"repo": "soup-bowl/chromeboard",
-		"image": "https://files.soupbowl.io/i/r/cb.webp"
+		"image": "https://f.subo.dev/i/r/cb.webp"
 	},
 	{
 		"repo": "soup-bowl/opensimulator-docker",
-		"image": "https://files.soupbowl.io/i/r/os.webp"
+		"image": "https://f.subo.dev/i/r/os.webp"
 	},
 	{
 		"repo": "soup-bowl/opensim-sandbox",
-		"image": "https://files.soupbowl.io/i/r/os.webp"
+		"image": "https://f.subo.dev/i/r/os.webp"
 	},
 	{
 		"repo": "soup-bowl/deskdash",
-		"image": "https://files.soupbowl.io/i/r/dd.webp"
+		"image": "https://f.subo.dev/i/r/dd.webp"
 	}
 ]
