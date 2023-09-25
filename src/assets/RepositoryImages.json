@@ -1,42 +1,42 @@
 [
 	{
 		"repo": "soup-bowl/whatsth.is",
-		"image": "https://repository-images.githubusercontent.com/466225803/ea8e463f-2ba4-423a-8e6f-17077c8322ad" 
+		"image": "https://files.soupbowl.io/i/r/wt.webp" 
 	},
 	{
 		"repo": "soup-bowl/pressify",
-		"image": "https://repository-images.githubusercontent.com/490981882/aa8110e2-af31-49a7-8e98-bf5dddb7a624"
+		"image": "https://files.soupbowl.io/i/r/press.webp"
 	},
 	{
 		"repo": "soup-bowl/Modoki-Firefox",
-		"image": "https://user-images.githubusercontent.com/11209477/192164979-31f7c725-87c4-4513-aaed-d2c52a17a9b6.png"
+		"image": "https://files.soupbowl.io/i/r/mm.webp"
 	},
 	{
 		"repo": "soup-bowl/wp-simple-smtp",
-		"image": "https://blog.soupbowl.io/assets/img/wpsmtp-scrot.webp"
+		"image": "https://files.soupbowl.io/i/r/wpss.webp"
 	},
 	{
 		"repo": "soup-bowl/soup-bowl.github.io",
-		"image": "https://user-images.githubusercontent.com/11209477/147856239-c7eb65c9-ba89-44fa-bf32-1e68568dc48b.png"
+		"image": "https://files.soupbowl.io/i/r/sb.webp"
 	},
 	{
 		"repo": "soup-bowl/labs",
-		"image": "https://repository-images.githubusercontent.com/365781860/ab5cb970-167f-40ad-82c8-6f11f0c2d471"
+		"image": "https://files.soupbowl.io/i/r/lab.webp"
 	},
 	{
 		"repo": "soup-bowl/chromeboard",
-		"image": "https://blog.soupbowl.io/assets/img/79EK6Hx.webp"
+		"image": "https://files.soupbowl.io/i/r/cb.webp"
 	},
 	{
 		"repo": "soup-bowl/opensimulator-docker",
-		"image": "https://repository-images.githubusercontent.com/594410735/49360e49-c97c-47b7-9fc4-7491780fb31e"
+		"image": "https://files.soupbowl.io/i/r/os.webp"
 	},
 	{
 		"repo": "soup-bowl/opensim-sandbox",
-		"image": "https://repository-images.githubusercontent.com/594410735/49360e49-c97c-47b7-9fc4-7491780fb31e"
+		"image": "https://files.soupbowl.io/i/r/os.webp"
 	},
 	{
 		"repo": "soup-bowl/deskdash",
-		"image": "https://blog.soupbowl.io/assets/img/Screenshot_20210515_091230.webp"
+		"image": "https://files.soupbowl.io/i/r/dd.webp"
 	}
 ]
