@@ -34,5 +34,9 @@
 	{
 		"repo": "soup-bowl/opensim-sandbox",
 		"image": "https://repository-images.githubusercontent.com/594410735/49360e49-c97c-47b7-9fc4-7491780fb31e"
+	},
+	{
+		"repo": "soup-bowl/deskdash",
+		"image": "https://blog.soupbowl.io/assets/img/Screenshot_20210515_091230.webp"
 	}
 ]
