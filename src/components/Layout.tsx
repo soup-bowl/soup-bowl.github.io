@@ -49,7 +49,7 @@ const BackgroundImage = styled.div({
 	position: 'fixed',
 	top: 0,
 	left: 0,
-	backgroundImage: 'url(/img/background.jpg)',
+	backgroundImage: 'url(https://f.subo.dev/i/background.webp)',
 	backgroundPositionX: 'center',
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',

@@ -24,7 +24,7 @@ const About = () => {
 	return (
 		<ProfileDisplay>
 			<div className="picture">
-				<img src="/img/avatar.png" alt="" />
+				<img src="https://f.subo.dev/i/avatar.webp" alt="" />
 			</div>
 			<div className="description">
 				<p>
