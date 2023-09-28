@@ -9,6 +9,12 @@ const conf: IOpenSimulatorInstance[] = [
 		url: "https://meta.subo.dev/stats",
 		slurl: "hop://hg.osgrid.org:80/Soupbowl1/123/125/26",
 		purpose: "Development Land"
+	},
+	{
+		name: "Soupbowl Hypergrid",
+		url: "https://meta.subo.dev/hgstats",
+		slurl: "http://hg.subo.dev:9000/Default%20Region/125/125/25",
+		purpose: "Trial Federated Region"
 	}
 ]
 
