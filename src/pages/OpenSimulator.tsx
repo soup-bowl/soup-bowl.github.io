@@ -51,6 +51,12 @@ const OpenSim = () => {
 				come check it out!
 			</p>
 
+			<div style={{ textAlign: 'center' }}>
+				<AttentionLink href="https://www.osgrid.org/profile.php?name=balthazar%20swindon">
+					OSgrid Profile
+				</AttentionLink>
+			</div>
+
 			<div>
 				<h2>Estates</h2>
 				{config.map((instance, index) => {
