@@ -11,9 +11,9 @@ const conf: IOpenSimulatorInstance[] = [
 		purpose: "Development Land"
 	},
 	{
-		name: "Hertfordshire",
+		name: "Thistlewood",
 		url: "https://meta.subo.dev/hgstats",
-		slurl: "hop://hg.subo.dev/Hertfordshire/125/125/25",
+		slurl: "hop://hg.subo.dev/Thistlewood",
 		purpose: "Trial Federated Region"
 	}
 ]
