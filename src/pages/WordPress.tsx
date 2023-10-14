@@ -5,6 +5,11 @@ import { IWordPressPluginListing } from "../interfaces";
 import { EState } from "../enums";
 import { ErrorMessage, LoadingMessage } from "../components/Common";
 
+const img: { [key: string]: string } = {
+	"simple-smtp": "https://f.subo.dev/i/r/wp-smtp.webp",
+	"opensimulator-bridge": "https://f.subo.dev/i/r/wp-os.webp",
+}
+
 const WordPress = () => {
 	const [plugins, setPlugins] = useState<IWordPressPluginListing[]>([]);
 	const [requestState, setRequestState] = useState<EState>(EState.Started);
@@ -37,6 +42,7 @@ const WordPress = () => {
 						<ListingItem
 							key={i}
 							title={item.name}
+							image={img[item.slug]}
 							url={`https://wordpress.org/plugins/${item.slug}`}
 							downloads={item.downloaded}
 							date={new Date(item.added)}

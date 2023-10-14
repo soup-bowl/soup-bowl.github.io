@@ -81,7 +81,7 @@ const Home = () => {
 			<Modal large title="GitHub" open={(open === "3") ? true : false} onClose={closeDialog}>
 				<GitHub />
 			</Modal>
-			<Modal title="WordPress" open={(open === "4") ? true : false} onClose={closeDialog}>
+			<Modal large title="WordPress" open={(open === "4") ? true : false} onClose={closeDialog}>
 				<WordPress />
 			</Modal>
 			<Modal title="OSgrid Estate" open={(open === "6") ? true : false} onClose={closeDialog}>
