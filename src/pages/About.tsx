@@ -28,6 +28,11 @@ const CommOptions = styled.span({
 	fontSize: '1.25em',
 	'a': {
 		color: '#787878'
+	},
+	'@media only screen and (max-width: 600px)': {
+		gap: 20,
+		fontSize: '1.75em',
+		justifyContent: 'center'
 	}
 });
 
