@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faComment, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ProfileDisplay = styled.div({
@@ -22,6 +22,15 @@ const ProfileDisplay = styled.div({
 	}
 });
 
+const CommOptions = styled.span({
+	display: 'flex',
+	gap: 10,
+	fontSize: '1.25em',
+	'a': {
+		color: '#787878'
+	}
+});
+
 const About = () => {
 	return (
 		<ProfileDisplay>
@@ -38,11 +47,14 @@ const About = () => {
 				<p>
 					If you wish to see more about me, please <a href="https://blog.soupbowl.io" style={{ fontWeight: 'bold' }}>check out my blog</a>.
 				</p>
-				<p style={{ fontSize: "1.25em"}}>
-					<a href="mailto:code@soupbowl.io" style={{ color: '#787878' }}>
+				<CommOptions>
+					<a href="mailto:code@soupbowl.io">
 						<FontAwesomeIcon icon={faEnvelope} />
 					</a>
-				</p>
+					<a href="https://matrix.to/#/@soupbowl:mozilla.org">
+						<FontAwesomeIcon icon={faComment} />
+					</a>
+				</CommOptions>
 			</div>
 		</ProfileDisplay>
 	);
