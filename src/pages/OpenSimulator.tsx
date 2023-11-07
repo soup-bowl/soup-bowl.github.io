@@ -7,7 +7,7 @@ const conf: IOpenSimulatorInstance[] = [
 	{
 		name: "Willowbourne",
 		url: "https://meta.subo.dev/stats",
-		slurl: "hop://hg.osgrid.org/Soupbowl1/125/125/25",
+		slurl: "hop://hg.osgrid.org/Soupbowl/125/125/25",
 		purpose: "Development Land"
 	},
 	{
