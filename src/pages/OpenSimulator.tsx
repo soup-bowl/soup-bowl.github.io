@@ -9,12 +9,6 @@ const conf: IOpenSimulatorInstance[] = [
 		url: "https://meta.subo.dev/stats",
 		slurl: "hop://hg.osgrid.org/Soupbowl/125/125/25",
 		purpose: "Development Land"
-	},
-	{
-		name: "Thistlewood",
-		url: "https://meta.subo.dev/hgstats",
-		slurl: "hop://hg.subo.dev/Thistlewood",
-		purpose: "Trial Federated Region"
 	}
 ]
 
