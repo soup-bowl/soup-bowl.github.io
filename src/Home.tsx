@@ -103,7 +103,7 @@ const Home = () => {
 				<ul>
 					<li>Open the Discord app (desktop, mobile, whatever).</li>
 					<li>Click on <strong>Find or Start a Conversation</strong>.</li>
-					<li>Paste in <strong>soupbowl1</strong>.</li>
+					<li>Paste in <strong>subo.dev</strong>.</li>
 					<li>???</li>
 					<li>Profit!</li>
 				</ul>
@@ -179,7 +179,7 @@ const Home = () => {
 								soupbowl<br />@lemmy.world
 							</Social>
 							<Social id="9" icon={faDiscord} color="#5865f2" onClick={openDialog}>
-								soupbowl1
+								subo.dev
 							</Social>
 						</SocialPanel>
 					</SocialContainer>
