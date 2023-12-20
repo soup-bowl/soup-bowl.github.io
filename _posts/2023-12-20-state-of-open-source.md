@@ -6,7 +6,7 @@ image:  /assets/img/sadcat.webp
 tags:   [Blog]
 ---
 
-**To start off, this is not a "I'm quitting post" - don't worry. But this should clear up why I'm 'ignoring' some actions.**
+**To start off, this is not a "I'm quitting" post - don't worry. But this should clear up why I'm 'ignoring' some actions.**
 
 But with some recent family events that have transpired, and also inspired by **[Jeff Geerlng's Just Say No](https://www.jeffgeerling.com/blog/2022/just-say-no)**, I've ended up dedicating way more time to my coding than I actually have.
 
