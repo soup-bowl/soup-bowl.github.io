@@ -131,7 +131,7 @@ const Home = () => {
 				<PageHeader id={PageOrder[0].label}>
 					<div>
 						<h1>soupbowl</h1>
-						<p><strong>DevOps</strong> and <strong>Web Developer</strong> from <strong>Hertfordshire, UK</strong></p>
+						<p><strong>DevOps Engineer</strong> from <strong>Hertfordshire, UK</strong></p>
 					</div>
 				</PageHeader>
 
