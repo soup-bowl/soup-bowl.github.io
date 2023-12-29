@@ -25,14 +25,16 @@ Specifically, this will mean for the main projects:
 * [**ReviveToday**](https://web.archive.org/web/2/https://revive.today/blog/goodbye-from-revivetoday) has been sunset from **June 2023**.
   * In the early part of this year, the site boomed and started getting me heat from various communities over the slow progress of the site. After seeing lots of Subreddits and Discord channels discussing this (and a DCMA request - fun), I figured it was better to leave the scene to those more capable.
   * The Discord was taken under new ownership, but I've been given to understand that the Discord has now since been closed.
-  * Liked the site? **[Keep it going](https://github.com/ReviveToday)**.
-* [**WordPress Simple SMTP**](https://wordpress.org/plugins/simple-smtp/) will be in **bugfix-only** state.
-  * This also incudes enhancement **Pull Requests**. As much as I love the enthusiasm, PRs will take time I don't have to review. I also haven't been a professional WordPress developer (or even PHP) now for **2 years**. I would recommend people who wish to make significant changes to the codebase instead create and maintain a **fork** of the plugin.
-  * That said, I will be continuing bug & security fixing maintenance of the plugin until the SMTP protocol dies.
-* [**Modern Modoki**](https://github.com/soup-bowl/Modoki-Firefox) is also in **bugfix-only**.
+  * Liked the site? **[the code is open-source](https://github.com/ReviveToday)** (content is under a CC license).
+* [**WordPress Simple SMTP**](https://wordpress.org/plugins/simple-smtp/) will be in **bugfix** state.
+  * This regards a pause/slowdown to **enhancements only**. The plugin is still **supported** and in **active development**.
+  * **Enhancements** and **Pull Requests** actions are halted for the time being. As much as I love the enthusiasm, PRs will take time I don't currently have to review. I would recommend people who wish to make significant enhancement changes to the codebase instead create and maintain a **fork** of the plugin (please still report **bugs**).
+* [**Modern Modoki**](https://github.com/soup-bowl/Modoki-Firefox) is also in **bugfix**.
   * Seriously though, I will find a way to fix [that damn menu button bug](https://github.com/soup-bowl/Modoki-Firefox/issues/8).
   * I was working on some improvements - these can be found in the branches.
 * [**Whats This**](https://app.whatsth.is/) and [**Pressify**](https://pressify.soupbowl.io/) will continue slowly, as they operate as a test bed for my professional activities.
 * This blog will continue at the usual snail's pace.
 
 None of this is permanent, so please don't treat this as my swan song to abandon all my projects. Just simply put - I need to spend more time with family for the now, and I will return.
+
+*edited **29th December** to improve clarity. Someone messaged me asking if I was quitting, so I reduced some of the harsh toning.*
