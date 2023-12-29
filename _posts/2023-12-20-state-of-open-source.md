@@ -28,7 +28,7 @@ Specifically, this will mean for the main projects:
   * Liked the site? **[the code is open-source](https://github.com/ReviveToday)** (content is under a CC license).
 * [**WordPress Simple SMTP**](https://wordpress.org/plugins/simple-smtp/) will be in **bugfix** state.
   * This regards a pause/slowdown to **enhancements only**. The plugin is still **supported** and in **active development**.
-  * **Enhancements** and **Pull Requests** actions are halted for the time being. As much as I love the enthusiasm, PRs will take time I don't currently have to review. I would recommend people who wish to make significant enhancement changes to the codebase instead create and maintain a **fork** of the plugin (please still report **bugs**).
+  * **Enhancements** and their **Pull Requests** actions are halted for the time being, as I won't have time to give them the review depths they will need. I would recommend people who wish to make significant enhancement changes to the codebase instead create and maintain a **fork** of the plugin (please still report **bugs**).
 * [**Modern Modoki**](https://github.com/soup-bowl/Modoki-Firefox) is also in **bugfix**.
   * Seriously though, I will find a way to fix [that damn menu button bug](https://github.com/soup-bowl/Modoki-Firefox/issues/8).
   * I was working on some improvements - these can be found in the branches.
