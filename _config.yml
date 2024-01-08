@@ -23,6 +23,8 @@ header_pages:
 sass:
   style: compressed
 
+giscus: true
+
 disqus:
   shortname: soup-bowl
   show_policy: true

@@ -3,6 +3,7 @@ layout: post
 title:  "The Complete Guide to Running WordPress on Windows/IIS"
 author: Casey (Soupbowl)
 tags:   [Development, Guides, Windows]
+use_disqus: true
 ---
 
 So you’ve discovered to your absolute horror that the WordPress site your company has inherited is running on Windows… on IIS?

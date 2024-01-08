@@ -4,6 +4,7 @@ title:  "MacOS in Virtualbox. It just works."
 image:  /assets/img/Screenshot-from-2020-04-21-17-50-11-1024x831.webp
 author: Casey (Soupbowl)
 tags:   [Guides, Mac]
+use_disqus: true
 ---
 
 **You can run MacOS in Virtualbox. Because? Because.**
