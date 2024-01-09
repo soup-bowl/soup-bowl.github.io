@@ -9,7 +9,7 @@
 
 My blog website, in automatic build-and-deploy [Jekyll][j] flavour.
 
-**This is a personal blog - Pull Requests will not be accepted.** This site is currently hosted using **[GitHub Pages][gh]**.
+**This is a personal blog - Pull Requests will not be accepted.**
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/soup-bowl/blog)
 
@@ -19,5 +19,4 @@ Installation of Ruby, Gem, Jekyll, etc is **not necessary**, as the **Docker Com
 
 [h]:  https://user-images.githubusercontent.com/11209477/147856239-c7eb65c9-ba89-44fa-bf32-1e68568dc48b.png
 [s]:  https://blog.soupbowl.io
-[gh]: https://docs.github.com/en/pages
 [j]:  https://jekyllrb.com/
