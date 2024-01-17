@@ -1,11 +1,11 @@
 tasks:
   - init: |
-      find . -type d -exec chmod 777 {} \;
-      docker-compose pull
-    command: |
-      docker-compose up
+      sudo wget -q -O /opt/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.121.2/hugo_0.121.2_linux-amd64.deb
+      sudo dpkg -i /opt/hugo.deb
+      sudo rm /opt/hugo.deb
+      (cd themes/soup && npm ci)
+    command: hugo server
 
 ports:
-  - port: 4000
-    name: Jekyll
-    description: Jekyll autobuild instance.
+  - port: 1313
+    name: Hugo

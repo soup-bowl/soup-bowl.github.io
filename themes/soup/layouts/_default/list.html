@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="container">
+  <h1 class="text-center mt-2">{{ .Title }}</h1>
+  {{ .Content }}
+  {{ range .Paginator.Pages }}
+  <div class="mb-4">
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Date | time.Format ":date_long" }}
+    <p><time datetime="{{ $dateMachine }}" class="text-secondary">{{ $dateHuman }}</time>
+    {{ .Summary }}</p>
+  </div>
+  {{ end }}
+  <div class="pagination-custom my-4">
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</div>
+{{ end }}

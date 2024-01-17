@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{ if .Params.image }}
+<div class="page-banner" style="background-image: url({{ .Params.image }});">
+  <h1>HasImg {{ .Title }}</h1>
+</div>
+{{ end }}
+
+<div class="container">
+  {{ if not .Params.image }}
+  <h1 class="text-center">{{ .Title }}</h1>
+  {{ end }}
+
+  <div class="text-center mb-4 text-secondary">
+    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Date | time.Format ":date_long" }}
+    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    •
+    <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <span class="p-author h-card" itemprop="name">{{ .Params.author }}</span>
+    </span>
+    •
+    {{ partial "terms_inline.html" (dict "taxonomy" "tags" "page" .) }}
+
+  </div>
+
+  {{ .Content }}
+
+  {{ partial "comments.html" }}
+</div>
+{{ end }}

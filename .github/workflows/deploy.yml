@@ -1,0 +1,48 @@
+name: Build and deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.devcontainer/**'
+      - '.vscode/**'
+      - '.gitignore'
+      - '.gitpod.yml'
+      - 'LICENSE'
+      - 'README.md'
+      - 'docker-compose.yml'
+  workflow_dispatch:
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Hugo
+        run: |
+          mkdir /opt/hugo
+          curl -L "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz" --output /opt/hugo.tar.gz
+          sudo tar -xvzf /opt/hugo.tar.gz -C /opt
+          sudo mv /opt/hugo /usr/local/bin
+        env:
+          HUGO_VERSION: 0.121.2
+      
+      - name: 📦 Compile Site
+        run: hugo
+
+      - name: 🚛 Publish Site
+        uses: cloudflare/pages-action@v1.3.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectName: soupbowl
+          directory: public
+          wranglerVersion: '3'

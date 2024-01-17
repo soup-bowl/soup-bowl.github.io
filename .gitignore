@@ -1,5 +1,11 @@
 .DS_Store
 _site/
+
+# Jekyll
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
+# Hugo
+node_modules/
+public/
