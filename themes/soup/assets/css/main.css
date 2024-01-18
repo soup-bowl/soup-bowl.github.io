@@ -27,6 +27,11 @@
   text-align: center;
 }
 
+.content-type-comic img {
+  max-width: 100%;
+  background-color: white;
+}
+
 main figure {
   text-align: center;
 }
