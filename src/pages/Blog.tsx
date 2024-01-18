@@ -25,7 +25,7 @@ const Blog = () => {
 						id: item.querySelector("guid")?.innerHTML ?? "",
 						title: item.querySelector("title")?.innerHTML ?? "",
 						summary: item.querySelector("description")?.innerHTML.replace(/^<!\[CDATA\[|\]\]>$/g, '') ?? "",
-						thumbnail: item.getElementsByTagName('media:thumbnail')[0]?.getAttribute("url") ?? "",
+						thumbnail: item.querySelector("thumbnail")?.innerHTML ?? "",
 						author: item.querySelector("author name")?.innerHTML ?? "",
 						link: item.querySelector("link")?.getAttribute("href") ?? "",
 						published: item.querySelector("pubDate")?.innerHTML ?? "",
