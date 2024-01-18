@@ -6,29 +6,29 @@ import { IBlogPost } from "../interfaces";
 import { ButtonGroup, NormalButton } from "../components/Buttons";
 
 const Blog = () => {
-	const blogURL = 'https://blog.soupbowl.io';
+	const blogURL = 'https://blog.soupbowl.io/post/index.xml';
 	const [items, setItems] = useState<IBlogPost[]>([]);
 	const [categories, setCategories] = useState<Set<string>>(new Set());
 	const [filter, setFilter] = useState<string | undefined>();
 	const [requestState, setRequestState] = useState<EState>(EState.Started);
 
 	useEffect(() => {
-		fetch(`${blogURL}/feed.xml`)
+		fetch(blogURL)
 			.then((response: Response) => response.text())
 			.then((response: string) => new window.DOMParser().parseFromString(response, "text/xml"))
 			.then((response: Document) => {
-				const items = response.querySelectorAll("entry");
+				const items = response.querySelectorAll("item");
 				const collect: IBlogPost[] = [];
 
 				items.forEach((item: Element) => {
 					collect.push({
-						id: item.querySelector("id")?.innerHTML ?? "",
+						id: item.querySelector("guid")?.innerHTML ?? "",
 						title: item.querySelector("title")?.innerHTML ?? "",
-						summary: item.querySelector("summary")?.innerHTML.replace(/^<!\[CDATA\[|\]\]>$/g, '') ?? "",
+						summary: item.querySelector("description")?.innerHTML.replace(/^<!\[CDATA\[|\]\]>$/g, '') ?? "",
 						thumbnail: item.getElementsByTagName('media:thumbnail')[0]?.getAttribute("url") ?? "",
 						author: item.querySelector("author name")?.innerHTML ?? "",
 						link: item.querySelector("link")?.getAttribute("href") ?? "",
-						published: item.querySelector("published")?.innerHTML ?? "",
+						published: item.querySelector("pubDate")?.innerHTML ?? "",
 						updated: item.querySelector("updated")?.innerHTML ?? "",
 						categories: Array.from(item.querySelectorAll("category")).map((category: Element) => category.getAttribute("term") ?? ""),
 					});
