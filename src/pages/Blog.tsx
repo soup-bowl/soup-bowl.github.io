@@ -6,7 +6,7 @@ import { IBlogPost } from "../interfaces";
 import { ButtonGroup, NormalButton } from "../components/Buttons";
 
 const Blog = () => {
-	const blogURL = 'https://blog.soupbowl.io/feed/index.xml';
+	const blogURL = 'https://blog.soupbowl.io/post/index.xml';
 	const [items, setItems] = useState<IBlogPost[]>([]);
 	const [categories, setCategories] = useState<Set<string>>(new Set());
 	const [filter, setFilter] = useState<string | undefined>();
