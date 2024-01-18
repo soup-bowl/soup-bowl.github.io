@@ -9,7 +9,7 @@ title: Hackintoshing a Toshiba Satellite Pro L850-1UJ
 slug: hackintoshing-a-toshiba-satellite-pro-l850-1uj
 ---
 
-**:warning: This project has been resumed. [Please see the latest version of this]({{< ref "/post/2020-04-25-toshiba-satellite-pro-l850-hackintosh-revisited" >}}  ).**
+**:warning: This project has been resumed. [Please see the latest version of this]({{< ref "/post/2020-04-25-toshiba-satellite-pro-l850-hackintosh-revisited" >}}).**
 
 While I am a technical person, the Hackintosh community is scores ahead of what I know. The work put in by the awesome community supporting the movement for macOS/OS X on other machines is incredible. I’ve watched the progress since I was 11, but never branched into it. Recently, it all changed.
 

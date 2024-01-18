@@ -10,7 +10,7 @@ slug: macos-in-vmware-yep-this-also-works
 use_disqus: true
 ---
 
-**[macOS Mojave worked great(ish) in Virtualbox]({% post_url 2020-04-25-macos-in-virtualbox %}). Does it work in VMware? Turns out, yes – works great, and has guest additions.**
+**[macOS Mojave worked great(ish) in Virtualbox]({{< ref "/post/2020-04-25-macos-in-virtualbox" >}}). Does it work in VMware? Turns out, yes – works great, and has guest additions.**
 
 Virtualbox is fantastic for Open Source software, but VMware is one of the primary players in the virtualisation scene. As soon as I got macOS working in Virtualbox, I almost immediately turned my attention to doing the same thing in VMware… Because I’m mad.
 

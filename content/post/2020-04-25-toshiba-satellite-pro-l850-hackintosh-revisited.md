@@ -9,11 +9,11 @@ title: Toshiba Satellite Pro L850, Hackintosh Revisited
 slug: toshiba-satellite-pro-l850-hackintosh-revisited
 ---
 
-[Back in 2018]({% post_url 2018-08-08-hackintoshing-a-toshiba-satellite-pro-l850-1uj %}) I turned my laptop into a Hackintosh device, running High Sierra. I had a donor MacBook mid-2010 that I used to run TonyMac tools to get Hackintosh working. It was a fun if complicated process of trial and error, but the result was always impressive – a craptop unexpectedly booting macOS.
+[Back in 2018]({{< ref "/post/2018-08-08-hackintoshing-a-toshiba-satellite-pro-l850-1uj" >}}) I turned my laptop into a Hackintosh device, running High Sierra. I had a donor MacBook mid-2010 that I used to run TonyMac tools to get Hackintosh working. It was a fun if complicated process of trial and error, but the result was always impressive – a craptop unexpectedly booting macOS.
 
 I eventually wiped macOS and re-installed Windows for a WordCamp coding session. The laptop proved to be quite a letdown, and now sits on a shelf collecting dust.
 
-So, let’s Hackintosh it – **[again]({% post_url 2018-08-08-hackintoshing-a-toshiba-satellite-pro-l850-1uj %})**!
+So, let’s Hackintosh it – **[again]({{< ref "/post/2018-08-08-hackintoshing-a-toshiba-satellite-pro-l850-1uj" >}})**!
 
 ## :stop_sign: If You’re Attempting This…
 

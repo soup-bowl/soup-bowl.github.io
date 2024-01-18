@@ -7,7 +7,7 @@ title: Cheap Tat Review – TWS i12 (blue stripe)
 slug: cheap-tat-review-tws-i12-blue-stripe
 ---
 
-I was happy enough with my [red label i12]({% post_url 2019-03-26-cheap-tat-review-tws-i12-red-stripe %})‘s, but when I saw you could get them in matte black (not an option for Apple ones), I decided to give it a pop.
+I was happy enough with my [red label i12]({{< ref "/post/2019-03-26-cheap-tat-review-tws-i12-red-stripe" >}})‘s, but when I saw you could get them in matte black (not an option for Apple ones), I decided to give it a pop.
 
 ## Design
 

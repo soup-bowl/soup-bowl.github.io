@@ -18,7 +18,7 @@ I had **no expectations** that this was going to work. OS X has always been runn
 
 **The macOS Virtualbox option is designed for _genuine_ Apple hardware. [You will not get community support](https://forums.virtualbox.org/viewtopic.php?f=1&t=92649) from Virtualbox if you have trouble with this process, as it’s against Apple ToS.**
 
-**VMware** more your jam? [We’ve got this working in there too]({% post_url 2021-04-10-macos-in-vmware-yep-this-also-works %}).
+**VMware** more your jam? [We’ve got this working in there too]({{< ref "/post/2021-04-10-macos-in-vmware-yep-this-also-works" >}}).
 
 ## :thinking: What do I need?
 

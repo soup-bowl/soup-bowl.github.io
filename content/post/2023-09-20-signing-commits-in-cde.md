@@ -13,7 +13,7 @@ My argument to myself is to prove "it is I, who committed!", but I don't do mean
 
 In reality, I was curious by GitHub's Vigilant mode, so I decided to see if I can feasibly sign all my commits for that sweet, sweet "Verified" badge alongside my commits. This is really easily done and achieved with [GitHub's commit signing guide](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits).
 
-But I do a lot of my [development work in Gitpod now]({% post_url 2023-02-13-a-year-of-cloud-code-in-review %}). Unlike GitHub Codespaces, Gitpod does not support automatic commit signing. Drat, do I abandon my utterly pointless plan? **No**, adapt and overcome!
+But I do a lot of my [development work in Gitpod now]({{< ref "/post/2023-02-13-a-year-of-cloud-code-in-review" >}}). Unlike GitHub Codespaces, Gitpod does not support automatic commit signing. Drat, do I abandon my utterly pointless plan? **No**, adapt and overcome!
 
 So, how did I do this?
 

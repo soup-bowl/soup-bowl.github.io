@@ -67,7 +67,7 @@ First two are pretty much dealt with by the Powerblock module. The rest will be 
 
 I had a hell of a time trying to figure out actually _where_ the Pi would sit inside the casing. Now more than ever, cooling is **fundamental** due to the sheer power the Pi 4 is packing. I could place the Pi in normally, but I would potentially need to add vents, or use the disc tray door as a vent.
 
-I’d recently [bought a Mega Drive case]({% post_url 2020-09-21-raspberry-pi-gameboy-and-mega-drive-my-retro-setup %}) from [Retroflag](http://retroflag.com/MEGAPi-CASE-M.html). Their method of dealing with the cooling was to have the Raspberry Pi upside down, with a heatsink and a fan venting out below. This is **applicable** to the PSOne shell, as there’s vents at the bottom. I opted to go with this approach, which would require me to modify the Powerblock module.
+I’d recently [bought a Mega Drive case]({{< ref "/post/2020-09-21-raspberry-pi-gameboy-and-mega-drive-my-retro-setup" >}}) from [Retroflag](http://retroflag.com/MEGAPi-CASE-M.html). Their method of dealing with the cooling was to have the Raspberry Pi upside down, with a heatsink and a fan venting out below. This is **applicable** to the PSOne shell, as there’s vents at the bottom. I opted to go with this approach, which would require me to modify the Powerblock module.
 
 I mounted the Pi so that the USB-C port on the Powerblock was facing the barrel jack connector slot.
 
