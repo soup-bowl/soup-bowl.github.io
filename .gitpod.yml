@@ -1,10 +1,13 @@
 tasks:
-  - init: |
+  - name: Hugo
+    init: |
       sudo wget -q -O /opt/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.121.2/hugo_0.121.2_linux-amd64.deb
       sudo dpkg -i /opt/hugo.deb
       sudo rm /opt/hugo.deb
-      (cd themes/soup && npm ci)
     command: hugo server
+  - name: CSS
+    init: (cd themes/soup && npm ci)
+    command: (cd themes/soup && npm run compile:watch)
 
 ports:
   - port: 1313
