@@ -97,6 +97,29 @@ export const ListingItemGroup = styled.div({
 	}
 });
 
+const timeSince = (date: Date): string => {
+	const now = new Date();
+	let years = now.getFullYear() - date.getFullYear();
+	let months = now.getMonth() - date.getMonth();
+	let days = now.getDate() - date.getDate();
+
+	if (months < 0 || (months === 0 && days < 0)) {
+		years--;
+		months += 12;
+	}
+	if (days < 0) {
+		months--;
+		const previousMonth = new Date(now.getFullYear(), now.getMonth() - 1, 0);
+		days += previousMonth.getDate();
+	}
+
+	if (years > 0) return `${years} ${years === 1 ? 'year' : 'years'} ago`;
+	if (months > 0) return `${months} ${months === 1 ? 'month' : 'months'} ago`;
+	if (days > 0) return `${days} ${days === 1 ? 'day' : 'days'} ago`;
+	return 'Today';
+};
+
+
 interface InfoProps {
 	icon: IconDefinition;
 	alt: string;
@@ -116,7 +139,7 @@ interface Props {
 	title: string;
 	image?: string;
 	date?: Date;
-	lastCommit?: Date;
+	daysSince?: Date;
 	stars?: number;
 	downloads?: number;
 	url: string;
@@ -127,7 +150,7 @@ export const ListingItem = ({
 	title,
 	image = undefined,
 	date = undefined,
-	lastCommit = undefined,
+	daysSince = undefined,
 	stars = 0,
 	downloads = 0,
 	url,
@@ -142,7 +165,7 @@ export const ListingItem = ({
 				<h2><a href={url}>{title}</a></h2>
 				<InfoBites>
 					{date ? <ItemInfo icon={faClock} alt="Created">{date.toLocaleDateString('en-GB')}</ItemInfo> : null}
-					{lastCommit ? <ItemInfo icon={faPenToSquare} alt="Last change">{((Date.now() - lastCommit.getTime()) / 86400000).toFixed(0)} days ago</ItemInfo> : null}
+					{daysSince ? <ItemInfo icon={faPenToSquare} alt="Last change">{timeSince(daysSince)}</ItemInfo> : null}
 					{stars > 0 ? <ItemInfo icon={faStar} alt="Stars">{stars}</ItemInfo> : null}
 					{downloads > 0 ? <ItemInfo icon={faDownload} alt="Downloads">{downloads.toLocaleString('en-GB')}</ItemInfo> : null}
 				</InfoBites>
@@ -198,7 +221,7 @@ export const ListingSocialItem = ({
 							borderRadius: '10px'
 						}} />
 					</div>
-				: null}
+					: null}
 			</div>
 		</ItemBlock>
 	);

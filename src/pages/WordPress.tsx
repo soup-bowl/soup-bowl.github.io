@@ -46,7 +46,7 @@ const WordPress = () => {
 							url={`https://wordpress.org/plugins/${item.slug}`}
 							downloads={item.downloaded}
 							date={new Date(item.added)}
-							lastCommit={new Date(item.last_updated.split(' ')[0])}
+							daysSince={new Date(item.last_updated.split(' ')[0])}
 						>
 							<p></p>
 						</ListingItem>

@@ -34,7 +34,7 @@ const GitHub = () => {
 					image={repoImg}
 					stars={repo.stargazers_count}
 					date={new Date(repo.created_at)}
-					lastCommit={new Date(repo.pushed_at)}
+					daysSince={new Date(repo.pushed_at)}
 				>
 					<p>{repo.description}</p>
 				</ListingItem>
