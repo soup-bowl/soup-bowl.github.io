@@ -11,3 +11,6 @@ params:
   description: The diverse and nonsensical ramblings from a seasoned software developer based in the United Kingdom
   images: 
     - https://files.soupbowl.io/i/background.webp
+
+minify:
+  minifyOutput: true
