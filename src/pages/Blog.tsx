@@ -6,7 +6,7 @@ import { IBlogPost } from "../interfaces";
 import { ButtonGroup, NormalButton } from "../components/Buttons";
 
 const Blog = () => {
-	const blogURL = 'https://blog.soupbowl.io/post/index.xml';
+	const blogURL = 'https://blog.soupbowl.io/index.xml';
 	const [items, setItems] = useState<IBlogPost[]>([]);
 	const [categories, setCategories] = useState<Set<string>>(new Set());
 	const [filter, setFilter] = useState<string | undefined>();
@@ -23,11 +23,11 @@ const Blog = () => {
 				items.forEach((item: Element) => {
 					collect.push({
 						id: item.querySelector("guid")?.innerHTML ?? "",
-						title: item.querySelector("title")?.innerHTML ?? "",
-						summary: item.querySelector("description")?.innerHTML.replace(/^<!\[CDATA\[|\]\]>$/g, '') ?? "",
+						title: decodeHtmlEntities(item.querySelector("title")?.innerHTML ?? ""),
+						summary: decodeHtmlEntities(truncateString(item.querySelector("description")?.innerHTML ?? "")),
 						thumbnail: item.querySelector("thumbnail")?.innerHTML ?? "",
 						author: item.querySelector("author name")?.innerHTML ?? "",
-						link: item.querySelector("link")?.getAttribute("href") ?? "",
+						link: item.querySelector("link")?.innerHTML ?? "",
 						published: item.querySelector("pubDate")?.innerHTML ?? "",
 						updated: item.querySelector("updated")?.innerHTML ?? "",
 						categories: Array.from(item.querySelectorAll("category")).map((category: Element) => category.getAttribute("term") ?? ""),
@@ -44,6 +44,17 @@ const Blog = () => {
 			.catch(() => setRequestState(EState.Error));
 	}, []);
 
+	const truncateString = (text: string, limit: number = 150) => {
+		if (text.length <= limit) { return decodeHtmlEntities(text) }
+		return decodeHtmlEntities(text.slice(0, limit) + '...');
+	}
+
+	const decodeHtmlEntities = (text: string) => {
+		const textarea: HTMLTextAreaElement = document.createElement('textarea');
+		textarea.innerHTML = text;
+		return textarea.value;
+	}
+
 	return (
 		<>
 			<p style={{ textAlign: "center" }}>
@@ -51,7 +62,7 @@ const Blog = () => {
 				at <a href={blogURL} style={{ fontWeight: "bold" }}>blog.soupbowl.io</a>
 			</p>
 			<ButtonGroup>
-				<NormalButton active={(filter === undefined)} key="all" onClick={() => setFilter(undefined)}>all</NormalButton>
+				<NormalButton active={(filter === undefined)} key="all" onClick={() => setFilter(undefined)}>All</NormalButton>
 				{Array.from(categories).map((item) => (
 					<NormalButton active={(item === filter)} key={item} onClick={() => setFilter(item)}>
 						{item}
@@ -65,7 +76,7 @@ const Blog = () => {
 							key={item.id}
 							title={item.title}
 							url={item.link}
-							image={item.thumbnail}
+							image={(item.thumbnail !== "") ? item.thumbnail : undefined}
 							date={new Date(item.published)}
 						>
 							<p>{item.summary}</p>
