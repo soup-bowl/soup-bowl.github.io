@@ -5,9 +5,11 @@ tasks:
       sudo dpkg -i /opt/hugo.deb
       sudo rm /opt/hugo.deb
     command: hugo server
+    openMode: split-left
   - name: CSS
     init: (cd themes/soup && npm ci)
     command: (cd themes/soup && npm run compile:watch)
+    openMode: split-right
 
 ports:
   - port: 1313
