@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "/workspace/portfolio",
+			"name": "Portfolio (React)"
+		},
+		{
+			"path": "/workspace/blog",
+			"name": "Blog (Hugo)"
+		}
+	]
+}
