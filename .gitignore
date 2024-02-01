@@ -24,3 +24,16 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# 
+.DS_Store
+_site/
+
+# Jekyll
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Hugo
+node_modules/
+public/

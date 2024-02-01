@@ -1,21 +1,13 @@
-checkoutLocation: portfolio
-additionalRepositories:
-  - url: https://github.com/soup-bowl/blog
-    checkoutLocation: blog
-
-workspaceLocation: portfolio/.github/gitpod.code-workspace
-
 tasks:
   - name: Blog Sass
-    before: cd ../blog
     init: (cd themes/soup && npm ci)
     command: (cd themes/soup && npm run compile:watch)
   - name: Portfolio
+    before: cd portfolio
     init: npm install && npm run build
     command: npm run start
     openMode: split-left
   - name: Blog
-    before: cd ../blog
     init: |
       sudo wget -q -O /opt/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.121.2/hugo_0.121.2_linux-amd64.deb
       sudo dpkg -i /opt/hugo.deb
