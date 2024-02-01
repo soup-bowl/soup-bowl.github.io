@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="/assets/img/icon-2.webp">
+  <meta name="theme-color" content="#0f0f0f">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+  <link rel="stylesheet" crossorigin href="/portfolio-res/assets/index.css">
+  <script type="module" crossorigin src="/portfolio-res/assets/index.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>

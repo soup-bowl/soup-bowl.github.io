@@ -10,5 +10,16 @@ export default defineConfig({
 	},
 	define: {
 		global: {}
+	},
+	build: {
+		outDir: '../public/portfolio-res',
+		emptyOutDir: true,
+		rollupOptions: {
+			output: {
+				entryFileNames: `assets/[name].js`,
+				chunkFileNames: `assets/[name].js`,
+				assetFileNames: `assets/[name].[ext]`
+			}
+		}
 	}
 })

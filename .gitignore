@@ -12,6 +12,7 @@
 /build
 /dist
 /dev-dist
+/portfolio/dist
 
 # misc
 .DS_Store

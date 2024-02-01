@@ -4,6 +4,9 @@ theme: soup
 baseURL: https://blog.soupbowl.io
 languageCode: en-gb
 
+ignoreFiles: 
+  - "/portfolio/.*"
+
 permalinks:
   post: "/:year/:month/:slug/"
 
