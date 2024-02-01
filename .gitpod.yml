@@ -6,6 +6,10 @@ additionalRepositories:
 workspaceLocation: portfolio/.github/gitpod.code-workspace
 
 tasks:
+  - name: Blog Sass
+    before: cd ../blog
+    init: (cd themes/soup && npm ci)
+    command: (cd themes/soup && npm run compile:watch)
   - name: Portfolio
     init: npm install && npm run build
     command: npm run start
@@ -18,10 +22,6 @@ tasks:
       sudo rm /opt/hugo.deb
     command: hugo server
     openMode: split-right
-  - name: Blog Sass
-    before: cd ../blog
-    init: (cd themes/soup && npm ci)
-    command: (cd themes/soup && npm run compile:watch)
 
 ports:
   - port: 1313
