@@ -6,7 +6,7 @@ import { IBlogPost } from "../interfaces";
 import { ButtonGroup, NormalButton } from "../components/Buttons";
 
 const Blog = () => {
-	const blogURL = 'https://blog.soupbowl.io/post/index.xml';
+	const blogURL = '/post/index.xml';
 	const [items, setItems] = useState<IBlogPost[]>([]);
 	const [categories, setCategories] = useState<Set<string>>(new Set());
 	const [filter, setFilter] = useState<string | undefined>();
@@ -57,10 +57,6 @@ const Blog = () => {
 
 	return (
 		<>
-			<p style={{ textAlign: "center" }}>
-				You can visit my full blog
-				at <a href="https://blog.soupbowl.io" style={{ fontWeight: "bold" }}>blog.soupbowl.io</a>
-			</p>
 			<ButtonGroup>
 				<NormalButton active={(filter === undefined)} key="all" onClick={() => setFilter(undefined)}>All</NormalButton>
 				{Array.from(categories).map((item) => (

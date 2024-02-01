@@ -25,6 +25,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: 'npm'
+
       - name: Setup Hugo
         run: |
           mkdir /opt/hugo
@@ -35,7 +41,9 @@ jobs:
           HUGO_VERSION: 0.121.2
       
       - name: 📦 Compile Site
-        run: hugo
+        run: |
+          (cd portfolio && npm ci)
+          npm run build
 
       - name: 🚛 Publish Site
         uses: cloudflare/pages-action@v1.3.0

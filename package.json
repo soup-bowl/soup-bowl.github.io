@@ -1,0 +1,8 @@
+{
+	"scripts": {
+		"build": "npm run build:react && npm run build:hugo && rm -r public/portfolio-res/*.html",
+		"preview": "npm run build && npx --yes http-server -p 8080",
+		"build:react": "cd portfolio && npm run build",
+		"build:hugo": "hugo --minify"
+	}
+}
