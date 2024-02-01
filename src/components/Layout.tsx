@@ -16,7 +16,7 @@ export const PageBody = styled.main({
 
 const theme = {
 	colors: {
-		primary: '#ef1a1a',
+		primary: '#ff6100',
 		white: '#fff',
 		background: '#1b1a1b'
 	}
