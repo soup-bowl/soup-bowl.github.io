@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "sass": "^1.69.7"
+  },
+  "scripts": {
+    "compile": "sass style.scss assets/css/main.css",
+    "compile:watch": "sass --watch style.scss assets/css/main.css"
+  }
+}

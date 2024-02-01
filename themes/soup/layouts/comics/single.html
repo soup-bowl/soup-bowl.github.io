@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+<div class="container content-type-comic text-center">
+  {{ $prev := .Prev }}
+  {{ $next := .Next }}
+  <h2 class="text-success">Stick of Celery Webcomics</h2>
+  <h1>{{ .Title }}</h1>
+
+  <div class="mb-4 text-secondary">
+    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Date | time.Format ":date_long" }}
+    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    •
+    <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <span class="p-author h-card" itemprop="name">{{ .Params.author }}</span>
+    </span>
+    •
+    <a href="{{ .Params.source }}">Original</a>
+
+  </div>
+
+  <div class="fs-2">
+    {{ if $prev }}
+    <a href="{{ $prev.RelPermalink }}">«</a>
+    {{ end }}
+    {{ .Page.Slug }}
+    {{ if $next }}
+    <a href="{{ $next.RelPermalink }}">»</a>
+    {{ end }}
+  </div>
+
+  {{ .Content }}
+
+  <p class="text-secondary">The content in these webcomics, created during my teenage years, may contain outdated or potentially offensive material and does not reflect my current views. Viewer discretion is advised.</p>
+</div>
+{{ end }}

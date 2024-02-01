@@ -1,0 +1,7 @@
+<div class="container d-flex flex-wrap justify-content-center fw-bold">
+	<a href="/" class="d-flex align-items-center gap-2 mb-3 mb-md-0 me-md-auto text-decoration-none text-light">
+		<span class="fs-5">{{ site.Title }}</span>
+	</a>
+
+	{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+</div>
