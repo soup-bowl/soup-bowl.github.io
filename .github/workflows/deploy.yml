@@ -30,6 +30,7 @@ jobs:
         with:
           node-version: 18.x
           cache: 'npm'
+          cache-dependency-path: portfolio/package-lock.json
 
       - name: Setup Hugo
         run: |
