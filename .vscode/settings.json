@@ -11,5 +11,8 @@
 		"refdef",
 		"Soupbowl",
 		"webp"
-	]
+	],
+	"yaml.schemas": {
+		"https://json.schemastore.org/github-workflow.json": "file:///workspace/soup-bowl.github.io/.github/workflows/deploy.yml"
+	}
 }
