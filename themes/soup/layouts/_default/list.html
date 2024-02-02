@@ -2,7 +2,7 @@
 <div class="container">
   <h1 class="text-center mt-2">{{ .Title }}</h1>
   {{ .Content }}
-  {{ $filteredPages := where .Site.RegularPages "Type" "!=" "webcomics" }}
+  {{ $filteredPages := where .Pages "Type" "!=" "webcomics" }}
   {{ $paginator := .Paginate $filteredPages }}
 
   {{ range $paginator.Pages }}
