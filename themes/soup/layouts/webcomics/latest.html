@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	{{ range ( where .Site.RegularPages "Type" "webcomics" | first 1 ) }}
+	<meta http-equiv="refresh" content="0;url={{ .Permalink }}" />
+	{{ end }}
+	<title>Redirecting...</title>
+	<style>
+		body {
+			background-color: #0c0c0c;
+			color: white;
+			font-family: sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+	<p>Redirecting to the newest comic...</p>
+</body>
+
+</html>
