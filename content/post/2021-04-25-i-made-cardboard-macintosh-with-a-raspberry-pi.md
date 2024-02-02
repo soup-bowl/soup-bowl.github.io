@@ -19,7 +19,7 @@ I’m in the camp of “Oh that’s looks cool… Oh I can’t afford any of thi
 
 And then I saw the **[Mini Mac on Instructables](https://www.instructables.com/Making-a-Tiny-Mac-From-a-Raspberry-Pi-Zero/)**…
 
-## :thinking: What did I use?
+## 🤔 What did I use?
 
 {{< figure src="/assets/img/IMG_20210423_181904-edited-scaled.webp" >}}
 
@@ -62,7 +62,7 @@ And finally, the optional extras:
 
 *   Beverage (alcohol not recommended).
 
-## :pie: Setting up the Pi
+## 🥧 Setting up the Pi
 
 ### First Steps
 
@@ -138,7 +138,7 @@ If all has gone correctly, your Pi screen drivers will be ready for us to connec
 
 For the security conscious, I don’t recommend switching off SSH yet as we will be using it for SCP (file transfer) a bit later. If you want to strengthen your Pi security, [here’s some good recommendations](https://www.raspberrypi.org/documentation/configuration/security.md) on setting up key-based authentication.
 
-## :hammer_and_wrench: Constructing the Cardboard Macintosh
+## 🛠️ Constructing the Cardboard Macintosh
 
 {{< figure src="/assets/img/IMG_20210422_182005-edited-scaled.webp" >}}
 
@@ -156,7 +156,7 @@ My plan is to come back to this project with a way of having ports facing outsid
 
 At this point, you should now have a neat looking little cardboard computer that runs Raspberry Pi OS quite fine. You could stop here if you want, because this is pretty damn cool in itself. Up next I’ll talk about how to emulate the OS the Macintosh would’ve used back in the day.
 
-## :apple: Emulating System 7
+## 🍎 Emulating System 7
 
 ### Pre-preperation
 
@@ -227,7 +227,7 @@ Upgrading is very different to the installation. Boot your cardboard Macintosh, 
 
 Do the same process again for the **mac755up.img** file. Same thing again, and woohoo – we’re on 7.5.5!
 
-## :shock: Bonus – Install Windows 3.11
+## 😱 Bonus – Install Windows 3.11
 
 Now you can achieve something that was definitely seen as impossible (and sacrilegious to the Apple fans) – You can install Windows on your cardboard Macintosh.
 
@@ -299,7 +299,7 @@ To start Windows, boot up Dosbox. Type **c:** and press Enter to switch to Windo
 
 Unfortunately the cursor does not work so well when Dosbox is run in windowed mode. When you run fullscreen, the cursor runs fine. [This is a known issue](https://github.com/dosbox-staging/dosbox-staging/issues/310), and is currently not officially resolved (likely due to the fact Dosbox is for games). In the next guide level, I’ll be exploring **Dosbox-X** which is supposedly designed for Windows emulation.
 
-## :question: Finished
+## ❓ Finished
 
 {{< figure src="https://media4.giphy.com/media/wYyTHMm50f4Dm/giphy.gif" >}}
 

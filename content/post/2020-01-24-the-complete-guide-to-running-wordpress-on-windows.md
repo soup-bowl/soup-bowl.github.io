@@ -16,13 +16,13 @@ So you’ve discovered to your absolute horror that the WordPress site your comp
 
 Before you stand up, throw your computer chair out the Window, maliciously eat your co-workers salad and enjoy it, or drop all the production databases, relax. We’ve got you covered.
 
-## :confused: What’s the problem?
+## 😕 What’s the problem?
 
 Good point. IIS (Information Internet Services) is the home-grown proprietary (for now) web server provided by Microsoft for Windows customers. IIS is fantastic at what it does, and can serve as an efficient web host as well as an absolutely golden reverse proxy server.
 
 So what’s the problem?
 
-### :angry: Support
+### 😡 Support
 
 {{< figure src="https://media.giphy.com/media/wofftnAdDtx4s/giphy.gif" >}}
 
@@ -38,7 +38,7 @@ However, [WordPress requirements](https://en-gb.wordpress.org/about/requirements
 
 – so don’t lose hope just yet.
 
-## :open_file_folder: The web.config File
+## 📂 The web.config File
 
 If you’re coming from an Apache background, you might be used to a **.htaccess** file. Just like how .htaccess is not compatible with NGINX, it is also **not compatible** with IIS.
 
@@ -53,7 +53,7 @@ An example of useful properties stored in here are:
 *   Request filtering, blocking and setting adjustments.
 *   Directory over-riding of parential settings (e.g. PHP Version).
 
-## :gear: Setting up WordPress
+## ⚙️ Setting up WordPress
 
 First you will need a database. It is recommended you have the database on a different server for performance and security reasons, but you can also have MySQL running on the same server as IIS.
 
@@ -63,7 +63,7 @@ Once completed, setup a database and access user like you would a Linux-based se
 
 Also, while it’s best to always be running the latest version of Windows Server, please consider using a version **no later than IIS 10 (Windows Server 2016**). This is because older versions of IIS do not have support for HTTP/2. Technically speaking the _minimum_ requirement is IIS 7 (Windows Server 2008).
 
-### :elephant: PHP on Windows/IIS
+### 🐘 PHP on Windows/IIS
 
 #### Prerequisites
 
@@ -87,7 +87,7 @@ Now is a good time to install [WordPress CLI](https://wp-cli.org/) if you’re p
 
 #### (Discontinued) Web Platform Installer – Easy
 
-:exclamation: **The Web Platform Installer is sunsetting, due to be officially discontinued on 31st December 2022. This method is no longer recommended and users have already reported experiencing issues with the Web Platform Installer.**
+❗️ **The Web Platform Installer is sunsetting, due to be officially discontinued on 31st December 2022. This method is no longer recommended and users have already reported experiencing issues with the Web Platform Installer.**
 
 **RIP WebPI – 2009 – 2022.**
 
@@ -95,7 +95,7 @@ Windows Server has an optional comonent called the **Web Platform Installer**. T
 
 Create a Site as regular, and double-click on it. You should have an option in **Management** called **Web Platform Installer** (at time of writing, it’s a circular, orange download icon). Open this up, and a new panel will load up. Search for **WordPress**, click Add, then Install.
 
-:question: **No Web Platform Installer?** It’s not installed by default. Click your server name in the Connections left-hand panel. In the now-visible right-hand panel, click on **Get New Web Platform Components**. Follow the Microsoft instructions and you’ll have the aforementioned button.
+❓ **No Web Platform Installer?** It’s not installed by default. Click your server name in the Connections left-hand panel. In the now-visible right-hand panel, click on **Get New Web Platform Components**. Follow the Microsoft instructions and you’ll have the aforementioned button.
 
 {{< figure src="/assets/img/1-1024x540.webp" >}}
 
@@ -112,7 +112,7 @@ Hit Continue, and go grab a coffee. When you return, **WordPress is installed**!
 For the technical information:
 
 *   **Microsoft WebMatrix** is installed.
-*   :exclamation: **PHP 7.1** is installed via **IIS Express**.
+*   ❗️ **PHP 7.1** is installed via **IIS Express**.
 		*   A newer version of PHP is recommended.
 *   A **global FastCGIModule** for PHP is created.
 		*   This means all sites on your IIS server can run PHP code via this module. Change priority listings if you wish to run different versions.
@@ -190,14 +190,14 @@ Run through the installation as per a normal site, and **congratulations** – y
 
 {{< figure src="https://media2.giphy.com/media/uihiEh31AiOCQ/giphy.gif?cid=790b76113f3975ca802e55917a842138c9bf733a2d6fadaf&rid=giphy.gif" >}}
 
-## :star: Special Thanks
+## 🌟 Special Thanks
 
 In the hopes of keeping the information up to date and relevant, the following commenters below have helped keep me in check:
 
 *   **Patrick Bates** for pointing out **Web Platform Installer**.
 *   **John Wilkin** for pointing out I did not cover **web.config**.
 
-## :information_source: FAQ
+## ℹ️ FAQ
 
 ### **\* Did Microsoft drop support for PHP on Windows?**
 

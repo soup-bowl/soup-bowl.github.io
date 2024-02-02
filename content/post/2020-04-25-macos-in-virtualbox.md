@@ -20,7 +20,7 @@ I had **no expectations** that this was going to work. OS X has always been runn
 
 **VMware** more your jam? [We’ve got this working in there too]({{< ref "/post/2021-04-10-macos-in-vmware-yep-this-also-works" >}}).
 
-## :thinking: What do I need?
+## 🤔 What do I need?
 
 You **need a donor Mac** to start this process. You will not need access to it permanently, but just during the process of creating an ISO for your VM to setup with. Else, you need:
 
@@ -34,9 +34,9 @@ You **need a donor Mac** to start this process. You will not need access to it p
 
 This guide will discuss installing **MacOS Mojave**, however installation process should be similar for all **MacOS versions**.
 
-:warning: At the time of writing, **Virtualbox** and **Hyper-V** cannot co-exist on Windows. MacOS is also **not installable** on Hyper-V. I use Linux in my screenshots as I use Docker on Windows. This also includes **Windows Subsystem for Linux**, which tripped me up from installing.
+⚠️ At the time of writing, **Virtualbox** and **Hyper-V** cannot co-exist on Windows. MacOS is also **not installable** on Hyper-V. I use Linux in my screenshots as I use Docker on Windows. This also includes **Windows Subsystem for Linux**, which tripped me up from installing.
 
-## :cd: Creating the ISO
+## 💿 Creating the ISO
 
 Virtualbox installs generally prefer to use an ISO file, which unfortunately will require some handiwork to get a hold of. Persevere and you will get there!
 
@@ -70,9 +70,9 @@ Now for the final process, let’s convert our CDR image to an ISO!
 
 You should now have a file on the Mac desktop called ‘Mojave.iso’. Congratulations, you have your installation disc! Copy this over to where your Virtualbox is setup. **The Mac is no longer needed at this point**.
 
-## :hammer_and_wrench: Setting up Virtualbox
+## 🛠️ Setting up Virtualbox
 
-:warning: Before continuing, install the [**Virtualbox Extension Pack**](https://www.virtualbox.org/wiki/Downloads#VirtualBox6.1.6OracleVMVirtualBoxExtensionPack), if you haven’t already. This comes with a special USB 3 driver that without, the Mac simply won’t see USB devices.
+⚠️ Before continuing, install the [**Virtualbox Extension Pack**](https://www.virtualbox.org/wiki/Downloads#VirtualBox6.1.6OracleVMVirtualBoxExtensionPack), if you haven’t already. This comes with a special USB 3 driver that without, the Mac simply won’t see USB devices.
 
 Virtualbox has the option for a MacOS virtual machine in it’s New VM dialog, but we will need to make further adjustments to make it truly Mac-ready.
 
@@ -140,9 +140,9 @@ Once this is complete and you filled all the required details in, congratulation
 
 {{< figure src="/assets/img/Screenshot-from-2020-04-21-17-50-11-1024x831.webp" >}}
 
-## :question: What works?
+## ❓ What works?
 
-#### :heavy_check_mark: Does
+#### ✅ Does
 
 *   Screen (No 3D).
 *   Regular input methods (mouse sharing).
@@ -150,7 +150,7 @@ Once this is complete and you filled all the required details in, congratulation
 *   USB devices.
 *   Mac App Store.
 
-#### :x: Does not
+#### ❌ Does not
 
 *   Full graphics.
 *   Audio.
@@ -160,7 +160,7 @@ At the end of the day it’s still a **virtual machine**, and a technically unsu
 
 Files can be shared using typical Windows share features. If you share a folder on your network from your host machine, your Mac VM should be able to connect to it.
 
-## :star: Special Thanks
+## 🌟 Special Thanks
 
 This required **a lot of Googling**, and these are the people who saved me at the end of the process!
 
@@ -169,7 +169,7 @@ This required **a lot of Googling**, and these are the people who saved me at th
 *   **miranhasan** on Reddit for [AMD processors](https://www.reddit.com/r/hackintosh/comments/9xvspq/stuck_at_end_randomseed_on_mojave_in_virtualbox/eigwon3/).
 *   **kvotheV** on Reddit for [disabling nested paging](https://www.reddit.com/r/hackintosh/comments/aij0v0/stuck_at_start_randomseed_on_mojave_in_virtualbox/ekmy83w/).
 
-## :bug: Troubleshooting
+## 🐞 Troubleshooting
 
 ### You get Guru Meditation, “A critical error has occurred while running the virtual machine and the machine execution has been stopped” when machine gets to RandomSeed.
 

@@ -15,7 +15,7 @@ I eventually wiped macOS and re-installed Windows for a WordCamp coding session.
 
 So, let’s Hackintosh it – **[again]({{< ref "/post/2018-08-08-hackintoshing-a-toshiba-satellite-pro-l850-1uj" >}})**!
 
-## :stop_sign: If You’re Attempting This…
+## 🛑 If You’re Attempting This…
 
 I hate it when some guides forget to do this, but if you want to try this yourself, you **absolutely must** have the following or you won’t be able to do it:
 
@@ -29,11 +29,11 @@ I hate it when some guides forget to do this, but if you want to try this yourse
 
 If you can’t fufill these, then **stop now**. You’ll be wasting your time. If you want to see roughly how Hackintosh works or how my experience was, then please read on!
 
-## :thinking: What Does and Does not Work?
+## 🤔 What Does and Does not Work?
 
 This is from my current setup. They might actually have working configs that I’ve yet to find. If you know any, please comment below!
 
-#### :heavy_check_mark: Does
+#### ✅ Does
 
 *   Screen (full graphics).
 *   Display brightness.
@@ -43,7 +43,7 @@ This is from my current setup. They might actually have working configs that I�
 *   Ethernet.
 *   Speaker audio.
 
-#### :x: Does not
+#### ❌ Does not
 
 *   Suspend.
 *   WiFi.
@@ -51,7 +51,7 @@ This is from my current setup. They might actually have working configs that I�
 
 The L850 has a **Qualcomm Atheros AR9462**, which does not work in macOS. I happened to have both the Edimax and TP-Link USB wireless adapters, [which worked with Chris1111 drivers](https://github.com/chris1111/Wireless-USB-Adapter-Clover).
 
-## :clock4: Changes from 2018
+## 🕓 Changes from 2018
 
 Instead of relying on [TonyMac](http://www.tonymacx86.com) software, I’ve decided to attempt [Hackintosh Vanilla](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). To quote the website:
 
@@ -67,7 +67,7 @@ Other than the different approach, I had the following caveats:
 
 \*An important point I must raise here. I bought my mac from an eBay listing a few years back. One day I plugged it in and it literally **blew up**. Smoke came from the plug and I had a residual shock. I put the MacBook and the dead charger in a cupboard and forgot about it. Recently, I pried open the plug to find it was a fake (or a non-recall), and the fuse was bypassed. Please, **check your chargers**! I now have a plug in RCD when using eBay auction purchases, just in case…
 
-## :woman_technologist: The Process
+## 👩‍💻 The Process
 
 ### Setting up a Bootable USB
 
@@ -105,7 +105,7 @@ Excluding the certificate expiry, the installation ran without a hitch. My netwo
 
 Storm through the install like a regular Mac. After a lot of waiting and reboots, you’ll be greeted with the Mac screen. Hooray, you’re done(ish)!
 
-### :hammer_and_wrench: Getting Stuff Working
+### 🛠️ Getting Stuff Working
 
 Most things are working at this point, or at least the most important stuff. **Networking, sound, and laptop detection** are not.
 
@@ -125,7 +125,7 @@ Great. With the above, your **keyboard, trackpad, audio, battery, brightness & w
 
 Native backlighting took some jiggling to get working. [RehabMan on TonyMac has a great guide](https://www.tonymacx86.com/threads/guide-laptop-backlight-control-using-applebacklightfixup-kext.218222/) to getting this working (I installed the kext into Clover, not MacOS).
 
-## :thinking: The Verdict
+## 🤔 The Verdict
 
 {{< figure src="/assets/img/Screenshot-2020-04-25-at-11.43.50.webp" >}}
 
@@ -155,7 +155,7 @@ I’ve tried adjusting my Clover for support and simply facing constant kernel p
 
 Since the community has moved from **Clover** to **OpenCore**, I’ll be trying that off the bat to continue the progress of this Hackintosh. If all goes well, I’ll make a seperate post so watch this space.
 
-## :robot: The Future
+## 🤖 The Future
 
 With no dire need to use this laptop (the battery is **really** dead), I’m going to persist on trying to get Hackintosh to work as much as possible. It really does feel rewarding, and you never get tired of the shock some people have when they see your craptop suddenly boot MacOS.
 

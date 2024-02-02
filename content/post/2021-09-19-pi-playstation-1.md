@@ -19,9 +19,9 @@ Next minute I’ve bought a dead PSOne off eBay, a Pi from the Pi Hut, and waved
 
 The idea was incredibly simple – Whack a Pi 4 inside a PSOne shell, with the toggle button and LED still functioning. With such a simple project, the idea can expand in phases (powered USB ports, hard drive storage, etc).
 
-:warning: **Since this article came out, Retroflag now offer a [Pi 4 case inspired by the PlayStation Classic](https://retroflag.com/pistation-case.html). I recommend this method far more than cannibalising an existing PSone, and can come with a screen option if you so wish.**
+⚠️ **Since this article came out, Retroflag now offer a [Pi 4 case inspired by the PlayStation Classic](https://retroflag.com/pistation-case.html). I recommend this method far more than cannibalising an existing PSone, and can come with a screen option if you so wish.**
 
-## :shopping_cart: What I Bought
+## 🛒 What I Bought
 
 (The links below are not affiliates).
 
@@ -44,11 +44,11 @@ I already had, but also needed:
 *   Cutting tools (I MacGyvered with diagonal pliers).
 *   Safety googles (I didn’t have these, and nearly injured myself).
 
-:warning: Excluding the tools, the whole project (at this stage) **cost me £120**. Albeit, if you follow my steps you’ll end up with quite a lot of re-usable resource.
+⚠️ Excluding the tools, the whole project (at this stage) **cost me £120**. Albeit, if you follow my steps you’ll end up with quite a lot of re-usable resource.
 
 _\* You can go for a higher RAM, but emulation mostly requires more powerful CPUs. If you’re planning to operate the Pi as a console, then the higher RAM will go to waste. You can find a [discussion about it here](https://retropie.org.uk/forum/topic/24302/raspberry-pi-4-does-ram-matter)._
 
-## :book: The Plan
+## 📕 The Plan
 
 {{< figure src="/assets/img/IMG-20201125-WA0002-1024x557.webp" title="Purchased PS One console before modifications" >}}
 
@@ -73,7 +73,7 @@ I mounted the Pi so that the USB-C port on the Powerblock was facing the barrel 
 
 Unfortunately I found with my spacers that the Pi was an extremely snug fit, which concerned me. I removed the centre columns, and some struts underneath the top casing. Doing this I found that I over-did mine, so I’d advise caution if you take this approach. I also chopped the square of the barrel recess out to allow for the USB-C connector to come through.
 
-## :construction: Hardware, the complex bit
+## 🚧 Hardware, the complex bit
 
 {{< figure src="/assets/img/IMG_20201221_122256-1024x768.webp" title="Eagle view of the modified PS One with the circuits exposed" >}}
 
@@ -91,7 +91,7 @@ The ribbon HDMI connector is easily put together, and can nicely convert the Mic
 
 You should be able to test the system at this point, and it should start up! There’s no driver installed yet, so it might behave strangely, but it should at least turn the Pi on and dimly light the LED.
 
-## :cd: Software, the easy bit
+## 💿 Software, the easy bit
 
 For software, I went for [RetroPie](https://retropie.org.uk/download/). I chose this because it’s the package I’m most familiar with, but [RecalBox](https://www.recalbox.com/) is also available if you want a more ready-rolled system.
 
@@ -101,7 +101,7 @@ You can install a theme that [styles the Emulation Station to look like the Play
 
 All that’s left now is to [start ripping your original PlayStation discs](https://www.reddit.com/r/PlaystationClassic/comments/alla7z/how_to_get_started_ripping_my_psone_games/) on a computer, [sticking them on your RetroPie](https://retropie.org.uk/docs/Transferring-Roms/) and playing like the PlayStation you could only dream would exist in the 00’s! And while you’re there, don’t forget the other classics it can handle – [from Atari to Dreamcast](https://retropie.org.uk/docs/Supported-Systems/).
 
-## :joystick: Verdict
+## 🕹️ Verdict
 
 The end result – while taking quite a bit of effort to construct – is fantastic. You now have a PlayStation One looking device that supports HDMI and can run many different consoles outside of Just the PlayStation 1. The perfect emulation machine.
 

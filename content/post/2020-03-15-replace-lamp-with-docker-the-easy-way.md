@@ -21,7 +21,7 @@ But **do not install it**.
 
 Cancel that download, uninstall that software. Because there’s a **better solution**.
 
-## :cry: Problems with LAMP
+## 😭 Problems with LAMP
 
 LAMP (XAMPP, MAMP, etc included) kits you out with all the essentials needed for running a website. Web server, language runtime and database. It can come with all the additionals you may need such as email and request logging.
 
@@ -43,7 +43,7 @@ Wouldn’t it be great if you could have an environment that each machine could 
 
 Well I have just the solution for you!
 
-## :whale: Docker!
+## 🐳 Docker!
 
 **Docker** is complicated, so I will keep things short and brief. Feel free to shout at me in the comments for it.
 
@@ -55,7 +55,7 @@ So with Docker, we can write a file that tells Docker what stuff we need to work
 
 Docker is complex. However, you don’t need to necessarily _understand_ how it works. This guide will cover the basics needed to achieve what you want, and then you can expand on your learning if you want!
 
-## :musical_score: Docker Compose
+## 🎼 Docker Compose
 
 Here’s a script, **docker-compose.yml** –
 
@@ -122,7 +122,7 @@ So we got web, db and mail. That’s all well and great. But how do you **use** 
 
 That’s it. Literally.
 
-## :muscle: Full LAMP stack
+## 💪 Full LAMP stack
 
 Okay okay, enough with the lecturing. Here’s a full LAMP stack I whipped up earlier (where’s my Blue Peter badge?).
 
@@ -182,7 +182,7 @@ Run with `docker-compose up` and congratulations – You have a development **LA
 
 This will serve you for simple applications, but I absolutely insist that you edit, tinker and break this script to truely discover what Docker can give you. If you mess it up beyond belief, then simply run `docker-compose down`, and start again!
 
-## :bug: More command info
+## 🐞 More command info
 
 `docker-compose` (`up`/`stop`/`down`)
 
@@ -197,7 +197,7 @@ If your docker-compose file has a strange name, or isn’t stored where it expec
 
 Make sure when running these commands, your terminal is local to where the docker-compose file is. Also, my script will create folders relative to where docker-compose file is. You can modify the volume paths to change this.
 
-## :+1: Closing Notes
+## 👍 Closing Notes
 
 The great level of flexibility with docker-compose files lets you think outside of the box. With a traditional LAMP stack, you would install it then stuff your PHP scripts into it’s www/htdocs directory. With Compose, you can actually create the docker-compose.yml inside your project directory, and tailor the script around it.
 

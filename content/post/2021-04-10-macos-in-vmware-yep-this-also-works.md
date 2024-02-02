@@ -16,7 +16,7 @@ Virtualbox is fantastic for Open Source software, but VMware is one of the prima
 
 Not only does it work just as well as it does in Virtualbox, you can also **install guest additions** thanks to some super smart cookies in the scene. While this doesn’t exactly perform miracles, you get a much more smoother experience once it’s installed.
 
-## :question: The Stuff
+## ❓ The Stuff
 
 If you Google this approach, you’ll find that there are pre-made ISO and vmdk floating around. In this project **we won’t use anything custom**, start from scratch with regular resources. As a result, **you will need a donor Mac** to get the installer image from. In this project, I’m using the following:
 
@@ -38,11 +38,11 @@ If you Google this approach, you’ll find that there are pre-made ISO and vmdk 
 
 Everything should work on the main 3 platforms (Windows, macOS and Linux) that VMware support. Although if you’re on macOS already, you shouldn’t need to do any extra steps to get things working.
 
-## :cd: Getting the Mojave Install Medium
+## 💿 Getting the Mojave Install Medium
 
 The way of extracting the install medium for Mojave has not changed, so if you want to grab the macOS ISO, [follow the guided segment on the Virtualbox guide](https://blog.soupbowl.io/2020/04/macos-in-virtualbox/) (Creating the ISO). Once you’ve got your Mojave.iso file, come back to this guide and we can proceed with infecting your VMWare with Apple.
 
-## :key: Unlocking macOS in VMware Windows & Linux
+## 🔑 Unlocking macOS in VMware Windows & Linux
 
 Apple isn’t particularly happy about people trying to emulate macOS and OS X on non-Apple platforms against their EULA. As a result, this feature isn’t available on Windows or Linux. Boo!
 
@@ -55,7 +55,7 @@ Linux: `sudo lnx-install.sh` (you might need to `chmod +x` first).
 
 This script will change the VMware configuration to un-hide the missing macOS options, then download the system files for macOS guests. Once done, restart your VMware Player/Workstation and the options should now appear in the VM creation wizard.
 
-## :desktop_computer: Setting up VMware
+## 🖥️ Setting up VMware
 
 Start up **VMWare Workstation** or **Player**, and click on **File > New Virtual Machine**.
 
@@ -108,7 +108,7 @@ You can experiment with changing the last 3 options for your setup, so long as t
 
 You can now save and close the editor. Now mount the ISO you made earlier into your VM (**VM Settings > CD/DVD > Connected at Power On** and **Choose ISO image**), and click start!
 
-## :apple: Booting into the Installer
+## 🍎 Booting into the Installer
 
 You will now boot up to see the vmware logo, then an Apple logo that pops up with a slider. If you get stuck for 5 minutes on the Apple logo, or you get the message **The CPU has been disabled by the guest operating system**, try the additional lines of code in the segment above (and use find (ctrl-f) to check there’s no duplicates).
 
@@ -120,11 +120,11 @@ Once done, you can now click on the **(re)install macOS Mojave** option. It will
 
 After a million hours, a few questions for initialisation, potentially a fruitless attempt to use a non-existent fingerprint sensor, you should finally boot into macOS. Congratulations! Now’s a good time to power off and take a snapshot if you’re using the Workstation edition.
 
-## :question: What works?
+## ❓ What works?
 
 {{< figure src="/assets/img/Screenshot_20210410_170530-1024x872.webp" >}}
 
-#### :heavy_check_mark: Does
+#### ✅ Does
 
 *   Screen.
 *   Input & USB devices.
@@ -136,7 +136,7 @@ After a million hours, a few questions for initialisation, potentially a fruitle
     *   Seamless mouse.
     *   Clipboard (text only).
 
-#### :x: Does not
+#### ❌ Does not
 
 *   Full (3D) graphics.
 *   Audio.
@@ -145,7 +145,7 @@ The performance is not great, and is not much different from the Virtualbox coun
 
 For powerful enough machines, this can be a great way to bridge the gap of requirements sometimes needed by Apple devices, such as the need for **xcode**, managing iPod devices with native iTunes, and even plundering hard drives that have been formatted with Apple-only partition formats.
 
-## :bug: Troubleshooting
+## 🐞 Troubleshooting
 
 ### Kernel Panic after updating VMware Player/Workstation.
 
