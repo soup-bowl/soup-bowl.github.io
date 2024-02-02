@@ -3,4 +3,4 @@ title: Home
 layout: home-react
 ---
 
-Hello 👋 My name’s Casey, and I’m a programmer – [see my portfolio here](https://soupbowl.io/)
+This loads a fancy React bit. If this doesn't seem to work, you can [visit the old page here](/home).

@@ -1,7 +1,7 @@
 title: Soupbowl
 description: The ramblings of a UK-based developer
 theme: soup
-baseURL: https://blog.soupbowl.io
+baseURL: https://soupbowl.io
 languageCode: en-gb
 
 ignoreFiles: 

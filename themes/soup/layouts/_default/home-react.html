@@ -6,10 +6,18 @@
   <link rel="icon" href="/assets/img/icon-2.webp">
   <meta name="theme-color" content="#0f0f0f">
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+  <style>
+    body {
+      background-color: #0c0c0c;
+      color: white;
+      font-family: sans-serif;
+    }
+  </style>
   <link rel="stylesheet" crossorigin href="/portfolio-res/assets/index.css">
   <script type="module" crossorigin src="/portfolio-res/assets/index.js"></script>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">{{ .Content }}</div>
+  <noscript>{{ .Content }}</noscript>
 </body>
 </html>
