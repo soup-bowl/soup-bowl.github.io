@@ -2,7 +2,7 @@
 # With credit to ChatGPT.
 
 input_file="comics.json"
-output_dir="content/comics"
+output_dir="content/webcomics"
 
 rm -rf "$output_dir"
 mkdir -p "$output_dir"
@@ -21,16 +21,16 @@ jq -c '.[]' "$input_file" | while read -r obj; do
 
     cat <<EOF >"$output_dir/$filename.md"
 ---
-type: comics
+type: webcomics
 title: "$title"
 date: $date
 author: $author
 source: $source
-image: /assets/comics/$image
+image: /assets/webcomics/$image
 slug: $count
 ---
 
-![](/assets/comics/$image)
+![](/assets/webcomics/$image)
 
 $note
 EOF
