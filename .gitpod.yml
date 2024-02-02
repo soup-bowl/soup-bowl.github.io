@@ -8,11 +8,11 @@ tasks:
     command: npm run start
     openMode: split-left
   - name: Blog
-    init: |
+    command: |
       sudo wget -q -O /opt/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.121.2/hugo_0.121.2_linux-amd64.deb
       sudo dpkg -i /opt/hugo.deb
       sudo rm /opt/hugo.deb
-    command: hugo server
+      hugo server
     openMode: split-right
 
 ports:

@@ -139,7 +139,7 @@ const Home = () => {
 					<SocialContainer>
 						<SocialPanel>
 							<Social id="1" icon={faBlog} color="#29132e" onClick={openDialog}>
-								blog.soupbowl.io
+								Blog
 							</Social>
 							<Social id="2" icon={faVial} color="#00ad2b" onClick={openDialog}>
 								Experiments
