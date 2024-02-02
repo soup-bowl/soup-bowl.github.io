@@ -46,12 +46,14 @@ jobs:
           (cd portfolio && npm ci)
           npm run build
 
-      - name: 🚛 Publish Site
-        uses: cloudflare/pages-action@v1.3.0
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectName: soupbowl
-          directory: public
-          wranglerVersion: '3'
+          path: './public'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
