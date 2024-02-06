@@ -19,21 +19,29 @@ const PageHeader = styled.section({
 	alignItems: 'end',
 	height: '100vh',
 	scrollSnapAlign: "start",
-	div: {
+	'& > div': {
+		display: 'flex',
+		flexDirection: 'row',
+		gap: 20,
 		width: '100%',
 		backgroundColor: 'rgb(0 0 0 / 60%)',
 		padding: 20,
 		borderRadius: '25px 25px 0 0',
 		backdropFilter: 'blur(10px)',
-		'& > h1': {
-			fontSize: '48px'
-		},
-		'& > p': {
-			fontSize: '24px'
+		fontSize: '24px',
+		img: {
+			width: 200
 		},
 		'@media only screen and (max-width: 650px)': {
+			flexDirection: 'column',
+			alignItems: 'center',
+			textAlign: 'center',
+			gap: 0,
 			marginTop: 20,
-			paddingBottom: 50
+			paddingBottom: 50,
+			img: {
+				width: 150
+			}
 		}
 	}
 });
@@ -130,8 +138,13 @@ const Home = () => {
 			<main>
 				<PageHeader id={PageOrder[0].label}>
 					<div>
-						<h1>soupbowl</h1>
-						<p><strong>DevOps Engineer</strong> from <strong>Hertfordshire, UK</strong></p>
+						<div>
+							<img src="https://files.soupbowl.io/i/logo.webp" />
+						</div>
+						<div>
+							<h1 style={{ fontSize: '48px' }}>soupbowl</h1>
+							<p><strong>DevOps Engineer</strong> from <strong>Hertfordshire, UK</strong></p>
+						</div>
 					</div>
 				</PageHeader>
 
