@@ -10,6 +10,10 @@ slug: state-of-open-source
 
 **To start off, this is not a "I'm quitting" post - don't worry. But this should clear up why I'm 'ignoring' some actions.**
 
+{{<alert class="alert-warning">}}
+As of **2024**, this is not necessarily the case anymore. Thankfully our collective luck has improved. Still, the warning remains in place while I pick up some pieces.
+{{</alert>}}
+
 But with some recent family events that have transpired, and also inspired by **[Jeff Geerlng's Just Say No](https://www.jeffgeerling.com/blog/2022/just-say-no)**, I've ended up dedicating way more time to my coding than I actually have.
 
 So this is a message to say - I'm slowing down. I need to take some time to tend to my family, and to tend to myself. I've been previously dealing with some emotional issues and stress by plunging myself into solving technical problems, but I've recently been discovering how unhealthy this was, and has accumulated into some very minor health issues. All stuff I'm working on fixing.
