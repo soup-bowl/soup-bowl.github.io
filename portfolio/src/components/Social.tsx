@@ -1,19 +1,9 @@
 import { ReactNode } from "react";
 import styled from "@emotion/styled";
+import { blackOrWhite, hexToRgb, pastelize } from "../utils/colour";
+
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const hexColorToBlackOrWhite = (hexColor: string): string => {
-	const hex = hexColor.replace("#", "");
-	const r = parseInt(hex.slice(0, 2), 16);
-	const g = parseInt(hex.slice(2, 4), 16);
-	const b = parseInt(hex.slice(4, 6), 16);
-
-	const perceivedBrightness = (r * 299 + g * 587 + b * 114) / 1000;
-	const primaryColor = perceivedBrightness >= 128 ? "#1B1A1B" : "#FFFFFF";
-
-	return primaryColor;
-};
 
 export const SocialPanel = styled.div({
 	display: "grid",
@@ -42,52 +32,45 @@ export const SocialPanel = styled.div({
 });
 
 const SocialSet = styled.a(props => ({
-	backgroundColor: props.color,
+	// @ts-ignore
+	//backgroundColor: props.theme.colors.primary,
+	backgroundColor: pastelize(hexToRgb(props.color)),
+	color: "#fff",
 	position: "relative",
 	width: "18rem",
 	height: "10rem",
 	float: "left",
 	overflow: "hidden",
 	textAlign: "center",
-	'::before, ::after': {
+	boxShadow: "4px 4px 0px #000",
+	border: "2px solid black",
+	'::before': {
 		content: '""',
 		position: "absolute",
 		right: 0,
 		left: 0,
-		zIndex: 1,
-		backgroundColor: "black",
-		transition: "0.4s ease"
-	},
-	'::before': {
 		top: 0,
 		bottom: 0,
-		opacity: 0
-	},
-	'::after': {
-		top: "10rem",
-		bottom: 0,
-		opacity: 0.25
+		opacity: 0,
+		zIndex: 1,
+		backgroundColor: `${props.color}c2`,
+		backdropFilter: "blur(5px)",
+		transition: "0.4s ease"
 	},
 	':hover, :active, :focus': {
 		outline: "none",
 		'::before': {
-			bottom: "10rem"
-		},
-		'::after': {
-			top: 0
-		},
-		'[datatype="icon"]': {
-			bottom: "10rem",
-			top: "-10rem"
+			opacity: 1
 		},
 		'[datatype="text"]': {
-			top: 0
+			opacity: 1
 		}
 	}
 }));
 
 const Label = styled.div(props => ({
-	color: hexColorToBlackOrWhite(props.color ?? '#ffffff'),
+	color: "#FFF",
+	textShadow: "2px 2px #000",
 	position: "absolute",
 	height: "100%",
 	width: "100%",
@@ -97,17 +80,18 @@ const Label = styled.div(props => ({
 	justifyContent: "center",
 	transition: "0.4s ease",
 
-	top: "10rem",
+	opacity: 0,
 	fontWeight: "500",
 	fontSize: "1.5rem",
 }));
 
 const Icon = styled.div(props => ({
-	color: hexColorToBlackOrWhite(props.color ?? '#ffffff'),
+	// @ts-ignore
+	color: props.theme.colors.secondary,
+	filter: "drop-shadow(3px 3px 0 black)",
 	position: "absolute",
 	height: "100%",
 	width: "100%",
-	zIndex: 10,
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",

@@ -6,9 +6,9 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 
 const Item = styled.div({
-	backgroundColor: '#292929',
-	borderRadius: '10px',
-	boxShadow: '0px 0px 15px 1px rgba(0, 0, 0, 0.5)',
+	backgroundColor: '#ffffff8c',
+	border: "2px solid black",
+	boxShadow: "4px 4px 0px #000",
 	display: 'flex',
 
 	'@media only screen and (max-width: 750px)': {
@@ -17,9 +17,9 @@ const Item = styled.div({
 });
 
 const ItemBlock = styled.div({
-	backgroundColor: '#292929',
-	borderRadius: '10px',
-	boxShadow: '0px 0px 15px 1px rgba(0, 0, 0, 0.5)',
+	backgroundColor: '#ffffff8c',
+	border: "2px solid black",
+	boxShadow: "4px 4px 0px #000",
 	padding: '10px'
 });
 
@@ -27,13 +27,8 @@ const Image = styled.div({
 	minHeight: '200px',
 	flexBasis: '300px',
 	flexShrink: 0,
-	borderRadius: '10px 0 0 10px',
 	backgroundPosition: 'center',
 	backgroundSize: 'cover',
-
-	'@media only screen and (max-width: 750px)': {
-		borderRadius: '10px 10px 0 0'
-	}
 });
 
 const Label = styled.div({
@@ -44,16 +39,12 @@ const Label = styled.div({
 		overflow: 'hidden',
 		textOverflow: 'ellipsis',
 		maxWidth: '95%'
-	},
-	a: {
-		color: 'white',
 	}
 });
 
 const InfoBites = styled.div({
 	display: 'flex',
 	flexDirection: 'row',
-	color: 'lightgray',
 
 	'div': {
 		marginRight: '15px'
@@ -75,7 +66,6 @@ const Socialview = styled.div({
 		img: {
 			height: '46px',
 			width: '46px',
-			borderRadius: '10px'
 		}
 	}
 });
@@ -199,7 +189,7 @@ export const ListingSocialItem = ({
 	return (
 		<ItemBlock>
 			<Socialview>
-				<a href={url} style={{ color: 'grey' }}>
+				<a href={url} style={{ color: 'black', textShadow: 'none' }}>
 					{date.toLocaleDateString()}
 				</a>
 				<a href={profileUrl}>
@@ -207,8 +197,8 @@ export const ListingSocialItem = ({
 						<img src={avatar} alt="" />
 					</div>
 					<div>
-						<p style={{ fontWeight: 'bold', color: 'white' }}>{name}</p>
-						<p style={{ color: 'grey' }}>{handle}</p>
+						<p style={{ fontWeight: 'bold' }}>{name}</p>
+						<p style={{ color: 'black', textShadow: 'none' }}>{handle}</p>
 					</div>
 				</a>
 			</Socialview>
@@ -218,7 +208,7 @@ export const ListingSocialItem = ({
 					<div style={{ textAlign: 'center' }}>
 						<img src={image} alt="" style={{
 							maxWidth: '100%',
-							borderRadius: '10px'
+							border: '2px solid black'
 						}} />
 					</div>
 					: null}

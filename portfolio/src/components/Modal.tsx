@@ -75,7 +75,7 @@ const ModalBackground = styled.div({
 });
 
 const ModalBox = styled.div<{ open?: boolean; isClosing?: boolean }>((props) => ({
-	backgroundColor: "#1B1A1B",
+	backgroundColor: "#C5A7C5",
 	margin: "32px",
 	position: "relative",
 	overflowY: "auto",
@@ -84,12 +84,8 @@ const ModalBox = styled.div<{ open?: boolean; isClosing?: boolean }>((props) => 
 	width: "90vw",
 	maxHeight: "calc(100% - 64px)",
 	minWidth: "200px",
-	borderRadius: "5px",
-	boxShadow: [
-		`rgb(0 0 0 / 20%) 0px 11px 15px -7px,
-		rgb(0 0 0 / 14%) 0px 24px 38px 3px,
-		rgb(0 0 0 / 12%) 0px 9px 46px 8px`
-	],
+	border: "2px solid black",
+	boxShadow: "8px 8px 0px #000",
 	transform: props.open && !props.isClosing ? "translateY(0)" : "translateY(100%)",
 	opacity: props.open && !props.isClosing ? 1 : 0,
 	animation: props.open
@@ -101,7 +97,7 @@ const ModalCloseBox = styled.button({
 	cursor: "pointer",
 	backgroundColor: "transparent",
 	fontSize: "1.5em",
-	color: "white",
+	color: "black",
 	border: "inherit",
 	borderRadius: "10px",
 	position: "absolute",
@@ -120,7 +116,7 @@ const ModalBody = styled.div({
 	padding: "16px 24px",
 	flex: "1 1 auto",
 	overflowY: "auto",
-	borderTop: "1px solid rgba(255, 255, 255, 0.12)"
+	borderTop: "2px solid black"
 });
 
 interface ModalProps {

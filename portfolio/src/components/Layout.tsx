@@ -18,6 +18,7 @@ const theme = {
 	colors: {
 		primary: '#ff6100',
 		white: '#fff',
+		black: '#000',
 		background: '#1b1a1b'
 	}
 };
@@ -29,17 +30,18 @@ const globalTheme = {
 	},
 	body: {
 		margin: 0,
-		fontFamily: '\'Open Sans\', sans-serif',
-		fontWeight: 300,
+		fontFamily: 'Lexend, sans-serif',
+		//fontWeight: 300,
 		fontSize: '1.125rem',
-		color: theme.colors.white,
+		color: theme.colors.black,
 		backgroundColor: theme.colors.background,
 	},
 	a: {
-		color: theme.colors.primary
+		color: theme.colors.primary,
+		textShadow: "1px 1px #000",
 	},
 	':root': {
-		colorScheme: 'dark'
+		colorScheme: 'light'
 	}
 } as Interpolation<Theme>;
 

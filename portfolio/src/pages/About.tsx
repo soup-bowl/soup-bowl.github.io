@@ -27,7 +27,7 @@ const CommOptions = styled.span({
 	gap: 10,
 	fontSize: '1.25em',
 	'a': {
-		color: '#787878'
+		color: '#000'
 	},
 	'@media only screen and (max-width: 600px)': {
 		gap: 20,
