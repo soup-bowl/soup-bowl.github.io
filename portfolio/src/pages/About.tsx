@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { faComment, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ButtonGroup, NormalButton } from "../components/Buttons";
 
 const ProfileDisplay = styled.div({
 	padding: 20,
@@ -22,20 +23,6 @@ const ProfileDisplay = styled.div({
 	}
 });
 
-const CommOptions = styled.span({
-	display: 'flex',
-	gap: 10,
-	fontSize: '1.25em',
-	'a': {
-		color: '#000'
-	},
-	'@media only screen and (max-width: 600px)': {
-		gap: 20,
-		fontSize: '1.75em',
-		justifyContent: 'center'
-	}
-});
-
 const About = () => {
 	return (
 		<ProfileDisplay>
@@ -52,14 +39,14 @@ const About = () => {
 				<p>
 					If you wish to see more about me, please <a href="https://soupbowl.io/post" style={{ fontWeight: 'bold' }}>check out my blog</a>.
 				</p>
-				<CommOptions>
-					<a href="mailto:code@soupbowl.io">
-						<FontAwesomeIcon icon={faEnvelope} />
-					</a>
-					<a href="https://matrix.to/#/@soupbowl:mozilla.org">
-						<FontAwesomeIcon icon={faComment} />
-					</a>
-				</CommOptions>
+				<ButtonGroup>
+					<NormalButton onClick={() => window.location.href = "mailto:code@soupbowl.io"}>
+						<FontAwesomeIcon icon={faEnvelope} /> Email me
+					</NormalButton>
+					<NormalButton onClick={() => window.location.href = "https://matrix.to/#/@soupbowl:mozilla.org"}>
+						<FontAwesomeIcon icon={faComment} /> Message on Matrix
+					</NormalButton>
+				</ButtonGroup>
 			</div>
 		</ProfileDisplay>
 	);
