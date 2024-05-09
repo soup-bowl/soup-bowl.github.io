@@ -11,12 +11,10 @@ interface NormalButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const AttentionButton = styled.button(props => ({
 	cursor: "pointer",
 	backgroundColor: props.theme.colors.primary,
-	borderRadius: "5px",
-	boxShadow: "#121212 0px 2px 5px",
+	border: "2px solid black",
+	boxShadow: "4px 4px 0px #000",
 	padding: "10px 15px 10px 15px",
 	fontSize: "1.25em",
-	color: "white",
-	border: "inherit",
 }));
 
 interface AttentionLinkProps {
@@ -26,24 +24,23 @@ interface AttentionLinkProps {
 
 export const AttentionLink = styled.a<AttentionLinkProps>(props => ({
 	backgroundColor: props.disabled ? 'grey' : props.theme.colors.primary,
-	borderRadius: '5px',
-	boxShadow: '#121212 0px 2px 5px',
+	border: "2px solid black",
+	boxShadow: "4px 4px 0px #000",
 	padding: '10px 15px',
 	fontSize: '1.25em',
-	color: 'white',
+	color: 'black',
+	textShadow: 'none',
 	textDecoration: 'none',
 	pointerEvents: props.disabled ? 'none' : 'auto',
   }));
 
 const NormalButtonDefinition: StyledComponent<NormalButtonProps, NormalButtonProps, Theme> = styled.button(props => ({
 	cursor: "pointer",
-	backgroundColor: props.active ? props.theme.colors.primary : "#292929",
-	borderRadius: "5px",
-	boxShadow: "#121212 0px 2px 5px",
+	backgroundColor: props.active ? props.theme.colors.primary : "#ffbe96",
+	border: "2px solid black",
+	boxShadow: "4px 4px 0px #000",
 	padding: "10px 15px 10px 15px",
 	fontSize: "1.25em",
-	color: "white",
-	border: "inherit",
 }));
 
 export const NormalButton: React.FC<NormalButtonProps> = ({ active, ...rest }) => {

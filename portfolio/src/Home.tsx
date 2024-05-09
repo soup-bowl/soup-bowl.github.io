@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { faDiscord, faDocker, faGithub, faMastodon, faWordpress } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faDocker, faGithub, faMastodon, faWordpressSimple } from "@fortawesome/free-brands-svg-icons";
 import { faBlog, faVial } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Layout from "./components/Layout";
@@ -7,6 +7,7 @@ import { Modal } from "./components/Modal";
 import { Social, SocialPanel } from "./components/Social";
 import { About, Blog, GitHub, Labs, Mastodon, OpenSim, WordPress } from "./pages";
 import { AttentionButton } from "./components/Buttons";
+import { blackOrWhite, hexToRgb } from "./utils/colour";
 
 const PageOrder = [
 	{ id: 0, label: 'start' },
@@ -24,10 +25,10 @@ const PageHeader = styled.section({
 		flexDirection: 'row',
 		gap: 20,
 		width: '100%',
-		backgroundColor: 'rgb(0 0 0 / 60%)',
+		backgroundColor: '#ff965b',
+		color: "#000",
 		padding: 20,
-		borderRadius: '25px 25px 0 0',
-		backdropFilter: 'blur(10px)',
+		border: '4px solid black',
 		fontSize: '24px',
 		img: {
 			width: 200
@@ -48,6 +49,8 @@ const PageHeader = styled.section({
 
 const PageBody = styled.section(props => ({
 	backgroundColor: props.color,
+	color: blackOrWhite(hexToRgb(props.color ?? '#000')),
+	border: '4px solid black',
 	minHeight: '100vh',
 	display: 'flex',
 	alignItems: 'center',
@@ -148,7 +151,7 @@ const Home = () => {
 					</div>
 				</PageHeader>
 
-				<PageBody id={PageOrder[1].label} color='#1B1A1B'>
+				<PageBody id={PageOrder[1].label} color='#a6faff'>
 					<SocialContainer>
 						<SocialPanel>
 							<Social id="1" icon={faBlog} color="#29132e" onClick={openDialog}>
@@ -160,7 +163,7 @@ const Home = () => {
 							<Social id="3" icon={faGithub} color="#2d333b" onClick={openDialog}>
 								soup-bowl
 							</Social>
-							<Social id="4" icon={faWordpress} color="#0085BA" onClick={openDialog}>
+							<Social id="4" icon={faWordpressSimple} color="#0085BA" onClick={openDialog}>
 								soupbowl
 							</Social>
 							<Social id="10" icon={faDocker} color="#086DD7" onClick={openDialog}>
@@ -198,7 +201,7 @@ const Home = () => {
 					</SocialContainer>
 				</PageBody>
 
-				<PageBody id={PageOrder[2].label} color='#101010'>
+				<PageBody id={PageOrder[2].label} color='#918efa'>
 					<About />
 				</PageBody>
 			</main>

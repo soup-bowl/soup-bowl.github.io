@@ -1,16 +1,17 @@
 $primary: #ff6100;
-$body-color: #fff;
-$body-bg: #0c0c0c;
+$secondary: #6b4f6b;
+$body-color: #000;
+$body-bg: #a8a6ff;
 $text-muted: #828282;
 $enable-shadows: true;
 $prefix: "mo-";
 
-$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-$font-size-base: 1.25rem;
-$font-weight-normal: 200;
+$font-family-sans-serif: "Lexend", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+$font-size-base: 1.5rem;
+$font-weight-normal: 300;
 
 .focus-background {
-	background-color: #0f0f0f;
+	background-color: #fff;
 }
 
 .pagination-custom {
@@ -34,9 +35,17 @@ $font-weight-normal: 200;
 
 	h1 {
 		padding: 10px;
-		background-color: rgba(0,0,0,0.5);
+		color: white;
+		text-shadow: 4px 4px black;
 		text-align: center;
 	}
+}
+
+.giscus-box {
+	background-color: #fff;
+	border: 2px solid black;
+	box-shadow: 4px 4px 0px #000;
+	padding: 10px;
 }
 
 .content-type-comic {
@@ -46,7 +55,15 @@ $font-weight-normal: 200;
 	}
 }
 
+.text-punchy {
+	text-shadow: 1px 1px black;
+}
+
 main {
+	a{
+		text-shadow: 1px 1px black;
+	}
+
 	figure {
 		text-align: center;
 
@@ -56,7 +73,7 @@ main {
 		}
 
 		figcaption h4 {
-            color: #828282;
+            color: $secondary;
 			font-size: 1.25rem;
 			margin-top: 5px;
         }
@@ -65,6 +82,7 @@ main {
 
 @import "node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lexend+Mega:wght@100..900&family=Lexend:wght@100..900&display=swap');
 
 // Overrides
 
@@ -78,4 +96,17 @@ a:hover {
 
 h1, h2, h3, h4, strong {
 	font-weight: 700;
+}
+
+.alert {
+	box-shadow: 4px 4px 0px #000;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 0;
+}
+
+@each $color, $value in $theme-colors {
+	.alert-#{$color} {
+		border-color: $value;
+	}
 }

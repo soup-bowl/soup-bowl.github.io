@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="container">
-  <h2 class="text-success text-center">Stick of Celery Webcomics</h2>
+  <h2 class="text-success text-center text-punchy">Stick of Celery Webcomics</h2>
   <h1 class="text-center mt-2">{{ .Title }}</h1>
   {{ .Content }}
   {{ $filteredPages := where .Site.RegularPages "Type" "==" "webcomics" }}
