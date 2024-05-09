@@ -40,6 +40,9 @@ const globalTheme = {
 		color: theme.colors.primary,
 		textShadow: "1px 1px #000",
 	},
+	button: {
+		fontFamily: 'Lexend, sans-serif',
+	},
 	':root': {
 		colorScheme: 'light'
 	}
