@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { ListingItemGroup, ListingSocialItem } from "../components/Listings";
-import { IMastodonStatus } from "../interfaces";
-import MastoAPI from "../api/Mastodon";
-import { EState } from "../enums";
-import { ErrorMessage, LoadingMessage } from "../components/Common";
+import { ListingItemGroup, ListingSocialItem } from "@/components/Listings";
+import { IMastodonStatus } from "@/interfaces";
+import MastoAPI from "@/api/Mastodon";
+import { EState } from "@/enums";
+import { ErrorMessage, LoadingMessage } from "@/components/Common";
 
 const Mastodon = () => {
 	const [statuses, setStatuses] = useState<IMastodonStatus[]>([]);

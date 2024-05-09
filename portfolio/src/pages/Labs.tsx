@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { ErrorMessage, LoadingMessage } from "../components/Common";
-import { ListingItem, ListingItemGroup } from "../components/Listings";
-import { EState } from "../enums";
-import { ILabs } from "../interfaces";
-import { ButtonGroup, NormalButton } from "../components/Buttons";
+import { ErrorMessage, LoadingMessage } from "@/components/Common";
+import { ListingItem, ListingItemGroup } from "@/components/Listings";
+import { EState } from "@/enums";
+import { ILabs } from "@/interfaces";
+import { ButtonGroup, NormalButton } from "@/components/Buttons";
 
 const Labs = () => {
 	const blogURL = 'https://soupbowl.io/labs';

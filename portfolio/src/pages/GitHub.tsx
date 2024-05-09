@@ -1,11 +1,11 @@
 import { ReactNode, useEffect, useState } from "react";
-import GitHubAPI from "../api/GitHub";
-import { ListingItem, ListingItemGroup } from "../components/Listings";
-import { IGitHubRepos } from "../interfaces";
-import RepoImages from "../assets/RepositoryImages.json";
-import { AttentionButton } from "../components/Buttons";
-import { EState } from "../enums";
-import { ErrorMessage, LoadingMessage } from "../components/Common";
+import GitHubAPI from "@/api/GitHub";
+import { ListingItem, ListingItemGroup } from "@/components/Listings";
+import { IGitHubRepos } from "@/interfaces";
+import RepoImages from "@/assets/RepositoryImages.json";
+import { AttentionButton } from "@/components/Buttons";
+import { EState } from "@/enums";
+import { ErrorMessage, LoadingMessage } from "@/components/Common";
 
 const GitHub = () => {
 	const [popularRepos, setPopularRepos] = useState<IGitHubRepos[]>([]);

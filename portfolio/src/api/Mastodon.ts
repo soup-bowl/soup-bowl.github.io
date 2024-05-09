@@ -1,4 +1,4 @@
-import { IMastodonStatus, IMastodonUser } from "../interfaces";
+import { IMastodonStatus, IMastodonUser } from "@/interfaces";
 
 const APIURL = "https://mstdn.social/api";
 const AccId = "109437206725527058";

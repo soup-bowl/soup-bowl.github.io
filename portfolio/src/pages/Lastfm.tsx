@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import MastoAPI from "../api/Mastodon";
-import { EState } from "../enums";
-import { ErrorMessage, LoadingMessage } from "../components/Common";
-import { IMastodonStatus } from "../interfaces";
-import { AttentionButton } from "../components/Buttons";
+import MastoAPI from "@/api/Mastodon";
+import { EState } from "@/enums";
+import { ErrorMessage, LoadingMessage } from "@/components/Common";
+import { IMastodonStatus } from "@/interfaces";
+import { AttentionButton } from "@/components/Buttons";
 
 const Lastfm = () => {
 	const [htw, setHtw] = useState<IMastodonStatus>();

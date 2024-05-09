@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import styled from "@emotion/styled";
-import { hexToRgb, pastelize } from "../utils/colour";
+import { hexToRgb, pastelize } from "@/utils/colour";
 
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

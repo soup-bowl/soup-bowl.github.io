@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { ListingItem, ListingItemGroup } from "../components/Listings";
-import WPAPI from "../api/WordPress";
-import { IWordPressPluginListing } from "../interfaces";
-import { EState } from "../enums";
-import { ErrorMessage, LoadingMessage } from "../components/Common";
+import { ListingItem, ListingItemGroup } from "@/components/Listings";
+import WPAPI from "@/api/WordPress";
+import { IWordPressPluginListing } from "@/interfaces";
+import { EState } from "@/enums";
+import { ErrorMessage, LoadingMessage } from "@/components/Common";
 
 const img: { [key: string]: string } = {
 	"simple-smtp": "https://f.subo.dev/i/r/wp-smtp.webp",

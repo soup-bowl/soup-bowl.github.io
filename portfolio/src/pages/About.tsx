@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { faComment, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ButtonGroup, NormalButton } from "../components/Buttons";
+import { ButtonGroup, NormalButton } from "@/components/Buttons";
 
 const ProfileDisplay = styled.div({
 	padding: 20,

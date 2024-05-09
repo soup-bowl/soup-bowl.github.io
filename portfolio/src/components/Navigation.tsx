@@ -1,4 +1,4 @@
-import { ScrollButtons } from "./Buttons";
+import { ScrollButtons } from "@/components/Buttons";
 
 interface Props {
 	pages: {id:number, label:string}[];

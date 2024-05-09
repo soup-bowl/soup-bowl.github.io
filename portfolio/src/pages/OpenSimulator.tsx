@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
-import { AttentionLink } from "../components/Buttons";
-import { IOpenSimulatorInstance, IOpenSimulatorStats } from "../interfaces";
+import { AttentionLink } from "@/components/Buttons";
+import { IOpenSimulatorInstance, IOpenSimulatorStats } from "@/interfaces";
 
 const conf: IOpenSimulatorInstance[] = [
 	{
