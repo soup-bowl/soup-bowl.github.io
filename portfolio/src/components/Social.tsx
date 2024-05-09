@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import styled from "@emotion/styled";
-import { blackOrWhite, hexToRgb, pastelize } from "../utils/colour";
+import { hexToRgb, pastelize } from "../utils/colour";
 
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -68,7 +68,7 @@ const SocialSet = styled.a(props => ({
 	}
 }));
 
-const Label = styled.div(props => ({
+const Label = styled.div({
 	color: "#FFF",
 	textShadow: "2px 2px #000",
 	position: "absolute",
@@ -83,7 +83,7 @@ const Label = styled.div(props => ({
 	opacity: 0,
 	fontWeight: "500",
 	fontSize: "1.5rem",
-}));
+});
 
 const Icon = styled.div(props => ({
 	// @ts-ignore
