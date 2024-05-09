@@ -3,7 +3,7 @@
 <div class="container content-type-comic text-center">
   {{ $prev := .Prev }}
   {{ $next := .Next }}
-  <h2 class="text-success">Stick of Celery Webcomics</h2>
+  <h2 class="text-success text-punchy">Stick of Celery Webcomics</h2>
   <h1>{{ .Title }}</h1>
 
   <div class="mb-4 text-secondary">
@@ -15,17 +15,17 @@
       <span class="p-author h-card" itemprop="name">{{ .Params.author }}</span>
     </span>
     •
-    <a href="{{ .Params.source }}">Original</a>
+    <a href="{{ .Params.source }}" class="text-success">Original</a>
 
   </div>
 
   <div class="fs-2">
     {{ if $prev }}
-    <a href="{{ $prev.RelPermalink }}">«</a>
+    <a href="{{ $prev.RelPermalink }}" class="text-success">«</a>
     {{ end }}
     {{ .Page.Slug }}
     {{ if $next }}
-    <a href="{{ $next.RelPermalink }}">»</a>
+    <a href="{{ $next.RelPermalink }}" class="text-success">»</a>
     {{ end }}
   </div>
 

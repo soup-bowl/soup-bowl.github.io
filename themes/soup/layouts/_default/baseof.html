@@ -4,13 +4,13 @@
   {{ partial "head.html" . }}
 </head>
 <body>
-  <header class="focus-background py-3">
+  <header class="focus-background py-3 border-bottom border-dark border-2">
     {{ partial "header.html" . }}
   </header>
   <main>
     {{ block "main" . }}{{ end }}
   </main>
-  <footer class="focus-background mt-2 py-4">
+  <footer class="focus-background mt-2 py-4 border-top border-dark border-2">
     {{ partial "footer.html" . }}
   </footer>
 </body>
