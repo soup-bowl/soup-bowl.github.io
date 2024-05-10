@@ -5,6 +5,13 @@ import { hexToRgb, pastelize } from "@/utils/colour";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+export const SocialContainer = styled.div({
+	display: 'flex',
+	alignItems: 'center',
+	justifyContent: 'center',
+	height: '100%'
+});
+
 export const SocialPanel = styled.div({
 	display: "grid",
 	gridGap: "20px",

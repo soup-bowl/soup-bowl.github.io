@@ -1,71 +1,20 @@
-import styled from "@emotion/styled";
 import { faDiscord, faDocker, faGithub, faMastodon, faWordpressSimple } from "@fortawesome/free-brands-svg-icons";
 import { faBlog, faVial } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import Layout from "./components/Layout";
-import { Modal } from "./components/Modal";
-import { Social, SocialPanel } from "./components/Social";
-import { About, Blog, GitHub, Labs, Mastodon, OpenSim, WordPress } from "./pages";
-import { AttentionButton } from "./components/Buttons";
-import { blackOrWhite, hexToRgb } from "./utils/colour";
+import Layout from "@/components/Layout";
+import { Modal } from "@/components/Modal";
+import { Social, SocialContainer, SocialPanel } from "@/components/Social";
+import { PageBody, PageHeader } from "@/components/Page";
+import { AttentionButton } from "@/components/Buttons";
+import { Blog, GitHub, Labs, Mastodon, OpenSim, WordPress } from "@/modals";
+import About from "@/About";
+
 
 const PageOrder = [
 	{ id: 0, label: 'start' },
 	{ id: 1, label: 'socials' },
 	{ id: 2, label: 'about' },
 ];
-
-const PageHeader = styled.section({
-	display: 'flex',
-	alignItems: 'end',
-	height: '100vh',
-	scrollSnapAlign: "start",
-	'& > div': {
-		display: 'flex',
-		flexDirection: 'row',
-		gap: 20,
-		width: '100%',
-		backgroundColor: '#ff965b',
-		color: "#000",
-		padding: 20,
-		border: '4px solid black',
-		fontSize: '24px',
-		img: {
-			width: 200
-		},
-		'@media only screen and (max-width: 650px)': {
-			flexDirection: 'column',
-			alignItems: 'center',
-			textAlign: 'center',
-			gap: 0,
-			marginTop: 20,
-			paddingBottom: 50,
-			img: {
-				width: 150
-			}
-		}
-	}
-});
-
-const PageBody = styled.section(props => ({
-	backgroundColor: props.color,
-	color: blackOrWhite(hexToRgb(props.color ?? '#000')),
-	minHeight: '100vh',
-	display: 'flex',
-	alignItems: 'center',
-	justifyContent: 'center',
-	scrollSnapAlign: "start",
-	'@media only screen and (max-width: 650px)': {
-		paddingBottom: 50
-	}
-}));
-
-const SocialContainer = styled.div({
-	display: 'flex',
-	alignItems: 'center',
-	justifyContent: 'center',
-	height: '100%'
-});
 
 const Home = () => {
 	const [open, setOpen] = useState<string>("0");

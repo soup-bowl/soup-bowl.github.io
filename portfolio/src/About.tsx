@@ -1,27 +1,7 @@
-import styled from "@emotion/styled";
 import { faComment, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ButtonGroup, NormalButton } from "@/components/Buttons";
-
-const ProfileDisplay = styled.div({
-	padding: 20,
-	display: 'flex',
-	flexWrap: 'wrap',
-	flexGrow: 1,
-	justifyContent: 'center',
-	'.picture img': {
-		'@media only screen and (max-width: 1000px)': {
-			maxWidth: "200px"
-		}
-	},
-	'.description': {
-		width: '60%',
-		'@media only screen and (max-width: 600px)': {
-			width: '100%',
-			textAlign: 'center'
-		}
-	}
-});
+import { ProfileDisplay } from "@/components/Profile";
 
 const About = () => {
 	return (
