@@ -1957,7 +1957,7 @@ progress {
   border-color: var(--mo-table-border-color);
 }
 .table > :not(caption) > * > * {
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
   color: var(--mo-table-color-state, var(--mo-table-color-type, var(--mo-table-color)));
   background-color: var(--mo-table-bg);
   border-bottom-width: var(--mo-border-width);
@@ -1979,7 +1979,7 @@ progress {
 }
 
 .table-sm > :not(caption) > * > * {
-  padding: 0.25rem 0.25rem;
+  padding: 0.25rem;
 }
 
 .table-bordered > :not(caption) > * {
@@ -5508,7 +5508,7 @@ textarea.form-control-lg {
   box-sizing: content-box;
   width: 1em;
   height: 1em;
-  padding: 0.25em 0.25em;
+  padding: 0.25em;
   color: var(--mo-btn-close-color);
   background: transparent var(--mo-btn-close-bg) center/1em auto no-repeat;
   border: 0;
@@ -12163,5 +12163,3 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, strong {
 .alert-dark {
   border-color: #212529;
 }
-
-/*# sourceMappingURL=main.css.map */
