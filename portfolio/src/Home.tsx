@@ -50,7 +50,6 @@ const PageHeader = styled.section({
 const PageBody = styled.section(props => ({
 	backgroundColor: props.color,
 	color: blackOrWhite(hexToRgb(props.color ?? '#000')),
-	border: '4px solid black',
 	minHeight: '100vh',
 	display: 'flex',
 	alignItems: 'center',
