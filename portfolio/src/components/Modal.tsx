@@ -2,7 +2,7 @@ import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useCallback, useEffect, useState } from "react";
 
 const flyInAnimation = keyframes`
 	0% {
@@ -136,7 +136,7 @@ export const Modal = ({ title, open, large, onClose, children }: ModalProps) => 
 	const [isClosing, setIsClosing] = useState(false);
 	const [isBackdropVisible, setIsBackdropVisible] = useState(false);
 
-	const handleClose = () => {
+	const handleClose = useCallback(() => {
 		setIsClosing(true);
 		setIsBackdropVisible(false);
 
@@ -146,7 +146,7 @@ export const Modal = ({ title, open, large, onClose, children }: ModalProps) => 
 			onCloseInteraction(onClose);
 			setIsClosing(false);
 		}, animationDuration);
-	};
+	}, [onClose]);
 
 	useEffect(() => {
 		document.getElementById("modal")?.addEventListener("click", (e) => {
@@ -161,7 +161,7 @@ export const Modal = ({ title, open, large, onClose, children }: ModalProps) => 
 			setIsClosing(false);
 			setIsBackdropVisible(true);
 		}
-	}, [open]);
+	}, [open, handleClose]);
 
 	if (open || isClosing) {
 		document.body.style.overflow = 'hidden';

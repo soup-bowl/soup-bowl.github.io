@@ -39,9 +39,7 @@ export const SocialPanel = styled.div({
 });
 
 const SocialSet = styled.a(props => ({
-	// @ts-ignore
-	//backgroundColor: props.theme.colors.primary,
-	backgroundColor: pastelize(hexToRgb(props.color)),
+	backgroundColor: pastelize(hexToRgb(props.color ?? '#fff')),
 	color: "#fff",
 	position: "relative",
 	width: "18rem",
@@ -93,7 +91,7 @@ const Label = styled.div({
 });
 
 const Icon = styled.div(props => ({
-	// @ts-ignore
+	// @ts-expect-error Property secondary doesn't exist
 	color: props.theme.colors.secondary,
 	filter: "drop-shadow(3px 3px 0 black)",
 	position: "absolute",

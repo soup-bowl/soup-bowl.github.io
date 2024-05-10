@@ -44,7 +44,7 @@ const NormalButtonDefinition: StyledComponent<NormalButtonProps, NormalButtonPro
 }));
 
 export const NormalButton: React.FC<NormalButtonProps> = ({ active, ...rest }) => {
-	// @ts-ignore
+	// @ts-expect-error colors is missing in type
 	return <NormalButtonDefinition active={active} {...rest} />;
 };
 

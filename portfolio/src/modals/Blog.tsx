@@ -17,6 +17,11 @@ const Blog = () => {
 			.then((response: Response) => response.text())
 			.then((response: string) => new window.DOMParser().parseFromString(response, "text/xml"))
 			.then((response: Document) => {
+				const truncateString = (text: string, limit: number = 150) => {
+					if (text.length <= limit) { return decodeHtmlEntities(text) }
+					return decodeHtmlEntities(text.slice(0, limit) + '...');
+				}
+
 				const items = response.querySelectorAll("item");
 				const collect: IBlogPost[] = [];
 
@@ -43,11 +48,6 @@ const Blog = () => {
 			})
 			.catch(() => setRequestState(EState.Error));
 	}, []);
-
-	const truncateString = (text: string, limit: number = 150) => {
-		if (text.length <= limit) { return decodeHtmlEntities(text) }
-		return decodeHtmlEntities(text.slice(0, limit) + '...');
-	}
 
 	const decodeHtmlEntities = (text: string) => {
 		const textarea: HTMLTextAreaElement = document.createElement('textarea');

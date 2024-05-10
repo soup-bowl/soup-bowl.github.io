@@ -29,6 +29,12 @@ const Image = styled.div({
 	flexShrink: 0,
 	backgroundPosition: 'center',
 	backgroundSize: 'cover',
+	borderRight: '2px solid black',
+
+	'@media only screen and (max-width: 750px)': {
+		flexDirection: 'column',
+		borderBottom: '2px solid black',
+	}
 });
 
 const Label = styled.div({
@@ -76,11 +82,6 @@ export const ListingItemGroup = styled.div({
 	margin: "20px 0 20px 0",
 	marginLeft: "5%",
 	marginRight: "5%",
-
-	/*gridTemplateColumns: "auto auto",
-	'@media only screen and (max-width: 1280px)': {
-		gridTemplateColumns: "auto"
-	},*/
 
 	'@media only screen and (max-width: 750px)': {
 		margin: 0
