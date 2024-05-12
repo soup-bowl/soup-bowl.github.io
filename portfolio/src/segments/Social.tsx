@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { faDiscord, faDocker, faGithub, faMastodon, faWordpressSimple } from "@fortawesome/free-brands-svg-icons";
+import { faBluesky, faDiscord, faDocker, faGithub, faMastodon, faWordpressSimple } from "@fortawesome/free-brands-svg-icons";
 import { faBlog, faVial } from "@fortawesome/free-solid-svg-icons";
 import { Modal } from "@/components/Modal";
 import { Social as SocialItem, SocialContainer, SocialPanel } from "@/components/Social";
@@ -7,7 +7,6 @@ import { AttentionButton } from "@/components/Buttons";
 import { Blog, GitHub, Labs, Mastodon, OpenSim, WordPress } from "@/modals";
 
 import OSGridLogo from '@/assets/osgrid.svg?react';
-import LemmyLogo from '@/assets/lemmy.svg?react';
 
 const Social = () => {
 	const [open, setOpen] = useState<string>("0");
@@ -42,11 +41,11 @@ const Social = () => {
 			<Modal large title="Mastodon" open={(open === "7") ? true : false} onClose={closeDialog}>
 				<Mastodon />
 			</Modal>
-			<Modal title="Lemmy" open={(open === "8") ? true : false} onClose={closeDialog}>
+			<Modal title="Bluesky" open={(open === "8") ? true : false} onClose={closeDialog}>
 				<div style={{ textAlign: 'center' }}>
-					<p>Nothing here just yet.</p>
-					<AttentionButton onClick={() => window.location.href = "https://lemmy.world/u/soupbowl"}>
-						Lemmy Profile
+					<p>I haven't built an integration just yet, sorry!</p>
+					<AttentionButton onClick={() => window.location.href = "https://bsky.app/profile/subo.dev"}>
+						Bluesky Profile
 					</AttentionButton>
 				</div>
 			</Modal>
@@ -101,8 +100,8 @@ const Social = () => {
 					<SocialItem id="7" icon={faMastodon} color="#6364ff" onClick={openDialog}>
 						soupbowl<br />@mstdn.social
 					</SocialItem>
-					<SocialItem id="8" color="#00bc8c" onClick={openDialog} iconSvg={<LemmyLogo />}>
-						soupbowl<br />@lemmy.world
+					<SocialItem id="8" icon={faBluesky} color="#0085ff" onClick={openDialog}>
+						subo.dev
 					</SocialItem>
 					<SocialItem id="9" icon={faDiscord} color="#5865f2" onClick={openDialog}>
 						subo.dev
