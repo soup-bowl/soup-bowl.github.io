@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { ListingItemGroup, ListingSocialItem } from "@/components/Listings";
-import { IBskyActor, IBskyPosts } from "@/interfaces";
+import { IBskyActor, IBskyFeed } from "@/interfaces";
 import { EState } from "@/enums";
 import { ErrorMessage, LoadingMessage } from "@/components/Common";
 
 const Bluesky = () => {
-	const [statuses, setStatuses] = useState<IBskyPosts | undefined>(undefined);
+	const [statuses, setStatuses] = useState<IBskyFeed | undefined>(undefined);
 	const [requestState, setRequestState] = useState<EState>(EState.Started);
 
 	useEffect(() => {
@@ -17,7 +17,7 @@ const Bluesky = () => {
 
 				const feedUrl = `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${did}&filter=posts_and_author_threads&limit=10`;
 				const feedResponse = await fetch(feedUrl);
-				const feedData: IBskyPosts = await feedResponse.json();
+				const feedData: IBskyFeed = await feedResponse.json();
 
 				setStatuses(feedData);
 				setRequestState(EState.Complete);
@@ -45,6 +45,7 @@ const Bluesky = () => {
 							name={item.post.author.displayName}
 							profileUrl="https://bsky.app/profile/subo.dev"
 							url=""
+							image={item.post.embed?.images?.[0]?.thumb}
 							date={new Date(item.post.record.createdAt)}
 						>
 							<div dangerouslySetInnerHTML={{ __html: item.post.record.text }} />

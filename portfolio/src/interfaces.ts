@@ -179,7 +179,7 @@ export interface IMastodonStatus {
 		website: string;
 	}
 	account: IMastodonUser;
-	media_attachments?: IMastodonMedia[]; 
+	media_attachments?: IMastodonMedia[];
 	tags?: [{
 		name: string;
 		url: string;
@@ -253,30 +253,42 @@ export interface IBskyActor {
 }
 
 export interface IBskyPosts {
-	feed: [
-		{
-			post: {
-				uri: string;
-				cid: string;
-				author: {
-					did: string;
-					handle: string;
-					displayName: string;
-					avatar: string;
-					labels: string[];
-				},
-				record: {
-					'$type': string;
-					createdAt: string;
-					langs: string[];
-					text: string;
-				},
-				replyCount: number;
-				repostCount: number;
-				likeCount: number;
-				indexedAt: string;
-				labels: string[];
+	uri: string;
+	cid: string;
+	author: {
+		did: string;
+		handle: string;
+		displayName: string;
+		avatar: string;
+		labels: string[];
+	},
+	record: {
+		'$type': string;
+		createdAt: string;
+		langs: string[];
+		text: string;
+	},
+	embed?: {
+		'$type': string;
+		images: [{
+			thumb: string;
+			fullsize: string;
+			alt: string;
+			aspectRatio: {
+				height: number;
+				width: number;
 			}
-		}
-	]
+		}]
+	},
+	replyCount: number;
+	repostCount: number;
+	likeCount: number;
+	indexedAt: string;
+	labels: string[];
+}
+
+export interface IBskyFeed {
+	feed: [{
+		post: IBskyPosts
+	}]
 }
