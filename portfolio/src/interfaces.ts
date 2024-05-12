@@ -247,3 +247,36 @@ export interface IDockerRepo {
 	media_types: string[];
 	content_types: string[];
 }
+
+export interface IBskyActor {
+	did: string;
+}
+
+export interface IBskyPosts {
+	feed: [
+		{
+			post: {
+				uri: string;
+				cid: string;
+				author: {
+					did: string;
+					handle: string;
+					displayName: string;
+					avatar: string;
+					labels: string[];
+				},
+				record: {
+					'$type': string;
+					createdAt: string;
+					langs: string[];
+					text: string;
+				},
+				replyCount: number;
+				repostCount: number;
+				likeCount: number;
+				indexedAt: string;
+				labels: string[];
+			}
+		}
+	]
+}

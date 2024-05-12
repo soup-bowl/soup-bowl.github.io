@@ -195,7 +195,7 @@ export const ListingSocialItem = ({
 				</a>
 				<a href={profileUrl}>
 					<div>
-						<img src={avatar} alt="" />
+						<img src={avatar} alt="" style={{ border: "1px solid #000", boxShadow: "2px 2px 0px #000" }} />
 					</div>
 					<div>
 						<p style={{ fontWeight: 'bold' }}>{name}</p>

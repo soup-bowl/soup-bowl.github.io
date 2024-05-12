@@ -4,7 +4,7 @@ import { faBlog, faVial } from "@fortawesome/free-solid-svg-icons";
 import { Modal } from "@/components/Modal";
 import { Social as SocialItem, SocialContainer, SocialPanel } from "@/components/Social";
 import { AttentionButton } from "@/components/Buttons";
-import { Blog, GitHub, Labs, Mastodon, OpenSim, WordPress } from "@/modals";
+import { Blog, Bluesky, GitHub, Labs, Mastodon, OpenSim, WordPress } from "@/modals";
 
 import OSGridLogo from '@/assets/osgrid.svg?react';
 
@@ -41,13 +41,8 @@ const Social = () => {
 			<Modal large title="Mastodon" open={(open === "7") ? true : false} onClose={closeDialog}>
 				<Mastodon />
 			</Modal>
-			<Modal title="Bluesky" open={(open === "8") ? true : false} onClose={closeDialog}>
-				<div style={{ textAlign: 'center' }}>
-					<p>I haven't built an integration just yet, sorry!</p>
-					<AttentionButton onClick={() => window.location.href = "https://bsky.app/profile/subo.dev"}>
-						Bluesky Profile
-					</AttentionButton>
-				</div>
+			<Modal large title="Bluesky" open={(open === "8") ? true : false} onClose={closeDialog}>
+				<Bluesky />
 			</Modal>
 			<Modal title="Talking on Discord" open={(open === "9") ? true : false} onClose={closeDialog}>
 				<p>There's no direct link to <strong>Discord</strong>, so to start a chat:</p>
