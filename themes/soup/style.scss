@@ -10,6 +10,18 @@ $font-family-sans-serif: "Lexend", -apple-system, BlinkMacSystemFont, "Helvetica
 $font-size-base: 1.5rem;
 $font-weight-normal: 300;
 
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #ffffffa0;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #000;
+}
+
 .focus-background {
 	background-color: #fff;
 }
