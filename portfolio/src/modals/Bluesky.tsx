@@ -43,8 +43,8 @@ const Bluesky = () => {
 							avatar={item.post.author.avatar}
 							handle={item.post.author.handle}
 							name={item.post.author.displayName}
-							profileUrl="https://bsky.app/profile/subo.dev"
-							url=""
+							profileUrl={`https://bsky.app/profile/${item.post.author.handle}`}
+							url={`https://bsky.app/profile/${item.post.author.handle}/post${item.post.uri.match(/\/([^\/]+)$/)?.[0] ?? ''}`}
 							image={item.post.embed?.images?.[0]?.thumb}
 							imageDimensions={{
 								height: item.post.embed?.images?.[0]?.aspectRatio.height,
