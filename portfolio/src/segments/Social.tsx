@@ -3,7 +3,7 @@ import { faBluesky, faDiscord, faDocker, faGithub, faMastodon, faWordpressSimple
 import { faBlog, faVial } from "@fortawesome/free-solid-svg-icons";
 import { Modal } from "@/components/Modal";
 import { Social as SocialItem, SocialContainer, SocialPanel } from "@/components/Social";
-import { AttentionButton } from "@/components/Buttons";
+import { AttentionLink } from "@/components/Buttons";
 import { Blog, Bluesky, GitHub, Labs, Mastodon, OpenSim, WordPress } from "@/modals";
 
 import OSGridLogo from '@/assets/osgrid.svg?react';
@@ -54,17 +54,17 @@ const Social = () => {
 					<li>Profit!</li>
 				</ul>
 				<p>Alternatively, click below to open my profile.</p>
-				<div style={{ textAlign: 'center' }}>
-					<AttentionButton onClick={() => window.location.href = "https://discord.com/users/555374749019013141"}>
-						Discord Profile
-					</AttentionButton>
+				<div style={{ textAlign: 'center', marginBottom: 10 }}>
+					<AttentionLink href="https://discord.com/users/555374749019013141">
+						My Profile
+					</AttentionLink>
 				</div>
 			</Modal>
 			<Modal title="Docker" open={(open === "10") ? true : false} onClose={closeDialog}>
 				<div style={{ textAlign: 'center' }}>
-					<AttentionButton onClick={() => window.location.href = "https://hub.docker.com/u/soupbowl"}>
-						Dockerhub Account
-					</AttentionButton>
+					<AttentionLink href="https://hub.docker.com/u/soupbowl">
+						My Profile
+					</AttentionLink>
 				</div>
 				<h2 style={{ textAlign: 'center' }}>Images</h2>
 				<div style={{ textAlign: 'center' }}>

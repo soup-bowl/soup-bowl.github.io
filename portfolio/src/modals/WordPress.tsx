@@ -4,6 +4,7 @@ import WPAPI from "@/api/WordPress";
 import { IWordPressPluginListing } from "@/interfaces";
 import { EState } from "@/enums";
 import { ErrorMessage, LoadingMessage } from "@/components/Common";
+import { AttentionLink } from "@/components/Buttons";
 
 const img: { [key: string]: string } = {
 	"simple-smtp": "https://f.subo.dev/i/r/wp-smtp.webp",
@@ -33,10 +34,16 @@ const WordPress = () => {
 	if (requestState === EState.Complete) {
 		return (
 			<>
-				<p>
-					These are plugins on WordPress.org that I look after and/or contribute to.&nbsp;
-					<a href="https://profiles.wordpress.org/soupbowl/">Visit my WordPress profile</a>.
-				</p>
+				<div style={{ textAlign: 'center' }}>
+					<AttentionLink href="https://profiles.wordpress.org/soupbowl/">
+						My Profile
+					</AttentionLink>
+
+					<p>
+						These are plugins on WordPress.org that I look after and/or contribute to.
+					</p>
+				</div>
+
 				<ListingItemGroup>
 					{plugins.map((item: IWordPressPluginListing, i: number) => (
 						<ListingItem

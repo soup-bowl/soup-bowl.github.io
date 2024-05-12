@@ -3,7 +3,7 @@ import GitHubAPI from "@/api/GitHub";
 import { ListingItem, ListingItemGroup } from "@/components/Listings";
 import { IGitHubRepos } from "@/interfaces";
 import RepoImages from "@/assets/RepositoryImages.json";
-import { AttentionButton } from "@/components/Buttons";
+import { AttentionLink } from "@/components/Buttons";
 import { EState } from "@/enums";
 import { ErrorMessage, LoadingMessage } from "@/components/Common";
 
@@ -45,9 +45,9 @@ const GitHub = () => {
 	return (
 		<>
 			<div style={{ textAlign: 'center' }}>
-				<AttentionButton onClick={() => window.location.href = "https://github.com/soup-bowl"}>
-					GitHub Account
-				</AttentionButton>
+				<AttentionLink href="https://github.com/soup-bowl">
+					My Profile
+				</AttentionLink>
 			</div>
 			<h2 style={{ textAlign: 'center' }}>Popular</h2>
 			{requestState === EState.Complete ?
