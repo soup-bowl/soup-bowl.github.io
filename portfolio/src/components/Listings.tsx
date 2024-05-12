@@ -174,6 +174,10 @@ interface SocialProps {
 	date: Date;
 	url: string;
 	image?: string;
+	imageDimensions?: {
+		width?: number;
+		height?: number;
+	};
 	children: ReactNode;
 }
 
@@ -185,6 +189,7 @@ export const ListingSocialItem = ({
 	url,
 	date,
 	image = undefined,
+	imageDimensions = undefined,
 	children
 }: SocialProps) => {
 	return (
@@ -208,6 +213,8 @@ export const ListingSocialItem = ({
 				{image !== undefined ?
 					<div style={{ textAlign: 'center' }}>
 						<img src={image} alt="" style={{
+							width: imageDimensions?.width,
+							height: imageDimensions?.height,
 							maxWidth: '100%',
 							border: '2px solid black'
 						}} />

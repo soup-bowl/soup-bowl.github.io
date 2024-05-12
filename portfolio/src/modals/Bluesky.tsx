@@ -46,6 +46,10 @@ const Bluesky = () => {
 							profileUrl="https://bsky.app/profile/subo.dev"
 							url=""
 							image={item.post.embed?.images?.[0]?.thumb}
+							imageDimensions={{
+								height: item.post.embed?.images?.[0]?.aspectRatio.height,
+								width: item.post.embed?.images?.[0]?.aspectRatio.width,
+							}}
 							date={new Date(item.post.record.createdAt)}
 						>
 							<div dangerouslySetInnerHTML={{ __html: item.post.record.text }} />
