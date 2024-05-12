@@ -1,4 +1,6 @@
+import styled from "@emotion/styled";
 import { ScrollButtons } from "@/components/Buttons";
+import { keyframes } from "@emotion/react";
 
 interface Props {
 	pages: {id:number, label:string}[];
@@ -42,4 +44,19 @@ export const Scroller = ({ pages }:Props) => {
 	);
 }
 
-export default Scroller;
+const bounce = keyframes`
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+`;
+
+export const ScrollHint = styled.div({
+	position: 'absolute',
+	right: 10,
+	bottom: 0,
+	fontSize: '5rem',
+	animation: `${bounce} 3s infinite`,
+});
