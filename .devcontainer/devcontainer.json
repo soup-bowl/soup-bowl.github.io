@@ -1,0 +1,19 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "Philly Cheesesteak",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"features": {
+		"ghcr.io/devcontainers/features/hugo:1": {},
+		"ghcr.io/devcontainers/features/node:1": {}
+	},
+	"postCreateCommand": "(cd portfolio && npm ci)"
+	// -- For Podman hosts
+	// "runArgs": [
+	// 	"--userns=keep-id"
+	// ],
+	// "containerEnv": {
+	// 	"HOME": "/home/vscode"
+	// },
+	// "containerUser": "vscode"
+}
