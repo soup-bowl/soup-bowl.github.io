@@ -1,0 +1,35 @@
+
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+@font-face {
+	font-family: "Lexend";
+	src: url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+}
+
+.markdown-preview.markdown-preview {
+	font-family: "Lexend", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 1.5rem;
+	background-color: rgb(168, 166, 255);
+
+	h1, h2, h3, h4, strong {
+		font-weight: 700;
+	}
+
+	a {
+		color: rgb(255, 97, 0);
+		text-shadow: 1px 1px black;
+		text-decoration: none;
+
+		&:hover {
+			color: rgb(204, 78, 0);
+			text-decoration: underline;
+		}
+	}
+
+	code {
+		font-size: .875em;
+		color: var(--mo-code-color);
+		word-wrap: break-word;
+	}
+}
