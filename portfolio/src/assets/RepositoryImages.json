@@ -38,5 +38,9 @@
 	{
 		"repo": "soup-bowl/deskdash",
 		"image": "https://f.subo.dev/i/r/dd.webp"
+	},
+	{
+		"repo": "soup-bowl/hot-this-week",
+		"image": "https://f.subo.dev/i/r/htw.webp"
 	}
 ]
