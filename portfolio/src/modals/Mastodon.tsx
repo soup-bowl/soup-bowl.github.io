@@ -1,40 +1,38 @@
-import { useEffect, useState } from "react";
-import { ListingItemGroup, ListingSocialItem } from "@/components/Listings";
-import { IMastodonStatus } from "@/interfaces";
-import MastoAPI from "@/api/Mastodon";
-import { EState } from "@/enums";
-import { ErrorMessage, LoadingMessage } from "@/components/Common";
-import { AttentionLink } from "@/components/Buttons";
+import { useEffect, useState } from "react"
+import { ListingItemGroup, ListingSocialItem } from "@/components/Listings"
+import { IMastodonStatus } from "@/interfaces"
+import MastoAPI from "@/api/Mastodon"
+import { EState } from "@/enums"
+import { ErrorMessage, LoadingMessage } from "@/components/Common"
+import { AttentionLink } from "@/components/Buttons"
 
 const Mastodon = () => {
-	const [statuses, setStatuses] = useState<IMastodonStatus[]>([]);
-	const [requestState, setRequestState] = useState<EState>(EState.Started);
+	const [statuses, setStatuses] = useState<IMastodonStatus[]>([])
+	const [requestState, setRequestState] = useState<EState>(EState.Started)
 
 	useEffect(() => {
 		MastoAPI.getLatestPosts()
 			.then((response: IMastodonStatus[]) => {
-				setStatuses(response);
-				setRequestState(EState.Complete);
+				setStatuses(response)
+				setRequestState(EState.Complete)
 			})
-			.catch(() => setRequestState(EState.Error));
-	}, []);
+			.catch(() => setRequestState(EState.Error))
+	}, [])
 
 	if (requestState === EState.Started) {
-		return (<LoadingMessage />);
+		return <LoadingMessage />
 	}
 
 	if (requestState === EState.Complete && statuses.length > 0) {
 		return (
 			<>
-				<div style={{ textAlign: 'center' }}>
-					<AttentionLink href="https://mstdn.social/@soupbowl">
-						My Profile
-					</AttentionLink>
+				<div style={{ textAlign: "center" }}>
+					<AttentionLink href="https://mstdn.social/@soupbowl">My Profile</AttentionLink>
 				</div>
 
 				<ListingItemGroup>
 					{statuses
-						.filter((item) => (item.content === '' ? false : true))
+						.filter((item) => (item.content === "" ? false : true))
 						.slice(0, 5)
 						.map((item, i) => (
 							<ListingSocialItem
@@ -52,10 +50,10 @@ const Mastodon = () => {
 						))}
 				</ListingItemGroup>
 			</>
-		);
+		)
 	}
 
-	return (<ErrorMessage />);
+	return <ErrorMessage />
 }
 
-export default Mastodon;
+export default Mastodon

@@ -1,40 +1,40 @@
-import styled from "@emotion/styled";
-import { useEffect, useState } from "react";
-import { AttentionLink } from "@/components/Buttons";
-import { IOpenSimulatorInstance, IOpenSimulatorStats } from "@/interfaces";
+import styled from "@emotion/styled"
+import { useEffect, useState } from "react"
+import { AttentionLink } from "@/components/Buttons"
+import { IOpenSimulatorInstance, IOpenSimulatorStats } from "@/interfaces"
 
 const conf: IOpenSimulatorInstance[] = [
 	{
 		name: "Willowbourne",
 		url: "https://meta.subo.dev/stats",
 		slurl: "hop://hg.osgrid.org/Soupbowl/125/125/25",
-		purpose: "Development Land"
-	}
+		purpose: "Development Land",
+	},
 ]
 
 const BigA = styled.a({
-	fontWeight: 'bold'
-});
+	fontWeight: "bold",
+})
 
 const OpenSim = () => {
-	const [config, setConfig] = useState<IOpenSimulatorInstance[]>(conf);
+	const [config, setConfig] = useState<IOpenSimulatorInstance[]>(conf)
 
 	useEffect(() => {
 		conf.forEach((instance, index) => {
 			fetch(instance.url)
-				.then(response => response.json())
+				.then((response) => response.json())
 				.then((data: IOpenSimulatorStats) => {
-					setConfig(prevInstances => {
-						const updatedInstances = [...prevInstances];
+					setConfig((prevInstances) => {
+						const updatedInstances = [...prevInstances]
 						updatedInstances[index] = {
 							...updatedInstances[index],
-							stats: data
-						};
-						return updatedInstances;
-					});
-				});
-		});
-	}, []);
+							stats: data,
+						}
+						return updatedInstances
+					})
+				})
+		})
+	}, [])
 
 	return (
 		<>
@@ -45,7 +45,7 @@ const OpenSim = () => {
 				come check it out!
 			</p>
 
-			<div style={{ textAlign: 'center' }}>
+			<div style={{ textAlign: "center" }}>
 				<AttentionLink href="https://www.osgrid.org/profile.php?name=balthazar%20swindon">
 					My Profile
 				</AttentionLink>
@@ -58,38 +58,48 @@ const OpenSim = () => {
 						return (
 							<div key={index} style={{ marginBottom: 20 }}>
 								<ul>
-									<li>Name: <strong>{instance.name}</strong></li>
-									<li>State: <strong style={{ color: "green" }}>Online</strong></li>
-									<li>Purpose: <strong>{instance.purpose}</strong></li>
-									<li>Version: <strong>{instance.stats.Version}</strong></li>
-									<li>Primitives: <strong>{instance.stats.Prims}</strong></li>
+									<li>
+										Name: <strong>{instance.name}</strong>
+									</li>
+									<li>
+										State: <strong style={{ color: "green" }}>Online</strong>
+									</li>
+									<li>
+										Purpose: <strong>{instance.purpose}</strong>
+									</li>
+									<li>
+										Version: <strong>{instance.stats.Version}</strong>
+									</li>
+									<li>
+										Primitives: <strong>{instance.stats.Prims}</strong>
+									</li>
 								</ul>
-								<div style={{ textAlign: 'center' }}>
-									<AttentionLink href={instance.slurl}>
-										Visit In-world
-									</AttentionLink>
+								<div style={{ textAlign: "center" }}>
+									<AttentionLink href={instance.slurl}>Visit In-world</AttentionLink>
 								</div>
 							</div>
-						);
+						)
 					} else {
 						return (
 							<div key={index}>
 								<ul>
-									<li>Name: <strong>{instance.name}</strong></li>
-									<li>State: <strong style={{ color: "red" }}>Offline</strong></li>
+									<li>
+										Name: <strong>{instance.name}</strong>
+									</li>
+									<li>
+										State: <strong style={{ color: "red" }}>Offline</strong>
+									</li>
 								</ul>
-								<div style={{ textAlign: 'center' }}>
-									<AttentionLink disabled>
-										Visit In-world
-									</AttentionLink>
+								<div style={{ textAlign: "center" }}>
+									<AttentionLink disabled>Visit In-world</AttentionLink>
 								</div>
 							</div>
-						);
+						)
 					}
 				})}
 			</div>
 		</>
-	);
+	)
 }
 
-export default OpenSim;
+export default OpenSim

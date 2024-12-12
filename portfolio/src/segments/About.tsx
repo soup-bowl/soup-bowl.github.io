@@ -1,7 +1,7 @@
-import { faComment, faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ButtonGroup, NormalButton } from "@/components/Buttons";
-import { ProfileDisplay } from "@/components/Profile";
+import { faComment, faEnvelope } from "@fortawesome/free-regular-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { ButtonGroup, NormalButton } from "@/components/Buttons"
+import { ProfileDisplay } from "@/components/Profile"
 
 const About = () => {
 	return (
@@ -11,25 +11,38 @@ const About = () => {
 			</div>
 			<div className="description">
 				<p>
-					Hello! My name is <strong>Casey LP</strong> and I am a developer from Hertfordshire, United Kingdom. I work as an <strong>Azure-based DevOps Engineer</strong> for the <strong>National Physical Laboratory</strong>. Outside NPL, I have a particular fondness for emerging technologies and <strong>containerisation</strong>. I can often be found discussing the benefits of <strong>Docker</strong> and <strong>Kubernetes</strong>, and I often spend my free time designing solutions in <strong>Progressive Web App</strong> format.
+					Hello! My name is <strong>Casey LP</strong> and I am a developer from Hertfordshire, United Kingdom.
+					I work as an <strong>Azure-based DevOps Engineer</strong> for the{" "}
+					<strong>National Physical Laboratory</strong>. Outside NPL, I have a particular fondness for
+					emerging technologies and <strong>containerisation</strong>. I can often be found discussing the
+					benefits of <strong>Docker</strong> and <strong>Kubernetes</strong>, and I often spend my free time
+					designing solutions in <strong>Progressive Web App</strong> format.
 				</p>
 				<p>
-					My languages of choice are <strong>Python</strong> and <strong>TypeScript</strong>. I have several years of experience with <strong>Git</strong> and Git technology platforms, primarily <strong>Azure DevOps</strong>, <strong>GitHub</strong> and <strong>GitLab</strong>, and some experience with <strong>Subversion</strong> and <strong>JIRA</strong>. My cloud of choice is <strong>Azure</strong>, with minor experience in <strong>Amazon Web Services</strong>.
+					My languages of choice are <strong>Python</strong> and <strong>TypeScript</strong>. I have several
+					years of experience with <strong>Git</strong> and Git technology platforms, primarily{" "}
+					<strong>Azure DevOps</strong>, <strong>GitHub</strong> and <strong>GitLab</strong>, and some
+					experience with <strong>Subversion</strong> and <strong>JIRA</strong>. My cloud of choice is{" "}
+					<strong>Azure</strong>, with minor experience in <strong>Amazon Web Services</strong>.
 				</p>
 				<p>
-					If you wish to see more about me, please <a href="https://soupbowl.io/post" style={{ fontWeight: 'bold' }}>check out my blog</a>.
+					If you wish to see more about me, please{" "}
+					<a href="https://soupbowl.io/post" style={{ fontWeight: "bold" }}>
+						check out my blog
+					</a>
+					.
 				</p>
 				<ButtonGroup>
-					<NormalButton onClick={() => window.location.href = "mailto:code@soupbowl.io"}>
+					<NormalButton onClick={() => (window.location.href = "mailto:code@soupbowl.io")}>
 						<FontAwesomeIcon icon={faEnvelope} /> Email me
 					</NormalButton>
-					<NormalButton onClick={() => window.location.href = "https://matrix.to/#/@soupbowl:mozilla.org"}>
+					<NormalButton onClick={() => (window.location.href = "https://matrix.to/#/@soupbowl:mozilla.org")}>
 						<FontAwesomeIcon icon={faComment} /> Message on Matrix
 					</NormalButton>
 				</ButtonGroup>
 			</div>
 		</ProfileDisplay>
-	);
+	)
 }
 
-export default About;
+export default About

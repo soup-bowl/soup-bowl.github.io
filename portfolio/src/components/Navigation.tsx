@@ -1,47 +1,45 @@
-import styled from "@emotion/styled";
-import { ScrollButtons } from "@/components/Buttons";
-import { keyframes } from "@emotion/react";
+import styled from "@emotion/styled"
+import { ScrollButtons } from "@/components/Buttons"
+import { keyframes } from "@emotion/react"
 
 interface Props {
-	pages: {id:number, label:string}[];
+	pages: { id: number; label: string }[]
 }
 
-export const Scroller = ({ pages }:Props) => {
+export const Scroller = ({ pages }: Props) => {
 	const scrollTo = (location: string) => {
-		document.getElementById(location)?.scrollIntoView({ behavior: 'smooth' });
+		document.getElementById(location)?.scrollIntoView({ behavior: "smooth" })
 	}
-	
+
 	const NavigateUp = () => {
-		const move = WhereAmI() - 1;
+		const move = WhereAmI() - 1
 		if (move >= 0) {
-			scrollTo(pages[move].label);
+			scrollTo(pages[move].label)
 		}
 	}
 
 	const NavigateDown = () => {
-		const move = WhereAmI() + 1;
+		const move = WhereAmI() + 1
 		if (move < pages.length) {
-			scrollTo(pages[move].label);
+			scrollTo(pages[move].label)
 		}
 	}
 
 	const WhereAmI = () => {
-		let page = -1;
+		let page = -1
 		for (let index = 0; index < pages.length; index++) {
-			const elementTarget = document.getElementById(pages[index].label);
+			const elementTarget = document.getElementById(pages[index].label)
 
 			if (elementTarget !== null) {
-				if (window.scrollY >= (elementTarget.offsetTop + elementTarget.offsetHeight)) {
-					page = pages[index].id;
+				if (window.scrollY >= elementTarget.offsetTop + elementTarget.offsetHeight) {
+					page = pages[index].id
 				}
 			}
 		}
-		return (page + 1);
+		return page + 1
 	}
 
-	return(
-		<ScrollButtons onUp={NavigateUp} onDown={NavigateDown} />
-	);
+	return <ScrollButtons onUp={NavigateUp} onDown={NavigateDown} />
 }
 
 const bounce = keyframes`
@@ -51,12 +49,12 @@ const bounce = keyframes`
 	50% {
 		transform: translateY(-10px);
 	}
-`;
+`
 
 export const ScrollHint = styled.div({
-	position: 'absolute',
+	position: "absolute",
 	right: 10,
 	bottom: 0,
-	fontSize: '5rem',
+	fontSize: "5rem",
 	animation: `${bounce} 3s infinite`,
-});
+})

@@ -1,7 +1,7 @@
 export enum EState {
 	Started,
 	Complete,
-	Error
+	Error,
 }
 
 export enum EPage {
@@ -12,5 +12,5 @@ export enum EPage {
 	LastFm,
 	Mastodon,
 	OpenSim,
-	Discord
+	Discord,
 }

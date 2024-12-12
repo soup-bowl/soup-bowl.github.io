@@ -1,32 +1,32 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react-swc';
-import svgr from "vite-plugin-svgr";
-import path from "path";
+import { defineConfig } from "vite"
+import react from "@vitejs/plugin-react-swc"
+import svgr from "vite-plugin-svgr"
+import path from "path"
 
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react(), svgr()],
 	server: {
 		host: true,
-		port: 3000
+		port: 3000,
 	},
 	define: {
-		global: {}
+		global: {},
 	},
 	build: {
-		outDir: '../public/portfolio-res',
+		outDir: "../public/portfolio-res",
 		emptyOutDir: true,
 		rollupOptions: {
 			output: {
 				entryFileNames: `assets/[name].js`,
 				chunkFileNames: `assets/[name].js`,
-				assetFileNames: `assets/[name].[ext]`
-			}
-		}
+				assetFileNames: `assets/[name].[ext]`,
+			},
+		},
 	},
 	resolve: {
 		alias: {
 			"@": path.resolve(__dirname, "./src"),
-		}
-	}
+		},
+	},
 })

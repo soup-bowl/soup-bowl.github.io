@@ -1,8 +1,8 @@
-import { keyframes } from "@emotion/react";
-import styled from "@emotion/styled";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ReactNode, useCallback, useEffect, useState } from "react";
+import { keyframes } from "@emotion/react"
+import styled from "@emotion/styled"
+import { faXmark } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { ReactNode, useCallback, useEffect, useState } from "react"
 
 const flyInAnimation = keyframes`
 	0% {
@@ -13,7 +13,7 @@ const flyInAnimation = keyframes`
 		transform: translateY(0);
 		opacity: 1;
 	}
-`;
+`
 
 const flyOutAnimation = keyframes`
 	0% {
@@ -24,7 +24,7 @@ const flyOutAnimation = keyframes`
 		transform: translateY(100%);
 		opacity: 0;
 	}
-`;
+`
 
 const fadeInBackdropAnimation = keyframes`
 	0% {
@@ -33,7 +33,7 @@ const fadeInBackdropAnimation = keyframes`
 	100% {
 		opacity: 0.75; /* or your desired backdrop opacity */
 	}
-`;
+`
 
 const fadeOutBackdropAnimation = keyframes`
 	0% {
@@ -42,13 +42,13 @@ const fadeOutBackdropAnimation = keyframes`
 	100% {
 		opacity: 0;
 	}
-`;
+`
 
 const ModalControl = styled.div({
 	position: "fixed",
 	zIndex: 1300,
-	inset: 0
-});
+	inset: 0,
+})
 
 const ModalBackdrop = styled.div<{ isVisible?: boolean }>((props) => ({
 	position: "fixed",
@@ -60,19 +60,19 @@ const ModalBackdrop = styled.div<{ isVisible?: boolean }>((props) => ({
 	zIndex: -1,
 	opacity: props.isVisible ? 0.75 : 0,
 	animation: props.isVisible
-    ? `${fadeInBackdropAnimation} 0.3s ease-in-out`
-    : props.isVisible === false // Check if explicitly set to false
-    ? `${fadeOutBackdropAnimation} 0.3s ease-in-out`
-    : "none",
-}));
+		? `${fadeInBackdropAnimation} 0.3s ease-in-out`
+		: props.isVisible === false // Check if explicitly set to false
+			? `${fadeOutBackdropAnimation} 0.3s ease-in-out`
+			: "none",
+}))
 
 const ModalBackground = styled.div({
 	height: "100%",
 	outline: 0,
 	display: "flex",
 	justifyContent: "center",
-	alignItems: "center"
-});
+	alignItems: "center",
+})
 
 const ModalBox = styled.div<{ open?: boolean; isClosing?: boolean }>((props) => ({
 	backgroundColor: "#C5A7C5",
@@ -88,10 +88,8 @@ const ModalBox = styled.div<{ open?: boolean; isClosing?: boolean }>((props) => 
 	boxShadow: "8px 8px 0px #000",
 	transform: props.open && !props.isClosing ? "translateY(0)" : "translateY(100%)",
 	opacity: props.open && !props.isClosing ? 1 : 0,
-	animation: props.open
-		? `${props.isClosing ? flyOutAnimation : flyInAnimation} 0.3s ease-in-out`
-		: "none",
-}));
+	animation: props.open ? `${props.isClosing ? flyOutAnimation : flyInAnimation} 0.3s ease-in-out` : "none",
+}))
 
 const ModalCloseBox = styled.button({
 	cursor: "pointer",
@@ -103,87 +101,90 @@ const ModalCloseBox = styled.button({
 	position: "absolute",
 	top: "15px",
 	right: "15px",
-});
+})
 
 const ModalHeader = styled.h2({
 	padding: "16px 24px",
 	flex: "0 0 auto",
 	lineHeight: 0,
-	fontSize: "1.25rem"
-});
+	fontSize: "1.25rem",
+})
 
 const ModalBody = styled.div({
 	padding: "16px 24px",
 	flex: "1 1 auto",
 	overflowY: "auto",
-	borderTop: "2px solid black"
-});
+	borderTop: "2px solid black",
+})
 
 interface ModalProps {
-	title: string;
-	open?: boolean;
-	large?: boolean;
-	onClose: () => void;
-	children: ReactNode;
+	title: string
+	open?: boolean
+	large?: boolean
+	onClose: () => void
+	children: ReactNode
 }
 
 const onCloseInteraction = (onClose: () => void) => {
-	document.body.style.overflow = 'visible';
-	onClose();
+	document.body.style.overflow = "visible"
+	onClose()
 }
 
 export const Modal = ({ title, open, large, onClose, children }: ModalProps) => {
-	const [isClosing, setIsClosing] = useState(false);
-	const [isBackdropVisible, setIsBackdropVisible] = useState(false);
+	const [isClosing, setIsClosing] = useState(false)
+	const [isBackdropVisible, setIsBackdropVisible] = useState(false)
 
 	const handleClose = useCallback(() => {
-		setIsClosing(true);
-		setIsBackdropVisible(false);
+		setIsClosing(true)
+		setIsBackdropVisible(false)
 
 		// Wait for the animation to complete before calling onClose
-		const animationDuration = 300; // 0.3 seconds in milliseconds
+		const animationDuration = 300 // 0.3 seconds in milliseconds
 		setTimeout(() => {
-			onCloseInteraction(onClose);
-			setIsClosing(false);
-		}, animationDuration);
-	}, [onClose]);
+			onCloseInteraction(onClose)
+			setIsClosing(false)
+		}, animationDuration)
+	}, [onClose])
 
 	useEffect(() => {
 		document.getElementById("modal")?.addEventListener("click", (e) => {
 			if (e.target instanceof HTMLElement) {
 				if (!e.target.closest("#modalbox")) {
-					handleClose();
+					handleClose()
 				}
 			}
-		});
+		})
 
 		if (open) {
-			setIsClosing(false);
-			setIsBackdropVisible(true);
+			setIsClosing(false)
+			setIsBackdropVisible(true)
 		}
-	}, [open, handleClose]);
+	}, [open, handleClose])
 
 	if (open || isClosing) {
-		document.body.style.overflow = 'hidden';
+		document.body.style.overflow = "hidden"
 		return (
 			<ModalControl id="modal">
-				<ModalBackdrop  isVisible={isBackdropVisible} />
+				<ModalBackdrop isVisible={isBackdropVisible} />
 				<ModalBackground>
-					<ModalBox id="modalbox" style={{ maxWidth: large ? '1200px' : '600px' }} open={open} isClosing={isClosing}>
+					<ModalBox
+						id="modalbox"
+						style={{ maxWidth: large ? "1200px" : "600px" }}
+						open={open}
+						isClosing={isClosing}
+					>
 						<ModalHeader>
 							{title}
 							<ModalCloseBox onClick={handleClose}>
 								<FontAwesomeIcon icon={faXmark} />
 							</ModalCloseBox>
 						</ModalHeader>
-						<ModalBody>
-							{children}
-						</ModalBody>
+						<ModalBody>{children}</ModalBody>
 					</ModalBox>
 				</ModalBackground>
 			</ModalControl>
-		);
+		)
 	} else {
-		return (<></>);
+		return <></>
 	}
 }
