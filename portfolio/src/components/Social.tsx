@@ -111,7 +111,7 @@ interface CardProps {
 	id?: string
 	url?: string
 	icon?: IconDefinition
-	iconSvg?: React.SVGProps<SVGSVGElement>
+	iconSvg?: JSX.Element
 	color: string
 	onClick?: React.MouseEventHandler<HTMLAnchorElement>
 	children: ReactNode
@@ -121,7 +121,7 @@ export const Social = ({ id, url = "#", icon, iconSvg, color, onClick, children 
 	return (
 		<SocialSet id={id} rel="me" href={url} color={color} onClick={onClick}>
 			<Icon color={color} datatype="icon">
-				{icon !== undefined ? <FontAwesomeIcon icon={icon} /> : <>{iconSvg}</>}
+				{icon !== undefined ? <FontAwesomeIcon icon={icon} /> : iconSvg}
 			</Icon>
 			<Label color={color} datatype="text">
 				{children}
