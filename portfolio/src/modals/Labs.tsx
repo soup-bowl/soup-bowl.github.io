@@ -45,9 +45,9 @@ const Labs = () => {
 				<ListingItemGroup>
 					{items
 						.filter((item) => filter === undefined || item.type === filter)
-						.map((item, i) => (
+						.map((item) => (
 							<ListingItem
-								key={i}
+								key={item.lab}
 								title={item.lab}
 								url={item.url.startsWith("/") ? `https://soupbowl.io/labs${item.url}` : item.url}
 								image={item.logo}

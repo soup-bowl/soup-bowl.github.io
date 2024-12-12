@@ -53,10 +53,10 @@ const OpenSim = () => {
 
 			<div>
 				<h2>Estates</h2>
-				{config.map((instance, index) => {
+				{config.map((instance) => {
 					if (instance.stats !== undefined) {
 						return (
-							<div key={index} style={{ marginBottom: 20 }}>
+							<div key={instance.name} style={{ marginBottom: 20 }}>
 								<ul>
 									<li>
 										Name: <strong>{instance.name}</strong>
@@ -81,7 +81,7 @@ const OpenSim = () => {
 						)
 					} else {
 						return (
-							<div key={index}>
+							<div key={instance.name}>
 								<ul>
 									<li>
 										Name: <strong>{instance.name}</strong>

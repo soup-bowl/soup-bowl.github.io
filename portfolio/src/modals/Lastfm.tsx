@@ -44,7 +44,7 @@ const Lastfm = () => {
 						My Last.fm
 					</AttentionButton>
 				</div>
-				{htw.media_attachments && htw.media_attachments[0]?.url && (
+				{htw.media_attachments?.[0]?.url && (
 					<img
 						src={htw.media_attachments[0].url}
 						style={{ maxWidth: "100%" }}

@@ -38,9 +38,9 @@ const WordPress = () => {
 				</div>
 
 				<ListingItemGroup>
-					{plugins.map((item: IWordPressPluginListing, i: number) => (
+					{plugins.map((item) => (
 						<ListingItem
-							key={i}
+							key={item.slug}
 							title={item.name}
 							image={img[item.slug]}
 							url={`https://wordpress.org/plugins/${item.slug}`}

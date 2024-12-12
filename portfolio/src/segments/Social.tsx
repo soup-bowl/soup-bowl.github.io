@@ -30,28 +30,28 @@ const Social = () => {
 
 	return (
 		<>
-			<Modal large title="Blog" open={open === "1" ? true : false} onClose={closeDialog}>
+			<Modal large title="Blog" open={open === "1"} onClose={closeDialog}>
 				<Blog />
 			</Modal>
-			<Modal large title="Experiments" open={open === "2" ? true : false} onClose={closeDialog}>
+			<Modal large title="Experiments" open={open === "2"} onClose={closeDialog}>
 				<Labs />
 			</Modal>
-			<Modal large title="GitHub" open={open === "3" ? true : false} onClose={closeDialog}>
+			<Modal large title="GitHub" open={open === "3"} onClose={closeDialog}>
 				<GitHub />
 			</Modal>
-			<Modal large title="WordPress" open={open === "4" ? true : false} onClose={closeDialog}>
+			<Modal large title="WordPress" open={open === "4"} onClose={closeDialog}>
 				<WordPress />
 			</Modal>
-			<Modal title="OSgrid Estate" open={open === "6" ? true : false} onClose={closeDialog}>
+			<Modal title="OSgrid Estate" open={open === "6"} onClose={closeDialog}>
 				<OpenSim />
 			</Modal>
-			<Modal large title="Mastodon" open={open === "7" ? true : false} onClose={closeDialog}>
+			<Modal large title="Mastodon" open={open === "7"} onClose={closeDialog}>
 				<Mastodon />
 			</Modal>
-			<Modal large title="Bluesky" open={open === "8" ? true : false} onClose={closeDialog}>
+			<Modal large title="Bluesky" open={open === "8"} onClose={closeDialog}>
 				<Bluesky />
 			</Modal>
-			<Modal title="Talking on Discord" open={open === "9" ? true : false} onClose={closeDialog}>
+			<Modal title="Talking on Discord" open={open === "9"} onClose={closeDialog}>
 				<p>
 					There's no direct link to <strong>Discord</strong>, so to start a chat:
 				</p>
@@ -71,7 +71,7 @@ const Social = () => {
 					<AttentionLink href="https://discord.com/users/555374749019013141">My Profile</AttentionLink>
 				</div>
 			</Modal>
-			<Modal title="Docker" open={open === "10" ? true : false} onClose={closeDialog}>
+			<Modal title="Docker" open={open === "10"} onClose={closeDialog}>
 				<div style={{ textAlign: "center" }}>
 					<AttentionLink href="https://hub.docker.com/u/soupbowl">My Profile</AttentionLink>
 				</div>

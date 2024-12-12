@@ -27,12 +27,12 @@ export const Scroller = ({ pages }: Props) => {
 
 	const WhereAmI = () => {
 		let page = -1
-		for (let index = 0; index < pages.length; index++) {
-			const elementTarget = document.getElementById(pages[index].label)
+		for (const pageItem of pages) {
+			const elementTarget = document.getElementById(pageItem.label)
 
 			if (elementTarget !== null) {
 				if (window.scrollY >= elementTarget.offsetTop + elementTarget.offsetHeight) {
-					page = pages[index].id
+					page = pageItem.id
 				}
 			}
 		}

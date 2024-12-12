@@ -44,14 +44,14 @@ const Bluesky = () => {
 				</div>
 
 				<ListingItemGroup>
-					{statuses.feed.map((item, i) => (
+					{statuses.feed.map((item) => (
 						<ListingSocialItem
-							key={i}
+							key={item.post.cid}
 							avatar={item.post.author.avatar}
 							handle={item.post.author.handle}
 							name={item.post.author.displayName}
 							profileUrl={`https://bsky.app/profile/${item.post.author.handle}`}
-							url={`https://bsky.app/profile/${item.post.author.handle}/post${item.post.uri.match(/\/([^\/]+)$/)?.[0] ?? ""}`}
+							url={`https://bsky.app/profile/${item.post.author.handle}/post${item.post.uri.match(/\/([^/]+)$/)?.[0] ?? ""}`}
 							image={item.post.embed?.images?.[0]?.thumb}
 							imageDimensions={{
 								height: item.post.embed?.images?.[0]?.aspectRatio.height,

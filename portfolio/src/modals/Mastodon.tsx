@@ -32,11 +32,11 @@ const Mastodon = () => {
 
 				<ListingItemGroup>
 					{statuses
-						.filter((item) => (item.content === "" ? false : true))
+						.filter((item) => item.content !== "")
 						.slice(0, 5)
-						.map((item, i) => (
+						.map((item) => (
 							<ListingSocialItem
-								key={i}
+								key={item.id}
 								avatar={item.account.avatar}
 								handle={`@${item.account.username}`}
 								name={item.account.display_name}
