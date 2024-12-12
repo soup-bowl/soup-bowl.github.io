@@ -50,21 +50,21 @@ const ModalControl = styled.div({
 	inset: 0,
 })
 
-const ModalBackdrop = styled.div<{ isVisible?: boolean }>((props) => ({
-	position: "fixed",
-	display: "flex",
-	alignItems: "center",
-	justifyContent: "center",
-	inset: "0px",
-	backgroundColor: "rgba(0, 0, 0, 0.75)",
-	zIndex: -1,
-	opacity: props.isVisible ? 0.75 : 0,
-	animation: props.isVisible
-		? `${fadeInBackdropAnimation} 0.3s ease-in-out`
-		: props.isVisible === false // Check if explicitly set to false
-			? `${fadeOutBackdropAnimation} 0.3s ease-in-out`
-			: "none",
-}))
+const ModalBackdrop = styled.div<{ isVisible?: boolean }>((props) => {
+	const animationType = props.isVisible === false ? fadeOutBackdropAnimation : fadeInBackdropAnimation
+
+	return {
+		position: "fixed",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+		inset: "0px",
+		backgroundColor: "rgba(0, 0, 0, 0.75)",
+		zIndex: -1,
+		opacity: props.isVisible ? 0.75 : 0,
+		animation: props.isVisible === undefined ? "none" : `${animationType} 0.3s ease-in-out`,
+	}
+})
 
 const ModalBackground = styled.div({
 	height: "100%",
@@ -74,22 +74,26 @@ const ModalBackground = styled.div({
 	alignItems: "center",
 })
 
-const ModalBox = styled.div<{ open?: boolean; isClosing?: boolean }>((props) => ({
-	backgroundColor: "#C5A7C5",
-	margin: "32px",
-	position: "relative",
-	overflowY: "auto",
-	display: "flex",
-	flexDirection: "column",
-	width: "90vw",
-	maxHeight: "calc(100% - 64px)",
-	minWidth: "200px",
-	border: "2px solid black",
-	boxShadow: "8px 8px 0px #000",
-	transform: props.open && !props.isClosing ? "translateY(0)" : "translateY(100%)",
-	opacity: props.open && !props.isClosing ? 1 : 0,
-	animation: props.open ? `${props.isClosing ? flyOutAnimation : flyInAnimation} 0.3s ease-in-out` : "none",
-}))
+const ModalBox = styled.div<{ open?: boolean; isClosing?: boolean }>((props) => {
+	const animationType = props.isClosing ? flyOutAnimation : flyInAnimation
+
+	return {
+		backgroundColor: "#C5A7C5",
+		margin: "32px",
+		position: "relative",
+		overflowY: "auto",
+		display: "flex",
+		flexDirection: "column",
+		width: "90vw",
+		maxHeight: "calc(100% - 64px)",
+		minWidth: "200px",
+		border: "2px solid black",
+		boxShadow: "8px 8px 0px #000",
+		transform: props.open && !props.isClosing ? "translateY(0)" : "translateY(100%)",
+		opacity: props.open && !props.isClosing ? 1 : 0,
+		animation: props.open ? `${animationType} 0.3s ease-in-out` : "none",
+	}
+})
 
 const ModalCloseBox = styled.button({
 	cursor: "pointer",
