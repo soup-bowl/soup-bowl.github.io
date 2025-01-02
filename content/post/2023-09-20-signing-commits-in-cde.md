@@ -19,6 +19,10 @@ So, how did I do this?
 
 Simple. I create a GPG key, turn the GPG directory into a portable bytestream, store it in an environmental variable then use a Dotfile to unpack and register!
 
+{{<alert class="alert-info">}}
+In this page, I am referring to **Gitpod Classic**, not **Gitpod Flex**. Instructions may differ.
+{{</alert>}}
+
 ## 🔑 First, Creating the Keys
 
 First, you want to create your GPG keys. [GitHub has a good guide](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key) on how you would achieve this. You will want to be interacting with the resultant keys, so I'd recommend setting a directory you have access to, where the key will be created. For example:

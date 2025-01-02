@@ -15,6 +15,10 @@ But bored of waiting for something I'm losing the plot over, I saw what alternat
 
 {{< figure src="/assets/img/gitpod-screenshot.webp" >}}
 
+{{<alert class="alert-warning">}}
+This article was created before **Gitpod Flex** was announced, and refers to Gitpod now known as **Gitpod Classic**. My views and experiences expressed in this article reflect their older offering.
+{{</alert>}}
+
 ## What's the Point in (GitHub) Codespaces and Gitpod Anyway?
 
 We're in the time of the cloud. 15 years ago we were told by the seers of technology it was coming, and we'd soon live in a time where your website would be hosted on a server not in a cabinet... Just in a cabinet thousands of miles away in someone else's data centre...
