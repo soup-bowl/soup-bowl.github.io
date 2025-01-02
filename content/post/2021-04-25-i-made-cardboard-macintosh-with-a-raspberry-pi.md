@@ -345,7 +345,7 @@ The speaker was **incredibly quiet**. So it does work, but you have to be point 
 
 ### Software
 
-{{< figure src="https://user-images.githubusercontent.com/11209477/117720836-0e3e9700-b1d7-11eb-8f55-941694225e3a.webp" >}}
+{{< figure src="https://user-images.githubusercontent.com/11209477/117720836-0e3e9700-b1d7-11eb-8f55-941694225e3a.png" >}}
 
 Glorious, glorious retro beige…
 
@@ -354,3 +354,7 @@ To show off the device, I had two shell scripts on the desktop that would start-
 Using **Python** and with some assistance from the lovely engineers over at the **[Technical Family Discord](https://discord.gg/V6Ahbvmz2Y)**, the desktop scripts were replaced with a **[visual bootloader application](https://github.com/soup-bowl/cardboardmac-bootselection)**. Just makes the whole thing a bit prettier to look at when it started up.
 
 If you decide to use this same application, the clickable buttons are configurable, so if you wish to dedicate the device to just System 7 (like it really should be), you can just show that script instead.
+
+## End of the Cardboard Macintosh, 3 years later…
+
+The Cardboard Macintosh has unfortunately become a casualty during my packing for my house move. For now, I'll call this the end of the Cardboard Macintosh (RIP - Apr 2021- Jan 2025), but I had been thinking of revisiting this project for a while now. Lockdown feels like an era away now, but watch this space for what comes of the Cardboard Macintosh II.
