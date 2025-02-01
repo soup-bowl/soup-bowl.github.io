@@ -7,13 +7,14 @@
 		"ghcr.io/devcontainers/features/hugo:1": {},
 		"ghcr.io/devcontainers/features/node:1": {}
 	},
-	"postCreateCommand": "(cd portfolio && npm ci)"
-	// -- For Podman hosts
-	// "runArgs": [
-	// 	"--userns=keep-id"
-	// ],
-	// "containerEnv": {
-	// 	"HOME": "/home/vscode"
-	// },
-	// "containerUser": "vscode"
+	"postCreateCommand": "(cd portfolio && npm ci)",
+	"forwardPorts": [1313, 3000],
+	"remoteUser": "root",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"shd101wyy.markdown-preview-enhanced"
+			]
+		}
+	}
 }
