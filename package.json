@@ -2,7 +2,9 @@
 	"scripts": {
 		"build": "npm run build:react && npm run build:hugo && rm -r public/portfolio-res/*.html",
 		"preview": "npm run build && npx --yes http-server -p 8080",
+		"start:react": "cd portfolio && npm start",
 		"build:react": "cd portfolio && npm run build",
+		"start:hugo": "hugo server",
 		"build:hugo": "hugo --minify"
 	}
 }
