@@ -1,9 +1,8 @@
 import { ReactNode, useEffect, useState } from "react"
 import GitHubAPI from "@/api/GitHub"
-import { ListingItem, ListingItemGroup } from "@/components/Listings"
 import { IGitHubRepos } from "@/interfaces"
 import RepoImages from "@/assets/RepositoryImages.json"
-import { AttentionLink } from "@soupbowl/neobrutalism-react"
+import { AttentionLink, ListingItem, ListingItemGroup } from "@soupbowl/neobrutalism-react"
 import { EState } from "@/enums"
 import { ErrorMessage, LoadingMessage } from "@/components/Common"
 

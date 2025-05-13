@@ -8,11 +8,11 @@ import {
 	faWordpressSimple,
 } from "@fortawesome/free-brands-svg-icons"
 import { faBlog, faVial } from "@fortawesome/free-solid-svg-icons"
-import { Social as SocialItem, SocialContainer, SocialPanel } from "@/components/Social"
-import { AttentionLink, Modal } from "@soupbowl/neobrutalism-react"
+import { Social as SocialItem, SocialContainer, SocialPanel, AttentionLink, Modal } from "@soupbowl/neobrutalism-react"
 import { Blog, Bluesky, GitHub, Labs, Mastodon, OpenSim, WordPress } from "@/modals"
 
 import OSGridLogo from "@/assets/osgrid.svg?react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Social = () => {
 	const [open, setOpen] = useState<string>("0")
@@ -82,33 +82,43 @@ const Social = () => {
 			</Modal>
 			<SocialContainer>
 				<SocialPanel>
-					<SocialItem id="1" icon={faBlog} color="#29132e" onClick={openDialog}>
+					<SocialItem id="1" icon={<FontAwesomeIcon icon={faBlog} />} color="#29132e" onClick={openDialog}>
 						Blog
 					</SocialItem>
-					<SocialItem id="2" icon={faVial} color="#00ad2b" onClick={openDialog}>
+					<SocialItem id="2" icon={<FontAwesomeIcon icon={faVial} />} color="#00ad2b" onClick={openDialog}>
 						Experiments
 					</SocialItem>
-					<SocialItem id="3" icon={faGithub} color="#2d333b" onClick={openDialog}>
+					<SocialItem id="3" icon={<FontAwesomeIcon icon={faGithub} />} color="#2d333b" onClick={openDialog}>
 						soup-bowl
 					</SocialItem>
-					<SocialItem id="4" icon={faWordpressSimple} color="#0085BA" onClick={openDialog}>
+					<SocialItem
+						id="4"
+						icon={<FontAwesomeIcon icon={faWordpressSimple} />}
+						color="#0085BA"
+						onClick={openDialog}
+					>
 						soupbowl
 					</SocialItem>
-					<SocialItem id="10" icon={faDocker} color="#086DD7" onClick={openDialog}>
+					<SocialItem id="10" icon={<FontAwesomeIcon icon={faDocker} />} color="#086DD7" onClick={openDialog}>
 						soupbowl
 					</SocialItem>
-					<SocialItem id="6" color="#FFCB00" onClick={openDialog} iconSvg={<OSGridLogo />}>
+					<SocialItem id="6" icon={<OSGridLogo />} color="#FFCB00" onClick={openDialog}>
 						Balthazar Swindon
 					</SocialItem>
-					<SocialItem id="7" icon={faMastodon} color="#6364ff" onClick={openDialog}>
+					<SocialItem
+						id="7"
+						icon={<FontAwesomeIcon icon={faMastodon} />}
+						color="#6364ff"
+						onClick={openDialog}
+					>
 						soupbowl
 						<br />
 						@mstdn.social
 					</SocialItem>
-					<SocialItem id="8" icon={faBluesky} color="#0085ff" onClick={openDialog}>
+					<SocialItem id="8" icon={<FontAwesomeIcon icon={faBluesky} />} color="#0085ff" onClick={openDialog}>
 						subo.dev
 					</SocialItem>
-					<SocialItem id="9" icon={faDiscord} color="#5865f2" onClick={openDialog}>
+					<SocialItem id="9" icon={<FontAwesomeIcon icon={faDiscord} />} color="#5865f2" onClick={openDialog}>
 						subo.dev
 					</SocialItem>
 				</SocialPanel>

@@ -11,7 +11,7 @@
 		"@fortawesome/free-solid-svg-icons": "^6.5.1",
 		"@fortawesome/react-fontawesome": "^0.2.0",
 		"@octokit/request": "^9.1.1",
-		"@soupbowl/neobrutalism-react": "^0.0.3",
+		"@soupbowl/neobrutalism-react": "^0.0.4",
 		"@types/node": "^22.9.0",
 		"@types/node-fetch": "^2.6.11",
 		"@types/react": "^18.2.48",
