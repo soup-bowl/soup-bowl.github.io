@@ -3,7 +3,7 @@ import { ErrorMessage, LoadingMessage } from "@/components/Common"
 import { ListingItem, ListingItemGroup } from "@/components/Listings"
 import { EState } from "@/enums"
 import { IBlogPost } from "@/interfaces"
-import { ButtonGroup, NormalButton } from "@/components/Buttons"
+import { ButtonGroup, Button as NormalButton } from "@soupbowl/neobrutalism-react"
 
 const Blog = () => {
 	const blogURL = "/post/index.xml"

@@ -3,7 +3,7 @@ import { ErrorMessage, LoadingMessage } from "@/components/Common"
 import { ListingItem, ListingItemGroup } from "@/components/Listings"
 import { EState } from "@/enums"
 import { ILabs } from "@/interfaces"
-import { ButtonGroup, NormalButton } from "@/components/Buttons"
+import { ButtonGroup, Button as NormalButton } from "@soupbowl/neobrutalism-react"
 
 const Labs = () => {
 	const blogURL = "https://soupbowl.io/labs"

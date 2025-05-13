@@ -3,7 +3,7 @@ import MastoAPI from "@/api/Mastodon"
 import { EState } from "@/enums"
 import { ErrorMessage, LoadingMessage } from "@/components/Common"
 import { IMastodonStatus } from "@/interfaces"
-import { AttentionButton } from "@/components/Buttons"
+import { AttentionButton } from "@soupbowl/neobrutalism-react"
 
 const Lastfm = () => {
 	const [htw, setHtw] = useState<IMastodonStatus>()

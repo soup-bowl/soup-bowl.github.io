@@ -8,9 +8,8 @@ import {
 	faWordpressSimple,
 } from "@fortawesome/free-brands-svg-icons"
 import { faBlog, faVial } from "@fortawesome/free-solid-svg-icons"
-import { Modal } from "@/components/Modal"
 import { Social as SocialItem, SocialContainer, SocialPanel } from "@/components/Social"
-import { AttentionLink } from "@/components/Buttons"
+import { AttentionLink, Modal } from "@soupbowl/neobrutalism-react"
 import { Blog, Bluesky, GitHub, Labs, Mastodon, OpenSim, WordPress } from "@/modals"
 
 import OSGridLogo from "@/assets/osgrid.svg?react"

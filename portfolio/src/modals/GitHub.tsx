@@ -3,7 +3,7 @@ import GitHubAPI from "@/api/GitHub"
 import { ListingItem, ListingItemGroup } from "@/components/Listings"
 import { IGitHubRepos } from "@/interfaces"
 import RepoImages from "@/assets/RepositoryImages.json"
-import { AttentionLink } from "@/components/Buttons"
+import { AttentionLink } from "@soupbowl/neobrutalism-react"
 import { EState } from "@/enums"
 import { ErrorMessage, LoadingMessage } from "@/components/Common"
 

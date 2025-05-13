@@ -4,7 +4,7 @@ import { IMastodonStatus } from "@/interfaces"
 import MastoAPI from "@/api/Mastodon"
 import { EState } from "@/enums"
 import { ErrorMessage, LoadingMessage } from "@/components/Common"
-import { AttentionLink } from "@/components/Buttons"
+import { AttentionLink } from "@soupbowl/neobrutalism-react"
 
 const Mastodon = () => {
 	const [statuses, setStatuses] = useState<IMastodonStatus[]>([])

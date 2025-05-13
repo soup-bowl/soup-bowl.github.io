@@ -1,6 +1,8 @@
 import styled from "@emotion/styled"
-import { ScrollButtons } from "@/components/Buttons"
+import { ScrollButtons } from "@soupbowl/neobrutalism-react"
 import { keyframes } from "@emotion/react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons"
 
 interface Props {
 	pages: { id: number; label: string }[]
@@ -39,7 +41,14 @@ export const Scroller = ({ pages }: Props) => {
 		return page + 1
 	}
 
-	return <ScrollButtons onUp={NavigateUp} onDown={NavigateDown} />
+	return (
+		<ScrollButtons
+			buttonUp={<FontAwesomeIcon icon={faChevronUp} />}
+			buttonDown={<FontAwesomeIcon icon={faChevronDown} />}
+			onUp={NavigateUp}
+			onDown={NavigateDown}
+		/>
+	)
 }
 
 const bounce = keyframes`

@@ -4,7 +4,7 @@ import WPAPI from "@/api/WordPress"
 import { IWordPressPluginListing } from "@/interfaces"
 import { EState } from "@/enums"
 import { ErrorMessage, LoadingMessage } from "@/components/Common"
-import { AttentionLink } from "@/components/Buttons"
+import { AttentionLink } from "@soupbowl/neobrutalism-react"
 
 const img: { [key: string]: string } = {
 	"simple-smtp": "https://f.subo.dev/i/r/wp-smtp.webp",

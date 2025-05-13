@@ -3,7 +3,7 @@ import { ListingItemGroup, ListingSocialItem } from "@/components/Listings"
 import { IBskyActor, IBskyFeed } from "@/interfaces"
 import { EState } from "@/enums"
 import { ErrorMessage, LoadingMessage } from "@/components/Common"
-import { AttentionLink } from "@/components/Buttons"
+import { AttentionLink } from "@soupbowl/neobrutalism-react"
 
 const Bluesky = () => {
 	const [statuses, setStatuses] = useState<IBskyFeed | undefined>(undefined)

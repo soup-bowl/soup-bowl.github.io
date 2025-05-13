@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 import { useEffect, useState } from "react"
-import { AttentionLink } from "@/components/Buttons"
+import { AttentionLink } from "@soupbowl/neobrutalism-react"
 import { IOpenSimulatorInstance, IOpenSimulatorStats } from "@/interfaces"
 
 const conf: IOpenSimulatorInstance[] = [
