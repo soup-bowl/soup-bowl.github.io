@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	{{ range ( where .Site.RegularPages "Type" "webcomics" | first 1 ) }}
 	<meta http-equiv="refresh" content="0;url={{ .Permalink }}" />
+	<meta content="text/html; charset=utf-8" />
 	{{ end }}
 	<title>Redirecting...</title>
 	<style>

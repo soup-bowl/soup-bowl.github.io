@@ -29,6 +29,50 @@ const updateInstanceStats = (
 	return updatedInstances
 }
 
+const renderInstance = (instance: IOpenSimulatorInstance) => {
+	if (instance.stats !== undefined) {
+		return (
+			<div key={instance.name} style={{ marginBottom: 20 }}>
+				<ul>
+					<li>
+						Name: <strong>{instance.name}</strong>
+					</li>
+					<li>
+						State: <strong style={{ color: "green" }}>Online</strong>
+					</li>
+					<li>
+						Purpose: <strong>{instance.purpose}</strong>
+					</li>
+					<li>
+						Version: <strong>{instance.stats.Version}</strong>
+					</li>
+					<li>
+						Primitives: <strong>{instance.stats.Prims}</strong>
+					</li>
+				</ul>
+				<div style={{ textAlign: "center" }}>
+					<AttentionLink href={instance.slurl}>Visit In-world</AttentionLink>
+				</div>
+			</div>
+		)
+	}
+	return (
+		<div key={instance.name}>
+			<ul>
+				<li>
+					Name: <strong>{instance.name}</strong>
+				</li>
+				<li>
+					State: <strong style={{ color: "red" }}>Offline</strong>
+				</li>
+			</ul>
+			<div style={{ textAlign: "center" }}>
+				<AttentionLink disabled>Visit In-world</AttentionLink>
+			</div>
+		</div>
+	)
+}
+
 const OpenSim = () => {
 	const [config, setConfig] = useState<IOpenSimulatorInstance[]>(conf)
 
@@ -41,50 +85,6 @@ const OpenSim = () => {
 				})
 		})
 	}, [])
-
-	const renderInstance = (instance: IOpenSimulatorInstance) => {
-		if (instance.stats !== undefined) {
-			return (
-				<div key={instance.name} style={{ marginBottom: 20 }}>
-					<ul>
-						<li>
-							Name: <strong>{instance.name}</strong>
-						</li>
-						<li>
-							State: <strong style={{ color: "green" }}>Online</strong>
-						</li>
-						<li>
-							Purpose: <strong>{instance.purpose}</strong>
-						</li>
-						<li>
-							Version: <strong>{instance.stats.Version}</strong>
-						</li>
-						<li>
-							Primitives: <strong>{instance.stats.Prims}</strong>
-						</li>
-					</ul>
-					<div style={{ textAlign: "center" }}>
-						<AttentionLink href={instance.slurl}>Visit In-world</AttentionLink>
-					</div>
-				</div>
-			)
-		}
-		return (
-			<div key={instance.name}>
-				<ul>
-					<li>
-						Name: <strong>{instance.name}</strong>
-					</li>
-					<li>
-						State: <strong style={{ color: "red" }}>Offline</strong>
-					</li>
-				</ul>
-				<div style={{ textAlign: "center" }}>
-					<AttentionLink disabled>Visit In-world</AttentionLink>
-				</div>
-			</div>
-		)
-	}
 
 	return (
 		<>

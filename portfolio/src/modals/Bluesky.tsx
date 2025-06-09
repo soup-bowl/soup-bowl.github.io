@@ -25,6 +25,7 @@ const Bluesky = () => {
 				setStatuses(feedData)
 				setRequestState(EState.Complete)
 			} catch (error) {
+				console.error("Error fetching Bluesky data:", error)
 				setRequestState(EState.Error)
 			}
 		}
