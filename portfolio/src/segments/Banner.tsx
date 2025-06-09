@@ -6,7 +6,7 @@ const Banner = () => {
 	return (
 		<div>
 			<div>
-				<img src="https://files.soupbowl.io/i/logo.webp" />
+				<img src="https://files.soupbowl.io/i/logo.webp" alt="" />
 			</div>
 			<div>
 				<h1 style={{ fontSize: "48px" }}>Soupbowl</h1>

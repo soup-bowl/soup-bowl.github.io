@@ -16,6 +16,19 @@ const BigA = styled.a({
 	fontWeight: "bold",
 })
 
+const updateInstanceStats = (
+	prevInstances: IOpenSimulatorInstance[],
+	index: number,
+	data: IOpenSimulatorStats
+): IOpenSimulatorInstance[] => {
+	const updatedInstances = [...prevInstances]
+	updatedInstances[index] = {
+		...updatedInstances[index],
+		stats: data,
+	}
+	return updatedInstances
+}
+
 const OpenSim = () => {
 	const [config, setConfig] = useState<IOpenSimulatorInstance[]>(conf)
 
@@ -24,17 +37,54 @@ const OpenSim = () => {
 			fetch(instance.url)
 				.then((response) => response.json())
 				.then((data: IOpenSimulatorStats) => {
-					setConfig((prevInstances) => {
-						const updatedInstances = [...prevInstances]
-						updatedInstances[index] = {
-							...updatedInstances[index],
-							stats: data,
-						}
-						return updatedInstances
-					})
+					setConfig((prevInstances) => updateInstanceStats(prevInstances, index, data))
 				})
 		})
 	}, [])
+
+	const renderInstance = (instance: IOpenSimulatorInstance) => {
+		if (instance.stats !== undefined) {
+			return (
+				<div key={instance.name} style={{ marginBottom: 20 }}>
+					<ul>
+						<li>
+							Name: <strong>{instance.name}</strong>
+						</li>
+						<li>
+							State: <strong style={{ color: "green" }}>Online</strong>
+						</li>
+						<li>
+							Purpose: <strong>{instance.purpose}</strong>
+						</li>
+						<li>
+							Version: <strong>{instance.stats.Version}</strong>
+						</li>
+						<li>
+							Primitives: <strong>{instance.stats.Prims}</strong>
+						</li>
+					</ul>
+					<div style={{ textAlign: "center" }}>
+						<AttentionLink href={instance.slurl}>Visit In-world</AttentionLink>
+					</div>
+				</div>
+			)
+		}
+		return (
+			<div key={instance.name}>
+				<ul>
+					<li>
+						Name: <strong>{instance.name}</strong>
+					</li>
+					<li>
+						State: <strong style={{ color: "red" }}>Offline</strong>
+					</li>
+				</ul>
+				<div style={{ textAlign: "center" }}>
+					<AttentionLink disabled>Visit In-world</AttentionLink>
+				</div>
+			</div>
+		)
+	}
 
 	return (
 		<>
@@ -53,50 +103,7 @@ const OpenSim = () => {
 
 			<div>
 				<h2>Estates</h2>
-				{config.map((instance) => {
-					if (instance.stats !== undefined) {
-						return (
-							<div key={instance.name} style={{ marginBottom: 20 }}>
-								<ul>
-									<li>
-										Name: <strong>{instance.name}</strong>
-									</li>
-									<li>
-										State: <strong style={{ color: "green" }}>Online</strong>
-									</li>
-									<li>
-										Purpose: <strong>{instance.purpose}</strong>
-									</li>
-									<li>
-										Version: <strong>{instance.stats.Version}</strong>
-									</li>
-									<li>
-										Primitives: <strong>{instance.stats.Prims}</strong>
-									</li>
-								</ul>
-								<div style={{ textAlign: "center" }}>
-									<AttentionLink href={instance.slurl}>Visit In-world</AttentionLink>
-								</div>
-							</div>
-						)
-					} else {
-						return (
-							<div key={instance.name}>
-								<ul>
-									<li>
-										Name: <strong>{instance.name}</strong>
-									</li>
-									<li>
-										State: <strong style={{ color: "red" }}>Offline</strong>
-									</li>
-								</ul>
-								<div style={{ textAlign: "center" }}>
-									<AttentionLink disabled>Visit In-world</AttentionLink>
-								</div>
-							</div>
-						)
-					}
-				})}
+				{config.map(renderInstance)}
 			</div>
 		</>
 	)
