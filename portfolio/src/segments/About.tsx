@@ -2,6 +2,8 @@ import { faComment, faEnvelope } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ButtonGroup, NormalButton } from "@/components/Buttons"
 import { ProfileDisplay } from "@/components/Profile"
+import { text } from "stream/consumers"
+import { faDiscord } from "@fortawesome/free-brands-svg-icons"
 
 const About = () => {
 	return (
@@ -33,12 +35,19 @@ const About = () => {
 					</a>
 					.
 				</p>
+				<br />
+				<p style={{ textAlign: "center", fontWeight: "bold" }}>Contact me on</p>
 				<ButtonGroup>
 					<NormalButton onClick={() => (window.location.href = "mailto:code@soupbowl.io")}>
-						<FontAwesomeIcon icon={faEnvelope} /> Email me
+						<FontAwesomeIcon icon={faEnvelope} /> Email
 					</NormalButton>
 					<NormalButton onClick={() => (window.location.href = "https://matrix.to/#/@soupbowl:mozilla.org")}>
-						<FontAwesomeIcon icon={faComment} /> Message on Matrix
+						<FontAwesomeIcon icon={faComment} /> Matrix
+					</NormalButton>
+					<NormalButton
+						onClick={() => (window.location.href = "https://discord.com/users/555374749019013141")}
+					>
+						<FontAwesomeIcon icon={faDiscord} /> Discord
 					</NormalButton>
 				</ButtonGroup>
 			</div>
