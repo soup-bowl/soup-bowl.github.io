@@ -2,7 +2,6 @@ import { faComment, faEnvelope } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ButtonGroup, NormalButton } from "@/components/Buttons"
 import { ProfileDisplay } from "@/components/Profile"
-import { text } from "stream/consumers"
 import { faDiscord } from "@fortawesome/free-brands-svg-icons"
 
 const About = () => {
