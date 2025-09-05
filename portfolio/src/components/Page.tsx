@@ -14,7 +14,7 @@ export const PageHeader = styled.section({
 		backgroundColor: "#ff965b",
 		color: "#000",
 		padding: 20,
-		border: "4px solid black",
+		borderTop: "4px solid black",
 		fontSize: "24px",
 		img: {
 			width: 200,
