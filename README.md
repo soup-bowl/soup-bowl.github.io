@@ -11,8 +11,6 @@ My website, statically built with [Hugo][j] and a [React][r] frontpage.
 
 **This is a personal site - Pull Requests will not be accepted.**
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/soup-bowl/soup-bowl.github.io)
-
 [h]:  https://user-images.githubusercontent.com/11209477/147856239-c7eb65c9-ba89-44fa-bf32-1e68568dc48b.png
 [s]:  https://soupbowl.io
 [j]:  https://gohugo.io/
