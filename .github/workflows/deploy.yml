@@ -26,10 +26,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 18.x
           cache: 'npm'
@@ -42,7 +42,7 @@ jobs:
           npm run build
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: art-react
           path: './public/portfolio-res'
@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup Hugo
         run: |
@@ -64,7 +64,7 @@ jobs:
           HUGO_VERSION: 0.121.2
         
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: art-hugo
           path: './public'
@@ -78,7 +78,7 @@ jobs:
     needs: [build-react, build-hugo]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Download Hugo build
         uses: actions/download-artifact@v4
@@ -96,7 +96,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './public'
 
