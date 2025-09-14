@@ -22,11 +22,7 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
+  build-react:
     runs-on: ubuntu-latest
 
     steps:
@@ -39,19 +35,62 @@ jobs:
           cache: 'npm'
           cache-dependency-path: portfolio/package-lock.json
 
+      - name: Install Dependencies
+        run: |
+          cd portfolio
+          npm ci
+          npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: art-react
+          path: './public/portfolio-res'
+  
+  build-hugo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
       - name: Setup Hugo
         run: |
           mkdir /opt/hugo
           curl -L "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz" --output /opt/hugo.tar.gz
           sudo tar -xvzf /opt/hugo.tar.gz -C /opt
           sudo mv /opt/hugo /usr/local/bin
+          hugo --minify
         env:
           HUGO_VERSION: 0.121.2
-      
-      - name: 📦 Compile Site
-        run: |
-          (cd portfolio && npm ci)
-          npm run build
+        
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: art-hugo
+          path: './public'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    needs: [build-react, build-hugo]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Hugo build
+        uses: actions/download-artifact@v4
+        with:
+          name: art-hugo
+          path: ./public
+
+      - name: Download React build
+        uses: actions/download-artifact@v4
+        with:
+          name: art-react
+          path: ./public/portfolio-res
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
