@@ -7,6 +7,10 @@ title: How I sign my commits in Gitpod
 slug: signing-commits-in-cde
 ---
 
+{{<alert class="alert-danger">}}
+Since writing this article, **Gitpod** has pivoted to an AI company. My views and opinions on the company do not reflect their current position, and I will be removing Gitpod articles from my website as a result.
+{{</alert>}}
+
 **For absolutely no good reason, I sign all my commits to GitHub.**
 
 My argument to myself is to prove "it is I, who committed!", but I don't do meaningful enough commits to warrant that.

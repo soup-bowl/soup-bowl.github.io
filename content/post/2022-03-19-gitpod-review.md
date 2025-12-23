@@ -9,6 +9,10 @@ title: Bored Waiting for GitHub Codespaces? Gitpod has Your Back
 slug: gitpod-review
 ---
 
+{{<alert class="alert-danger">}}
+Since writing this article, **Gitpod** has pivoted to an AI company. My views and opinions on the company do not reflect their current position, and I will be removing Gitpod articles from my website as a result.
+{{</alert>}}
+
 I've been on the waiting list for GitHub Codespaces for nearly 2 years now, and I haven't seen anything from GitHub about it. At this point, I'm even wondering if the Codespaces initiative was some kind of desert mirage, and actually doesn't exist at all!
 
 But bored of waiting for something I'm losing the plot over, I saw what alternatives are available. In comes **[Gitpod][gp]** to save the day.

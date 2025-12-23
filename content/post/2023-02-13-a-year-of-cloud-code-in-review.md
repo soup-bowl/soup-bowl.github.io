@@ -19,7 +19,7 @@ After doing an [article reviewing Gitpod]({{< ref "/post/2022-03-19-gitpod-revie
 Things have come a long, long way since my [**Cloud9**](https://aws.amazon.com/cloud9/), [**Codeenvy**](https://github.com/codenvy/codenvy) and **Codeanywhere** days!
 
 {{<alert class="alert-warning">}}
-This article was created before **Gitpod Flex** was announced, and refers to Gitpod now known as **Gitpod Classic**. My views and experiences expressed in this article reflect their older offering.
+This article was created before **Gitpod** became **Ona**. This was also created before **Gitpod Flex** was announced, and refers to Gitpod now known as **Gitpod Classic**. My views and experiences expressed in this article reflect their original offering, and I do not support or condone them since.
 {{</alert>}}
 
 ## The Challenges
