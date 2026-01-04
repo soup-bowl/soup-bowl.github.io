@@ -5,10 +5,10 @@
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"features": {
 		"ghcr.io/devcontainers/features/hugo:1": {
-			"version": "0.121.2"
+			"version": "0.146.0"
 		},
 		"ghcr.io/devcontainers/features/node:1": {
-			"version": "18"
+			"version": "24"
 		}
 	},
 	"postCreateCommand": "(cd portfolio && npm ci)",
