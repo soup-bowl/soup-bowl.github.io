@@ -14,7 +14,7 @@ My work extends a crazy, disjointed range of different purposes. I maintain a Wo
 
 **All of this**, I did in cloud editors. At this point, if it wasn't for getting into Plex, my workstation laptop would have spent the whole year not getting anywhere past 50% utilisation. They have really changed my world in ways I have always been hoping for.
 
-After doing an [article reviewing Gitpod]({{< ref "/post/2022-03-19-gitpod-review" >}}) exactly a year ago, I thought I'd make another post about my experiences a year on. This **isn't just about Gitpod**, as I'm also an avid GitHub Codespaces user. However, a majority share of my cloud development work happened on the Gitpod platform.
+After doing an [article reviewing Gitpod](https://web.archive.org/web/20251223084249/https://soupbowl.io/2022/03/gitpod-review/) exactly a year ago, I thought I'd make another post about my experiences a year on. This **isn't just about Gitpod**, as I'm also an avid GitHub Codespaces user. However, a majority share of my cloud development work happened on the Gitpod platform.
 
 Things have come a long, long way since my [**Cloud9**](https://aws.amazon.com/cloud9/), [**Codeenvy**](https://github.com/codenvy/codenvy) and **Codeanywhere** days!
 
