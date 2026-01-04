@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
 import { hexToRgb, pastelize } from "@/utils/colour"
 
@@ -111,7 +111,7 @@ interface CardProps {
 	id?: string
 	url?: string
 	icon?: IconDefinition
-	iconSvg?: JSX.Element
+	iconSvg?: React.ReactNode
 	color: string
 	onClick?: React.MouseEventHandler<HTMLAnchorElement>
 	children: ReactNode
