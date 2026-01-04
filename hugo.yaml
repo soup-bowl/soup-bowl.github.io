@@ -17,3 +17,8 @@ params:
 
 minify:
   minifyOutput: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

@@ -9,7 +9,6 @@
 	},
 	"postCreateCommand": "(cd portfolio && npm ci)",
 	"forwardPorts": [1313, 3000],
-	"remoteUser": "root",
 	"customizations": {
 		"vscode": {
 			"extensions": [
