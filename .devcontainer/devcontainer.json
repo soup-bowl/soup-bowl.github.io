@@ -4,8 +4,12 @@
 	"name": "Philly Cheesesteak",
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"features": {
-		"ghcr.io/devcontainers/features/hugo:1": {},
-		"ghcr.io/devcontainers/features/node:1": {}
+		"ghcr.io/devcontainers/features/hugo:1": {
+			"version": "0.121.2"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "18"
+		}
 	},
 	"postCreateCommand": "(cd portfolio && npm ci)",
 	"forwardPorts": [1313, 3000],
