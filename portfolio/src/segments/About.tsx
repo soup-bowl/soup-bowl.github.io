@@ -1,4 +1,4 @@
-import { faComment, faEnvelope } from "@fortawesome/free-regular-svg-icons"
+import { faComment } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ButtonGroup, NormalButton } from "@/components/Buttons"
 import { ProfileDisplay } from "@/components/Profile"
