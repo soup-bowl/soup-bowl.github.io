@@ -4,8 +4,31 @@ layout: no-fun
 url: "/404.html"
 ---
 
+<div class="container">
+	<div class="row">
+    	<div class="col d-flex justify-content-center align-items-center">
+			<model-viewer
+				src="/assets/cassette.glb"
+				poster="/assets/cassette.png"
+				autoplay
+				auto-rotate
+				auto-rotate-delay="0"
+				rotation-per-second="25deg"
+				camera-controls="false"
+				interaction-prompt="none"
+				disable-zoom
+				disable-pan
+				disable-tap
+				shadow-intensity="0"
+				exposure="1.1"
+				style="width: 620px; height: 500px; background: transparent; pointer-events: none;"
+			>
+			</model-viewer>
+		</div>
+	</div>
+</div>
+
 <div class="text-center">
-	<img class="w-50 my-4" src="/assets/cassette.png" alt="">
 	<p>The requested content could not be found - sorry about that!</p>
 	<p>
 		Sure this content was here once? Try this URL in the
@@ -17,3 +40,5 @@ url: "/404.html"
 <script type="text/javascript">
 	document.getElementById('wbmu').setAttribute('href', 'https://web.archive.org/' + window.location.href);
 </script>
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
